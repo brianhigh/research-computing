@@ -150,6 +150,14 @@ Logical Design: Modeling Relationships
 
 (Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-performs-song.svg), [Public Domain](http://en.wikipedia.org/wiki/Public_domain))
 
+
+Logical Design: DFD and ERD Diagrams
+========================================================
+
+![DFD and ERD](https://raw.githubusercontent.com/brianhigh/data-workshop/master/images/analysis_and_design.png)
+
+(Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/analysis_and_design.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/))
+
 Decision Analysis: Making a Decision
 ========================================================
 

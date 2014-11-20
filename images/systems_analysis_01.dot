@@ -1,0 +1,13 @@
+// dot -Tpng systems_analysis_01.dot -o systems_analysis_01.png
+digraph Systems_Analysis {
+    S [label="Scope Definition:\nEstablish system boundaries"];
+    P [label="Problem analysis:\nIdentify symptoms and causes"];
+    R [label="Requirements analysis:\nDetermine goals"];
+    L [label="Logical design:\nModel relationships"];
+    D [label="Decision analysis:\nEvaluate alternatives"];
+    S -> P;
+    P -> R;
+    R -> L;
+    L -> D;
+}
+

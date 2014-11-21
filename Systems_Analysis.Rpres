@@ -35,6 +35,18 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#
 Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
 </small>
 
+What will you need?
+========================================================
+incremental: true
+
+A **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*.
+
+[Requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis) is an **essential component** of *[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)*.
+
+[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) helps you **clarify your project needs** and **plan ahead** in order to obtain and allocate **critical resources**.
+
+> If you don't know what you need, how can you ask for it?
+
 Systems Analysis
 ========================================================
 incremental: true
@@ -42,8 +54,6 @@ incremental: true
 After completing an initial [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study) to "determine if creating a new or improved system is a viable solution", proposing the project, and gaining approval from [stakeholders](http://en.wikipedia.org/wiki/Project_stakeholder), you may then conduct a [systems analysis](http://en.wikipedia.org/wiki/Systems_analysis). 
 
 [Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) will involve "[breaking down](http://en.wikipedia.org/wiki/Work_breakdown_structure) the system in different pieces to analyze the situation, **analyzing project goals**, breaking down what needs to be created and attempting to **engage users** so that **[definite requirements](http://en.wikipedia.org/wiki/Requirements_analysis)** can be defined."
-
-In particular, a **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*, to **clarify your project needs**.
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -53,9 +63,9 @@ Systems Analysis Definition
 ========================================================
 incremental: true
 
-*analysis* = "to take apart" ... *synthesis* = "to put together"<sup style="font-size:.7em">1</sup>
+*analysis* = "to take apart"<sup style="font-size:.7em">1</sup>
 
-"[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) is a problem solving technique that decomposes a system into its component pieces for the purpose of the studying how well those component parts work and interact to accomplish their purpose."<sup style="font-size:.7em">2</sup>
+>[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) is a problem solving technique that decomposes a system into its component pieces for the purpose of the studying how well those component parts work and interact to accomplish their purpose.<sup style="font-size:.7em">2</sup>
 
 We will accomplish this analysis by working through a series of [five phases](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology).
 
@@ -84,22 +94,22 @@ incremental: true
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Scope Definition: System Boundaries
+Scope Definition
 ========================================================
 incremental: true
 
-"Scope involves *getting information* required to start a project, and the *features* the product would have that would meet its *stakeholders requirements*."
+> **Scope** involves *getting information* required to start a project, and the *features* the product would have that would meet its *stakeholders requirements*.
 
-* **Project Scope**: *work to be done* to deliver desired product
-* **Product Scope**: *desired features and functions* of product
+* **Project Scope**: *work to be done*
+* **Product Scope**: *desired features and functions*
     
-"**Scope creep** is a term which refers to the *incremental expansion* of the scope of a project, which may include and introduce *more requirements* that may not have been a part of the initial planning of the project, while nevertheless *failing to adjust* schedule and budget."
+> **Scope creep** is [...] the *incremental expansion* of the scope of a project [...], while nevertheless *failing to adjust* schedule and budget.
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Problem Analysis: Symptoms and Causes
+Problem Analysis
 ========================================================
 incremental: true
 
@@ -109,15 +119,13 @@ incremental: true
 * Consider any negative impacts (unintended consequences)
 * Prioritize problems to solve (bottlenecks? low-hanging fruit?)
 * Answer: *what*, *why*, *who*, *when*, *where*, and *how much*?
-  - Dig deeper: Ask -- *But why?* → *But why?* → *But why?* → ...
-  - Force-field analysis: Find *driving forces* and *restraining forces*
 * Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) and **symptoms** (effects)
 
 <small style="font-size:.7em">
 Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/en/table-of-contents/analyze/analyze-community-problems-and-solutions/define-analyze-problem/main)
 </small>
 
-Requirements Analysis: Determine Goals
+Requirements Analysis
 ========================================================
 incremental: true
 
@@ -143,7 +151,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-
 * Performance
 * (Others...)
 
-Requirements Modeling: Simple Example
+Requirements Modeling: Example
 ========================================================
 incremental: true
 
@@ -166,7 +174,7 @@ Behavioral requirements:
 Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/research_survey_data_system.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/)
 </small>
 
-Logical Design: Model Relationships
+Logical Design
 ========================================================
 incremental: true
 
@@ -193,7 +201,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design),
 Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-performs-song.svg), [Public Domain](http://en.wikipedia.org/wiki/Public_domain)
 </small>
 
-Logical Design: DFD and ERD Diagrams
+Logical Design: Diagrams
 ========================================================
 
 ![DFD and ERD](https://raw.githubusercontent.com/brianhigh/data-workshop/master/images/analysis_and_design.png)
@@ -202,7 +210,7 @@ Logical Design: DFD and ERD Diagrams
 Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/analysis_and_design.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/)
 </small>
 
-Decision Analysis: Evaluate Alternatives
+Decision Analysis
 ========================================================
 incremental: true
 

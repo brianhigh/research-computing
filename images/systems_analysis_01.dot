@@ -1,13 +1,16 @@
 // dot -Tpng systems_analysis_01.dot -o systems_analysis_01.png
 digraph Systems_Analysis {
-    S [label="Scope Definition:\nEstablish system boundaries"];
-    P [label="Problem analysis:\nIdentify symptoms and causes"];
-    R [label="Requirements analysis:\nDetermine goals"];
-    L [label="Logical design:\nModel relationships"];
-    D [label="Decision analysis:\nEvaluate alternatives"];
+
+    S [label="Scope definition:\nEstablish system boundaries", style=filled fillcolor=pink];
+    P [label="Problem analysis:\nIdentify symptoms and causes", style=filled fillcolor=orange];
+    R [label="Requirements analysis:\nDetermine goals", style=filled fillcolor=yellow];
+    L [label="Logical design:\nModel relationships", style=filled fillcolor=seagreen1];
+    D [label="Decision analysis:\nEvaluate alternatives", style=filled fillcolor=lightblue];
+
     S -> P;
     P -> R;
     R -> L;
     L -> D;
+    
 }
 

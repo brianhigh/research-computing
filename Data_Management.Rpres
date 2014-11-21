@@ -15,11 +15,11 @@ Data and Information
 ========================================================
 incremental: true
 
-[Data](http://en.wikipedia.org/wiki/Data) are "*values* of qualitative or quantitative variables; restated, pieces of data are individual pieces of *information*."
+> [Data](http://en.wikipedia.org/wiki/Data) [are] *values* of qualitative or quantitative variables; restated, pieces of data are individual pieces of *information*.
 
-[Data](http://en.wikipedia.org/wiki/Data_%28computing%29) (treated as singular, plural, or as a mass noun) is any sequence of *symbols* given meaning by specific acts of interpretation.
+> [Data](http://en.wikipedia.org/wiki/Data_%28computing%29) (treated as singular, plural, or as a mass noun) is any sequence of *symbols* given meaning by specific acts of interpretation.
 
-[Information](http://en.wikipedia.org/wiki/Information) (shortened as info or info.) is that which informs, i.e. that from which data and knowledge can be *derived* (as data represents *values* attributed to parameters, while knowledge signifies *understanding* of real things or abstract concepts).
+> [Information](http://en.wikipedia.org/wiki/Information) (shortened as info or info.) is that which informs, i.e. that from which data and knowledge can be *derived* (as data represents *values* attributed to parameters, while knowledge signifies *understanding* of real things or abstract concepts).
 
 <small style="font-size:.7em">
 Source: Wikipedia ([Data](http://en.wikipedia.org/wiki/Data), [Data (computing)](http://en.wikipedia.org/wiki/Data_%28computing%29), [Information](http://en.wikipedia.org/wiki/Information)), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -54,7 +54,7 @@ Data → Information → Knowledge → Wisdom
 Source: [RobOnKnowledge, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:DIKW-diagram.png)
 </small>
 
-Data and Information Management
+Data/Information Management
 ========================================================
 incremental: true
 
@@ -72,14 +72,19 @@ Source: [DAMA International](http://dama.inpuls.eu/)
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Information Management Priorities
+Information Management Ideals
 ========================================================
+incremental: true
 
+Categories
+----------
 * Quality
 * Efficiency
 * Compliance
 * Security
 * Sharing
+
+... form a framework of building blocks.
 
 ----
 
@@ -89,7 +94,7 @@ Information Management Priorities
 Source: [US Coast Guard, Public Domain, (Wikipedia)](http://en.wikipedia.org/wiki/File:Information_Management_Framework.png)
 </small>
 
-Information Management Complexities
+Information Mgmt. Challenges
 ========================================================
 incremental: true
 

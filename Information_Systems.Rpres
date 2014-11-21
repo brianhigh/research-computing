@@ -38,7 +38,7 @@ Information System Types
 ========================================================
 incremental: true
 
-- [Search](http://en.wikipedia.org/wiki/Web_search_engine) - [Search engines](http://en.wikipedia.org/wiki/Search_engine_%28computing%29), [PubMed](http://en.wikipedia.org/wiki/PubMed), [Google Search](http://en.wikipedia.org/wiki/Google_Search)
+- [Search](http://en.wikipedia.org/wiki/Web_search_engine) - [Search engines](http://en.wikipedia.org/wiki/Search_engine_%28computing%29),  [Google Search](http://en.wikipedia.org/wiki/Google_Search), [PubMed](http://en.wikipedia.org/wiki/PubMed)
 - [Spatial](http://en.wikipedia.org/wiki/Geographic_information_system) - [Geographic information system (GIS)](http://en.wikipedia.org/wiki/Geographic_information_system), [ArcGIS](http://en.wikipedia.org/wiki/ArcGIS), [QGIS](http://en.wikipedia.org/wiki/QGIS)
 - [Global](http://en.wikipedia.org/wiki/Global_information_system) - GLIS, Global Health Databases ([UNHCR](http://www.unhcr.org/pages/49c3646c4d6.html), [GHO](Global Health Observatory))
 - [Enterprise](http://en.wikipedia.org/wiki/Enterprise_systems) - [Enterprise Resource Planning (ERP)](http://en.wikipedia.org/wiki/Enterprise_resource_planning)
@@ -74,26 +74,22 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Later, we will take a closer look at *Systems Analysis*.
-
 Transparency
 ========================================================
 incremental: true
 
-Information systems vary in the transparency of the their implementations, both in terms of data exchange standards as well as internal design (e.g. source code and hardware).
+Information systems vary in the transparency of the their implementations, in terms of both standards and implementation.
 
 * Open ([standards](http://en.wikipedia.org/wiki/Open_standard), [source](http://en.wikipedia.org/wiki/Open_source))
 * Closed ([proprietary](http://en.wikipedia.org/wiki/Proprietary_software))
   * [Shareware](http://en.wikipedia.org/wiki/Shareware), Trialware
-* [Commercial software](http://en.wikipedia.org/wiki/Commercial_software) can be proprietary or open
+* [Commercial software](http://en.wikipedia.org/wiki/Commercial_software): proprietary or open
 
 ----
 
-Open standards
--------------------------
-"The documentation for an open standard is open to the public and anyone can create a software that implements and uses the standard." 
+> The documentation for an **open standard** is open to the public and anyone can create a software that implements and uses the standard.
 
-"The documentation and specification for closed standards are not available to the public."
+> The documentation and specification for **closed standards** are not available to the public.
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)

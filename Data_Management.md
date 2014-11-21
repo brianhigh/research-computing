@@ -22,7 +22,7 @@ incremental: true
 [Information](http://en.wikipedia.org/wiki/Information) (shortened as info or info.) is that which informs, i.e. that from which data and knowledge can be *derived* (as data represents *values* attributed to parameters, while knowledge signifies *understanding* of real things or abstract concepts).
 
 <small style="font-size:.7em">
-(Source: Wikipedia ([Data](http://en.wikipedia.org/wiki/Data), [Data (computing)](http://en.wikipedia.org/wiki/Data_%28computing%29), [Information](http://en.wikipedia.org/wiki/Information)), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: Wikipedia ([Data](http://en.wikipedia.org/wiki/Data), [Data (computing)](http://en.wikipedia.org/wiki/Data_%28computing%29), [Information](http://en.wikipedia.org/wiki/Information)), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Data and Information Put to Use
@@ -51,7 +51,7 @@ Data → Information → Knowledge → Wisdom
 ![Data, Information, Knowledge, Wisdom](http://upload.wikimedia.org/wikipedia/commons/c/c3/DIKW-diagram.png)
 
 <small style="font-size:.7em">
-(Source: [RobOnKnowledge, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:DIKW-diagram.png))
+Source: [RobOnKnowledge, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:DIKW-diagram.png)
 </small>
 
 Data and Information Management
@@ -61,7 +61,7 @@ incremental: true
 "[Data management](http://en.wikipedia.org/wiki/Data_management) is the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets."
 
 <small style="font-size:.7em">
-(Source: [DAMA International](http://dama.inpuls.eu/))
+Source: [DAMA International](http://dama.inpuls.eu/)
 </small>
 
 ----
@@ -69,7 +69,7 @@ incremental: true
 "[Information management](http://en.wikipedia.org/wiki/Information_management) (IM) is the collection and management of information from one or more sources and the distribution of that information to one or more audiences."
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Information Management Priorities
@@ -86,7 +86,7 @@ Information Management Priorities
 ![information managemnt framework](http://upload.wikimedia.org/wikipedia/en/thumb/2/27/Information_Management_Framework.png/508px-Information_Management_Framework.png)
 
 <small style="font-size:.7em">
-(Source: [US Coast Guard, Public Domain, (Wikipedia)](http://en.wikipedia.org/wiki/File:Information_Management_Framework.png))
+Source: [US Coast Guard, Public Domain, (Wikipedia)](http://en.wikipedia.org/wiki/File:Information_Management_Framework.png)
 </small>
 
 Information Management Complexities
@@ -103,5 +103,5 @@ Information managers may encounter ...
 ... among other challenges.
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management#Information_management_complexities), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management#Information_management_complexities), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>

@@ -24,7 +24,7 @@ We will take a closer look at the **[systems analysis](http://en.wikipedia.org/w
 * [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 ----
@@ -32,7 +32,7 @@ We will take a closer look at the **[systems analysis](http://en.wikipedia.org/w
 ![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
 
 <small style="font-size:.7em">
-(Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png))
+Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
 </small>
 
 Systems Analysis
@@ -46,7 +46,7 @@ After completing an initial [feasibility study](http://en.wikipedia.org/wiki/Fea
 In particular, a **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*, to **clarify your project needs**.
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Systems Analysis Definition
@@ -81,7 +81,7 @@ incremental: true
 5. [Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis): Evaluate alternatives
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Scope Definition: System Boundaries
@@ -96,7 +96,7 @@ incremental: true
 "**Scope creep** is a term which refers to the *incremental expansion* of the scope of a project, which may include and introduce *more requirements* that may not have been a part of the initial planning of the project, while nevertheless *failing to adjust* schedule and budget."
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Problem Analysis: Symptoms and Causes
@@ -114,7 +114,7 @@ incremental: true
 * Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) and **symptoms** (effects)
 
 <small style="font-size:.7em">
-(Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/en/table-of-contents/analyze/analyze-community-problems-and-solutions/define-analyze-problem/main))
+Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/en/table-of-contents/analyze/analyze-community-problems-and-solutions/define-analyze-problem/main)
 </small>
 
 Requirements Analysis: Determine Goals
@@ -129,7 +129,7 @@ incremental: true
 * Output: [Requirements specification](http://en.wikipedia.org/wiki/Requirements_specification)
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 ----
@@ -163,7 +163,7 @@ Behavioral requirements:
 ![research survey data system](https://raw.githubusercontent.com/brianhigh/data-workshop/master/images/research_survey_data_system.png)
 
 <small style="font-size:.7em">
-(Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/research_survey_data_system.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/))
+Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/research_survey_data_system.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/)
 </small>
 
 Logical Design: Model Relationships
@@ -178,7 +178,7 @@ incremental: true
   * [Entity Relationship Diagram (ERD)](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 ----
@@ -190,7 +190,7 @@ incremental: true
 ![artist performs song](http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/640px-ERD-artist-performs-song.svg.png)
 
 <small style="font-size:.7em">
-(Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-performs-song.svg), [Public Domain](http://en.wikipedia.org/wiki/Public_domain))
+Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-performs-song.svg), [Public Domain](http://en.wikipedia.org/wiki/Public_domain)
 </small>
 
 Logical Design: DFD and ERD Diagrams
@@ -199,7 +199,7 @@ Logical Design: DFD and ERD Diagrams
 ![DFD and ERD](https://raw.githubusercontent.com/brianhigh/data-workshop/master/images/analysis_and_design.png)
 
 <small style="font-size:.7em">
-(Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/analysis_and_design.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/))
+Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/analysis_and_design.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/)
 </small>
 
 Decision Analysis: Evaluate Alternatives
@@ -216,5 +216,5 @@ incremental: true
 * Get a decision from stakeholders
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Decision_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Decision_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>

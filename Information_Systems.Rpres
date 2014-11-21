@@ -18,7 +18,7 @@ incremental: true
 ![personal computer](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Personal_computer%2C_exploded_5%2C_unlabeled.svg/446px-Personal_computer%2C_exploded_5%2C_unlabeled.svg.png)
 
 <small style="font-size:.7em">
-(Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:Personal_computer,_exploded_5.svg))
+Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:Personal_computer,_exploded_5.svg)
 </small>
 
 ----
@@ -31,7 +31,7 @@ incremental: true
   * The most important component!
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Information System Types
@@ -47,7 +47,7 @@ incremental: true
 - [Personal](http://en.wikipedia.org/wiki/Personal_information_manager) - Communications, [calendaring](http://en.wikipedia.org/wiki/Calendaring_software), journaling/notes
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_information_systems), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_information_systems), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Systems Development
@@ -57,7 +57,7 @@ incremental: true
 ![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
 
 <small style="font-size:.7em">
-(Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png))
+Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
 </small>
 
 ----
@@ -71,7 +71,7 @@ incremental: true
 * [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
 Later, we will take a closer look at *Systems Analysis*.
@@ -96,5 +96,5 @@ Open standards
 "The documentation and specification for closed standards are not available to the public."
 
 <small style="font-size:.7em">
-(Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License))
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>

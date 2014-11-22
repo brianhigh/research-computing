@@ -45,7 +45,7 @@ A **primary goal** of this course is to help you develop your skills in *[requir
 
 [Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) helps you **clarify your project needs** and **plan ahead** in order to obtain and allocate **critical resources**.
 
-> If you don't know what you need, how can you ask for it?
+> If you don't *know* what you *need*, how can you *ask* for it?
 
 Systems Analysis
 ========================================================
@@ -157,12 +157,14 @@ incremental: true
 
 **Survey Data System**
 
-Behavioral requirements:
+Behavioral requirements ...
 
-* **Researcher** *uploads* survey.
-* **Subject** *takes* survey.
-* **Subject** *uploads* results.
-* **Researcher** *downloads* results.
+* **Researcher** *uploads survey*.
+* **Subject** *takes survey*.
+* **Subject** *uploads results*.
+* **Researcher** *downloads results*.
+
+... in **role** *goal* format.
 
 ----
 
@@ -193,7 +195,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design),
 
 [Entity Relationship Diagram](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 
-* **Artist** *performs* song
+* **Artist** *performs song*
 
 ![artist performs song](http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/640px-ERD-artist-performs-song.svg.png)
 
@@ -203,6 +205,16 @@ Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-p
 
 Logical Design: Diagrams
 ========================================================
+
+Several examples of these diagrams can be found in [Systems Analysis and Design](https://github.com/brianhigh/data-workshop/blob/master/Systems_Analysis_and_Design.md).
+
+This [tutorial](https://github.com/brianhigh/data-workshop/blob/master/Systems_Analysis_and_Design.md)<sup style="font-size:.7em">1</sup> ([PDF](https://canvas.uw.edu/courses/951183/modules/items/5479924), [HTML](https://canvas.uw.edu/courses/951183/modules/items/5479962), [MP4](https://canvas.uw.edu/courses/951183/modules/items/5479995)) provides several examples from a fictitious public health research study.
+
+<small style="font-size:.7em">
+1. See also: *[Data Management](https://canvas.uw.edu/courses/951183/modules)*, UW Canvas.
+</small>
+
+----
 
 ![DFD and ERD](https://raw.githubusercontent.com/brianhigh/data-workshop/master/images/analysis_and_design.png)
 

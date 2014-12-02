@@ -1,19 +1,21 @@
 Systems Analysis
 ========================================================
 author: Brian High
-date: 2014-11-20
+date: 2014-12-01
 transition: fade
 
 Research Computing and Data Management
 -------------------------------------------------------
+[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+
 <small style="font-size:.7em">
-Source: [http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)<br />
-License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) 
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small>
 
 Systems Development Life Cycle
 ========================================================
-incremental: true
+
 
 We will take a closer look at the **[systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)** phase.
 
@@ -37,7 +39,7 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 
 What will you need?
 ========================================================
-incremental: true
+
 
 A **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*.
 
@@ -49,7 +51,7 @@ A **primary goal** of this course is to help you develop your skills in *[requir
 
 Systems Analysis
 ========================================================
-incremental: true
+
 
 After completing an initial [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study) to "determine if creating a new or improved system is a viable solution", proposing the project, and gaining approval from [stakeholders](http://en.wikipedia.org/wiki/Project_stakeholder), you may then conduct a [systems analysis](http://en.wikipedia.org/wiki/Systems_analysis). 
 
@@ -61,7 +63,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#
 
 Systems Analysis Definition
 ========================================================
-incremental: true
+
 
 *analysis* = "to take apart"<sup style="font-size:.7em">1</sup>
 
@@ -78,7 +80,7 @@ We will accomplish this analysis by working through a series of [five phases](ht
 
 Systems Analysis Phases
 ========================================================
-incremental: true
+
 
 ![systems analysis phases](./images/systems_analysis_01.png)
 
@@ -96,7 +98,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_te
 
 Scope Definition
 ========================================================
-incremental: true
+
 
 > **Scope** involves *getting information* required to start a project, and the *features* the product would have that would meet its *stakeholders requirements*.
 
@@ -111,7 +113,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29)
 
 Problem Analysis
 ========================================================
-incremental: true
+
 
 * Define and clarify the problem
 * Determine the problem's importance
@@ -127,7 +129,7 @@ Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/
 
 Requirements Analysis
 ========================================================
-incremental: true
+
 
 * [Elicit, Analyze, and Record (EAR)](http://en.wikipedia.org/wiki/Requirements_analysis#Overview):
   * System and project [requirements](http://en.wikipedia.org/wiki/Requirements_analysis)
@@ -153,7 +155,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-
 
 Requirements Modeling: Example
 ========================================================
-incremental: true
+
 
 **Survey Data System**
 
@@ -178,7 +180,7 @@ Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/mas
 
 Logical Design
 ========================================================
-incremental: true
+
 
 * Abstract representation
 * Data flows, entities, and relationships
@@ -224,7 +226,7 @@ Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/mas
 
 Decision Analysis
 ========================================================
-incremental: true
+
 
 [Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis) involves ...
 * Presentation of alternatives:

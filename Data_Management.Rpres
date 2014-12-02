@@ -1,19 +1,21 @@
 Data Management
 ========================================================
 author: Brian High
-date: 2014-11-20
+date: 2014-12-01
 transition: fade
 
 Research Computing and Data Management
 -------------------------------------------------------
+[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+
 <small style="font-size:.7em">
-Source: [http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)<br />
-License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) 
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small>
 
 Data and Information
 ========================================================
-incremental: true
+
 
 > [Data](http://en.wikipedia.org/wiki/Data) [are] *values* of qualitative or quantitative variables; restated, pieces of data are individual pieces of *information*.
 
@@ -27,7 +29,7 @@ Source: Wikipedia ([Data](http://en.wikipedia.org/wiki/Data), [Data (computing)]
 
 Data and Information Put to Use
 ========================================================
-incremental: true
+
 
 [Data](http://en.wikipedia.org/wiki/Data):
 * *Raw* facts
@@ -56,7 +58,7 @@ Source: [RobOnKnowledge, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org
 
 Data/Information Management
 ========================================================
-incremental: true
+
 
 "[Data management](http://en.wikipedia.org/wiki/Data_management) is the development, execution and supervision of plans, policies, programs and practices that control, protect, deliver and enhance the value of data and information assets."
 
@@ -74,7 +76,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management), [CC BY
 
 Information Management Ideals
 ========================================================
-incremental: true
+
 
 Categories
 ----------
@@ -96,7 +98,7 @@ Source: [US Coast Guard, Public Domain, (Wikipedia)](http://en.wikipedia.org/wik
 
 Information Mgmt. Challenges
 ========================================================
-incremental: true
+
 
 Information managers may encounter ...
 

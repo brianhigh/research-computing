@@ -13,7 +13,7 @@ License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0)
 
 Information System Components
 ========================================================
-incremental: true
+
 
 ![personal computer](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Personal_computer%2C_exploded_5%2C_unlabeled.svg/446px-Personal_computer%2C_exploded_5%2C_unlabeled.svg.png)
 
@@ -36,7 +36,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components),
 
 Information System Types
 ========================================================
-incremental: true
+
 
 - [Search](http://en.wikipedia.org/wiki/Web_search_engine) - [Search engines](http://en.wikipedia.org/wiki/Search_engine_%28computing%29),  [Google Search](http://en.wikipedia.org/wiki/Google_Search), [PubMed](http://en.wikipedia.org/wiki/PubMed)
 - [Spatial](http://en.wikipedia.org/wiki/Geographic_information_system) - [Geographic information system (GIS)](http://en.wikipedia.org/wiki/Geographic_information_system), [ArcGIS](http://en.wikipedia.org/wiki/ArcGIS), [QGIS](http://en.wikipedia.org/wiki/QGIS)
@@ -52,7 +52,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_inf
 
 Systems Development
 ========================================================
-incremental: true
+
 
 ![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
 
@@ -76,7 +76,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle)
 
 Transparency
 ========================================================
-incremental: true
+
 
 Information systems vary in the transparency of the their implementations, in terms of both standards and implementation.
 

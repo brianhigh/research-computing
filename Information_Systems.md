@@ -8,7 +8,7 @@ Research Computing and Data Management
 -------------------------------------------------------
 [http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small>
@@ -19,7 +19,7 @@ Information System Components
 
 ![personal computer](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Personal_computer%2C_exploded_5%2C_unlabeled.svg/446px-Personal_computer%2C_exploded_5%2C_unlabeled.svg.png)
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:Personal_computer,_exploded_5.svg)
 </small>
 
@@ -32,7 +32,7 @@ Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:P
 - People ...
   * The most important component!
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
@@ -48,7 +48,7 @@ Information System Types
 - [Office](http://en.wikipedia.org/wiki/Office_automation) - [Business Process Automation (BPA)](http://en.wikipedia.org/wiki/Business_process_automation)
 - [Personal](http://en.wikipedia.org/wiki/Personal_information_manager) - Communications, [calendaring](http://en.wikipedia.org/wiki/Calendaring_software), journaling/notes
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_information_systems), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
@@ -58,7 +58,7 @@ Systems Development
 
 ![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
 </small>
 
@@ -72,7 +72,7 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 * [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
 * [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
@@ -93,6 +93,6 @@ Information systems vary in the transparency of the their implementations, in te
 
 > The documentation and specification for **closed standards** are not available to the public.
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>

@@ -3,15 +3,16 @@ title: "Information Systems"
 author: "Brian High"
 date: "December 22, 2014"
 output:
-  beamer_presentation:
-    highlight: default
   ioslides_presentation:
+    incremental: true
     css: style.css
     fig_caption: yes
     highlight: default
     keep_md: no
     number_sections: no
     toc: yes
+  beamer_presentation:
+    highlight: default
 logo: images/by-sa.png
 mode: draft
 license: Creative Commons Attribution-ShareAlike 4.0 International
@@ -39,7 +40,7 @@ Image: Gustavb, CC BY-SA 3.0, (Wikimedia)
 - [Data](http://en.wikipedia.org/wiki/Data_%28computing%29) (facts)
 - Procedures (policies)
 - People ...
-  * The most important component!
+    * The most important component!
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -71,13 +72,17 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_inf
 Image: Dzonatas, CC BY-SA 3.0, (Wikimedia)
 </small>
 
-[Systems development life cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle) (SDLC) [phases](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases):
+<br>
+<br>
 
-* [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
-* [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
-* [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
-* [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
-* [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
+- *[Systems Development Life Cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle)*
+
+    * [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) 
+        - [Feasibility Study](http://en.wikipedia.org/wiki/Feasibility_study)
+    * [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
+    * [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
+    * [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
+    * [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -96,9 +101,13 @@ Information systems vary in the transparency of the their implementations, in te
     * [Shareware](http://en.wikipedia.org/wiki/Shareware), Trialware
     * [Commercial software](http://en.wikipedia.org/wiki/Commercial_software): proprietary or open
 
-> The documentation for an **open standard** is open to the public and anyone can create a software that implements and uses the standard.
+<br>
+<br>
+<br>
 
-> The documentation and specification for **closed standards** are not available to the public.
+* The documentation for an **open standard** is open to the public and anyone can create a software that implements and uses the standard.
+
+* The documentation and specification for **closed standards** are not available to the public.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)

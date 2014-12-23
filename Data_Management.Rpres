@@ -1,7 +1,7 @@
 Data Management
 ========================================================
 author: Brian High
-date: 2014-12-01
+date: 2014-12-16
 transition: fade
 
 Research Computing and Data Management
@@ -15,7 +15,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 Data and Information
 ========================================================
-
 
 > [Data](http://en.wikipedia.org/wiki/Data) [are] *values* of qualitative or quantitative variables; restated, pieces of data are individual pieces of *information*.
 
@@ -99,7 +98,6 @@ Source: [US Coast Guard, Public Domain, (Wikipedia)](http://en.wikipedia.org/wik
 Information Mgmt. Challenges
 ========================================================
 
-
 Information managers may encounter ...
 
 * Lack of resources for managing information systems
@@ -112,3 +110,24 @@ Information managers may encounter ...
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_management#Information_management_complexities), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
+
+Data Hazards and Pitfalls
+========================================================
+
+- Corruption
+- Device failure
+- Backups
+- Versioning
+
+
+Real-life examples
+========================================================
+
+(Memory/disk/flash-drive corruption -> data-loss)
+
+Tips
+========================================================
+
+* Keep at least two copies in different physical locations.
+* Automate your backups and store (offsite) backups encrypted.
+

@@ -1,0 +1,72 @@
+Instrument Interfaces
+========================================================
+author: Brian High
+date: 2014-12-16
+transition: fade
+
+Research Computing and Data Management
+-------------------------------------------------------
+[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+
+<small style="font-size:.7em">
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</small> 
+
+Instrument Interfaces 
+========================================================
+
+- Input/Output (I/O) interfaces
+- Peripherals
+
+Data Acquisition
+-------------------
+
+- Remote
+- Instrument Data Acquisition Software
+
+Input/Output (I/O) interfaces
+========================================================
+
+- For "peripherals"
+- Various ports
+- Analog/digital
+
+
+Peripherals
+========================================================
+
+- Instruments
+- Sensors
+- Screens/printers
+- Keyboard/mice/touchpad/stylus
+
+Instrument interfaces
+========================================================
+
+- I/O cards
+- HPIB/GPIB
+- Ethernet
+- Serial
+- Parallel
+- USB
+
+Remote Data Aquisition
+========================================================
+
+- Sensors
+- "hackable" mini-systems
+  * Arduino
+  * Raspberry Pi
+-GPS
+- Mobile devices
+  * phones
+  * tablets
+
+Instrument Data Acquisition Software
+========================================================
+
+* LabVIEW
+* Chemstation
+* Torrent Suite
+

@@ -1,0 +1,25 @@
+// dot -Tpng sdlc_01.dot -o sdlc_01.png
+digraph SDLC {
+    layout = "circo";
+    splines = curved;
+    overlap = true;
+    P [label="Planning"];
+    A [label="Analysis"];
+    D [label="Design"];
+    I [label="Implementation"];
+    M [label="Maintenance"];
+
+  //P [label="Planning", pos="0.4635254915624212,1.4265847744427302!"];
+  //A [label="Analysis", pos="-1.213525491562421,0.8816778784387098!"];
+  //D [label="Design", pos="-1.2135254915624214,-0.8816778784387096!"];
+  //I [label="Implenetation", pos="0.46352549156242084,-1.4265847744427305!"];
+  //M [label="Maintenance", pos="1.5,-3.6739403974420594e-16!"];
+    P -> A;
+    A -> D;
+    D -> I;
+    I -> M;
+    M -> P;
+    
+    
+}
+

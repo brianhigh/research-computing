@@ -1,29 +1,38 @@
-Information Systems
-========================================================
-author: Brian High
-date: 2014-12-01
-transition: fade
+---
+title: "Information Systems"
+author: "Brian High"
+date: "December 22, 2014"
+output:
+  beamer_presentation:
+    highlight: default
+  ioslides_presentation:
+    css: style.css
+    fig_caption: yes
+    highlight: default
+    keep_md: no
+    number_sections: no
+    toc: yes
+logo: images/by-sa.png
+mode: draft
+license: Creative Commons Attribution-ShareAlike 4.0 International
+subtitle: Research Computing and Data Management
+github:
+  repo: research-computing
+  user: brianhigh
+---
 
-Research Computing and Data Management
--------------------------------------------------------
-[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+## Information System Components
+<div class="columns-2">
 
-<small style="font-size:.7em">
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+![Computer Hardware](images/personal_computer.png)
+
+<small style="font-size:.5em">
+Image: Gustavb, CC BY-SA 3.0, (Wikimedia)
 </small>
 
-Information System Components
-========================================================
-
-
-![personal computer](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Personal_computer%2C_exploded_5%2C_unlabeled.svg/446px-Personal_computer%2C_exploded_5%2C_unlabeled.svg.png)
-
-<small style="font-size:.7em">
-Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:Personal_computer,_exploded_5.svg)
-</small>
-
-----
+<br>
+<br>
+<br>
 
 - [Hardware](http://en.wikipedia.org/wiki/Computer_hardware) (machinery)
 - [Software](http://en.wikipedia.org/wiki/Software) (OS + apps)
@@ -36,9 +45,9 @@ Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:P
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Information System Types
-========================================================
+</div>
 
+## Information System Types
 
 - [Search](http://en.wikipedia.org/wiki/Web_search_engine) - [Search engines](http://en.wikipedia.org/wiki/Search_engine_%28computing%29),  [Google Search](http://en.wikipedia.org/wiki/Google_Search), [PubMed](http://en.wikipedia.org/wiki/PubMed)
 - [Spatial](http://en.wikipedia.org/wiki/Geographic_information_system) - [Geographic information system (GIS)](http://en.wikipedia.org/wiki/Geographic_information_system), [ArcGIS](http://en.wikipedia.org/wiki/ArcGIS), [QGIS](http://en.wikipedia.org/wiki/QGIS)
@@ -48,21 +57,19 @@ Information System Types
 - [Office](http://en.wikipedia.org/wiki/Office_automation) - [Business Process Automation (BPA)](http://en.wikipedia.org/wiki/Business_process_automation)
 - [Personal](http://en.wikipedia.org/wiki/Personal_information_manager) - Communications, [calendaring](http://en.wikipedia.org/wiki/Calendaring_software), journaling/notes
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Types_of_information_systems), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Systems Development
-========================================================
+## Systems Development
 
+<div class="columns-2">
 
-![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
+![SDLC](images/300px-SDLC-Maintenance-Highlighted.png)
 
-<small style="font-size:.7em">
-Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
+<small style="font-size:.5em">
+Image: Dzonatas, CC BY-SA 3.0, (Wikimedia)
 </small>
-
-----
 
 [Systems development life cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle) (SDLC) [phases](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases):
 
@@ -72,27 +79,29 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 * [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
 * [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-Transparency
-========================================================
+</div>
 
+## Transparency
+
+<div class="columns-2">
 
 Information systems vary in the transparency of the their implementations, in terms of both standards and implementation.
 
-* Open ([standards](http://en.wikipedia.org/wiki/Open_standard), [source](http://en.wikipedia.org/wiki/Open_source))
-* Closed ([proprietary](http://en.wikipedia.org/wiki/Proprietary_software))
-  * [Shareware](http://en.wikipedia.org/wiki/Shareware), Trialware
-* [Commercial software](http://en.wikipedia.org/wiki/Commercial_software): proprietary or open
-
-----
+- Open ([standards](http://en.wikipedia.org/wiki/Open_standard), [source](http://en.wikipedia.org/wiki/Open_source))
+- Closed ([proprietary](http://en.wikipedia.org/wiki/Proprietary_software))
+    * [Shareware](http://en.wikipedia.org/wiki/Shareware), Trialware
+    * [Commercial software](http://en.wikipedia.org/wiki/Commercial_software): proprietary or open
 
 > The documentation for an **open standard** is open to the public and anyone can create a software that implements and uses the standard.
 
 > The documentation and specification for **closed standards** are not available to the public.
 
-<small style="font-size:.7em">
+<small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
+
+</div>

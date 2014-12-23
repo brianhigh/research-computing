@@ -1,0 +1,18 @@
+// dot -Tpng sdlc_01.dot -o sdlc_01.png
+digraph SDLC {
+    layout = "circo";
+    splines = curved;
+    
+    P [label="Planning"];
+    A [label="Analysis"];
+    D [label="Design"];
+    I [label="Implementation"];
+    M [label="Maintenance"];
+
+    P -> A;
+    A -> D;
+    D -> I;
+    I -> M;
+    M -> P;
+}
+

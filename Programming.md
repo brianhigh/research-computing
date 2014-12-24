@@ -1,7 +1,7 @@
 Intro to Programming
 ========================================================
 author: Elliot Norwood
-date: 2014-12-24
+date: December 24, 2014 
 transition: fade
 
 Research Computing and Data Management

@@ -1,7 +1,7 @@
 Application Interfaces
 ========================================================
 author: Brian High & Elliot Norwood
-date: 2014-12-16
+date: `r format(Sys.Date(), format="%B %d, %Y")` 
 transition: fade
 
 Research Computing and Data Management

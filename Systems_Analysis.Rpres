@@ -1,7 +1,7 @@
 Systems Analysis
 ========================================================
 author: Brian High
-date: 2014-12-01
+date: `r format(Sys.Date(), format="%B %d, %Y")`
 transition: fade
 
 Research Computing and Data Management
@@ -15,7 +15,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 Systems Development Life Cycle
 ========================================================
-
 
 We will take a closer look at the **[systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)** phase.
 
@@ -40,22 +39,31 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 What will you need?
 ========================================================
 
-
 A **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*.
 
-[Requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis) is an **essential component** of *[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)*.
-
-[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) helps you **clarify your project needs** and **plan ahead** in order to obtain and allocate **critical resources**.
+- These skills **enable** you to:
+  * **Clarify** of your project needs
+  * **Plan** your project
+  * **Obtain** and **allocate** critical resources
 
 > If you don't *know* what you *need*, how can you *ask* for it?
 
 Systems Analysis
 ========================================================
 
+Imagine we have already:
 
-After completing an initial [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study) to "determine if creating a new or improved system is a viable solution", proposing the project, and gaining approval from [stakeholders](http://en.wikipedia.org/wiki/Project_stakeholder), you may then conduct a [systems analysis](http://en.wikipedia.org/wiki/Systems_analysis). 
+1. Completed initial [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study)
+2. Proposed the project
+3. Gained approval from from [stakeholders](http://en.wikipedia.org/wiki/Project_stakeholder) to proceed
 
-[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) will involve "[breaking down](http://en.wikipedia.org/wiki/Work_breakdown_structure) the system in different pieces to analyze the situation, **analyzing project goals**, breaking down what needs to be created and attempting to **engage users** so that **[definite requirements](http://en.wikipedia.org/wiki/Requirements_analysis)** can be defined."
+Now, our [Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) will:
+
+- [Break down](http://en.wikipedia.org/wiki/Work_breakdown_structure) the system in different pieces
+- Analyze the situation and **project goals**
+- Break down what needs to be created
+- **Engage users** to state **[definite requirements](http://en.wikipedia.org/wiki/Requirements_analysis)**
+
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -64,13 +72,14 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#
 Systems Analysis Definition
 ========================================================
 
-
 *analysis* = "to take apart"<sup style="font-size:.7em">1</sup>
 
 >[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) is a problem solving technique that decomposes a system into its component pieces for the purpose of the studying how well those component parts work and interact to accomplish their purpose.<sup style="font-size:.7em">2</sup>
 
-We will accomplish this analysis by working through a series of [five phases](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology).
+> *Lonnie D. Bentley*
 
+<br>
+<br>
 <small style="font-size:.7em">
 1. Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
@@ -80,7 +89,6 @@ We will accomplish this analysis by working through a series of [five phases](ht
 
 Systems Analysis Phases
 ========================================================
-
 
 ![systems analysis phases](./images/systems_analysis_01.png)
 
@@ -99,7 +107,6 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_te
 Scope Definition
 ========================================================
 
-
 > **Scope** involves *getting information* required to start a project, and the *features* the product would have that would meet its *stakeholders requirements*.
 
 * **Project Scope**: *work to be done*
@@ -113,7 +120,6 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29)
 
 Problem Analysis
 ========================================================
-
 
 * Define and clarify the problem
 * Determine the problem's importance
@@ -129,7 +135,6 @@ Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/
 
 Requirements Analysis
 ========================================================
-
 
 * [Elicit, Analyze, and Record (EAR)](http://en.wikipedia.org/wiki/Requirements_analysis#Overview):
   * System and project [requirements](http://en.wikipedia.org/wiki/Requirements_analysis)
@@ -155,7 +160,6 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-
 
 Requirements Modeling: Example
 ========================================================
-
 
 **Survey Data System**
 

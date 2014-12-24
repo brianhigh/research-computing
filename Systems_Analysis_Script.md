@@ -1,8 +1,5 @@
 Systems Analysis
 ========================================================
-author: Brian High
-date: 2014-12-01
-transition: fade
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -16,18 +13,44 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Systems Development Life Cycle
 ========================================================
 
+Systems analysis is an important part of an overall approach to *systems design*.
 
-We will take a closer look at the **[systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)** phase.
+The life of an information system follows a cycle. The classic development model is called
+the Systems Development Life Cycle, or SDLC.
 
-* [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
-* **[Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)**
-* [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
-* [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
-* [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
+Planning Phase
+--------------
+
+The [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation)  phase defines the primary issue (*problem* or *goal*) and performs a [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study). Here, you clarify the project scope, compare your best options, and come up with a plan.
+
+Analysis Phase
+--------------
+
+The [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis) phase focusses on the issue, defined previously, and studies its role in the current (or proposed) 
+system. The system is explored, piece by piece, in light of the project goals, to determine system requirements.
+
+Design Phase
+------------
+
+In the [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design) phase, a detailed model of the proposed system is created. Various components or modules address each of the requirements identified earlier.
+
+Implementation Phase
+--------------------
+
+During the [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29) phase, a working system is built from the design and put into use.
+
+Maintenance Phase
+--------------------
+
+The [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance) includes ongoing 
+updates and evaluation. As changes are needed, the cycle repeats with more planning, analysis, and so on.
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
+
+We will take a closer look at the **[systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)** phase next.
+
 
 ----
 
@@ -40,18 +63,18 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 What will you need?
 ========================================================
 
+Essentially, in *[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)* we answer the question, "*What will you need* to reach your goal?" In other words, **"What are your requirements?"**
 
 A **primary goal** of this course is to help you develop your skills in *[requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis)*.
 
-[Requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis) is an **essential component** of *[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis)*.
+[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) helps you **clarify your project needs** and **plan ahead** in order to *obtain and allocate* **critical resources**.
 
-[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) helps you **clarify your project needs** and **plan ahead** in order to obtain and allocate **critical resources**.
+The main idea here is ...
 
 > If you don't *know* what you *need*, how can you *ask* for it?
 
 Systems Analysis
 ========================================================
-
 
 After completing an initial [feasibility study](http://en.wikipedia.org/wiki/Feasibility_study) to "determine if creating a new or improved system is a viable solution", proposing the project, and gaining approval from [stakeholders](http://en.wikipedia.org/wiki/Project_stakeholder), you may then conduct a [systems analysis](http://en.wikipedia.org/wiki/Systems_analysis). 
 
@@ -64,8 +87,11 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle#
 Systems Analysis Definition
 ========================================================
 
+So, what, exactly, *is* "Systems Analysis"?
 
-*analysis* = "to take apart"<sup style="font-size:.7em">1</sup>
+*Analysis* means "to take apart"<sup style="font-size:.7em">1</sup>
+
+Lonnie D. Bentley, author of *Systems Analysis and Design for the Global Enterprise*, writes:
 
 >[Systems analysis](http://en.wikipedia.org/wiki/Systems_analysis) is a problem solving technique that decomposes a system into its component pieces for the purpose of the studying how well those component parts work and interact to accomplish their purpose.<sup style="font-size:.7em">2</sup>
 
@@ -81,16 +107,13 @@ We will accomplish this analysis by working through a series of [five phases](ht
 Systems Analysis Phases
 ========================================================
 
+Systems Analysis has its own series of phases. We will look at each of these one by one.
 
 ![systems analysis phases](./images/systems_analysis_01.png)
 
 ----
 
-1. [Scope definition](http://en.wikipedia.org/wiki/Scope_%28project_management%29): Establish system boundaries
-2. [Problem analysis](http://en.wikipedia.org/wiki/Problem_statement): Identify symptoms and causes
-3. [Requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis): Determine goals
-4. [Logical design](http://en.wikipedia.org/wiki/Systems_design#Logical_design): Model relationships
-5. [Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis): Evaluate alternatives
+During [Scope definition](http://en.wikipedia.org/wiki/Scope_%28project_management%29), we establish our system boundaries. In our [Problem analysis](http://en.wikipedia.org/wiki/Problem_statement) phase, we identify the symptoms and causes. Our [Requirements analysis](http://en.wikipedia.org/wiki/Requirements_analysis) determines our system goals. The [Logical design](http://en.wikipedia.org/wiki/Systems_design#Logical_design) phase models relationships within the system. And our [Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis) evaluates the various alternatives.
 
 <small style="font-size:.7em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_technology), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -99,12 +122,14 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_analysis#Information_te
 Scope Definition
 ========================================================
 
+So, do we mean by *scope*?
 
 > **Scope** involves *getting information* required to start a project, and the *features* the product would have that would meet its *stakeholders requirements*.
 
-* **Project Scope**: *work to be done*
-* **Product Scope**: *desired features and functions*
-    
+Put another way, *project* scope defines the *work to be done* whereas *product* scope is concerned with the *desired features and functions*.
+
+By being careful to define scope *early on*, we can be more watchful for *scope creep*.
+
 > **Scope creep** is [...] the *incremental expansion* of the scope of a project [...], while nevertheless *failing to adjust* schedule and budget.
 
 <small style="font-size:.7em">
@@ -114,14 +139,37 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Scope_%28project_management%29)
 Problem Analysis
 ========================================================
 
+Problem analysis is critical. When we say, *problem*, we can also think *goal* or *research question*. If you don't get this right, you can waste a lot of time and money solving the *wrong* problem.
 
-* Define and clarify the problem
-* Determine the problem's importance
-* Assess the feasibility of solving the problem
-* Consider any negative impacts (unintended consequences)
-* Prioritize problems to solve (bottlenecks? low-hanging fruit?)
-* Answer: *what*, *why*, *who*, *when*, *where*, and *how much*?
-* Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) and **symptoms** (effects)
+We can summarize the key points of problem analysis (with some help from Jenette Nagy of Kansas University) as:
+
+> Define and clarify the problem
+
+*What exactly are we trying to solve?*
+
+> Determine the problem's importance
+
+*How much does it matter?*
+
+> Assess the feasibility of solving the problem
+
+*Do we have the resources we need?*
+
+> Consider any negative impacts (unintended consequences)
+
+*What could go wrong?*
+
+> Prioritize problems to solve (bottlenecks? low-hanging fruit?)
+
+*What are the most critical issues?*
+
+> Answer: *what*, *why*, *who*, *when*, *where*, and *how much*?
+
+*Drill down into the problem with all kinds of questions to expose dependencies.*
+
+> Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) and **symptoms** (effects)
+
+*Are these causes or just symptoms?*
 
 <small style="font-size:.7em">
 Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/en/table-of-contents/analyze/analyze-community-problems-and-solutions/define-analyze-problem/main)
@@ -129,7 +177,6 @@ Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/
 
 Requirements Analysis
 ========================================================
-
 
 * [Elicit, Analyze, and Record (EAR)](http://en.wikipedia.org/wiki/Requirements_analysis#Overview):
   * System and project [requirements](http://en.wikipedia.org/wiki/Requirements_analysis)

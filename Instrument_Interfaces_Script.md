@@ -10,25 +10,20 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small> 
 
-Instrument Interfaces 
+Introduction 
 ========================================================
 
-Input/Output Interfaces enable a computer to communicate with a variety of devices. These range from simple perihperals, such as a keyboard to a complex scientific instrument.
+Data is waiting to become information. Through instrument interfaces, and data acquisition software you can transform raw data into useful information.
 
-Data Acquisition
--------------------
-
-Data can be acquired through remote sensing systems, or in the lab using instrument data acquisition software.
-
-Input/Output (I/O) interfaces
+Input/Output (I/O)
 ========================================================
 
-Peripherals interface with the computer via a variety of protocols, ports, and sometimes wirelessly. These interfaces are typically digital, however some are analog.
+Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports, and sometimes wireless technology. These interfaces are typically digital, however some are analog.
 
 Peripherals
 ========================================================
 
-Peripherals include instruments, sensors, monitors, keyboards, etc. Each of these devices connects via some interface which could be wired or wireless. Be aware though, that a peripheral may be available in more than one interface type. 
+Peripherals are not limited to monitors and keyboards. They also include sensors, and complex instruments. Each of these devices connects via some interface which could be wired or wireless. Be aware though, that a peripheral may be available in more than one interface type. 
 
 Instrument Interfaces
 ========================================================

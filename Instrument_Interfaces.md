@@ -1,7 +1,7 @@
 Instrument Interfaces
 ========================================================
-author: Brian High
-date: 2014-12-16
+author: John Yocum
+date: 2014-12-24
 transition: fade
 
 Research Computing and Data Management
@@ -10,22 +10,10 @@ Research Computing and Data Management
 
 <small style="font-size:.5em">
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-sa/4.0/88x31.png" /></a>
 </small> 
 
-Instrument Interfaces 
-========================================================
-
-- Input/Output (I/O) interfaces
-- Peripherals
-
-Data Acquisition
--------------------
-
-- Remote
-- Instrument Data Acquisition Software
-
-Input/Output (I/O) Interfaces
+Input/Output (I/O)
 ========================================================
 
 - Peripherals
@@ -40,15 +28,15 @@ Input/Output (I/O) Interfaces
 Peripherals
 ========================================================
 
-- Instruments
-- Sensors
 - Monitors/printers
 - Keyboard/mouse/touchpad/stylus
+- Sensors
+- Instruments
 
 Instrument Interfaces
 ========================================================
 
-- I/O cards
+- I/O Cards
 - HPIB/GPIB
 - Ethernet
 - Serial

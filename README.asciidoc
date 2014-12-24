@@ -1,0 +1,26 @@
+== Research Computing
+
+This resource contains the slides in R Markdown format as well as scripts to
+go with those slides. The scripts will eventually be made into wiki pages and
+then will be compiled in PDF and Epub ebooks.
+
+The target audience is primarily college students, particularly graduate students, 
+who conduct academic or scientific research. The information will also be useful 
+for working professionals.
+
+=== The Research Computing Team
+
+Thanks to the following people who have contributed to this resource (in
+no particular order):
+
+_Brian High, Jim Hogan, John Yocum, and Elliot Norwood_
+
+=== Copyright, License and Disclaimer
+
+Copyright © The https://github.com/brianhigh/research-computing[Research Computing
+Team]. This information is provided for educational purposes
+only. See
+https://github.com/brianhigh/research-computing/blob/master/LICENSE[LICENSE]
+for more information.
+https://creativecommons.org/licenses/by/4.0/[Creative Commons
+Attribution 4.0 International Public License].

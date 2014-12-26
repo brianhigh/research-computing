@@ -13,6 +13,27 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small>
 
+Networking Script
+===================
+- [Cue Also Sprach Zarathustra]
+
+Intro
+-------
+
+The intent of this 30-minute presentation is to give students a somewhat better undertanding of the basic underpinnings of computer networking as it relates to Research and Data Management.
+
+We'll cover a number of areas including
+
+Slide 1
+-----------
+
+- [Script]
+
+
+
+
+
+
 Computer Networks
 ========================================================
 

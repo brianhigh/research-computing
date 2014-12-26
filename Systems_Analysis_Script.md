@@ -234,14 +234,38 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Requirements_analysis), [CC BY-
 
 ----
 
+You may categorize requirements according to several important types:
+
 [Types of requirements](http://en.wikipedia.org/wiki/Requirements_analysis#Types_of_Requirements):
+
 - Operational
+
+> *Operational requirements are the **utility, effectiveness, and deployment** needs, with repect to practical use of the system within the overall operation. These are the **customer Requirements**.*
+
 - [Functional](http://en.wikipedia.org/wiki/Functional_requirement)
+
+> *Functional requirements are specific things the system must **do**.*
+
 - [Non-functional](http://en.wikipedia.org/wiki/Non-functional_requirement)
+
+> *Non-functional requirements are specific things the system must **provide**.*
+
 - [Architectural](http://en.wikipedia.org/wiki/Systems_architecture)
+
+> *Architectural requirements define how the system must be **structured**, 
+in other words, how the components must **interrelate**.*
+
 - Behavioral
+
+> *Behavioral requirements describe how **users** and other systems will **interact** with the system and how the **system** will respond.*
+
 - Performance
+
+> Performance requires define **how well** the systems needs to do things, **measured** in terms of quantity, quality, coverage, timeliness or readiness.
+
 - (Others...)
+
+> While there are other ways to group requirements, these are the most significant categories.
 
 Requirements Modeling: Example
 ========================================================
@@ -269,18 +293,27 @@ The [Use Case Diagram](http://en.wikipedia.org/wiki/Use_case) is a standard mean
 Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/master/images/research_survey_data_system.png), [Public Domain, CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/)
 </small>
 
-Here, human *actors* are depicted as stick figures. These are the **roles**. The goal is the line connecting the role to a system activity of function, shown as an oval. In this example, the *system* is drawn as a box with the actors outside the box. The reason is that the system's *product scope* was defined to be electronic data system. The human actors interact with that system. The information flowing to and from an actor will be modeled in the *logical design*.
+Here, human *actors* are depicted as stick figures. These are the **roles**. 
+The goal is the line connecting the role to a system activity of function, 
+shown as an oval. In this example, the *system* is drawn as a box with the 
+actors outside the box. The reason is that the system's *product scope* was 
+defined to be electronic data system. The human actors interact with that 
+system. The information flowing to and from an actor, as well as data flows 
+within a system, will be modeled in the *logical design*.
 
 Logical Design
 ========================================================
 
-
-- Abstract representation
-- Data flows, entities, and relationships
-- Inputs and outputs
-- Graphical modeling:
-  * [Data Flow Diagram (DFD)](http://en.wikipedia.org/wiki/Data_flow_diagram)
-  * [Entity Relationship Diagram (ERD)](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
+Once system behaviours have been modeled from the perspective of user 
+interaction, we can begin to model the internal workings of the system with 
+the *logical design*. The *logical* part means that this is an 
+*abstract representation* of the system. Therefore, the system is modeled 
+in terms of abstractions such as *data flows, entities, and relationships*. 
+We model how the system will satisfy function requirements such as 
+*inputs and outputs*. To make the abstract more concrete, we make use of 
+*Graphical modeling* techniques to produce graphics such as the 
+[Data Flow Diagram (DFD)](http://en.wikipedia.org/wiki/Data_flow_diagram) and 
+[Entity Relationship Diagram (ERD)](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model).
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -288,11 +321,28 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_design#Logical_design),
 
 ----
 
-[Entity Relationship Diagram](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
-
-- **Artist** *performs song*
+For example, let's consider a systems which records the playlists of musical 
+performances at a local pub. You will want to store which artist performs which 
+song. The relationship between an artist and a song can be shown in a 
+simple [Entity Relationship Diagram](http://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model). We start with the behavioral *use case* written as **Artist** *performs Song*. Then,
+using a standard set of symbols, we can produce this diagram.
 
 ![artist performs song](http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/ERD-artist-performs-song.svg/640px-ERD-artist-performs-song.svg.png)
+
+The boxes represent *entities* and the line connecting them is the relationship. 
+Here, the symbols indicate that there is a one to many relationship. This diagram 
+is saying that exactly one artist performs one or more songs, (or doesn't perform 
+any). 
+
+Since this "system" describes only solo performers, you would want to model 
+it differently to include groups of artists that perform more than one song. You 
+would want a many to many relationship as well as entities to represent the 
+musical groups. Since there will by many performances, you will also want an 
+entity to represent the performances. 
+
+The value of this type of diagram is that complex relationships can be mapped 
+to a great level of detail. In fact, they can be used to automatically generate 
+database schemas.
 
 <small style="font-size:.5em">
 Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-performs-song.svg), [Public Domain](http://en.wikipedia.org/wiki/Public_domain)
@@ -301,9 +351,12 @@ Source: [Bignose, Wikimedia](http://commons.wikimedia.org/wiki/File:ERD-artist-p
 Logical Design: Diagrams
 ========================================================
 
-Several examples of these diagrams can be found in [Systems Analysis and Design](https://github.com/brianhigh/data-workshop/blob/master/Systems_Analysis_and_Design.md).
+Several examples of these diagrams can be found in the 
+[Systems Analysis and Design](https://github.com/brianhigh/data-workshop/blob/master/Systems_Analysis_and_Design.md) course repository.
 
 This [tutorial](https://github.com/brianhigh/data-workshop/blob/master/Systems_Analysis_and_Design.md)<sup style="font-size:.5em">1</sup> ([PDF](https://canvas.uw.edu/courses/951183/modules/items/5479924), [HTML](https://canvas.uw.edu/courses/951183/modules/items/5479962), [MP4](https://canvas.uw.edu/courses/951183/modules/items/5479995)) provides several examples from a fictitious public health research study.
+
+You will find several real-world examples from actual public health research projects.
 
 <small style="font-size:.5em">
 1. See also: *[Data Management](https://canvas.uw.edu/courses/951183/modules)*, UW Canvas.
@@ -320,15 +373,27 @@ Source: [Brian High, Github](https://github.com/brianhigh/data-workshop/blob/mas
 Decision Analysis
 ========================================================
 
+These models and diagrams will help you make a very important decision. Before 
+you go further in the system design process, you need to decide whether to buy 
+a system or build one. Or you may consider building a system of components, 
+some of which you might buy and others might be custom built. You will want to 
+come up with a few of the best alternatives and present them to your 
+stakeholders. In your case that might be your lab manager, principal 
+investigator, or funding agency. 
 
-[Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis) involves ...
-- Presentation of alternatives:
-  * What to buy or build?
-- Evaluation of alternatives:
-  * Assess the "pros and cons"
-  * Compare against requirements
-- Make a recommendation to stakeholders
-- Get a decision from stakeholders
+Your presentation will also include a 
+[Decision analysis](http://en.wikipedia.org/wiki/Decision_analysis) to weigh  
+the pros and cons of the various options against the requirements in order to 
+help the stakeholders with their decision. You should conclude your 
+analysis with a recommendation of your top choice and explain why this choice 
+is the most compelling. Then you will want to get a decision, and the approval 
+to continue, before you invest any more time on further analysis.
+
+The system development life cycle (SDLC) continues on to other phases, which we 
+do not have time to cover here. However, we hope that this glipse at the systems 
+analysis phase has demonstrated the value of this approach in gathering and 
+clarifying requirements that can be used to design and build an information 
+system.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Decision_analysis), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)

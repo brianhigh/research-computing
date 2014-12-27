@@ -3,7 +3,7 @@ Systems Analysis
 author: Brian High
 date: December 26, 2014
 transition: fade
-#incremental: true
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------

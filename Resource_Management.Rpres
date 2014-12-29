@@ -1,7 +1,7 @@
 Resource Management
 ========================================================
-author: Brian High
-date: 2014-12-16
+author: John Yocum
+date: 2014-12-29
 transition: fade
 
 Research Computing and Data Management
@@ -21,15 +21,15 @@ Resource Management
   * CPU
   * RAM
   * Disk
-- Monitoring Utilization
 - Optimization
-- Parallel processing
-
+- Parallel Processing
+- Monitoring Utilization
 
 System Resources
 ========================================================
 
 - CPU: Central Processing Unit
+  * Clock Speed
   * Processor Cores
 - RAM: Random Access Memory
   * Insertable modules
@@ -59,9 +59,10 @@ Programs that read all data into RAM by default:
 - MATLAB
 - Excel
 
-CPU Utilization: Parallel processing
+CPU Utilization: Parallel Processing
 ========================================================
 
 - "divide and conquer"
 - MapReduce
+- GNU Parallel
 - some examples

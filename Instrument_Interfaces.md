@@ -25,6 +25,10 @@ Input/Output (I/O)
 
 ![IO Card](http://upload.wikimedia.org/wikipedia/commons/f/f8/Chassis-plans-Digital-IO-Card.jpg)
 
+<small style="font-size:.5em">
+Source: [Lippincott, CC-BY-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Chassis-plans-Digital-IO-Card.jpg)
+</small>
+
 Peripherals
 ========================================================
 
@@ -52,6 +56,10 @@ Instrument Interfaces
 
 ![IEE-488](http://upload.wikimedia.org/wikipedia/commons/7/76/IEEE-488-Stecker2.jpg)
 
+<small style="font-size:.5em">
+Source: [1-1111, Public Domain, (Wikimedia)](http://commons.wikimedia.org/wiki/File:IEEE-488-Stecker2.jpg)
+</small>
+
 Remote Data Aquisition
 ========================================================
 
@@ -67,6 +75,10 @@ Remote Data Aquisition
 ***
 
 ![Arduino Uno](http://upload.wikimedia.org/wikipedia/commons/9/9d/UnoConnections.jpg)
+
+<small style="font-size:.5em">
+Source: [1sfoerster, CC-BY-SA-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:UnoConnections.jpg)
+</small>
 
 Instrument Data Acquisition Software
 ========================================================

@@ -17,7 +17,7 @@ Resource Management
 ========================================================
 
 - Capacity Planning
-- System Resources
+- **System Resources**
   * CPU
   * RAM
   * Disk
@@ -28,14 +28,14 @@ Resource Management
 System Resources
 ========================================================
 
-- CPU: Central Processing Unit
+- **CPU:** Central Processing Unit
   * Clock Speed
   * Processor Cores
-- RAM: Random Access Memory
+- **RAM:** Random Access Memory
   * Insertable modules
   * Relatively Cheap
   * Fast
-- Disk
+- **Disk**
   * Sizes and types
   * Arrays
   * Network
@@ -43,26 +43,49 @@ System Resources
 Optimization
 ========================================================
 
-- Monitor resource utilization
+- Monitor Utilization
   * Windows
+     * Performance Monitor
   * Mac
+     * Activity Monitor
   * Linux
+     * htop
+     * iostat
 - Find bottlenecks
 - Reduce bottlenecks
+
+***
+
+![Performance Monitor](http://upload.wikimedia.org/wikipedia/en/9/9a/Performance_Monitor_-_Windows_7.png)
+
+<small style="font-size:.5em">
+Source: [Used with permission from Microsoft](http://en.wikipedia.org/wiki/File:Performance_Monitor_-_Windows_7.png)
+</small>
 
 Memory Utilization
 ========================================================
 
-Programs that read all data into RAM by default: 
+Some applications read all data into RAM by default:
 
 - R
 - MATLAB
 - Excel
+- Stata
 
-CPU Utilization: Parallel Processing
+In each of these cases, there are some tools or methods to help reduce consumption.
+
+CPU Utilization
 ========================================================
 
-- "divide and conquer"
+**Parallel Processing**
+-------------------------------------------------------
+
+- "Divide and Conquer"
+  - Break down tasks into many small ones
+  - Maximize CPU core utilization
 - MapReduce
+  - Open source framework for parallel processing
 - GNU Parallel
-- some examples
+  - Open source tool for managing parallel tasks
+- Examples:
+  - Climate data

@@ -38,20 +38,18 @@ In order to optimize your data, and work-flow, you need to identify what resourc
 
 Every operating system has tools to track resource usage. On Windows, the Performance Monitor is the most helpful. It gives a break of RAM, CPU, Disk, and Network utilization by application. On a Mac, the Activity Monitor is the most user friendly method of tracking resource usage. And, in the newest versions of OS X it has a color coding scheme to help identify if you are hitting the limits. On Linux, you've got many choices, but htop is a solid choice for CPU and RAM monitoring. For disk activity, you'll want to use iostat.
 
-Once you have determined your usage, you can try to identify bottlenecks. A bottleneck could be caused by your available resources, or your software. If you aren't maxing out the CPU, Memory, and Disk, then the bottleneck is likely within the software itself. However, if you are maxing out a particular resource, then increasing the capacity should help. For example, if your system has a single hard disk drive, which is being maxed out, replacing it with a solid state drive should speed things up.
+Once you have determined your usage, you can try to identify bottlenecks. A bottleneck could be caused by your available resources, or your software. If you aren't maxing out the CPU, Memory, and Disk, then the bottleneck is likely within the software itself. However, if you are maxing out a particular resource, then increasing the available resources should help. For example, if your system has a single hard disk drive, and it's being maxed out, replacing it with a solid state drive should speed things up.
 
 Memory Utilization
 ========================================================
 
-Memory or RAM must be utilized effectively. Exceeding the available RAM in your system can result in a severe drop in performance. Unfortunately, applications such as R, and Matlab  are memory intensive, and require RAM equal to the size of the data you are processing. If you are using applications that operate in the manner, you may need to purchase a lot of RAM, or break up your data into smaller chunks which can fit within your systems memory capacity.
+Memory or RAM must be utilized effectively. Exceeding the available RAM in your system can result in a severe drop in performance. Unfortunately, applications such as R, and Matlab  are memory intensive, and require RAM equal to the size of the data you are processing. If you are using applications that operate in this manner, you may need to purchase a lot of RAM, or break up your data into smaller chunks which can fit within your available resources.
 
 CPU Utilization: Parallel Processing
 ========================================================
 
 With modern CPUs having multiple cores, parallel processing is the only effective way to utilize all of the CPU power available. In order to utilize it, your data and work-flow may need adjustment. With parallel processing, your data is divided into pieces, and calculations are done on several pieces simultaneously.
 
-Thankfully, there are some well developed tools and techniques to help with this. One of the more common is MapReduce which is used with Apache's Hadoop. MapReduce is framework for processing large volumes of data in parallel. Some lesser seen tools include GNU Parallel which is a tool used to run and manage command-line tools in a parallel fashion.
+Thankfully, there are some well developed tools and techniques to help with this. One of the more common is MapReduce which is used with Apache's Hadoop. MapReduce is a framework for processing large volumes of data in parallel. Some lesser seen tools include GNU Parallel which is a tool used to run and manage command-line tools in a parallel fashion.
 
-- "divide and conquer"
-- MapReduce
-- GNU P
+As an example, climate data can be processed in a parallel fashion. The data can be divided up by area, and then computation performed on a per area basis.

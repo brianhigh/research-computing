@@ -18,7 +18,7 @@ Data is waiting to become information. Through instrument interfaces, and data a
 Input/Output (I/O)
 ========================================================
 
-Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports, and sometimes wireless technology. These interfaces are typically digital, however some are analog.
+Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports or connectors, and sometimes wireless technology. These interfaces are typically digital, however some, such as audio, are analog.
 
 Peripherals
 ========================================================

@@ -17,7 +17,7 @@ Input/Output (I/O)
 ========================================================
 
 - Peripherals
-- Ports
+- Ports and Connectors
 - Wireless
 - Analog/digital
 
@@ -31,14 +31,19 @@ Peripherals
 - Monitors/printers
 - Keyboard/mouse/touchpad/stylus
 - Sensors
+  - Temperature, pressure, etc.
 - Instruments
+  - HPLC, and many more.
 
 Instrument Interfaces
 ========================================================
 
 - I/O Cards
+  - expand the I/O capabilities of a computer
 - HPIB/GPIB
+  - widely used instrument interface
 - Ethernet
+  - most prolific network interface technology
 - Serial
 - Parallel
 - USB
@@ -54,7 +59,7 @@ Remote Data Aquisition
 - "hackable" mini-systems
   * Arduino
   * Raspberry Pi
--GPS
+- GPS
 - Mobile devices
   * phones
   * tablets
@@ -67,6 +72,9 @@ Instrument Data Acquisition Software
 ========================================================
 
 * LabVIEW
+  * Programmable data acquisition system
 * Chemstation
+  * Widely used chromatography package
 * Torrent Suite
+  * Open source sequence analyzer
 

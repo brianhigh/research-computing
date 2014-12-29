@@ -1,7 +1,7 @@
 Instrument Interfaces
 ========================================================
 author: John Yocum
-date: 2014-12-24
+date: `r format(Sys.Date(), format="%B %d, %Y")`
 transition: fade
 
 Research Computing and Data Management

@@ -1,12 +1,7 @@
-Computer Networking
+Information Security
 ========================================================
-<<<<<<< HEAD
 author: Brian High
-date: 2014-12-08
-=======
-author: Jim Hogan
-date: 2014-12-23
->>>>>>> 405d3bb93fc7bb706ad83fd0d92989c965e0bcd9
+date: 2014-12-16
 transition: fade
 
 Research Computing and Data Management
@@ -18,76 +13,95 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 </small>
 
-Computer Networks
+
+Information Security 
 ========================================================
 
-- Computer networks:
-  * Provide a means for devices to communicate
-- Computing devices: 
-  * Communicate by exchanging data
+- CIA (AAA)
+- Controls
+- Encryption
+- Best Practices
 
-Networking
+CIA (AAA)
 ========================================================
 
-- Internet
-- Components
-- Topologies
-- Layers
+- Confidentiality
+- Integrity
+- Availability
+- Accounting
+- Accountability
+
+Controls
+========================================================
+
+- Administrative (policies)
+- Logical (accounts)
+- Physical (door locks)
+
+Access control
+========================================================
+
+- Identification
+- Authentication
+- Authorization
+
+Securing Storage
+========================================================
+
+- Backups
+- Snapshots
+- Archives
+- Version control
+
+Encryption
+========================================================
+
+- Codes/cyphers
+- Keys (length)
+- Standards
 - Protocols
-- Speeds
+- PKI: Public Key Infrastructure
 
-
-Internet
+Encryption software
 ========================================================
 
-- History
-- Components
-- Structure ("Cloud")
+Stream/Session based:
 
+- Web, SSH, SFTP (SSL/TLS)
+- Lock Symbol
+- Certificates
+- Negotiation
 
-Components
+----
+
+File based:
+
+- 7-Zip
+- TrueCrypt
+- PDF
+- PGP
+
+Encryption Standards
 ========================================================
 
-- Nodes
-  * hosts
-  * switches
-  * routers
-- Links
+National standards (NIST):
+
+- DES
+- 3DES
+- AES
 
 
-Topologies
+Some Basic Security Tips
 ========================================================
 
-- Bus
-- Star
-- Ring
-- Mesh
-- tree
-- Line
-- Fully connected
+* Security on personal computers and devices is easily subverted.
 
-Network Layers
+* Internet-connected devices are under attack day and night.
+
+* Anti-virus software is not updated fast enough to keep up.
+
+Best practices
 ========================================================
 
-- Link
-- Internet
-- Transport
-- Application
+List and discuss data security best practices.
 
-Protocols/addressing
-========================================================
-
-- Ethernet
-- TCP/IP
-- DNS
-- HTTP
-- SMTP
-- IMAP
-- RDP
-
-Common Network Speeds
-========================================================
-
-- Home
-- Small business
-- Campus

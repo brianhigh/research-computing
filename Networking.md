@@ -1,12 +1,7 @@
 Computer Networking
 ========================================================
-<<<<<<< HEAD
-author: Brian High
-date: 2014-12-08
-=======
 author: Jim Hogan
 date: 2014-12-23
->>>>>>> 405d3bb93fc7bb706ad83fd0d92989c965e0bcd9
 transition: fade
 
 Research Computing and Data Management
@@ -20,6 +15,8 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 Computer Networks
 ========================================================
+
+![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
 
 - Computer networks:
   * Provide a means for devices to communicate

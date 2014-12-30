@@ -18,7 +18,7 @@ Data is waiting to become information. Through instrument interfaces, and data a
 Input/Output (I/O)
 ========================================================
 
-Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports, and sometimes wireless technology. These interfaces are typically digital, however some are analog.
+Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports or connectors, and sometimes wireless technology. These interfaces are typically digital, however some, such as audio, are analog.
 
 Peripherals
 ========================================================
@@ -30,7 +30,7 @@ Instrument Interfaces
 
 An input/output card expands a computer's I/O options. These can range from a basic USB card, to a GPIB controller.
 
-HPIB evolved into the standard General Purpose Interface Bus, is a standarized interface bus used by a wide array of scientific instruments. One nice feature of GPIB, is the ease of converting it into another interface technology such as ethernet or USB.
+HPIB evolved into the General Purpose Interface Bus, it's a standarized interface bus used by a wide array of scientific instruments. One nice feature of GPIB, is the ease of converting it into another interface technology such as ethernet or USB.
 
 Ethernet is the most common network interface technology. Many modern instruments have native ethernet support, enabling them to be accessed directly from a desk, instead of via a computer located next to the instrument.
 
@@ -43,20 +43,20 @@ USB is a fairly universal bus technology. It's used to connect everything from k
 Remote Data Aquisition
 ========================================================
 
-Sensors exist for most everything, from temperature to particulate detection.
+Sensors exist for most everything, from temperature and pressure to particulate detection.
 
 Hackable devices have become popular in the past few years. They are designed to make development of custom devices and sensor packages more accessible to a wider user base. In the past, where a commerically built sensor package would be used, a hackable system may be a suitable replacement.
 
 GPS enables you to quickly and accurately determine location, altitude, and time. By integrating GPS into your field data acquisition, you may be able to partially automate location tracking of sensors and samples.
 
-Mobile devices such as smartphones and tablets can be used for field data acquisition. They can be used to scan barcodes on sample containers and record the location (when equipped withGPS), or used to log notes during an interview.
+Mobile devices such as smartphones and tablets can be used for field data acquisition. They can be used to scan barcodes on sample containers and record the location (when equipped with GPS), or used to log notes during an interview.
 
 * http://coverclock.blogspot.com/2012/01/remote-sensing-with-arduino.html
 
 Instrument Data Acquisition Software
 ========================================================
 
-Instruments require acquisition software. It translate the raw data from the instrument into a useful file format, or provides some additional processing capability.
+Instruments require acquisition software. It translates the raw data from the instrument into a useful file format, or provides some additional processing capability. Keep in mind, some software and formats are limited to specific brands of instruments. So, be sure the software you wish to use will work with your equipment and other tools.
 
 LabVIEW is a popular package due to it's unique development language, called G. What sets G a part from others, is the graphical development model. Instead of writing pages of code, you graphically build your acquisition system by dragging and dropping objects on the screen.
 

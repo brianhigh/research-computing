@@ -1,7 +1,7 @@
 Instrument Interfaces
 ========================================================
 author: John Yocum
-date: 2014-12-24
+date: December 29, 2014
 transition: fade
 
 Research Computing and Data Management
@@ -17,7 +17,7 @@ Input/Output (I/O)
 ========================================================
 
 - Peripherals
-- Ports
+- Ports and Connectors
 - Wireless
 - Analog/digital
 
@@ -25,20 +25,29 @@ Input/Output (I/O)
 
 ![IO Card](http://upload.wikimedia.org/wikipedia/commons/f/f8/Chassis-plans-Digital-IO-Card.jpg)
 
+<small style="font-size:.5em">
+Source: [Lippincott, CC-BY-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Chassis-plans-Digital-IO-Card.jpg)
+</small>
+
 Peripherals
 ========================================================
 
 - Monitors/printers
 - Keyboard/mouse/touchpad/stylus
 - Sensors
+  - Temperature, pressure, etc.
 - Instruments
+  - HPLC, and many more.
 
 Instrument Interfaces
 ========================================================
 
 - I/O Cards
+  - expand the I/O capabilities of a computer
 - HPIB/GPIB
+  - widely used instrument interface
 - Ethernet
+  - most prolific network interface technology
 - Serial
 - Parallel
 - USB
@@ -47,6 +56,10 @@ Instrument Interfaces
 
 ![IEE-488](http://upload.wikimedia.org/wikipedia/commons/7/76/IEEE-488-Stecker2.jpg)
 
+<small style="font-size:.5em">
+Source: [1-1111, Public Domain, (Wikimedia)](http://commons.wikimedia.org/wiki/File:IEEE-488-Stecker2.jpg)
+</small>
+
 Remote Data Aquisition
 ========================================================
 
@@ -54,7 +67,7 @@ Remote Data Aquisition
 - "hackable" mini-systems
   * Arduino
   * Raspberry Pi
--GPS
+- GPS
 - Mobile devices
   * phones
   * tablets
@@ -63,10 +76,17 @@ Remote Data Aquisition
 
 ![Arduino Uno](http://upload.wikimedia.org/wikipedia/commons/9/9d/UnoConnections.jpg)
 
+<small style="font-size:.5em">
+Source: [1sfoerster, CC-BY-SA-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:UnoConnections.jpg)
+</small>
+
 Instrument Data Acquisition Software
 ========================================================
 
 * LabVIEW
+  * Programmable data acquisition system
 * Chemstation
+  * Widely used chromatography package
 * Torrent Suite
+  * Open source sequence analyzer
 

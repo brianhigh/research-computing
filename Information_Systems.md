@@ -1,7 +1,7 @@
 Information Systems
 ========================================================
 author: Brian High
-date: December 30, 2014
+date: December 31, 2014
 transition: fade
 #incremental: true
 
@@ -183,29 +183,35 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development), [C
 Transparency
 ========================================================
 
-[Interoperability](http://en.wikipedia.org/wiki/Interoperability) standards and specific design details may be:
+Information systems may be:
 
 - Open ([standards](http://en.wikipedia.org/wiki/Open_standard), [source](http://en.wikipedia.org/wiki/Open_source))
 - Closed ([proprietary](http://en.wikipedia.org/wiki/Proprietary_software))
-    * Source code
-    * File formats 
-    * Communications protocols
-    * Encryption algorithms
 
-----
+Affecting [interoperability](http://en.wikipedia.org/wiki/Interoperability) of:
 
-> The documentation for an **open standard** is open to the public and anyone can create a software that implements and uses the standard.
-
-<br>
-Aside...
-
-[Commercial software](http://en.wikipedia.org/wiki/Commercial_software): may be proprietary *or* open *or* both.
-
+- [File formats](http://en.wikipedia.org/wiki/File_format)
+- [Communications protocols](http://en.wikipedia.org/wiki/Communications_protocol)
+- [Encryption](http://en.wikipedia.org/wiki/Encryption)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
+----
+
+[Openness](http://en.wikipedia.org/wiki/Openness) is also important in:
+
+- [Government](http://en.wikipedia.org/wiki/Open_government)
+- [Research](http://en.wikipedia.org/wiki/Open_research)
+- [Education](http://en.wikipedia.org/wiki/Open_education)
+- [Courseware](http://en.wikipedia.org/wiki/OpenCourseWare)
+- [Content](http://en.wikipedia.org/wiki/Open_content)
+- [Culture](http://en.wikipedia.org/wiki/Free_culture_movement)
+
+<small style="font-size:.5em">
+Source: [Wikipedia](http://en.wikipedia.org/wiki/Openness), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
+</small>
 
 Transparency Example: This Course
 ========================================================
@@ -215,8 +221,8 @@ Transparency Example: This Course
 * Open content review process
 * Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
 * Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
-* Open file formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
-* [Open source](http://en.wikipedia.org/wiki/Open_source) tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell))
-* Open communications protocol standards (HTTP/HTTPS)
+* Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
+* [Open](http://en.wikipedia.org/wiki/Open_source) tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell))
+* Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***

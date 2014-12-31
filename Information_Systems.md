@@ -200,7 +200,8 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._close
 
 ----
 
-[Openness](http://en.wikipedia.org/wiki/Openness) is also important in:
+Information [transparency](http://en.wikipedia.org/wiki/Transparency_%28behavior%29) 
+supports [openness](http://en.wikipedia.org/wiki/Openness) in:
 
 - [Government](http://en.wikipedia.org/wiki/Open_government)
 - [Research](http://en.wikipedia.org/wiki/Open_research)
@@ -222,7 +223,7 @@ Transparency Example: This Course
 * Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
 * Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
 * Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
-* [Open](http://en.wikipedia.org/wiki/Open_source) tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell))
+* Open tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)
 * Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***

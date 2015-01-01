@@ -99,14 +99,13 @@ Source: [Beao Old waterfall: Paul Smith, Public Domain, (Wikimedia)](http://comm
 
 ----
 
-- Waterfall development
-- Prototyping
-- Incremental development
-- Iterative and incremental development
-- Spiral development
-- Rapid application development (RAD)
-- Agile development
-- Code and fix
+- [Waterfall development](http://en.wikipedia.org/wiki/Waterfall_model)
+- [Prototyping](http://en.wikipedia.org/wiki/Software_prototyping)
+- [Iterative and incremental development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+- [Spiral development](http://en.wikipedia.org/wiki/Spiral_model)
+- [Rapid application development (RAD)](http://en.wikipedia.org/wiki/Rapid_application_development)
+- [Agile development](http://en.wikipedia.org/wiki/Agile_software_development)
+- [Code and fix](http://en.wikipedia.org/wiki/Cowboy_coding)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_development_process), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -126,11 +125,11 @@ Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/
 
 [Systems development life cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle) (SDLC) [phases](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases):
 
-* [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
-* [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
-* [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
-* [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
-* [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
+- [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
+- [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
+- [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
+- [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
+- [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -149,10 +148,10 @@ Source: [Peter Kemp / Paul Smith, CC BY 3.0, (Wikimedia)](http://commons.wikimed
 
 Notable features:
 
-* Similar to SDLC
-* Cascading stair-steps
-* Each phase feeds another
-* Origins in Manufacturing
+- Similar to SDLC
+- Cascading stair-steps
+- Each phase feeds another
+- Origins in Manufacturing
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Waterfall_model), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -219,11 +218,11 @@ Transparency Example: This Course
 
 ***This course*** is being developed transparently:
 
-* Open content review process
-* Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
-* Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
-* Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
-* Open tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)
-* Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
+- Open content review process
+- Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
+- Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
+- Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
+- Open tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29))
+- Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***

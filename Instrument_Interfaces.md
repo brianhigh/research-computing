@@ -1,7 +1,7 @@
 Instrument Interfaces
 ========================================================
 author: John Yocum
-date: December 29, 2014
+date: January 02, 2015
 transition: fade
 
 Research Computing and Data Management

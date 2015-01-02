@@ -94,9 +94,46 @@ There are quite a number of other elements and terms that are essential to routi
 
 "Congestion" is more or less a measure of just how much traffic is on the road so to speak. Think of daily traffic on Interstate 5 as it ebbs and flows and slows in response to congestion. Internetworks aren't much different.
 
-"Queuing" is essentially a positive component of most networks that allow data packets (or cars!) To get where they are going by imposing certain rules of queuing and by implementing controls to enforce those rules. Think of the light controlled on ramps on Interstate 5. Of course for queuing to be effective you must have someplace for packets or cars to queue up like the entrance ramp off the 45th 25 N. In the network world devices that participate in routing traffic include queuing capacity by design so that packets have a better chance of reaching their decks destination expeditiously even if there is some delay involved.
+"Queuing" is essentially a positive component of most networks that allow data packets (or cars!) To get where they are going by imposing certain rules of queuing and by implementing controls to enforce those rules. Think of the light controlled on ramps on Interstate 5. Of course for queuing to be effective you must have someplace for packets or cars to queue up like the entrance ramp off the 45th 25 N. In the network world devices that participate in routing traffic include queuing capacity by design so that packets have a better chance of reaching their destination expeditiously even if there is some delay involved.
 
 "Metrics" are something that are implemented in routing protocols that consider a lot of the other factors we have just discussed -- queuing, congestion, latency, hops -- and make calculated decisions about the best way to send packets on their way. If you had to drive from the UW campus to Edmonds right now, you would have a choice of routes. Take I-5 Or Highway 99? And you would likely consider pretty much the same list of factors as these "routing metrics".
+
+Rats.  I lost a good chunk that had to do with IP addresses that are assigned and then Mac addresses that are required for our ARP
+
+Protocols and jargon beget more protocols and jargon. If we suggested that you go to 128.95.230.32 to work on RStudio, it might be hard to remember your intended destination. Instead, we are able to say go to "phage" or "phage.deohs.washington.edu. This is made possible by a resolution protocol system called the domain name system or DNS with which many of you are likely familiar. Further, resolution is required not simply to that IP address, but to an actual hardware device in the computer and to something called a MAC (media access control) address. This MAC address is something that is equally unfriendly to humans consisting as it does of a string of hexadecimal numbers. Resolving an IP address to a specific computer and its Mac address required another protocol called ARP or address resolution protocol. But we may be drifting into the realm of that protocol called TMI.
+
+Question: What were the design goals of ARPANET?
+
+http://en.wikipedia.org/wiki/ARPANET#Misconceptions_of_design_goals
+
+To bring more conceptual order to this complicated set of protocols, a layered model is used as a reference. Take a look at this diagram. While there are other layered models in the communications world, the TCP/IP model aimed for some simplicity in comparison to others. Protocols are quite regularly referred to by the layer in which they operate like a layer 2 protocol, or a layer 3 protocol. Probably the most frequently referred to protocol in the suite is IP or the Internet protocol which deals with what would be called a layer 3 "IP address" and which is also fundamental to the operation of routing across an IP network.
+
+It is not so important for you to remember a lot of details about the great number of protocols employed, but we review this information with an eye towards helping you learn how to troubleshoot problems you may have using a networked computer. More on that later.
+
+Question: Roughly how many protocols are included in the TCP/IP protocol suite?
+
+http://en.wikipedia.org/wiki/Internet_protocol_suite
+
+Let's quickly review a few other elements. 
+
+The term LAN for "local area network" means pretty much what it says it is the local network that you are connected to and routing does not necessarily occur except to make connections to other LANs. Connections to other computers on the local area network are handled more by protocols like ARP.
+
+The term WAN for "wide area network" is pretty open ended but refers to a collection of local area networks tied together with a wider area network where elements like routing become more important.
+
+Two perhaps familiar pieces of equipment used in networking include soak a so-called "switch" and something called a "router". The former is typically implemented to support a LAN while the latter is intended to provide routing services for all WAN.
+
+Network equipment can be organized in different so-called apologies. Common examples include mesh hub and spoke, and bus. The Internet can be considered the biggest example going of a mesh network. Closer to home and on a LAN a hub and spoke, or star, topology is more likely to be found.
+
+At this point in the history of computer networking it could seem that ethernet is the only networking protocol that ever existed to supply layer 2 networking and switching. While that is not the case, for practical purposes it might as well be considered so. Competing protocols have come but mostly gone.
+
+While not restricted to local area network technology, network speeds are referred to in bits per second – bps – with variations based on the speed of the network.  Probably most familiar is the term megabits (million bits) per second – Mbps. Speeds have progressed from 10 Mbps, past 100 Mbps, and now range into "gigabit" or billion bits per second – Gbps.
+
+Take note that the letter B in"bps" is expressed in lower case where a bit is simply one binary digit. Contrast this with "MB" for megabyte where a byte is an unit consisting of 8 bits. This distinction becomes important when trying to calculate the time needed to transfer data over a network where the network speed is expressed and measured in some number of bits per second but the data to be transferred is stated in megabytes
+
+Question?: What comes after Gigabit?
+
+http://en.wikipedia.org/wiki/Data_rate_units#Megabit_per_second
+
 
 
 - Internet
@@ -161,3 +198,12 @@ Common Network Speeds
 - Home
 - Small business
 - Campus
+
+Sidebar: Troubleshooting
+========================================================
+Problem: I can't get to the Pepsi website!
+Question: can I get to the Coca-Cola website?
+Results: yes I can. 
+Possible conclusion: Maybe it is just the Pepsi website.
+
+Problem: but I can't get to a few other websites!

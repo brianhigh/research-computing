@@ -18,6 +18,10 @@ Computer Networks
 
 ![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
 
+![TCP/IP Model](http://upload.wikimedia.org/wikipedia/commons/b/b2/Data_Flow_of_the_Internet_Protocol_Suite.PNG)
+
+[The Internet Protocol Suite](http://en.wikipedia.org/wiki/Internet_protocol_suite)
+
 - Computer networks:
   * Provide a means for devices to communicate
 - Computing devices: 

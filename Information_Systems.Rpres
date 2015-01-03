@@ -44,7 +44,7 @@ Hardware
     * [Central Processing Unit (CPU)](http://en.wikipedia.org/wiki/Central_processing_unit)
     * Memory: Random Access Memory (RAM)
     * Storage
-        * Hard disk drives (HDD)
+        * Hard Disk Drives (HDD)
         * Solid State Devices (SSD)
 - [Peripherals (accessories)](http://en.wikipedia.org/wiki/Peripheral)
   * Keyboard, mouse, screen, speakers, microphone
@@ -64,7 +64,7 @@ Software
         * Internet use (web browser)
         * Editing files (word processor, spreadsheet app)
 - Systems Software
-    * Operating systems, such as:
+    * [Operating systems](http://en.wikipedia.org/wiki/Operating_system), such as:
         * [Windows](http://en.wikipedia.org/wiki/Microsoft_Windows), [OS X](http://en.wikipedia.org/wiki/OS_X), [iOS](http://en.wikipedia.org/wiki/IOS), [Android](http://en.wikipedia.org/wiki/Android) and [Linux](http://en.wikipedia.org/wiki/Linux).
     * [Kernel](http://en.wikipedia.org/wiki/Kernel_(operating_system), [device drivers](http://en.wikipedia.org/wiki/Device_driver), and [firmware](http://en.wikipedia.org/wiki/Firmware)
     * [Utility software](http://en.wikipedia.org/wiki/Utility_software) and [Software libraries](http://en.wikipedia.org/wiki/Library_(computing)
@@ -99,6 +99,7 @@ Source: [Beao Old waterfall: Paul Smith, Public Domain, (Wikimedia)](http://comm
 
 ----
 
+- [Systems development life cycle (SDLC)](http://en.wikipedia.org/wiki/Systems_development_life_cycle)
 - [Waterfall development](http://en.wikipedia.org/wiki/Waterfall_model)
 - [Prototyping](http://en.wikipedia.org/wiki/Software_prototyping)
 - [Iterative and incremental development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development)

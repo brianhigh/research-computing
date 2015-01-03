@@ -22,10 +22,10 @@ types, and development models of these systems.
 # Information System Components
 
 The primary components of an information system are hardware, software, data, 
-and *people* -- the most important component of all! Why? Because systems are 
-designed and built *by* people *for* people. If people don't use them, or they do 
-not serve the people's needs, then they are worthless! Today we will take a 
-closer look at how information systems are designed to help us.
+procedures, and *people* -- the most important component of all! Why? Because 
+systems are designed and built *by* people *for* people. If people don't use 
+them, or they do not serve the people's needs, then they are worthless! Today 
+we will take a closer look at how information systems are designed to help us.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Information_system#Components), 
@@ -41,13 +41,20 @@ Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:P
 ## Hardware
 
 The physical machinery of a computer system is called its 
-[hardware](http://en.wikipedia.org/wiki/Computer_hardware). Examples are the 
-computer itself, its chassis and the parts inside it, including its core 
+[hardware](http://en.wikipedia.org/wiki/Computer_hardware). Of course, this 
+means the computer itself, its chassis and the parts inside it, including its core 
 [integrated circuit](http://en.wikipedia.org/wiki/Integrated_circuit) known as 
 the [central processing unit (CPU)](http://en.wikipedia.org/wiki/Central_processing_unit), 
-as well as the [accessories](http://en.wikipedia.org/wiki/Peripheral), wires, 
-[networking equipment](http://en.wikipedia.org/wiki/Networking_hardware), and 
-other tangible parts of the sytsem.
+as well as its memory, called "RAM" or Random Access Memory, and any internal 
+storage devices like hard disk drives (HDD) and solid state devices (SSD).
+
+Accessories or [peripherals(http://en.wikipedia.org/wiki/Peripheral) are the 
+devices you plug into the computer, mostly for input and output.
+
+[Networking equipment](http://en.wikipedia.org/wiki/Networking_hardware) includes 
+all of the devices that allow your computer to communicate with other systems. 
+Examples are the network cables and the boxes they connect to, such as routers, 
+switches, hubs, wireless access points, and modems.
 
 ## Software
 
@@ -77,7 +84,7 @@ document, or working with data.
 
 #### The Operating System
 
-Applications run within a software environment called the 
+Applications run within a *overall* software environment called the 
 [operating system (OS)](http://en.wikipedia.org/wiki/Operating_system). 
 
 Notable examples are the familiar 
@@ -101,8 +108,10 @@ Devices that contain integrated circuits of their own may store software in
 [firmware](http://en.wikipedia.org/wiki/Firmware) that allows updates through a 
 procedure called [flashing](http://en.wikipedia.org/wiki/Firmware#Flashing). 
 The computing system will also contain 
-[utility software](http://en.wikipedia.org/wiki/Utility_software) and 
-[software libraries](http://en.wikipedia.org/wiki/Library_(computing)). 
+[utility software](http://en.wikipedia.org/wiki/Utility_software) such as 
+configuration and management tools, plus shared 
+[software libraries](http://en.wikipedia.org/wiki/Library_(computing)) used 
+by both applications *and* system software. 
 
 ## Data
 
@@ -161,7 +170,7 @@ popularity.
 [Global](http://en.wikipedia.org/wiki/Global_information_system) informations 
 systems (GLIS) are those either developed or used in a global context. Public 
 health examples include global health databases such as the 
-([UNHCR](http://www.unhcr.org/pages/49c3646c4d6.html) Statistics & Operational 
+[UNHCR](http://www.unhcr.org/pages/49c3646c4d6.html) Statistics & Operational 
 Data Portals and the WHO's [Global Health Observatory (GHO)](http://www.who.int/gho/en/).
 
 [Enterprise](http://en.wikipedia.org/wiki/Enterprise_systems) systems are 
@@ -203,13 +212,48 @@ Source: [Beao Old waterfall: Paul Smith, Public Domain, (Wikimedia)](http://comm
 
 ----
 
-- [Waterfall development](http://en.wikipedia.org/wiki/Waterfall_model)
-- [Prototyping](http://en.wikipedia.org/wiki/Software_prototyping)
-- [Iterative and incremental development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development)
-- [Spiral development](http://en.wikipedia.org/wiki/Spiral_model)
-- [Rapid application development (RAD)](http://en.wikipedia.org/wiki/Rapid_application_development)
-- [Agile development](http://en.wikipedia.org/wiki/Agile_software_development)
-- [Code and fix](http://en.wikipedia.org/wiki/Cowboy_coding)
+Here is a short list of common development models. We have provided links from each 
+of these to relevant Wikipedia pages. You are encouraged to read more about them. We'll 
+just go through the list quickly to give you a rough idea of the differences between them.
+
+The [Systems development life cycle (SDLC)](http://en.wikipedia.org/wiki/Systems_development_life_cycle) 
+is the classic model. It involves lots of up-front planning and is risk averse.
+
+[Waterfall development](http://en.wikipedia.org/wiki/Waterfall_model) is another 
+and "old school" favorite, It's ike the SDLC but does not offer any sort of 
+feedback loop.
+
+[Prototyping](http://en.wikipedia.org/wiki/Software_prototyping) is a useful 
+technique for many models. Good when a small-scale experiment can prove an idea 
+without risking heavy investment. 
+
+[Iterative and incremental development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development) 
+might evoke the image of "baby steps" or the notion of "try, try, again". There 
+is a central loop, between initial planning and final deployment, which repeats 
+as needed. Like prototyping, it is a technique which can be used in other models.
+
+Likewise, [Spiral development](http://en.wikipedia.org/wiki/Spiral_model) is 
+meant to address evolving requirements through cycles of repeated analysis and 
+design, getting closer and closer to the desired product. The idea is that the 
+*entire process* is repeated over and over until you are finally satisfied.
+
+[Rapid application development (RAD)](http://en.wikipedia.org/wiki/Rapid_application_development) 
+focusses on development more than up-front planning.
+
+[Agile development](http://en.wikipedia.org/wiki/Agile_software_development) is 
+a more evolved form of RAD, with more of a focus on user engagement, and gaining 
+wide popularity.
+
+[Code and fix](http://en.wikipedia.org/wiki/Cowboy_coding) sounds like what it 
+is -- *cowboy coding* -- what most lone programmers do, and what might seem most 
+familiar to you as a scientific researcher. This can be quick for easy projects, 
+but can be very inefficient and expensive for larger projects, due to 
+insufficient planning.
+
+They are all useful methods, though, some more generally than others. The 
+approach you take should depend upon your situation. 
+
+We'll look more closely at three of these right now.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_development_process), 
@@ -221,8 +265,7 @@ Systems Development Life Cycle
 
 Since information systems are so complex, it is very helpful to follow a standard 
 development model to make sure you take care of all of the little details without 
-missing any. For years, the standard was known as the SDLC, or Systems Development 
-Life Cycle.
+missing any. 
 
 ![SDLC cycle](http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/SDLC-Maintenance-Highlighted.png/360px-SDLC-Maintenance-Highlighted.png)
 
@@ -230,15 +273,41 @@ Life Cycle.
 Source: [Dzonatas, CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:SDLC-Maintenance-Highlighted.png)
 </small>
 
+For years, the standard development model was known as the SDLC, or Systems 
+Development Life Cycle. It works well for large, complex, expensive projects, 
+but can be scaled down as needed. Many of its phases are used in the other 
+models as well. Let's take a quick look at them.
+
 ----
 
 [Systems development life cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle) (SDLC) [phases](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases):
 
 - [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
+
+> There is a focus on careful *planning* before any design or coding takes place. The feasibility study explores your options and gaining approval from stakeholders.
+
 - [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
+
+> *Analysis* includes a detailed study of the current system and clearly identifying requirements before designing a new system.
+
 - [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
+
+> Once you have thoroughly defined the requirements, you can begin to model the new system.
+
 - [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
+
+> *Implementation* is where the hardware assembly, software coding, testing, and deployment takes place.
+
 - [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
+
+> *Maintenance* may sound boring, but it is essential to ensure that the project is an overall success.
+
+The main idea is that systems development is a cycle -- a continual process. You 
+need to allow for maintenance, updates, and new features. The use and upkeep of 
+the system provides feedback which goes into planning the next version.
+
+We will spend more time on the SDLC and its early phases in a separate module.
+
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Systems_development_life_cycle), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -290,9 +359,22 @@ Source: [VersionOne, Inc., CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.o
 Notable features:
 
 - Smaller Teams
+
+> Smaller teams that can meet regularly, ideally face-to-face.
+
 - Pair Programming
+
+> Working in pairs, with one person coding and other helping "over the shoulder".
+
 - Test-driven Development
+
+> After you identify use cases, then you write tests and then build the system to pass the tests.
+
 - Frequent Product Releases
+
+> By developing an automated test and build system, releases can be pushed out quickly and more often.
+
+These three delopement model examples are popular, but make use of features of the others, such as cyclical, sprial development and prototyping.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development), 
@@ -357,3 +439,5 @@ support this course.
 - Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***
+
+So, we hope that this brief overview of Information Systems has given you a more clear picture of the what they are and how they are built. Next time we will take a closer look at requirements analysis and systems analysis, two of the most important topics of this course.

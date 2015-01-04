@@ -3,7 +3,7 @@ Systems Analysis
 author: Brian High
 date: `r format(Sys.Date(), format="%B %d, %Y")`
 transition: fade
-incremental: true
+#incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------

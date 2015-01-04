@@ -1,8 +1,5 @@
 Information Systems
 ========================================================
-author: Brian High
-date: Jan. 4, 2015
-
 
 Research Computing and Data Management
 -------------------------------------------------------

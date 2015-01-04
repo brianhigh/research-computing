@@ -1,7 +1,7 @@
 Information Systems
 ========================================================
 author: Brian High
-date: `r format(Sys.Date(), format="%B %d, %Y")`
+date: Jan. 4, 2015
 
 
 Research Computing and Data Management
@@ -285,24 +285,15 @@ models as well. Let's take a quick look at them.
 [Systems development life cycle](http://en.wikipedia.org/wiki/Systems_development_life_cycle) (SDLC) [phases](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Phases):
 
 - [Planning](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_investigation) ([feasibility study](http://en.wikipedia.org/wiki/Feasibility_study))
-
-> There is a focus on careful *planning* before any design or coding takes place. The feasibility study explores your options and gaining approval from stakeholders.
-
+    * There is a focus on careful *planning* before any design or coding takes place. The feasibility study explores your options and gaining approval from stakeholders.
 - [Analysis](http://en.wikipedia.org/wiki/Systems_development_life_cycle#System_analysis)
-
-> *Analysis* includes a detailed study of the current system and clearly identifying requirements before designing a new system.
-
+    * *Analysis* includes a detailed study of the current system and clearly identifying requirements before designing a new system.
 - [Design](http://en.wikipedia.org/wiki/Systems_development_life_cycle#Design)
-
-> Once you have thoroughly defined the requirements, you can begin to model the new system.
-
+    * Once you have thoroughly defined the requirements, you can begin to model the new system.
 - [Implementation](http://en.wikipedia.org/wiki/Implementation#Information_Technology_.28IT.29)
-
-> *Implementation* is where the hardware assembly, software coding, testing, and deployment takes place.
-
+    * *Implementation* is where the hardware assembly, software coding, testing, and deployment takes place.
 - [Maintenance](http://en.wikipedia.org/wiki/Software_maintenance)
-
-> *Maintenance* may sound boring, but it is essential to ensure that the project is an overall success.
+    * *Maintenance* may sound boring, but it is essential to ensure that the project is an overall success.
 
 The main idea is that systems development is a cycle -- a continual process. You 
 need to allow for maintenance, updates, and new features. The use and upkeep of 
@@ -387,8 +378,9 @@ switch to another due to the high costs and disruption.
 
 These interoperability aspects will include 
 [file formats](http://en.wikipedia.org/wiki/File_format), 
-[communications protocols](http://en.wikipedia.org/wiki/Communications_protocol) 
-and [encryption](http://en.wikipedia.org/wiki/Encryption).
+[communications protocols](http://en.wikipedia.org/wiki/Communications_protocol), 
+[security](http://en.wikipedia.org/wiki/Information_security) and 
+[encryption](http://en.wikipedia.org/wiki/Encryption).
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -431,7 +423,7 @@ We have developed the course transparently, using an open content review
 process where students, staff and faculty look at the materials and evaluate 
 them to determine wehther or not they best meet the course goals.
 
-We have an open content license, the Creative Commons Attribution Share-Alike [CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
+We have an open content license, the Creative Commons Attribution Share-Alike [CC BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
 
 We have ppen development where our source is freely and publically available on [GitHub](http://github.com/brianhigh/research-computing)).
 

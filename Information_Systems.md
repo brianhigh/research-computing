@@ -219,7 +219,7 @@ Affecting [interoperability](http://en.wikipedia.org/wiki/Interoperability) of:
 
 - [File formats](http://en.wikipedia.org/wiki/File_format)
 - [Communications protocols](http://en.wikipedia.org/wiki/Communications_protocol)
-- [Encryption](http://en.wikipedia.org/wiki/Encryption)
+- [Security](http://en.wikipedia.org/wiki/Information_security) and [encryption](http://en.wikipedia.org/wiki/Encryption)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -247,7 +247,7 @@ Transparency Example: This Course
 ***This course*** is being developed transparently:
 
 - Open content review process
-- Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
+- Open content license ([CC BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
 - Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
 - Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
 - Open tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29))

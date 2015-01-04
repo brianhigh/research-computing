@@ -22,7 +22,7 @@ types, and development models of these systems.
 # Information System Components
 
 The primary components of an information system are hardware, software, data, 
-procedures, and *people* -- the most important component of all! Why? Because 
+and *people* -- the most important component of all! Why? Because 
 systems are designed and built *by* people *for* people. If people don't use 
 them, or they do not serve the people's needs, then they are worthless! Today 
 we will take a closer look at how information systems are designed to help us.
@@ -127,20 +127,14 @@ systems, data may also reside on scraps of paper or may only exist in a person's
 mind in the form of a thought or idea, waiting to be communicated to the rest 
 of the information system.
 
-## Policies and Procedures
+----
 
-Software implements policies, 
-[business (or domain) logic](http://en.wikipedia.org/wiki/Business_logic), and 
-procedures. For example, an organization might have a 
-[business rule](http://en.wikipedia.org/wiki/Business_rule) about how data are 
-to be analyzed. The software programmer would capture that rule in business 
-logic, which is just a more formalized and specific way to describe the rule. 
-The business logic is then designed into the program using data structures 
-(objects) and procedures (methods) which ensure that the analysis is performed 
-according to the business rule. By "baking" the rule into the information 
-system, the organization can use software to help people "do the right thing". 
-We sometimes call this "engineering success" because this approach minimizes 
-mistakes and increases positive outcomes.
+![linked data](http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png)
+
+<small style="font-size:.5em">
+Source: [Linked Data, CC BY-SA 3.0](http://linkeddata.org/)
+</small>
+
 
 ## People
 
@@ -149,6 +143,14 @@ maintain it, and adapt it to new uses. Our systems should serve *us*, not the
 other way around. Every aspect of the system should be designed to serve 
 people's needs *optimally*. But our needs vary, and so we need various types 
 of systems.
+
+----
+
+![paired programming](http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pair_programming_1.jpg/640px-Pair_programming_1.jpg)
+
+<small style="font-size:.5em">
+Source: [Ted & Ian, CC BY 2,0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Pair_programming_1.jpg)
+</small>
 
 # Information System Types
 
@@ -326,14 +328,10 @@ instead of a circle.
 Source: [Peter Kemp / Paul Smith, CC BY 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Waterfall_model.svg)
 </small>
 
-----
-
-Notable features:
-
-- Similar to SDLC
-- Cascading stair-steps
-- Each phase feeds another
-- Origins in Manufacturing
+It's basically similar to the SDLC, but without the feedback loop. There are 
+cascading stair-steps, where one phase leads to another and the output of one 
+phase becomes sthe input of another. Its came from manufactoring where 
+after-the-fact changes are expensive or impossible.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Waterfall_model), 
@@ -354,33 +352,16 @@ development, and frequent product releases.
 Source: [VersionOne, Inc., CC BY-SA 3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Agile_Software_Development_methodology.jpg)
 </small>
 
----
-
-Notable features:
-
-- Smaller Teams
-
-> Smaller teams that can meet regularly, ideally face-to-face.
-
-- Pair Programming
-
-> Working in pairs, with one person coding and other helping "over the shoulder".
-
-- Test-driven Development
-
-> After you identify use cases, then you write tests and then build the system to pass the tests.
-
-- Frequent Product Releases
-
-> By developing an automated test and build system, releases can be pushed out quickly and more often.
-
-These three delopement model examples are popular, but make use of features of the others, such as cyclical, sprial development and prototyping.
+Smaller teams that can meet regularly, ideally face-to-face. Working in pairs, 
+with one person coding and other helping "over the shoulder". After you identify 
+use cases, then you write tests and then build the system to pass the tests. By 
+developing an automated test and build system, releases can be pushed out quickly 
+and more often.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Agile_software_development), 
 [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
-
 
 Transparency
 ========================================================
@@ -391,20 +372,31 @@ their implementations, in terms of both
 [interoperability](http://en.wikipedia.org/wiki/Interoperability) standards and 
 specific design details.
 
-- Open ([standards](http://en.wikipedia.org/wiki/Open_standard), [source](http://en.wikipedia.org/wiki/Open_source))
-- Closed ([proprietary](http://en.wikipedia.org/wiki/Proprietary_software))
+You can have *open* systems and 
+[standards](http://en.wikipedia.org/wiki/Open_standard), 
+[source](http://en.wikipedia.org/wiki/Open_source)), where the technical 
+specifications are publicly available. Different organizations may implement them 
+in their own way, yet still maintain [interoperability](http://en.wikipedia.org/wiki/Interoperability) with other implementations.
 
-Affecting [interoperability](http://en.wikipedia.org/wiki/Interoperability) of:
+Or systems be *closed*, or 
+[proprietary](http://en.wikipedia.org/wiki/Proprietary_software), where an 
+organization keeps the details to itself, making it more difficult for 
+competitors to interoperate. While this may provide a competetive advantage for
+the producer it contributes to what is called [vendor lock-in](http://en.wikipedia.org/wiki/Vendor_lock-in), where a consumer becomes dependent on the vendor, unable to 
+switch to another due to the high costs and disruption.
 
-- [File formats](http://en.wikipedia.org/wiki/File_format)
-- [Communications protocols](http://en.wikipedia.org/wiki/Communications_protocol)
-- [Encryption](http://en.wikipedia.org/wiki/Encryption)
+These interoperability aspects will include 
+[file formats](http://en.wikipedia.org/wiki/File_format), 
+[communications protocols](http://en.wikipedia.org/wiki/Communications_protocol) 
+and [encryption](http://en.wikipedia.org/wiki/Encryption).
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
 </small>
 
-----
+All of those are important when you are collaborating, sharing data and files with others, who might be using different platforms. 
+
+By using transparent systems, you not only increase your ease of communication and collaboration, you also contribute to openess in a broader, social context.
 
 Information [transparency](http://en.wikipedia.org/wiki/Transparency_%28behavior%29) 
 supports [openness](http://en.wikipedia.org/wiki/Openness) in:
@@ -416,8 +408,12 @@ supports [openness](http://en.wikipedia.org/wiki/Openness) in:
 - [Content](http://en.wikipedia.org/wiki/Open_content)
 - [Culture](http://en.wikipedia.org/wiki/Free_culture_movement)
 
-So, if you want the benefits of openness in your work, consider building your 
-information infrastructure with open technologies.
+We have provided links to several popular movements which are working to increase 
+openness and transparency in various aspects of society. You are encouraged to 
+spend some time learning about these trends.
+
+So, if you want the benefits of openness in your work and more freedom to make 
+changes, consider building your information infrastructure with open technologies.
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Openness), 
@@ -431,13 +427,24 @@ Transparency Example: This Course
 As an example, we have assembled a transparent information system to create and 
 support this course.
 
-- Open content review process
-- Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
-- Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
-- Open file formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
-- Open source tools tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29))
-- Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
+We have developed the course transparently, using an open content review 
+process where students, staff and faculty look at the materials and evaluate 
+them to determine wehther or not they best meet the course goals.
 
-***Thank you for contributing to this course!***
+We have an open content license, the Creative Commons Attribution Share-Alike [CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/) license.
 
-So, we hope that this brief overview of Information Systems has given you a more clear picture of the what they are and how they are built. Next time we will take a closer look at requirements analysis and systems analysis, two of the most important topics of this course.
+We have ppen development where our source is freely and publically available on [GitHub](http://github.com/brianhigh/research-computing)).
+
+We are using open file formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format)), open source tools tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)) and open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)).
+
+As you take part in this course, and provide feedback which will go toward 
+improving it, we thank *you* for contributing!
+
+Wrap-Up
+========================================================
+
+We hope that this brief overview of Information Systems has given you a more clear picture of the what they are and how they are built. 
+
+For more information, please read the related sections in the [Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki), particularly, the pages on [hardware](https://github.com/brianhigh/computing-basics/wiki/hardware) and [software](https://github.com/brianhigh/computing-basics/wiki/software).
+
+Next time we will take a closer look at [requirements gathering](http://en.wikipedia.org/wiki/Requirements_elicitation) and [systems analysis](http://en.wikipedia.org/wiki/Systems_analysis), two of the most important topics of this course.

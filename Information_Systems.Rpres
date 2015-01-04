@@ -29,7 +29,6 @@ Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:P
 - [Hardware](http://en.wikipedia.org/wiki/Computer_hardware) (machinery)
 - [Software](http://en.wikipedia.org/wiki/Software) (OS + apps)
 - [Data](http://en.wikipedia.org/wiki/Data_%28computing%29) (facts, documents)
-- Procedures (policies)
 - **People** ...
   * The most important component!
 
@@ -70,7 +69,35 @@ Software
     * [Utility software](http://en.wikipedia.org/wiki/Utility_software) and [Software libraries](http://en.wikipedia.org/wiki/Library_(computing)
 
 <small style="font-size:.5em">
-Source: [Wikipedia](http://en.wikipedia.org/wiki/Software), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
+Sources: [Wikipedia](http://en.wikipedia.org/wiki/Software), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) and [Computing Basics](https://github.com/brianhigh/computing-basics/wiki/software), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+</small>
+
+Data
+========================================================
+
+Data are values in an information system:
+
+- Raw or processed
+- At rest or in motion
+- Digital or analog
+- Electronic or physical ("hard copy")
+
+----
+
+![linked data](http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png)
+
+<small style="font-size:.5em">
+Source: [Linked Data, CC BY-SA 3.0](http://linkeddata.org/)
+</small>
+
+
+People
+========================================================
+
+![paired programming](http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pair_programming_1.jpg/640px-Pair_programming_1.jpg)
+
+<small style="font-size:.5em">
+Source: [Ted & Ian, CC BY 2,0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Pair_programming_1.jpg)
 </small>
 
 Information System Types
@@ -227,3 +254,18 @@ Transparency Example: This Course
 - Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***
+
+Wrap-up
+========================================================
+
+For more information...
+
+- [Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki)
+    * [Hardware](https://github.com/brianhigh/computing-basics/wiki/hardware)
+    * [Software](https://github.com/brianhigh/computing-basics/wiki/software)
+
+Next time ...
+
+- [Systems Analysis](http://en.wikipedia.org/wiki/Systems_analysis)
+    * ... including [requirements gathering](http://en.wikipedia.org/wiki/Requirements_elicitation)
+

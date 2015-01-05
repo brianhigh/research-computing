@@ -1,7 +1,7 @@
 Resource Management
 ========================================================
 author: John Yocum
-date: `r format(Sys.Date(), format="%B %d, %Y")`
+date: December 29, 2014
 transition: fade
 
 Research Computing and Data Management

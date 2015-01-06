@@ -197,34 +197,21 @@ lot of time and money solving the *wrong problem* or address a *non-issue*.
 We can summarize the key points of problem analysis (with some help from 
 Jenette Nagy of Kansas University) as:
 
-> Define and clarify the problem (or issue)
-
-*What exactly are we trying to solve?*
-
-> Determine the problem's importance
-
-*How much does it matter?*
-
-> Assess the feasibility of solving the problem
-
-*Do we have the resources we need?*
-
-> Consider any negative impacts (unintended consequences)
-
-*What could go wrong?*
-
-> Prioritize problems to solve (bottlenecks? low-hanging fruit?)
-
-*What are the most critical issues?*
-
-> Answer: *what*, *why*, *who*, *when*, *where*, and *how much*?
-
-*Drill down into the problem with all kinds of questions to expose dependencies.*
-
-> Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) 
+- Define and clarify the problem (or issue)
+    * *What exactly are we trying to solve?*
+- Determine the problem's importance
+    * *How much does it matter?*
+- Assess the feasibility of solving the problem
+    * *Do we have the resources we need?*
+- Consider any negative impacts (unintended consequences)
+    * *What could go wrong?*
+- Prioritize problems to solve (bottlenecks? low-hanging fruit?)
+    * *What are the most critical issues?*
+- Answer: *what*, *why*, *who*, *when*, *where*, and *how much*?
+    * *Drill down into the problem with all kinds of questions to expose dependencies.*
+- Find **causes** (especially [root cause](http://en.wikipedia.org/wiki/Root_cause_analysis)) 
 and **symptoms** (effects)
-
-*What is really going on here?*
+    * *What is really going on here?*
 
 <small style="font-size:.5em">
 Source: [Jenette Nagy, Kansas University, CC BY-NC-SA 3.0 US](http://ctb.ku.edu/en/table-of-contents/analyze/analyze-community-problems-and-solutions/define-analyze-problem/main)
@@ -302,38 +289,23 @@ You may categorize requirements according to several important types:
 
 [Types of requirements](http://en.wikipedia.org/wiki/Requirements_analysis#Types_of_Requirements):
 
-- Operational
-
-> *Operational requirements are the **utility, effectiveness, and deployment** 
+Operational requirements are the **utility, effectiveness, and deployment** 
 needs, with repect to practical use of the system within the overall operation. 
-These are the **customer Requirements**.*
+These are the **customer Requirements**.
 
-- [Functional](http://en.wikipedia.org/wiki/Functional_requirement)
+[Functional](http://en.wikipedia.org/wiki/Functional_requirement) requirements are specific things the system must **do**.
 
-> *Functional requirements are specific things the system must **do**.*
+[Non-functional](http://en.wikipedia.org/wiki/Non-functional_requirement) requirements are specific things the system must **provide**.
 
-- [Non-functional](http://en.wikipedia.org/wiki/Non-functional_requirement)
+[Architectural](http://en.wikipedia.org/wiki/Systems_architecture) requirements define how the system must be **structured**, in other words, how the components must **interrelate**.
 
-> *Non-functional requirements are specific things the system must **provide**.*
+Behavioral requirements describe how **users** and other systems will 
+**interact** with the system and how the **system** will respond.
 
-- [Architectural](http://en.wikipedia.org/wiki/Systems_architecture)
-
-> *Architectural requirements define how the system must be **structured**, 
-in other words, how the components must **interrelate**.*
-
-- Behavioral
-
-> *Behavioral requirements describe how **users** and other systems will 
-**interact** with the system and how the **system** will respond.*
-
-- Performance
-
-> Performance requirements define **how well** the systems needs to do things, 
+Performance requirements define **how well** the systems needs to do things, 
 **measured** in terms of quantity, quality, coverage, timeliness or readiness.
 
-- (Others...)
-
-> While there are other ways to group requirements, these are the most 
+While there are other ways to group requirements, these are the most 
 significant categories.
 
 Requirements Modeling: Example

@@ -1,7 +1,7 @@
 Information Systems
 ========================================================
 author: Brian High
-date: December 31, 2014
+date: January 04, 2015
 transition: fade
 #incremental: true
 
@@ -29,7 +29,6 @@ Source: [Gustavb, CC BY-SA 3.0, (Wikimedia)](http://en.wikipedia.org/wiki/File:P
 - [Hardware](http://en.wikipedia.org/wiki/Computer_hardware) (machinery)
 - [Software](http://en.wikipedia.org/wiki/Software) (OS + apps)
 - [Data](http://en.wikipedia.org/wiki/Data_%28computing%29) (facts, documents)
-- Procedures (policies)
 - **People** ...
   * The most important component!
 
@@ -44,7 +43,7 @@ Hardware
     * [Central Processing Unit (CPU)](http://en.wikipedia.org/wiki/Central_processing_unit)
     * Memory: Random Access Memory (RAM)
     * Storage
-        * Hard disk drives (HDD)
+        * Hard Disk Drives (HDD)
         * Solid State Devices (SSD)
 - [Peripherals (accessories)](http://en.wikipedia.org/wiki/Peripheral)
   * Keyboard, mouse, screen, speakers, microphone
@@ -64,13 +63,41 @@ Software
         * Internet use (web browser)
         * Editing files (word processor, spreadsheet app)
 - Systems Software
-    * Operating systems, such as:
+    * [Operating systems](http://en.wikipedia.org/wiki/Operating_system), such as:
         * [Windows](http://en.wikipedia.org/wiki/Microsoft_Windows), [OS X](http://en.wikipedia.org/wiki/OS_X), [iOS](http://en.wikipedia.org/wiki/IOS), [Android](http://en.wikipedia.org/wiki/Android) and [Linux](http://en.wikipedia.org/wiki/Linux).
     * [Kernel](http://en.wikipedia.org/wiki/Kernel_(operating_system), [device drivers](http://en.wikipedia.org/wiki/Device_driver), and [firmware](http://en.wikipedia.org/wiki/Firmware)
     * [Utility software](http://en.wikipedia.org/wiki/Utility_software) and [Software libraries](http://en.wikipedia.org/wiki/Library_(computing)
 
 <small style="font-size:.5em">
-Source: [Wikipedia](http://en.wikipedia.org/wiki/Software), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
+Sources: [Wikipedia](http://en.wikipedia.org/wiki/Software), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License) and [Computing Basics](https://github.com/brianhigh/computing-basics/wiki/software), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+</small>
+
+Data
+========================================================
+
+Data are values in an information system:
+
+- Raw or processed
+- At rest or in motion
+- Digital or analog
+- Electronic or physical ("hard copy")
+
+----
+
+![linked data](http://linkeddata.org/static/images/lod-datasets_2009-07-14_cropped.png)
+
+<small style="font-size:.5em">
+Source: [Linked Data, CC BY-SA 3.0](http://linkeddata.org/)
+</small>
+
+
+People
+========================================================
+
+![paired programming](http://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pair_programming_1.jpg/640px-Pair_programming_1.jpg)
+
+<small style="font-size:.5em">
+Source: [Ted & Ian, CC BY 2,0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Pair_programming_1.jpg)
 </small>
 
 Information System Types
@@ -99,6 +126,7 @@ Source: [Beao Old waterfall: Paul Smith, Public Domain, (Wikimedia)](http://comm
 
 ----
 
+- [Systems development life cycle (SDLC)](http://en.wikipedia.org/wiki/Systems_development_life_cycle)
 - [Waterfall development](http://en.wikipedia.org/wiki/Waterfall_model)
 - [Prototyping](http://en.wikipedia.org/wiki/Software_prototyping)
 - [Iterative and incremental development](http://en.wikipedia.org/wiki/Iterative_and_incremental_development)
@@ -191,7 +219,7 @@ Affecting [interoperability](http://en.wikipedia.org/wiki/Interoperability) of:
 
 - [File formats](http://en.wikipedia.org/wiki/File_format)
 - [Communications protocols](http://en.wikipedia.org/wiki/Communications_protocol)
-- [Encryption](http://en.wikipedia.org/wiki/Encryption)
+- [Security](http://en.wikipedia.org/wiki/Information_security) and [encryption](http://en.wikipedia.org/wiki/Encryption)
 
 <small style="font-size:.5em">
 Source: [Wikipedia](http://en.wikipedia.org/wiki/Software_standard#Open_v._closed_standards), [CC BY-SA 3.0](http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
@@ -219,10 +247,25 @@ Transparency Example: This Course
 ***This course*** is being developed transparently:
 
 - Open content review process
-- Open content license ([CC-BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
+- Open content license ([CC BY-SA 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/))
 - Open development (source available on [GitHub](http://github.com/brianhigh/research-computing))
 - Open formats ([Markdown](http://en.wikipedia.org/wiki/Markdown), [HTML](http://en.wikipedia.org/wiki/HTML), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets), [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics), [AsciiDoc](http://en.wikipedia.org/wiki/AsciiDoc), [PDF](http://en.wikipedia.org/wiki/Portable_Document_Format))
 - Open tools ([RStudio](http://en.wikipedia.org/wiki/RStudio), [Git](http://en.wikipedia.org/wiki/Git_%28software%29), [Redmine](http://en.wikipedia.org/wiki/Redmine), [Canvas](http://en.wikipedia.org/wiki/Instructure#Canvas), [Linux](http://en.wikipedia.org/wiki/Linux), [Bash](http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29))
 - Open communications protocol standards ([HTTP/HTTPS](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol))
 
 ***Thank you for contributing to this course!***
+
+Wrap-up
+========================================================
+
+For more information...
+
+- [Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki)
+    * [Hardware](https://github.com/brianhigh/computing-basics/wiki/hardware)
+    * [Software](https://github.com/brianhigh/computing-basics/wiki/software)
+
+Next time ...
+
+- [Systems Analysis](http://en.wikipedia.org/wiki/Systems_analysis)
+    * ... including [requirements gathering](http://en.wikipedia.org/wiki/Requirements_elicitation)
+

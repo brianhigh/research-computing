@@ -118,9 +118,13 @@ Let's quickly review a few other elements.
 
 The term LAN for "local area network" means pretty much what it says it is the local network that you are connected to and routing does not necessarily occur except to make connections to other LANs. Connections to other computers on the local area network are handled more by protocols like ARP.
 
-The term WAN for "wide area network" is pretty open ended but refers to a collection of local area networks tied together with a wider area network where elements like routing become more important.
+The term WAN for "wide area network" refers to a collection of networks tied together across a wide area and where elements like routing become more important.
 
-Two perhaps familiar pieces of equipment used in networking include soak a so-called "switch" and something called a "router". The former is typically implemented to support a LAN while the latter is intended to provide routing services for all WAN.
+Question: Is the UW network a WAN?
+
+http://en.wikipedia.org/wiki/Wide_area_network
+
+Two perhaps familiar pieces of equipment used in networking include soak a so-called "switch" and something called a "router". The former is typically implemented to support a LAN while the latter is intended to provide routing services for a  WAN.
 
 Network equipment can be organized in different so-called apologies. Common examples include mesh hub and spoke, and bus. The Internet can be considered the biggest example going of a mesh network. Closer to home and on a LAN a hub and spoke, or star, topology is more likely to be found.
 

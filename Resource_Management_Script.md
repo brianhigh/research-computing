@@ -36,7 +36,7 @@ Optimization
 
 In order to optimize your data, and work-flow, you need to identify what resources you are using, identify bottlenecks, and eliminate them.
 
-Every operating system has tools to track resource usage. On Windows, the Performance Monitor is the most helpful. It gives a break of RAM, CPU, Disk, and Network utilization by application. On a Mac, the Activity Monitor is the most user friendly method of tracking resource usage. And, in the newest versions of OS X, it has a color coding scheme to help identify if you are hitting the limits. On Linux, you've got many choices, but htop is a solid choice for CPU and RAM monitoring. For disk activity, you'll want to use iostat.
+Every operating system has tools to track resource usage. On Windows, the Performance Monitor (shown on the right) is the most helpful. It gives a break of RAM, CPU, Disk, and Network utilization by application. On a Mac, the Activity Monitor is the most user friendly method of tracking resource usage. And, in the newest versions of OS X, it has a color coding scheme to help identify if you are hitting the limits. On Linux, you've got many choices, but htop is a solid choice for CPU and RAM monitoring. For disk activity, you'll want to use iostat.
 
 Once you have determined your usage, you can try to identify bottlenecks. A bottleneck could be caused by your available resources, or your software. If you aren't maxing out the CPU, Memory, and Disk, then the bottleneck is likely within the software itself. However, if you are maxing out a particular resource, then increasing the available resources should help. For example, if your system has a single hard disk drive, and it's being maxed out, replacing it with a solid state drive should speed things up.
 
@@ -53,3 +53,8 @@ With modern CPUs having multiple cores, parallel processing is the only effectiv
 Thankfully, there are some well developed tools and techniques to help with this. One of the more common is MapReduce which is used with Apache's Hadoop. MapReduce is a framework for processing large volumes of data in parallel. Some lesser seen tools include GNU Parallel which is a tool used to run and manage command-line tools in a parallel fashion.
 
 As an example, climate data can be processed in a parallel fashion. The data can be divided up by area, and then computation performed on a per area basis.
+
+Summary
+========================================================
+
+To recap, there are there are three main components to resource management. Capacity planning, which is the identification and allocation of necessary resources. Utilization monitoring, which is verifing you are using the resources you've allocated. And, finally, bottleneck resolution. The identification, and correction of performance bottlenecks.

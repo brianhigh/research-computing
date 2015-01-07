@@ -37,9 +37,9 @@ System Resources
   * Fast
 - **Disk**
   * Sizes and types
-  * Arrays
   * Network
-
+  * Arrays
+  
 Optimization
 ========================================================
 
@@ -89,3 +89,10 @@ CPU Utilization
   - Open source tool for managing parallel tasks
 - Examples:
   - Climate data
+  
+Summary
+========================================================
+
+- Capacity Planning
+- Utilization Monitoring
+- Bottlenecks

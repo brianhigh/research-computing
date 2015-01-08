@@ -1,7 +1,7 @@
 Information Security
 ========================================================
-author: Brian High
-date: 2014-12-16
+author: Jim Hogan
+date: 2015-01-08
 transition: fade
 
 Research Computing and Data Management
@@ -45,6 +45,8 @@ Access control
 - Authentication
 - Authorization
 
+![Pattern Token](https://commons.wikimedia.org/wiki/File:Array-Card.gif)
+
 Securing Storage
 ========================================================
 
@@ -80,6 +82,9 @@ File based:
 - TrueCrypt
 - PDF
 - PGP
+
+![Public-Key Ecryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
+
 
 Encryption Standards
 ========================================================

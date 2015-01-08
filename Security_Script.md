@@ -27,7 +27,27 @@ Information Security
 
 Philosophies and Foundations
 =========================================================
-Before getting into specifics, is probably worthwhile spend a few minutes looking at philosophical underpinnings of information security. There is no single philosophy or underpinning foundation, but arrange, a spectrum of philosophies from different viewpoints.
+Before getting into specifics, we should spend a few minutes looking at some philosophical underpinnings of information security, starting with a question like "why is security a good thing?"
+
+Information security is not an end but a means. What is the desired end? Information security people most commonly refer to the desired end or end with the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
+
+Confidentiality should be ready self-explanatory: only parties who should have access to information get it. 
+
+Integrity means that the accuracy and consistency of data throughout its life-cycle is assured.  That data can't be modified in an unplanned or unauthorized way and that your data is correct at least with respect to your expectation of what the data should be. 
+
+Availability is a lofty term for making sure that you can get your data – that your data management system is built and designed in such a way that it will continue to make your data available to authorized parties and mitigate against threats to availability whether they be computer failure, network failure, a malicious exploit, or something else.
+
+It should be easy to think of some reasons why these three concepts are important. Let's take the example of a research study that you are working on. It has been funded to the tune of $5 million over five years, and there is the possibility of renewal. By chance, the  study collects and stores some private health information. 
+
+Possible results of a failure to assure data confidentiality should be obvious these days. Harm to study subjects, lawsuits against the sponsoring institution, disciplinary actions, loss of funding… The list goes on.
+
+integrity, and a failure to maintain it, are probably easiest to think of with an example like a large study that spent millions of dollars, collected lots of data, but then discovered at some point that the data was more or less corrupt, incorrect, inconsistent. Possible harms? Incorrect conclusions making their way into the scientific literature would be one. Withdrawal of funding would be another on top of damage professional reputations.
+
+Availability would seem more straightforward, but also requires considerable thought and planning. What good is confidentiality and integrity if all of your study data was lost in a fire or stolen from an airport lounge? How good are your backups?
+
+
+
+There is no single philosophy or underpinning foundation, but arrange, a spectrum of philosophies from different viewpoints.
 
 There is a quote, attributed to Frederick the great, that posits "he who defends everything defends nothing". Which is popular among some security professionals. It is probably worthwhile to look at the converse assertion "he who does not defend everything defends nothing". Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion however, matters a lot in the "info sec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.
 
@@ -50,8 +70,7 @@ One risk is that you could spend too much time on risk assessment!
 CIA (AAA)
 ========================================================
 
-Some key tenets of information security are often described using the term "CIA". In its simplest form this stands for confidentiality, integrity, and availability. Confidentiality should be ready self-explanatory only people who should have access to information get it. Integrity means that your data is correct at least with respect to your expectation of what the data should be. Availability is a lofty term for making sure that you can get your data – that your data management system is built and designed in such a way that it will continue to make your data available to authorized parties and mitigate against threats to availability whether they be computer failure, network failure, a malicious exploit, or something else.
-
+Some key tenets of information security are often described using the term "CIA". In its simplest form this stands for confidentiality, integrity, and availability. 
 
 - Confidentiality
 - Integrity
@@ -135,6 +154,8 @@ File based:
 - PDF
 - PGP
 
+https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg
+
 Encryption Standards
 ========================================================
 
@@ -147,6 +168,9 @@ National standards (NIST):
 
 Some Basic Security Tips
 ========================================================
+
+Question: If I have set a password on my laptop, is the data on my laptop secure?
+
 
 * Security on personal computers and devices is easily subverted.
 

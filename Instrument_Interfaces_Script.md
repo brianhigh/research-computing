@@ -67,3 +67,7 @@ Torrent Suite is a modern sequence analysis package. It's available with an open
 * http://en.wikipedia.org/wiki/LabVIEW
 * http://en.wikipedia.org/wiki/Agilent_ChemStation
 
+Summary
+========================================================
+
+To review. Peripherals are typically external input and output devices, such as keyboards, and monitors. There are a number of interface technologies on the market, the latest instruments can be purchased with ethernet builtin, while most older devices will rely on GPIB. As for data acquisition, in the field you can use mobile devices like tablets, and GPS to aid your work. And, in the lab, use software like LabVIEW to process data from an instrument.

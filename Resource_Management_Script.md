@@ -50,11 +50,11 @@ CPU Utilization: Parallel Processing
 
 With modern CPUs having multiple cores, parallel processing is the only effective way to utilize all of the CPU power available. In order to utilize it, your data and work-flow may need adjustment. With parallel processing, your data is divided into pieces, and calculations are done on several pieces simultaneously.
 
-Thankfully, there are some well developed tools and techniques to help with this. One of the more common is MapReduce which is used with Apache's Hadoop. MapReduce is a framework for processing large volumes of data in parallel. Some lesser seen tools include GNU Parallel which is a tool used to run and manage command-line tools in a parallel fashion.
+Thankfully, there are some well developed tools and techniques to help with this. One of the more common is MapReduce which was popularized by Apache's Hadoop. MapReduce is a framework for processing large volumes of data in parallel. Some lesser seen tools include GNU Parallel which is a tool used to run and manage command-line tools in a parallel fashion.
 
 As an example, climate data can be processed in a parallel fashion. The data can be divided up by area, and then computation performed on a per area basis.
 
 Summary
 ========================================================
 
-To recap, there are there are three main components to resource management. Capacity planning, which is the identification and allocation of necessary resources. Utilization monitoring, which is verifing you are using the resources you've allocated. And, finally, bottleneck resolution. The identification, and correction of performance bottlenecks.
+To recap, there are three main components to resource management. Capacity planning, which is the identification and allocation of necessary resources. Utilization monitoring, which is verifing you are using the resources you've allocated. And, finally, bottleneck resolution. The identification, and correction of performance bottlenecks.

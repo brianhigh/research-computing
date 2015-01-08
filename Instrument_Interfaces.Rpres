@@ -16,7 +16,6 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Input/Output (I/O)
 ========================================================
 
-- Peripherals
 - Ports and Connectors
 - Wireless
 - Analog/digital
@@ -42,12 +41,10 @@ Peripherals
 Instrument Interfaces
 ========================================================
 
-- I/O Cards
-  - expand the I/O capabilities of a computer
-- HPIB/GPIB
-  - widely used instrument interface
-- Ethernet
-  - most prolific network interface technology
+- **I/O Cards:** expand the I/O capabilities of a computer
+- **Bus:** multiple devices
+- **HPIB/GPIB:** widely used instrument interface
+- **Ethernet:** prolific network technology
 - Serial
 - Parallel
 - USB

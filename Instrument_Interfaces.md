@@ -16,6 +16,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Input/Output (I/O)
 ========================================================
 
+- Physical and Virtual
 - Ports and Connectors
 - Wireless
 - Analog/digital

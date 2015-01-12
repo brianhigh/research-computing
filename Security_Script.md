@@ -183,3 +183,8 @@ Best practices
 
 List and discuss data security best practices.
 
+Some practical resources on network/Internet security:
+
+Krebs on Security http://http://krebsonsecurity.com/
+
+

@@ -17,24 +17,35 @@ Networking Script
 ===================
 - [Cue Also Sprach Zarathustra]
 
-Intro
--------
+Introduction
+===================
 
 The intent of this 30-minute presentation is to give students a somewhat better undertanding of the basic underpinnings of computer networking as it relates to Research and Data Management.
 
 We'll cover a number of topics including a bit of history of networking, it's purpose, the evolution to contemporary computer networks, and many important technical aspects including networking topologies, protocols and standards, and networking system components.
 
 
-Slide 1
------------
+Networking History
+========================================================
+
+Did you know that By 1792 there was a data network that spanned the length and breadth of France?
+
+[Page]
+
 
 The notion of a communications network goes back some time. Think of smoke signals or drums and later on in history the arrival of some semaphore systems that connected European capitals to their frontier defence posts during Napoleonic times.  Fast forward a bit and you find yourself looking at the telegraph and telephone all of which were technological improvements but which would be considered as "analog"  technologies.  As such these all suffered from the problems like amiguity -- "Does that flag mean attack or retreat?"  other limitations depending upon the technology. For example, a semaphore system might only be usable during periods of clear weather, and sound or smoke traveling over long distances might be misinterpreted due to audible or visual degradation.
+
+From the industrial revolution to the early 1900s, things improved considerably. However, communications systems still suffered from the limitations of analog technology. While a tin can telephone is a far cry from the extensive telephone networks that followed, this 1943 switchboard photo depicts a system using the same fundamental technology.
+
+Enter Binary
+==================================================================
 
 What we think of as a computer network really could not arise until certain preconditions were met and certain technologies discovered. For one it required the invention of usable computers that employed binary-based "digital" technology to perform calculations. Secondarily, it required a realization that binary/digital technologies could be employed in communication to set the stage for the emergence of computer networks and networking. Specifically, it wasn't until the 1960s that computer networks as we know them really started to take off with something called "packet switching".
 
 Question: would not Morse code be considered a binary communication protocol?
 
-Some binary basics
+Some Binary Basics
+==================================================================
 
 The essential elements in the binary world is that only two data states exist - 0 and 1 - yet these can be used to describe incredibly complex information. It's importance cannot be over emphasized. However, its simple use of zeros and of ones can be very difficult for normal mortals to cope with. Consider the following number:
 
@@ -44,7 +55,12 @@ Some of you may recognize this number as the address of a server at the Universi
 
   10000000010111110111000000000001
   
-While speaking in binary won't make you the hit of the party it is important to remember that all of our contemporary communications rely on this underlying binary math.
+While speaking in binary won't make you the hit of the party it is important to remember that all of our contemporary communications rely completely on this underlying binary math.
+
+Question: would not Morse code be considered a binary communication protocol?
+
+Computer Networks
+==================
 
 So, what do computer networks provide? They are a means for a computer system to communicate with another computer system or many computers systems. I intentionally say "computer system" rather than "computer" as it is often the case that it is a system running on a computer that is communicating to peer system, say a specialized  system that performs bank transfers. By extension it allows people to communicate with each other at least for so long as the computers do not rise up and prohibit this. 
   
@@ -57,7 +73,7 @@ Computer Networks
 - Computing devices: 
   * Communicate by exchanging data
 
-Networking
+Contemporary Networking
 ========================================================
 
 Several characteristics define modern computer networking as we know it today. First is its basis in the binary world that we just reviewed. Second is a basis in something we have mentioned but not examined and that is "packet switching". The third characteristic is what could generally be called "protocols".
@@ -66,7 +82,7 @@ One other crucial element in modern computer networking and applications that ru
 
 Other important elements in computer networking include software and hardware components, network topologies, network speeds, and a number of other elements.
 
-Protocols and standards
+Protocols, Standards and Governing Bodies
 
 In 1865 -- the age of telegraphy -- the establishment of the International Telecommunications Union (ITU)  signaled the recognition that worldwide communication would not grow and improve unless countries cooperated in defining standards and protocols that would allow national telegram and telephones to interoprate. The ITU is still very much alive today with governing bodies spanning landline telephone communication, wireless telephony, satellite communications and many other areas.
 

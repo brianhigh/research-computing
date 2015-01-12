@@ -1,7 +1,7 @@
 Instrument Interfaces
 ========================================================
 author: John Yocum
-date: January 02, 2015
+date: January 08, 2015
 transition: fade
 
 Research Computing and Data Management
@@ -16,7 +16,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Input/Output (I/O)
 ========================================================
 
-- Peripherals
+- Physical and Virtual
 - Ports and Connectors
 - Wireless
 - Analog/digital
@@ -42,12 +42,10 @@ Peripherals
 Instrument Interfaces
 ========================================================
 
-- I/O Cards
-  - expand the I/O capabilities of a computer
-- HPIB/GPIB
-  - widely used instrument interface
-- Ethernet
-  - most prolific network interface technology
+- **I/O Cards:** expand the I/O capabilities of a computer
+- **Bus:** multiple devices
+- **HPIB/GPIB:** widely used instrument interface
+- **Ethernet:** prolific network technology
 - Serial
 - Parallel
 - USB
@@ -90,3 +88,9 @@ Instrument Data Acquisition Software
 * Torrent Suite
   * Open source sequence analyzer
 
+Summary
+========================================================
+
+- Peripherals
+- Interfaces
+- Data Aquisition

@@ -1,7 +1,7 @@
 Databases
 ========================================================
 author: John Yocum
-date: January 07, 2015
+date: January 08, 2015
 transition: fade
 
 Research Computing and Data Management
@@ -59,6 +59,7 @@ Flat File Examples
 ========================================================
 
 - When to use it
+- Recording temperature from a single sensor
 
 Relational
 ========================================================
@@ -80,6 +81,7 @@ Relational Examples
 ========================================================
 
 - When to use it
+- Tracking multiple samples and locations
 
 NoSQL
 ========================================================
@@ -94,11 +96,15 @@ NoSQL Continued
 ========================================================
 
 - Show the different data storage models
+- Key/Value
+- Document
+- Tabular
 
 NoSQL Examples
 ========================================================
 
 - When to use it
+- Recording high resolution (frequent) data from multiple sensors or locations
 
 Query Languages
 ========================================================

@@ -18,23 +18,25 @@ Data is waiting to become information. Through instrument interfaces, and data a
 Input/Output (I/O)
 ========================================================
 
-Computers and devices are equipped with a variety of inputs, and outputs. Peripherals then interface with the computer via those input and output protocols, ports or connectors, and sometimes wireless technology. These interfaces are typically digital, however some, such as audio, are analog.
+Computers and devices are equipped with a variety of inputs, and outputs. Inputs and outputs have both physical and virtual components. On the physical side, is the various ports, connectors, and cables utilized. On the virtual side, are the various protocols that operate over the physical interface. That said, physical interfaces aren't limited to cabled connections. Wireless both radio frequency and optical are growing in popularity. Regardless of the physical medium most are digital, however some, such as audio, are analog.
 
 Peripherals
 ========================================================
 
-Peripherals are not limited to monitors and keyboards. They also include sensors, and complex instruments. Each of these devices connects via some interface which could be wired or wireless. Be aware though, that a peripheral may be available in more than one interface type. 
+Peripherals are not limited to monitors and keyboards. They also include sensors, and complex instruments. Each of these devices connects via some interface which could be wired or wireless. Be aware though, that a peripheral may be available in more than one interface type or may be equipped with multiple interface options. For example, monitors often equipped with  both analog and digital inputs. 
 
 Instrument Interfaces
 ========================================================
 
-An input/output card expands a computer's I/O options. These can range from a basic USB card, to a GPIB controller.
+An input/output card expands a computer's I/O options. These can range from a basic USB card, to a GPIB controller. Something to keep in mind, laptop computers tend to be more limited in their I/O expansion options. If you need more than USB and Ethernet capability, a Desktop computer is recommended. 
 
-HPIB evolved into the General Purpose Interface Bus, it's a standarized interface bus used by a wide array of scientific instruments. One nice feature of GPIB, is the ease of converting it into another interface technology such as ethernet or USB.
+A bus technology allows multiple devices to share a common medium. With bus technologies, you can share a single port on your computer with multiple devices via a bus specific hub or in some cases via daisy chaning devices.
 
-Ethernet is the most common network interface technology. Many modern instruments have native ethernet support, enabling them to be accessed directly from a desk, instead of via a computer located next to the instrument.
+Hewlett-Packard Interface Bus evolved into the General Purpose Interface Bus. It's a standarized interface bus used by a wide array of scientific instruments. One nice feature of GPIB, is the ease of converting it into another interface technology such as ethernet or USB.
 
-Serial and Parallel are both "legacy" interfaces. Their popularity has been in a decline over the past decade, largely being replaced with USB and Ethernet.
+Ethernet is the most common network interface technology. So common, that most computers built today include ethernet onboard. Many modern instruments have native ethernet support, enabling them to be accessed directly from a desk, instead of via a computer located next to the instrument.
+
+Serial and Parallel are both "legacy" interfaces. Their popularity has been in a decline over the past decade, largely being replaced with USB and Ethernet. Due to their decline, they aren't typically seen on modern computers.
 
 USB is a fairly universal bus technology. It's used to connect everything from keyboards to GPIB interface controllers. It's found on every computer made in the past 10 years, making it a safe choice when compatibility is needed.
 
@@ -62,7 +64,7 @@ LabVIEW is a popular package due to it's unique development language, called G. 
 
 ChemStation from Agilent is one of many chromatography packages. Like many instrument acquisition packages, it's a vendor specific software package limited to use with Agilent equipment.
 
-Torrent Suite is a modern sequence analysis package. It's available with an open source license, making it free software.
+Torrent Suite is a modern sequence analysis package. It's available with an open source license, making it free software. Open source alternatives exist for a variety of proprietary software.
 
 * http://en.wikipedia.org/wiki/LabVIEW
 * http://en.wikipedia.org/wiki/Agilent_ChemStation

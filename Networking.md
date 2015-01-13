@@ -84,11 +84,11 @@ Question
 Computer Networks: What's the Point?
 ========================================================
 
-1. Allow a computer system to communicate with another computer system
+1. Allow a computer system/device to communicate with another computer system by exchanging data
 2. Allow humans to interact with computer systems
 3. Allow humans to interact with other humans.*  
   
-        
+      
 
 `*` at least for so long as the computers do not rise up and prohibit this
 
@@ -133,12 +133,6 @@ Questions
 > What is ICANN?
 
 
-Packet Switching and a Traceroute Example
-=============================================================
-
-
-http://www.monitis.com/traceroute/
-
 
 Packet Switching and Routing Metrics
 =============================================================
@@ -149,22 +143,55 @@ Packet Switching and Routing Metrics
 
 ![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
 
-
-Placeholder
+Routing: a Traceroute Example
 =============================================================
+          
+http://www.monitis.com/traceroute/
+
+Resolution of Names and Addresses
+==============================================================
+
+* DNS: phage.deohs.washington.edu => 128.95.230.32
+* ARP: 128.95.230.32 => 26:a5:b7:20:f0:35
+
+Question
+=============================================================
+> What were the design goals of ARPANET?
 
 
+Data Flow of the Layered TCP/IP Model
+=============================================================
 
 ![TCP/IP Model](http://upload.wikimedia.org/wikipedia/commons/b/b2/Data_Flow_of_the_Internet_Protocol_Suite.PNG)
 
-[The Internet Protocol Suite](http://en.wikipedia.org/wiki/Internet_protocol_suite)
+[The Internet Protocol Suite Wikipedia Page](http://en.wikipedia.org/wiki/Internet_protocol_suite)
 
-- Computer networks:
-  * Provide a means for devices to communicate
-- Computing devices: 
-  * Communicate by exchanging data
+Layers, Protocols, and Encapsulation
+=============================================================
+(Not translated from the Dutch)
 
-Networking
+![encapsulation](https://upload.wikimedia.org/wikipedia/commons/5/54/Inkapseling_bij_tcp-ip-nl.svg)
+
+Types of Networks
+=============================================================
+
+* LAN - Local Area Network
+* WAN - Wide Area Network
+
+* LAN - less need for routing
+* WAN - more need for routing
+
+Network Equipment
+============================================================
+
+Topologies and the Networking Layer
+=============================================================
+
+![Topologies](https://upload.wikimedia.org/wikipedia/commons/9/97/NetworkTopologies.svg)
+
+
+
+Placeholder
 ========================================================
 
 - Internet
@@ -173,24 +200,6 @@ Networking
 - Layers
 - Protocols
 - Speeds
-
-
-Internet
-========================================================
-
-- History
-- Components
-- Structure ("Cloud")
-
-
-Components
-========================================================
-
-- Nodes
-  * hosts
-  * switches
-  * routers
-- Links
 
 
 Topologies
@@ -223,9 +232,3 @@ Protocols/addressing
 - IMAP
 - RDP
 
-Common Network Speeds
-========================================================
-
-- Home
-- Small business
-- Campus

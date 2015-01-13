@@ -92,6 +92,9 @@ Many factors are considered in the development of these complicated protocols in
 
 Before looking any more closely at protocols it will help to back up a bit and look at other defining aspect of "internetworking" in the form of the layered model mentioned earlier and at packet switching. Let us look at the basics of packet switching first.
 
+Packt Switching
+===============================================================
+
 Imagine if you will Charles Dickens sitting at Gad's Hill, Kent writing A Tale of Two Cities one paragraph at a time. He's doing it this way because the only way he has to send his prose to the publisher is on the back of a stack of postcards one card at a time. At a very basic level this represents how a packet switching network operates, by reducing a larger message or text too small postcard sized packets which are then transmitted individually. 
 
 Now, you might ask, how will Dickens postcards get to the publisher in London if one of the bridges over the Thames is out of service, or if a certain post office along the route is closed for the day or has burned down. The logical answer might be that the postcards should be sent over a different bridge and through a different post office. This can be seen to represent another important component of packet switched networking, that of "routing".
@@ -114,11 +117,11 @@ There are quite a number of other elements and terms that are essential to routi
 
 "Metrics" are something that are implemented in routing protocols that consider a lot of the other factors we have just discussed -- queuing, congestion, latency, hops -- and make calculated decisions about the best way to send packets on their way. If you had to drive from the UW campus to Edmonds right now, you would have a choice of routes. Take I-5 Or Highway 99? And you would likely consider pretty much the same list of factors as these "routing metrics".
 
-Rats.  I lost a good chunk that had to do with IP addresses that are assigned and then Mac addresses that are required for our ARP
+Protocols and jargon beget more protocols and jargon. If we suggested that you go to 128.95.230.32 to work on RStudio, it might be hard to remember your intended destination. Instead, we are able to say go to "phage" or "phage.deohs.washington.edu. This is made possible by a resolution protocol system called the domain name system or DNS with which many of you are likely familiar. Further, resolution is required not simply to that IP address, but to an actual hardware device in the computer and to something called a MAC (media access control) address. This MAC address is something that is equally unfriendly to humans consisting as it does of a string of hexadecimal numbers. Resolving an IP address to a specific computer and its MAC address required another protocol called ARP or address resolution protocol. But we may be drifting into the realm of that protocol called TMI.
 
-Protocols and jargon beget more protocols and jargon. If we suggested that you go to 128.95.230.32 to work on RStudio, it might be hard to remember your intended destination. Instead, we are able to say go to "phage" or "phage.deohs.washington.edu. This is made possible by a resolution protocol system called the domain name system or DNS with which many of you are likely familiar. Further, resolution is required not simply to that IP address, but to an actual hardware device in the computer and to something called a MAC (media access control) address. This MAC address is something that is equally unfriendly to humans consisting as it does of a string of hexadecimal numbers. Resolving an IP address to a specific computer and its Mac address required another protocol called ARP or address resolution protocol. But we may be drifting into the realm of that protocol called TMI.
-
-Question: What were the design goals of ARPANET?
+Question
+=============================================================
+> What were the design goals of ARPANET?
 
 http://en.wikipedia.org/wiki/ARPANET#Misconceptions_of_design_goals
 

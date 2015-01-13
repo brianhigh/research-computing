@@ -116,9 +116,7 @@ Protocols, Standards and Governing Bodies
 
 ![Internet Engineering Task Force](images/ietf-logo.png) Internet Engineering Task Force
 
-----
 
-IEEE
 
 The TCP/IP Protocol Suite
 ==============================================================
@@ -135,15 +133,27 @@ Questions
 > What is ICANN?
 
 
-
-
-Packet Switching
+Packet Switching and a Traceroute Example
 =============================================================
+
+
+http://www.monitis.com/traceroute/
+
+
+Packet Switching and Routing Metrics
+=============================================================
+* Hops
+* Latency
+* Congestion
+* Queuing
+
+![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
+
 
 Placeholder
 =============================================================
 
-![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
+
 
 ![TCP/IP Model](http://upload.wikimedia.org/wikipedia/commons/b/b2/Data_Flow_of_the_Internet_Protocol_Suite.PNG)
 

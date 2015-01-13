@@ -1,8 +1,9 @@
 Application Interfaces
 ========================================================
 author: Brian High & Elliot Norwood
-date: January 05, 2015 
+date: January 12, 2015 
 transition: fade
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -21,7 +22,7 @@ Application Interfaces
  * Windows, Files and Folders, Graphics.
  * Most common modern interface.
 - Textual
- * Command line.
+ * Command line
  * Often more powerful and faster than the visual interface, but less intuitive.
 
 
@@ -43,6 +44,8 @@ GUI
  * Physical actions should corrospond to computer behavior.
 - Most useful for common or visual tasks (e.g. photo editing).
 - More intuitive interface for most computer users.
+
+>
 
 Web Interfaces
 ========================================================
@@ -96,6 +99,8 @@ Server-side web-scripting languages and platforms:
 Client-side
  - JavaScript (do not confuse with Java)
  - Flash
+ 
+>
 
 Web Application Frameworks
 ========================================================
@@ -116,7 +121,7 @@ Data Exchange
  * Standard markup language that can be used by tools (eg. RSS, XHTML, SOAP) to deliver data.
 - JSON 
  * An alternative to XML, transmits data in attribute-value pairs.
- * Ajax uses JSON to request new data after a page as loaded by sending data to server dynamically.
+ * Ajax uses JSON to request new data after a page has loaded by sending data to server dynamically.
 
 Textual Interfaces
 ========================================================
@@ -145,7 +150,6 @@ Windows CLI
 
 - DOS - "Disk Operating System"
 - CMD.EXE
-- Windows systems
 - PowerShell
 
 Bash
@@ -154,6 +158,8 @@ Bash
 - "Bourne Again Shell"
 - Unix systems (Mac OSX) and Linux
 - Windows: Cygwin, GitBash
+
+>
 
 Other (Application)
 ========================================================
@@ -172,6 +178,7 @@ API
 - Develop your own apps / utilities using data from another source
 - Example: Google Maps API
 
+>
 
 
 

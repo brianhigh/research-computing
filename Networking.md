@@ -1,9 +1,9 @@
 Computer Networking
 ========================================================
 author: Jim Hogan
-date: 2014-12-23
+date: 2015-01-14
 transition: fade
-#incremental: true
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -187,9 +187,30 @@ Network Equipment
 Topologies and the Networking Layer
 =============================================================
 
-![Topologies](https://upload.wikimedia.org/wikipedia/commons/9/97/NetworkTopologies.svg)
+![Topologies](https://upload.wikimedia.org/wikipedia/commons/9/97/NetworkTopologies.svg) 
 
+* Mesh, Star and Tree arguably more common in this era 
+* Complex networks can combine elements of several topologies
 
+Link Layer Technologies (Ethernet Rules!)
+==============================================================
+
+From bus-based in the 80s 
+
+![10Base2](https://upload.wikimedia.org/wikipedia/commons/9/92/10base2_t-piece.png)
+
+To the familiar RJ45
+
+![RJ-45](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/CAT5e-RJ45.jpg/299px-CAT5e-RJ45.jpg)
+
+----
+Over copper and fiber media
+
+![copper and fiber](images/copper-fiber.jpg)
+
+All standards thanks to
+
+![IEEE](images/IEEE_logo.png)
 
 Placeholder
 ========================================================

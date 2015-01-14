@@ -160,9 +160,11 @@ Let's look the flow of data through the layer TCP/IP model. You can see that dat
 Layers, Protocols, and Encapsulation
 =============================================================
 
-The importance of the layered model operation makes a bit more sense when you consider another fundamental operation of IP networks, that of encapsulation. While some of this attractive diagram has not been translated from the Dutch it should be pretty straightforward to see where we have an application layer that process information is transformed into packets of binary data  for encapsulation by the transport layer f then again encapsulated into the Internet layer format and so on until the data is finally encapsulated for transmission over the link layer of data network.
+The importance of the layered model operation makes a bit more sense when you consider another fundamental operation of IP networks, that of encapsulation. While some of this attractive diagram has not been translated from the Dutch it should be pretty straightforward to see where we have an application layer where information is transformed into packets of binary data  for encapsulation by the transport layer then again encapsulated into the Internet layer format and so on until the data is finally encapsulated for transmission over the link layer of data network.
 
 Using our Charles Dickens example, it would be as if Dickens ran out of postcards but discovered a cache of envelopes. Think of encapsulation as a layer of envelopes around chapters of his long tale.
+
+This diagram also offers a very clear depiction of the protocols associated with each layer.
 
 Types of Networks
 =============================================================
@@ -190,6 +192,9 @@ Network Topologies
 ===============================================================
 
 Network equipment can be organized in different so-called topologies. Common examples include mesh hub and spoke, and bus. The Internet can be considered the biggest example going of a mesh network. Closer to home and on a LAN a hub and spoke, or star, topology is more likely to be found.
+
+Link Layer Technologies
+==============================================================
 
 At this point in the history of computer networking it could seem that ethernet is the only networking protocol that ever existed to supply layer 2 networking and switching. While that is not the case, for practical purposes it might as well be considered so. Competing protocols have come but mostly gone.
 

@@ -3,7 +3,7 @@ Computer Networking
 author: Jim Hogan
 date: 2015-01-14
 transition: fade
-incremental: true
+#incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -88,7 +88,7 @@ Computer Networks: What's the Point?
 2. Allow humans to interact with computer systems
 3. Allow humans to interact with other humans.*  
   
-      
+----
 
 `*` at least for so long as the computers do not rise up and prohibit this
 
@@ -181,8 +181,6 @@ Types of Networks
 * LAN - less need for routing
 * WAN - more need for routing
 
-Network Equipment
-============================================================
 
 Topologies and the Networking Layer
 =============================================================
@@ -212,44 +210,30 @@ All standards thanks to
 
 ![IEEE](images/IEEE_logo.png)
 
-Placeholder
+Primary Networking Devices
 ========================================================
 
-- Internet
-- Components
-- Topologies
-- Layers
-- Protocols
-- Speeds
+* routers
+* switches
+
+* access point
+
+----
+Devices may combine functions and be hard to distinguish by appearance.
+
+![Switch](images/switch.png)
 
 
-Topologies
+Using the Network Effectively
 ========================================================
 
-- Bus
-- Star
-- Ring
-- Mesh
-- tree
-- Line
-- Fully connected
-
-Network Layers
-========================================================
-
-- Link
-- Internet
-- Transport
-- Application
-
-Protocols/addressing
-========================================================
-
-- Ethernet
-- TCP/IP
-- DNS
-- HTTP
-- SMTP
-- IMAP
-- RDP
-
+* network could be performance bottleneck
+* wired connection more reliable than wireless
+* read and write speed to local disk always faster
+* troubleshooting: 
+  + start with closest component
+  + learn how to use simple tool "ping"
+  + get a grip on name resolution/DNS
+  + know how to determine your IP address
+  
+[Networking on Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki/networking)

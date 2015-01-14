@@ -183,20 +183,18 @@ Question
 
 http://en.wikipedia.org/wiki/Wide_area_network
 
-Network Equipment
-=====================
-
-Two perhaps familiar pieces of equipment used in networking include soak a so-called "switch" and something called a "router". The former is typically implemented to support a LAN while the latter is intended to provide routing services for a  WAN.
 
 Network Topologies
 ===============================================================
 
 Network equipment can be organized in different so-called topologies. Common examples include mesh hub and spoke, and bus. The Internet can be considered the biggest example going of a mesh network. Closer to home and on a LAN a hub and spoke, or star, topology is more likely to be found.
 
-Link Layer Technologies
+Link Layer Technologies (Ethernet Rules!)
 ==============================================================
 
 At this point in the history of computer networking it could seem that ethernet is the only networking protocol that ever existed to supply layer 2 networking and switching. While that is not the case, for practical purposes it might as well be considered so. Competing protocols have come but mostly gone.
+
+Ethernet has continuously evolved, from a bus-based system in the 1980s to ethernet utilizing twisted-pair cabling and the familiar RJ 45 connector, and can connect over a variety of copper, fiber, and wireless/radio media. All brought to us by another important standards body, the Institute of Electrical and Electronics Engineers.
 
 While not restricted to local area network technology, network speeds are referred to in bits per second – bps – with variations based on the speed of the network.  Probably most familiar is the term megabits (million bits) per second – Mbps. Speeds have progressed from 10 Mbps, past 100 Mbps, and now range into "gigabit" or billion bits per second – Gbps.
 
@@ -209,80 +207,41 @@ Question
 
 http://en.wikipedia.org/wiki/Data_rate_units#Megabit_per_second
 
-Topologies and the Networking Layer
-=============================================================
+Primary Network Devices
+=======================
 
-![Tolologies](https://upload.wikimedia.org/wikipedia/commons/9/97/NetworkTopologies.svg)
+So, what are the devices that make these complex topologies work?
 
-- Internet
-- Components
-- Topologies
-- Layers
-- Protocols
-- Speeds
+Two types of devices, perhaps familiar, provide the functionality needed for a packet switched network. The first would be a "switch".  The second is known as a router. The former is typically implemented to support a LAN while the latter is intended to provide routing services for a  WAN.
 
+Another device with which you are probably familiar is a wireless access point.
 
-Internet
-========================================================
+By design these newer devices may combine functions and be hard to distinguish solely by appearance or size.
 
-- History
-- Components
-- Structure ("Cloud")
+Using the Network Effectively
+=============================================
 
+First keep in mind that a network is only as good as its weakest or slowest link. Network service can be a performance bottleneck in some situations.
 
-Components
-========================================================
+A wired connection to your computer is almost always more reliable than a wireless network connection.
 
-- Nodes
-  * hosts
-  * switches
-  * routers
-- Links
+In the case of bottlenecks remember that read and write speed to and from a local hard drive will typically always be faster than the speed of read and write to share or folder on the network.
 
+What are some troubleshooting techniques?
 
-Topologies
-========================================================
+For one start with the component closest to you and work your ways outward. Troubleshooting what seems like an Internet problem may be nonproductive if it is simply the case that someone has unplugged your network cable from the wall.
 
-- Bus
-- Star
-- Ring
-- Mesh
-- tree
-- Line
-- Fully connected
+Learn how to use a simple tool called "ping" to assess whether remote network hosts are reachable by IP address.
 
-Network Layers
-========================================================
+Get a grip on name resolution and DNS. Knowing whether a problem is simply a failure  of domain name resolution can save you a lot of time and aggravation.
 
-- Link
-- Internet
-- Transport
-- Application
+Learn how to determine your IP address using tools on your computer or web based tools like what is my IP.com.
 
-Protocols/addressing
-========================================================
+Whether you are attempting to solve a problem by yourself or wind up seeking help from another party, knowing some of these techniques will help get you back in action much more quickly.
 
-- Ethernet
-- TCP/IP
-- DNS
-- HTTP
-- SMTP
-- IMAP
-- RDP
+For more look at networking on the computing basics wiki.
 
-Common Network Speeds
-========================================================
+Conclusion
+==========================================================
 
-- Home
-- Small business
-- Campus
-
-Sidebar: Troubleshooting
-========================================================
-Problem: I can't get to the Pepsi website!
-Question: can I get to the Coca-Cola website?
-Results: yes I can. 
-Possible conclusion: Maybe it is just the Pepsi website.
-
-Problem: but I can't get to a few other websites!
 

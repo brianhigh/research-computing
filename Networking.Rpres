@@ -3,7 +3,7 @@ Computer Networking
 author: Jim Hogan
 date: 2015-01-14
 transition: fade
-#incremental: true
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -86,12 +86,9 @@ Computer Networks: What's the Point?
 
 1. Allow a computer system/device to communicate with another computer system by exchanging data
 2. Allow humans to interact with computer systems
-3. Allow humans to interact with other humans.*  
-  
-----
+3. Allow humans to interact with other humans. 
 
-`*` at least for so long as the computers do not rise up and prohibit this
-
+ 
 Contemporary Computer Networks: Key Elements
 ==================================================================
 
@@ -130,7 +127,7 @@ Questions
 ==============================================================
 > How many different protocols are under the TCP/IP umbrella?
 
-> What is ICANN?
+> What is ICANN?  IANA?
 
 
 
@@ -210,11 +207,24 @@ All standards thanks to
 
 ![IEEE](images/IEEE_logo.png)
 
+Network Speeds
+=======================================================
+
+Familiar Speeds in Common Use:
+
+10 Mbps - Ethernet 10BaseT - outmoded
+
+100 Mbps - "Fast Ethernet" - still very common
+
+1000 Mbps - "Gigabit Ethernet or 1Gbps" - typical in new devices
+
+Faster speeds possible but expensive. 
+
 Primary Networking Devices
 ========================================================
 
-* routers
 * switches
+* router
 
 * access point
 

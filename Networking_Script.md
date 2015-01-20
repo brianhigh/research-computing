@@ -20,7 +20,9 @@ Networking Script
 Introduction
 ===================
 
-The intent of this 30-minute presentation is to give students a somewhat better undertanding of the basic underpinnings of computer networking as it relates to Research and Data Management.
+In this day and age, it is rare to use a computer without some sort of networked connection, so learning more about the ins and outs of networking is essential for researchers.
+
+The intent of this 30-minute presentation is to give youa somewhat better undertanding of the basic underpinnings of computer networking as it relates to Research and Data Management.
 
 We'll cover a number of topics including a bit of history of networking, it's purpose, the evolution to contemporary computer networks, and many important technical aspects including networking topologies, protocols and standards, and networking system components.
 
@@ -35,7 +37,7 @@ Networking History
 
 They year was 1792 and the Chappe system used what were called optical telegraphs.
 
-The notion of a communications network goes back some time. Think of smoke signals or drums and later on in history the arrival of some semaphore systems that connected European capitals to their frontier defence posts during Napoleonic times.  Fast forward a bit and you find yourself looking at the electrical telegraph and telephone all of which were technological improvements but which would be considered as "analog"  technologies.  Analog communications all suffered from problems like amiguity -- "Does that flag mean attack or retreat?" --and other limitations depending upon the technology. For example, a semaphore system might only be usable during periods of clear weather, and sound or smoke traveling over long distances might be misinterpreted due to audible or visual degradation.
+The notion of a communications network goes back some time. Think of smoke signals or drums and later on semaphore and telegraph systems like Chappe's that connected European capitals to their frontier defence posts during Napoleonic times.  Fast forward a bit and you find yourself looking at the electrical telegraph and telephone all of which were technological improvements but which would be considered as "analog"  technologies.  Analog communications all suffered from problems like amiguity -- "Does that flag mean attack or retreat?" --and other limitations depending upon the technology. For example, a semaphore system might only be usable during periods of clear weather, and sound or smoke traveling over long distances might be misinterpreted due to audible or visual degradation.
 
 Moving Along 
 ================================================================
@@ -47,24 +49,21 @@ Enter Binary
 
 What we think of as a computer network really could not arise until certain preconditions were met and certain technologies discovered. For one it required the invention of usable computers that employed binary-based "digital" technology to perform calculations. Secondarily, it required a realization that binary/digital technologies could be employed in communication to set the stage for the emergence of computer networks and networking. Specifically, it wasn't until the 1960s that computer networks as we know them really started to take off with something called "packet switching".
 
-Question
-==================================================================
-
-Would not Morse code be considered a binary communication protocol?
-
-Enter Binary
-===============
 
 Some Binary Basics
 ==================================================================
 
-The essential elements in the binary world is that only two data states exist - 0 and 1 - yet these can be used to describe incredibly complex information. It's importance cannot be over emphasized. However, its simple use of zeros and of ones can be very difficult for normal mortals to cope with. Consider the following number:
+The essential elements in the binary world is that only two data states exist - 0 and 1 - yet these can be used to describe incredibly complex information. It's importance cannot be over emphasized. However, its simple use of zeros and of ones can be very difficult for normal mortals to cope with. Consider the following number. Do yuu recognize it?
 
 128.95.112.1
 
-Some of you may recognize this number as the address of a server at the University of Washington that provides so-called domain name services. In fact this number is simply a decimal notation representing the following binary number.
+Some of you may recognize this number as the address of a server at the University of Washington that provides so-called domain name services. .
+
+How about this number?:
 
   10000000010111110111000000000001
+  
+In fact the first number simply a decimal notation representing the second binary number. 
   
 While speaking in binary won't make you the hit of the party it is important to remember that all of our contemporary communications rely completely on this underlying binary math.
 
@@ -75,12 +74,20 @@ Would not Morse code be considered a binary communication protocol?
 Computer Networks: What's the Point?
 ===================================================
 
-So, what do computer networks provide? They are a means for a computer system to communicate with another computer system or many computers systems. I intentionally say "computer system" rather than "computer" as it is often the case that it is a system running on a computer that is communicating to peer system, say a specialized  system that performs bank transfers. By extension it allows people to communicate with each other at least for so long as the computers do not rise up and prohibit this. 
+So, what do computer networks provide? First, they are a means for a computer system to communicate with another computer system or many computers systems. I intentionally say "computer system" rather than "computer" as it is often the case that it is a system running on a computer that is communicating to peer system, say a specialized  system that performs bank transfer 
+
+Secondarily, networks allow humans to interact with computer systems.
+
+And lastly, networks allow humans to communicate with other humans..... at least for so long as the computers do not rise up and prohibit this. 
   
 Contemporary Computer Networks:Key Elements
 ========================================================
 
-Several characteristics define modern computer networking as we know it today. First is its basis in the binary world that we just reviewed. Second is a basis in something we have mentioned but not examined and that is "packet switching". The third characteristic is what could generally be called "protocols".
+Several characteristics define modern computer networking as we know it today. First is its basis in the binary world that we just reviewed. 
+
+Second is a basis in something we have mentioned but not examined and that is "packet switching". 
+
+The third characteristic is what could generally be called "protocols".
 
 One other crucial element in modern computer networking and applications that run on networked computers is the notion of "layers", We will review what is generally called a "layered model".
 
@@ -93,9 +100,19 @@ In 1865 -- the age of telegraphy -- the establishment of the International Telec
 
 It was not always a given, but now that we are well into the age of the Internet, it is clear that the governing body that has the most to do with how networking and the Internet as we know them operate is the Internet engineering task force or IETF.  The IETF is the governing body that has custody of the overall suite of protocols that define the way that the Internet works.  Most notable in this realm is the suite of Internet protocols that go by the name of TCP/IP.  While not necessarily part of the Internet, many other organizations and institutions operate networks that use the same TCP/IP suite to implement their networks. The core protocols of this suite include transmission control protocol and Internet protocol both of which are featured in the suite's name and which govern routing on what we now call an Internet-based network. The suite includes under its umbrella many other protocols that support operations on an Internet-based network these include protocols to look up names you may – may recognize DNS in that role – and things like time synchronization handled by the protocol NTP or network time protocol.
 
+TCP/IP protocols and their changes and enhancements are embodied in documents call RFCs, or Request For Comment. In technical discussions, it is not unusual to hear networking types use phrases like "RFC 1918 addressing" to reference a specific technical subject.
+
 Many factors are considered in the development of these complicated protocols including what degree of reliability is required what performance is required. Some protocols may include elements that are unreliable by design and are simply called unreliable. It is not an insult but a very practical decision of trade-offs to allow a certain degree of unreliability in the name of better performance and the the converse can be true.
 
+To the amusement of some of the key protocols begin with the term "Simple" when they are hardly that.
+
 Before looking any more closely at protocols it will help to back up a bit and look at other defining aspect of "internetworking" in the form of the layered model mentioned earlier and at packet switching. Let us look at the basics of packet switching first.
+
+Question
+=============================================================
+>How many different protocols are under the TCP/IP umbrella>
+
+>What is ICANN? IANA?
 
 Packet Switching, Routing, and Metrics
 ===============================================================
@@ -125,32 +142,17 @@ There are quite a number of other elements and terms that are essential to routi
 Resolution of Names and Addresses
 ==============================================================
 
-Protocols and jargon beget more protocols and jargon. If we suggested that you go to 128.95.230.32 to work on RStudio, it might be hard to remember your intended destination. Instead, we are able to say go to "phage" or "phage.deohs.washington.edu. This is made possible by a resolution protocol system called the domain name system or DNS with which many of you are likely familiar. Further, resolution is required not simply to that IP address, but to an actual hardware device in the computer and to something called a MAC (media access control) address. This MAC address is something that is equally unfriendly to humans consisting as it does of a string of hexadecimal numbers. Resolving an IP address to a specific computer and its MAC address required another protocol called ARP or address resolution protocol. But we may be drifting into the realm of that protocol called TMI.
+Protocols and jargon beget more protocols and jargon. If we suggested that you go to 128.95.230.32 to work on RStudio, it might be hard to remember your intended destination. Instead, we are able to say go to "phage" or "phage.deohs.washington.edu. This is made possible by a resolution protocol system called the domain name system or DNS with which many of you are likely familiar. 
 
-Question
-=============================================================
-> What were the design goals of ARPANET?
+Further, resolution is required not simply to that IP address, but to an actual hardware device in the computer and to something called a MAC (media access control) address. This MAC address is something that is equally unfriendly to humans consisting as it does of a string of hexadecimal numbers. Resolving an IP address to a specific computer and its MAC address required another protocol called ARP or address resolution protocol. But we may be drifting into the realm of that protocol called TMI.
 
-http://en.wikipedia.org/wiki/ARPANET#Misconceptions_of_design_goals
 
-Data Flow of the Layered TCP/IP Model
+The Layerd TCP/IP Model
 =============================================================
 
 To bring more conceptual order to this complicated set of protocols, a layered model is used as a reference. Take a look at this diagram. While there are other layered models in the communications world, the TCP/IP model aimed for some simplicity in comparison to others, with only 4 layers (other popular models such as the OSI Model have more). Probably the most frequently referred to protocol in the suite is IP or the Internet protocol which deals with what would be called an IP address and which is also fundamental to the operation of routing across an IP network.
 
 It is not so important for you to remember a lot of details about the great number of protocols employed, but we review this information with an eye towards helping you learn how to troubleshoot problems you may have using a networked computer. More on that later.
-
-Question
-================================================================  
-
-> Roughly how many protocols are included in the TCP/IP protocol suite?
-
-http://en.wikipedia.org/wiki/Internet_protocol_suite
-
-Routing: a Traceroute Example
-=============================================================
-          
-http://www.monitis.com/traceroute/
 
 Data Flow of the Layered TCP/IP Model
 =============================================================
@@ -189,6 +191,9 @@ Network Topologies
 
 Network equipment can be organized in different so-called topologies. Common examples include mesh hub and spoke, and bus. The Internet can be considered the biggest example going of a mesh network. Closer to home and on a LAN a hub and spoke, or star, topology is more likely to be found.
 
+* Mesh Star and Tree arguably more common in this era
+* Complex networks can combine elements of multiple topologies.
+
 Link Layer Technologies (Ethernet Rules!)
 ==============================================================
 
@@ -200,12 +205,6 @@ While not restricted to local area network technology, network speeds are referr
 
 Take note that the letter B in"bps" is expressed in lower case where a bit is simply one binary digit. Contrast this with "MB" for megabyte where a byte is an unit consisting of 8 bits. This distinction becomes important when trying to calculate the time needed to transfer data over a network where the network speed is expressed and measured in some number of bits per second but the data to be transferred is stated in megabytes
 
-Question
-=============================================================
-
->What comes after Gigabit?
-
-http://en.wikipedia.org/wiki/Data_rate_units#Megabit_per_second
 
 Primary Network Devices
 =======================

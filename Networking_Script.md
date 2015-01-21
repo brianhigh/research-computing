@@ -20,12 +20,12 @@ Networking Script
 Introduction
 ===================
 
-In this day and age, it is rare to use a computer without some sort of networked connection, so learning more about the ins and outs of networking is essential for researchers.
+In this day and age, it is rare to use a computer without some sort of network connection, so learning more about the ins and outs of networking is essential for researchers.
 
 The intent of this 30-minute presentation is to give youa somewhat better undertanding of the basic underpinnings of computer networking as it relates to Research and Data Management.
 
 We'll cover a number of topics including a bit of history of networking, it's purpose, the evolution to contemporary computer networks, and many important technical aspects including networking topologies, protocols and standards, and networking system components.
-
+ 
 
 Networking History
 ========================================================
@@ -121,11 +121,11 @@ Imagine if you will Charles Dickens sitting at Gad's Hill, Kent writing A Tale o
 
 Now, you might ask, how will Dickens postcards get to the publisher in London if one of the bridges over the Thames is out of service, or if a certain post office along the route is closed for the day or has burned down. The logical answer might be that the postcards should be sent over a different bridge and through a different post office. This can be seen to represent another important component of packet switched networking, that of "routing".
 
-Now put yourself in the shoes of the publisher. Hundreds of new postcards have arrived from Dickens but they have come across different bridges and different post offices and it's not really obvious what the orders of order of these postcards are or whether any postcards might be missing. Some of the postcards are off. Obviously damaged or smeared. In fact the first part card reads "A Tale of [illegible] Cities" and the second "it was the winter of our discontent". What is the publisher to make of this text?
+Now put yourself in the shoes of the publisher. Hundreds of new postcards have arrived from Dickens but they have come across different bridges and through different post offices and it's not really obvious what the order of these postcards are is supposed to be of whether any postcards might be missing. Some of the postcards are bviously damaged or smeared. In fact the first part card reads "A Tale of [illegible] Cities" and the second "it was the winter of our discontent". What is the publisher to make of this text?
 
 These issues are all something that packet switched networking must address. Routing, address resolution, sequencing, and checking for completeness.
 
-This first diagram is a very simple example of network routing that simply shows how traffic may choose another path through the network in the event a device along the path has failed. The second diagram shows pretty clearly and simply how different packets belonging to the same data stream may take different routes through different devices to arrive at the same destination. The protocols that we will talk about a little later are essential to making sure that, regardless of the route, the data transmission is successful and copes with any variables along the way.
+This first diagram is a very simple example of network routing that simply shows how traffic may choose another path through the network in the event a device along the path has failed.  The protocols that we will talk about a little later are essential to making sure that, regardless of the route, the data transmission is successful and copes with any variables along the way.
 
 There are quite a number of other elements and terms that are essential to routing but I'll mention just a few of them here including hops, latency, congestion, queuing and metrics.  Let's take a quick tour through all five terms.
 

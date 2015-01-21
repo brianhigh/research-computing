@@ -92,20 +92,17 @@ Computer Networks: What's the Point?
 Contemporary Computer Networks: Key Elements
 ==================================================================
 
-* Binary Operation
-* Packet Switching
-* Protocols
-
-Another biggie:
-
-* Layered Model
-
-And some other bits:
-
-* software and hardware components
-* network topologies
-* network speeds
-* more...
+* Key Elements
+ + Binary Operation
+ + Packet Switching
+ + Protocols
+* Another biggie:
+  + Layered Model
+* And some other bits:
+    + software and hardware components
+  + network topologies
+  + network speeds
+  +  more...
 
 Protocols, Standards and Governing Bodies
 =============================================================
@@ -133,17 +130,12 @@ Questions
 
 Packet Switching and Routing Metrics
 =============================================================
+![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
+
 * Hops
 * Latency
 * Congestion
 * Queuing
-
-![Routing example](http://upload.wikimedia.org/wikipedia/commons/thumb/4/43/CPT-internet-packetswitching-reroute.svg/500px-CPT-internet-packetswitching-reroute.svg.png)
-
-Routing: a Traceroute Example
-=============================================================
-          
-http://www.monitis.com/traceroute/
 
 Resolution of Names and Addresses
 ==============================================================

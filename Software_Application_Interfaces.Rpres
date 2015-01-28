@@ -83,7 +83,7 @@ Styles
  * The design side of a website
  * Design should be separate from content
  * Allows for layout (margins, sizes of elements), colors (font and background, images), changing fonts, and more.
- * Can quickly change the look of a site without changing content by switch stylesheets.
+ * Can quickly change the look of a site without changing content by switching stylesheets.
 
 Scripts
 ========================================================

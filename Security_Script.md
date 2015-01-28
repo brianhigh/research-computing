@@ -16,7 +16,7 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 
 
 
-Information Security 
+Information Security Outline
 ========================================================
 
 - Philosophies and Foundations 
@@ -29,7 +29,7 @@ Philosophies and Foundations
 =========================================================
 Before getting into specifics, we should spend a few minutes looking at some philosophical underpinnings of information security, starting with a question like "why is security a good thing?"
 
-Information security is not an end but a means. What is the desired end? Information security people most commonly refer to the desired end or end with the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
+Information security -- lets use the common abbreviation "InfoSec" -- is not an end but a means. What is the desired end? InfoSec proffessionals most commonly refer to the desired end or end with the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
 
 Confidentiality should be ready self-explanatory: only parties who should have access to information get it. 
 

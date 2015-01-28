@@ -1,7 +1,7 @@
 Databases
 ========================================================
 author: John Yocum
-date: January 08, 2015
+date: January 28, 2015
 transition: fade
 
 Research Computing and Data Management
@@ -110,6 +110,7 @@ Query Languages
 ========================================================
 
 - SQL
+- Procedural Language, e.g. PL/Perl
 - CQL
 - Etc
 

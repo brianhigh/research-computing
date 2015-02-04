@@ -81,7 +81,7 @@ Flat file databases are extremely simple. They are simply a single table of valu
 
 Due to their simple nature, they lack a number of features found in more capable database systems. For example, they lack indexing, which means that searching a large flat file could require considerably more time than a relational database. They also lack concurrent write access, since they aren't server based. Finally, updates can be extremely slow, as they require rewriting the entire file to disk after making a change.
 
-All these limitations side, there are some benefits. Flat files can be very lightweight in resource usage, atleast when they are small in size. For databases using CSV or similar formats, you can even edit the database using a basic text editor.
+All these limitations aside, there are some benefits. Flat files can be very lightweight in resource usage, atleast when they are small in size. For databases using CSV or similar formats, you can even edit the database using a basic text editor.
 
 That said, it's generally best to not go with a flat file database for storage. If at some point you find that your needs change, converting to a more capable format, could become a rather daunting task.
 
@@ -94,6 +94,8 @@ That said, it's generally best to not go with a flat file database for storage. 
 Flat File Continued
 ========================================================
 
+Show a CSV file, demonstrate adding an entry, etc.
+
 - show screenshot or demo of flat file
 
 Flat File Examples
@@ -105,11 +107,19 @@ Flat File Examples
 Relational
 ========================================================
 
-Relational databases, as their name implies, relate data from one table to another. These relations reduce the duplication of data that is common to multiple records. For example, in an ordering system, you could try your customers with one table, and link their orders to them via a customer identification number.
+Relational databases, as their name implies, relate data from one table to another. These relations reduce the duplication of data that is common to multiple records. For example, in an ordering system, you could tie your customers with one table, and link their orders to them via a customer identification number.
 
-Relational databases are basically the jack of all trades in the database world. They are highly flexible enabling them to meet the widest number of use cases. Virtually all of them support ODBC or Open Database Connectivity, which is a standardized interface between an operating system or programming language and the database driver. Through ODBC, you can plug your database into a huge number of applications, such as R or even Excel.
+Relational databases are basically the jack of all trades in the database world. They are highly flexible enabling them to meet the widest number of use cases. But, that flexibility comes at a price. You have to tell the database about the data you plan to store. In other words, a relational database requires a schema to define the structure of your data, and how it relates.
+
+Virtually all of them support ODBC or Open Database Connectivity, which is a standardized interface between an operating system or programming language and the database driver. Through ODBC, you can plug your database into a huge number of applications, such as R or even Excel.
 
 There are variety of relational database engines on the market, some open source, others proprietary. The most common open source database is MySQL, which is now owned by Oracle. For those with very small needs, there is SQLite which is commonly embedded into other applications like Firefox and Android. Even Microsoft has an offering, in the form of Microsoft SQL Server.
+
+So, which should you choose? My advice is to pick an open source option, like MySQL or Postgres. They have low minimum resources making them easy to setup on a laptop for testing purposes. Documentation is widely available. And, more importantly, their free nature means, a lot of folks have taken the time to integrate them into a huge array of tools.
+
+That said, different engines make sacrifices to make gains in other areas. This commonly occurs in the area of ACID compliance. A database may forgo strict data validation, or consistent disk writing to speed up query response time. If you value your data over speed, be sure to pick an ACID compliant database.
+
+In short, if you aren't sure what kind of database to use, an ACID compliant relational database is a good start. It's typically easier to migrate from a relational database to other types, as opposed to converting to one.
 
 - General purpose
 - Wide application support through ODBC
@@ -121,6 +131,8 @@ There are variety of relational database engines on the market, some open source
 
 Relational Continued
 ========================================================
+
+Use MySQL Workbench to create a couple of related tables, and show their relations
 
 - Show screenshot or demo of relational DB
 
@@ -138,6 +150,10 @@ NoSQL or "Not Only SQL" databases serve a variety of niches. Each implementation
 
 Within the NoSQL arena, there are a lot of options. A couple commonly used are Apache's Cassandra, which functions similarly to a traditional database. It has tables, which consist of rows and columns. However, the method you query across multiple tables is a bit different than a Relational Database. mongoDB on the other hand, is known as a Document Store. A document being an object containing a series of values. Where a value could be as simple as a name, to an entire PDF. In addition, objects can be related to each other through their unique IDs.
 
+With all this variation in data storage methods, there has to be a catch. While many relational databases offer ACID compliance, NoSQL databases rarely do. They make many sacrifices in order to scale massively. The guiding rule with NoSQL is the CAP Theorem which basically says you can't ensure every server shows the exact same data, handle every query, and not lose access to something in the event of a crash.
+
+So, which NoSQL option to go with? That isn't an easy question to answer. Since each database system varies from the next, you have to closely evaluate your needs. You need to consider what questions you are asking from your data. Also factor in, what is your data. For example, is it a huge table of values, or millions of documents. Finally, look at the other tools you are using. They may include support for one or maybe two options. In which case, you are either stuck with those choices, or recondier the tools being used.
+
 - "Not Only SQL"
 - Big Data
 - Example Engines
@@ -147,19 +163,21 @@ Within the NoSQL arena, there are a lot of options. A couple commonly used are A
 NoSQL Continued
 ========================================================
 
-Much like there are a number of NoSQL databases, each excelling in their own ways, there are a variety of storage models. A storage model is how the data is actually stored within the database. Each storage method is best suited to select use cases, or applications.
+Much like there are a number of NoSQL databases, each excelling in their own ways, there are a variety of storage models. A storage model is how the data is actually stored within the database. Each storage method is best suited to select use cases, or applications. You'll want to consult the documentation for each database to see what it's most suited for. You may also want to look to sites like biostars.org to see what others in your field are using to solve their problems.
+
+http://en.wikipedia.org/wiki/NoSQL#Types_of_NoSQL_databases
 
 - Show the different data storage models
 - Key/Value
 - Document
-- Tabular
+- Column
 
 NoSQL Examples
 ========================================================
 
 - When to use it
 - Recording high resolution (frequent) data from multiple sensors or locations
-
+ 
 Query Languages
 ========================================================
 
@@ -180,14 +198,20 @@ SQL or Structured Query Language is the most widely used database query language
 
 When possible, it's best to avoid the use of proprietary extensions. Otherwise, in the future should you need to change your database backend, for example switching from MySQL to Postgres, you may find yourself rewriting a lot of queries, and adjusting your database schema.
 
+So, what does SQL look like? It has a lot of commands, though there are 4 basic commands which you'll want to get mose comfortable with. The SELECT command, which is used to select or retrieve data from the database. The INSERT command, which as the name states, is used to insert new data. UPDATE, which is used to change values within the database. And, DELETE, which removes records from the database.
+
 - ANSI Standard
 - Proprietary Extensions
 - Widely Supported
 
+Cut to a demo of using SQL with MySQL Workbench.
+
 Other Query Languages
 ========================================================
 
-Among the numerous proprietary quary languages, here are few examples. Apache's Cassandra implements their Cassandra Query Language, which is SQL inspired. Oracle, Microsoft, and others offer Procedural Languages which embed some kind of scripting language within the database. Procedural Languages enable you to complex operations using things like Loops and Arrays within the database engine itself. By embeding the language into the engine, you gain performance from not having to transmit data across the network. As well, gaining capabilities like having some code executed upon a database insert or update.
+Among the numerous non-standard query languages, here are few examples. Apache's Cassandra implements their Cassandra Query Language, which is SQL inspired. Oracle, Microsoft, and others offer Procedural Languages which embed some kind of scripting language within the database. Procedural Languages enable you to complex operations using things like Loops and Arrays within the database engine itself. By embeding the language into the engine, you gain performance from not having to transmit data across the network. As well, gaining capabilities like having some code executed upon a database insert or update.
+
+In short, it's best to use a standardized language like SQL whenever possible. However, you shouldn't hinder yourself when the database engine offers an option that will improve performance or reduce data processing time.
 
 - CQL: Cassandra
 - PL/SQL: Oracle
@@ -198,13 +222,19 @@ Summary
 
 We've gone over quite a bit of basics on databases. So, let's review the key points to remember.
 
-CRUD or Create, Read, Update, Delete are the basic operations performed on a database.
-ACID or Atomicity, Consistency, Isolation, Durability
-Normalization is the process of reducing duplication in a database by relating records, instead of repeating the same information in each record.
-Schema is the design and specifications for the database. It defines tables, content types, etc.
-CAP Theorem
+CRUD or Create, Read, Update, Delete are the basic operations performed on a database. In SQL these operations are represented with INSERT, SELECT, UPDATE, and DELETE.
 
-We covered the three basic types of databases, Flat, Relational, and NoSQL. With flat files being generally frowned upon unless you have specific reasons for them. NoSQL typically only required when working with Big Data. And, relational being the most general database you can use.
+ACID or Atomicity, Consistency, Isolation, Durability compliance controls how data is stored. It ensures that all queries are atomic, e.g. all or nothing. That data stored is in full compliance with any validation rules. And, that data written to submitted, is really stored on disk.
+
+Normalization is the process of reducing duplication in a database by relating records, instead of repeating the same information in each record.
+
+Schema is the design and specifications for the database. It defines tables, content types, etc.
+
+CAP Theorem applies mostly to NoSQL. It states that all database servers in a group can't show the exact same data, respond to every query, and tolerate a node failure without compromising in one of those areas. 
+
+We covered the three basic types of databases, Flat, Relational, and NoSQL. With flat files being generally frowned upon unless you have specific reasons for them. NoSQL typically only required when working with Big Data. And, relational being the most general  purpose database you can use.
+
+We've also covered ODBC, or Open Database Connectivity. Which is a standardized scheme for connecting applications, and languages with databases. In the Java world, the equivalent is JDBC or Java Databae Connectivity. Regardless of language, these interfaces are your friend.
 
 Finally, we covered some query languages. SQL being the most common query language, makes it a valuable tool to know how to use. If you plan to stick with a single database engine for a lot of projects, it may benefit you to become familiar with it's specific language. For instance, if working with Oracle a lot, you'll probably want to know PL/SQL.
 

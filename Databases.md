@@ -1,7 +1,7 @@
 Databases
 ========================================================
 author: John Yocum
-date: January 08, 2015
+date: February 02, 2015
 transition: fade
 
 Research Computing and Data Management
@@ -59,7 +59,7 @@ Flat File Examples
 ========================================================
 
 - When to use it
-- Recording temperature from a single sensor
+  - Recording temperature from a single sensor
 
 Relational
 ========================================================
@@ -81,7 +81,8 @@ Relational Examples
 ========================================================
 
 - When to use it
-- Tracking multiple samples and locations
+  - Tracking multiple samples and locations
+  - Recording survey and interview answers
 
 NoSQL
 ========================================================
@@ -104,12 +105,13 @@ NoSQL Examples
 ========================================================
 
 - When to use it
-- Recording high resolution (frequent) data from multiple sensors or locations
+ - Recording high resolution (frequent) data from multiple sensors or locations
 
 Query Languages
 ========================================================
 
 - SQL
+- Procedural Language, e.g. PL/Perl
 - CQL
 - Etc
 
@@ -124,6 +126,8 @@ Other Query Languages
 ========================================================
 
 - CQL: Cassandra
+- PL/SQL: Oracle
+- Transact-SQL: Microsoft SQL Server
 
 Summary
 ========================================================

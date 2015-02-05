@@ -3,6 +3,7 @@ Information Security
 author: Jim Hogan
 date: 2015-01-08
 transition: fade
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -111,4 +112,8 @@ Best practices
 ========================================================
 
 List and discuss data security best practices.
+
+
+![Guard Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Military_dog_barking.JPG/640px-Military_dog_barking.JPG)
+
 

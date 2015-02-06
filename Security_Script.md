@@ -15,14 +15,31 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </small>
 
 
-<!-- PART ONE -->
-
-# PART ONE
+<!-- VIDEO PART ONE -->
 
 
+Welcome
+=================
 
-Information Security Outline
+Welcome to our session on Information Security.  I'd like to start on a positive note by showing you a picture of my buddy Frank's friendly dog "Rex":
+
+----
+
+![Guard Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Military_dog_barking.JPG/640px-Military_dog_barking.JPG)
+
+We'll spend some time with Rex a little later in the program.  But first....
+
+Introduction and Outline
 ========================================================
+
+Some terms may be meaningful to you yet, but in this session we'll cover:
+
+* Some philosophical foundations of information security
+* The concepts contained in "CIA"
+* Risk assessment
+* Security controls
+* Encryption
+* Security best practices
 
 - Philosophies and Foundations 
 - CIA (AAA)
@@ -32,33 +49,63 @@ Information Security Outline
 
 Philosophies and Foundations
 =========================================================
-Before getting into specifics, we should spend a few minutes looking at some philosophical underpinnings of information security, starting with a question like "why is security a good thing?"
 
-Information security -- lets use the common abbreviation "InfoSec" -- is not an end but a means. What is the desired end? InfoSec proffessionals most commonly refer to the desired end or end with the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
+So why is security in general a good thing?  Some folks manage to form the impression that people who are enthusiastic about "security" are people with some control issues.  While I'm sure you can find some security enthusiasts who might be described as "control freaks", a more fair picture is that mature security professionals are not interested in control anywhere near as much as they are committed to the pursuit of risk management.  We'll come back to that.
+
+So we see security, and Information security, not as an control-freak end in and of itself but rather as a means of identifying and dealing with risk. 
+
+Working for the CIA
+===========================
+
+Information Security, often referred to as "InfoSec" uses a number a number of different frameworks to pursue its desired result.  The most commonly-used InfoSec principles revolve around the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
 
 Confidentiality should be ready self-explanatory: only parties who should have access to information get it. 
 
-Integrity means that the accuracy and consistency of data throughout its life-cycle is assured.  That data can't be modified in an unplanned or unauthorized way and that your data is correct at least with respect to your expectation of what the data should be. 
+Integrity means that the accuracy and consistency of data throughout its life-cycle is assured.  It means that data can't be modified in an unplanned or unauthorized way and that your data is correct at least with respect to your expectation of what the data should be. 
 
 Availability is a lofty term for making sure that you can get your data – that your data management system is built and designed in such a way that it will continue to make your data available to authorized parties and mitigate against threats to availability whether they be computer failure, network failure, a malicious exploit, or something else.
+
+What does CIA address? (Examples)
+=====================================
 
 It should be easy to think of some reasons why these three concepts are important. Let's take the example of a research study that you are working on. It has been funded to the tune of $5 million over five years, and there is the possibility of renewal. By chance, the  study collects and stores some private health information. 
 
 Possible results of a failure to assure data confidentiality should be obvious these days. Harm to study subjects, lawsuits against the sponsoring institution, disciplinary actions, loss of funding… The list goes on.
 
-integrity, and a failure to maintain it, are probably easiest to think of with an example like a large study that spent millions of dollars, collected lots of data, but then discovered at some point that the data was more or less corrupt, incorrect, inconsistent. Possible harms? Incorrect conclusions making their way into the scientific literature would be one. Withdrawal of funding would be another on top of damage professional reputations.
+Integrity, and a failure to maintain it, are probably easiest to think of with an example like a large study that spent millions of dollars, collected lots of data, but then discovered at some point that the data was more or less corrupt, incorrect, inconsistent, invalid. Possible harms? Incorrect conclusions making their way into the scientific literature would be one. Withdrawal of funding would be another on top of damage to professional reputations.
 
 Availability would seem more straightforward, but also requires considerable thought and planning. What good is confidentiality and integrity if all of your study data was lost in a fire or stolen from an airport lounge? How good are your backups?
 
+CIA is a mainstay of good Information Security practice, but there are many additional elements that form a more complete InfoSec framework.  Let's start with a vignette:
+
+Frederick II the Great
+===========================
+
+![Freddie](http://upload.wikimedia.org/wikipedia/commons/4/46/Frederick2.jpg)
+
+-------
+
+> "He who defends everything defends nothing.""
 
 
-There is no single philosophy or underpinning foundation, but arrange, a spectrum of philosophies from different viewpoints.
+There is a quote, attributed to Frederick the great, that posits "he who defends everything defends nothing". Which is popular among some security professionals.  Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion"He who does not defend everything defends nothing" matters a lot in the "InfoSec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.  This is something we'll talk about when we cover the concept of "privilege escalation".
 
-There is a quote, attributed to Frederick the great, that posits "he who defends everything defends nothing". Which is popular among some security professionals. It is probably worthwhile to look at the converse assertion "he who does not defend everything defends nothing". Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion however, matters a lot in the "info sec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.
-
+Allocating Resources for Information Security
+==============================================
 So what is one to do? How do you decide where to spend your finite, Limited resources and time to protect your data and information?
 
 One cornerstone of good information security practices is that of risk management. While it might sound rather dull, a risk management approach is key to making decisions that optimize the application of your resources to secure your information and the organization.
+
+Risk Assessment Methods
+============================
+The field of risk assessment covers a lot of territory and can have many different emphases. This can range from a billionaire commodities trader trying to assess the risk of a small drop in the price of precious metals all the way to my Buddy Frank trying to judge the likelihood that thieves may break into his house in Ballard and steal his sole possessions, a collectible Atari video console and a well-used 70-inch plasma TV.   Frank may not realize it, but he is attempting to estimate something called "Single Loss Expectancy" and which is calculated in the formula:
+  
+  ![SLE](http://upload.wikimedia.org/math/f/7/6/f76081ec21b408d1f1e1488fb335e2d7.png)
+
+Let's not belabor this but suffice it to say that Frank will calculate the asset value of the Atari and aging TV and the "exposure factor" (how much of his stuff the robbers might haul off) to arrive at this "SLE".
+
+Okay, Frank thinks he could sell the TV on Craigslist for $500, but knows he could sell the Atari on eBay for $2000.  It would be nearly impossible for thieves to haul off the big TV, but the Atari would be a cinch to steal.  So his total Asset Value is $2500 but his Exposure Factor would be .80, reflecting that Atari would be stolen while the TV remained.  So his Single Loss Expectancy is $2000.  This is a simple example and might seem a bit circular, but it is the basis for more complicated estimates.    
+
 
 One truism that most information security professionals would agree with is that "There is no silver bullet.", meaning that there is no single technology or technique or philosophy that will adequately protect information in a complex world. Most every information security plan will require a multifaceted approach that combines defensive methods along with procedures that mitigate the adverse effects of security exploits and breaches. If you ever hear someone proclaim "We are okay. We have a firewall!" You are probably looking through a window into a future information security disaster. successful security practice is implemented in multiple layers, of "layered defense".
 
@@ -159,7 +206,7 @@ File based:
 - PDF
 - PGP
 
-https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg
+![Public Key Encryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
 
 Encryption Standards
 ========================================================
@@ -191,5 +238,10 @@ List and discuss data security best practices.
 Some practical resources on network/Internet security:
 
 Krebs on Security http://http://krebsonsecurity.com/
+
+More to work in
+=======================
+Privilege escalation
+
 
 

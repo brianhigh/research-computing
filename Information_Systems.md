@@ -1,7 +1,7 @@
 Information Systems
 ========================================================
 author: Brian High
-date: January 04, 2015
+date: January 10, 2015
 transition: fade
 #incremental: true
 

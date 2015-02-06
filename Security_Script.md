@@ -107,47 +107,77 @@ Let's not belabor this but suffice it to say that Frank will calculate the asset
 Okay, Frank thinks he could sell the TV on Craigslist for $500, but knows he could sell the Atari on eBay for $2000.  It would be nearly impossible for thieves to haul off the big TV, but the Atari would be a cinch to steal.  So his total Asset Value is $2500 but his Exposure Factor would be .80, reflecting that Atari would be stolen while the TV remained.  So his Single Loss Expectancy is $2000.  This is a simple example and might seem a bit circular, but it is the basis for more complicated estimates.    
 
 
-One truism that most information security professionals would agree with is that "There is no silver bullet.", meaning that there is no single technology or technique or philosophy that will adequately protect information in a complex world. Most every information security plan will require a multifaceted approach that combines defensive methods along with procedures that mitigate the adverse effects of security exploits and breaches. If you ever hear someone proclaim "We are okay. We have a firewall!" You are probably looking through a window into a future information security disaster. successful security practice is implemented in multiple layers, of "layered defense".
-
-With other topics remaining to be discussed we may be forced to give risk management short shrift. It is an area that could consume hours days months years, and to which some people have devoted their entire careers. That being said, at the beginning of any project and more usefully before it is even launched (or funded!), It is essential to devote some time to an assessment of the projects risks.
-
-This is not cut and dried. While it might be easy to identify all risk such as losing data on a laptop that gets stolen, other risks might be less tangible yet important. For example, what if the lost data on that laptop leads to the cancellation of a project or an unsuccessful grant renewal?
-
-Paradoxically an asset can be a risk. For example think about the very bright data analyst you hired for the project and who is the only person in the project who truly understands some of your statistical methods. They are an asset to the project until they take a new, highly paid position in Paris. In impersonal terms, they were always a risk really.
-
-One risk is that you could spend too much time on risk assessment!
 
 
 
-CIA (AAA)
-========================================================
-
-Some key tenets of information security are often described using the term "CIA". In its simplest form this stands for confidentiality, integrity, and availability. 
-
-- Confidentiality
-- Integrity
-- Availability
-- Accounting
-- Accountability
 
 Controls
 ========================================================
 
-A successful information security and data management LAN will address specific risks by means of specific controls. These can be looked at in a few different ways. One main way is the type of control. Several important types along with some examples include:
+A successful information security and data management plan will address specific risks by means of specific measures or  "controls". These can be looked at in a few different ways. One main way is the type of control. Several important types along with some examples include:
 
 – administrative (for example written policies)
 – logical (computer accounts are the most common example)
 – physical (door locks and access cards for example)
 
-Another primary way to look at security controls is whether they attempt to prevent the occurrence of a risk event, reduce the impact of a risk event if it does occur, or restore your systems and information when a risk event occurs with full impact.
+Another primary way to look at security controls is whether they attempt to prevent the occurrence of a risk event, reduce the impact of a risk event if it does occur, or restore your systems and information when a risk event occurs with full impact.  So, we have controls that are:
 
-Let's look at a simple example of domestic burglary risk management.
+- preventative
+- corrective or mitigating
+- restorative
 
-A loud barking dog in the front yard would primarily be a preventative control as might a sticker or sign that says "this premises has an alarm system". If the burglar feeds your dog a handful of tranquilizers, then the burglar may gain access to your premises and then the alarm system could come into play this time as a mitigating control, wherein the amount of loot the burglar can haul away is reduced by the approach of police sirens responding to the alarm. But let's say the burglar hauls away everything including your most valuable possessions, photos of your family and of Elvis Presley. If you have been prudent data manager and digitized all of those family and Elvis photos then stored them on a hard drive in a safe deposit box, then you have implemented a strong restorative control.
+Saving Frank's Atari
+======================
 
-- Administrative (policies)
-- Logical (accounts)
-- Physical (door locks)
+![Frank's Atari](http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Atari-2600-Wood-4Sw-Set.jpg/320px-Atari-2600-Wood-4Sw-Set.jpg)
+
+Let's look at Frank's attempt at domestic burglary risk management.
+
+Having his friendly Rex patrol the front yard would definitely be a preventative control, as might the "Protected by ADT" yard sign that Frank bought on eBay.
+
+Frank has even given some thought to getting a real alarm system for his digs.  Not only would that be preventative, but, since it could summon the police before the perp escapes with the Atari. But it would be expensive.
+
+Frank is at a loss for a restorative control.  Unlike in information security where you can employ restorative controls like off-site data backups, the only measure Frank can identify is to get special theft insurance coverage for the Atari, but that might cost as much as the $2000 that the game console is worth.
+
+So, faced with the cost issues, and based on how watchful Rex is, Frank decides that having Rex patrol the yard will be good enough. 
+
+How does this apply to Information Security?
+===============================================
+One truism that most information security professionals would agree with is that "There is no silver bullet.", meaning that there is no single technology or technique or philosophy that will adequately protect information in a complex world. They recognize that somebody might give faithful Rex some tranquilizers or enter Frank's house through a windo in the back
+
+Most every decent information security plan will require a multifaceted approach that combines preventative/defensive methods along with procedures that mitigate the adverse effects of security exploits and breaches. If you ever hear someone proclaim "We are okay. We have a firewall!" You are probably looking through a window into a future information security disaster. successful security practice is implemented in multiple layers, or a "layered defense".
+
+With other topics remaining to be discussed we may be forced to give risk management short shrift. It is an area that could consume hours days months years, and to which some people have devoted their entire careers. That being said, at the beginning of any project and more usefully before it is even launched (or funded!), It is essential to devote some time to an assessment of the projects risks so as to develop adequate controls.
+
+This is not cut and dried. While it might be easy to identify a risk such as losing data on a laptop that gets stolen, other risks might be less tangible yet important. For example, what if the lost data on that laptop leads to the cancellation of a project or an unsuccessful grant renewal?
+
+Paradoxically an asset can be a risk. For example think about the very bright data analyst you hired for the project and who is the only person in the project who truly understands some of your statistical methods. They are an asset to the project until they take a new, highly paid position in Paris. In impersonal terms, they were always a risk really.
+
+One risk is that you could spend too much time on risk assessment!
+
+Typical Risks and Threats in Information Security
+==================================================
+
+There is a danger in saying "typical" in this context, as risk profiles can cover a lot of different areas across different environments.   Where a company in the Swiss Alps may need to account for the risk of avalaches, their subsidiary in the Phillipines will need to pay attention to the dangers of the Monsoon season.  
+
+
+Typical Controls in information Security
+=========================================
+
+* Access Control
+ + Physical
+ + Logical
+ + Network 
+* Alarm Systems and Monitoring
+ + Intrusion Detection (physical and logical)
+ + Server hardware health 
+ + Environmental conditions (temp, smoke, fire)
+* Redundancy
+* Backups
+
+
+
+
 
 Access control
 ========================================================
@@ -241,7 +271,15 @@ Krebs on Security http://http://krebsonsecurity.com/
 
 More to work in
 =======================
+
+Understand the baseline security environment and leverage it. Don't reinvent.
+
 Privilege escalation
+
+Links
+======================
+
+http://en.wikipedia.org/wiki/Single_loss_expectancy
 
 
 

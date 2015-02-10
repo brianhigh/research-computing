@@ -3,7 +3,7 @@ Data Files
 author: Brian High
 date: February 09, 2015
 transition: fade
-#incremental: true
+incremental: true
 
 <style type="text/css">
 .small-code pre code {
@@ -37,8 +37,9 @@ Data Files Overview
     vs. [plain text](http://en.wikipedia.org/wiki/Plain_text)
 - [Filename extensions](http://en.wikipedia.org/wiki/Filename_extension) and 
 [File type associations](http://en.wikipedia.org/wiki/File_association)
-- [ASCII](http://en.wikipedia.org/wiki/ASCII) and 
-    [Unicode](http://en.wikipedia.org/wiki/Unicode)
+- [ASCII](http://en.wikipedia.org/wiki/ASCII), 
+    [Unicode](http://en.wikipedia.org/wiki/Unicode), and 
+    [UTF-8](http://en.wikipedia.org/wiki/UTF-8)
 - [Structured](http://en.wikipedia.org/wiki/Data_model), 
 [Semi-structured](http://en.wikipedia.org/wiki/Semi-structured_data), 
 and [Unstructured](http://en.wikipedia.org/wiki/Unstructured_data) data

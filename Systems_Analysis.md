@@ -1,7 +1,7 @@
 Systems Analysis
 ========================================================
 author: Brian High
-date: January 04, 2015
+date: January 15, 2015
 transition: fade
 #incremental: true
 

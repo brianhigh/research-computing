@@ -34,20 +34,18 @@ Introduction and Outline
 
 Some terms may be meaningful to you yet, but in this session we'll cover:
 
-* Some philosophical foundations of information security
-* The concepts contained in "CIA"
-* Risk assessment
-* Security controls
-* Encryption
-* Security best practices
+* Part 1: Some philosophical foundations of information security
+* Part 2: Risk assessment
+* Part 3: Security controls
+* Part 4: Encryption
+* Part 5: Security best practices
 
-- Philosophies and Foundations 
-- CIA (AAA)
-- Controls
-- Encryption
-- Best Practices
 
-Philosophies and Foundations
+
+Part 1: Philosphies and Foundations
+========================================
+
+Why Security?
 =========================================================
 
 So why is security in general a good thing?  Some folks manage to form the impression that people who are enthusiastic about "security" are people with some control issues.  While I'm sure you can find some security enthusiasts who might be described as "control freaks", a more fair picture is that mature security professionals are not interested in control anywhere near as much as they are committed to the pursuit of risk management.  We'll come back to that.
@@ -78,6 +76,13 @@ Availability would seem more straightforward, but also requires considerable tho
 
 CIA is a mainstay of good Information Security practice, but there are many additional elements that form a more complete InfoSec framework.  Let's start with a vignette:
 
+
+<!-- VIDEO PART TWO -->
+
+
+Part 2: Risk Assessment and Management
+========================================
+
 Frederick II the Great
 ===========================
 
@@ -85,10 +90,11 @@ Frederick II the Great
 
 -------
 
-> "He who defends everything defends nothing.""
+>"He who defends everything defends nothing."
 
 
-There is a quote, attributed to Frederick the great, that posits "he who defends everything defends nothing". Which is popular among some security professionals.  Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion"He who does not defend everything defends nothing" matters a lot in the "InfoSec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.  This is something we'll talk about when we cover the concept of "privilege escalation".
+There is a quote, attributed to Frederick the Great, that posits "he who defends everything defends nothing". Which is popular among some security professionals.  Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion"He who does not defend everything defends nothing" matters a lot in the "InfoSec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.  This is something we'll talk about when we cover the concept of "privilege escalation".
+
 
 Allocating Resources for Information Security
 ==============================================
@@ -98,7 +104,7 @@ One cornerstone of good information security practices is that of risk managemen
 
 Risk Assessment Methods
 ============================
-The field of risk assessment covers a lot of territory and can have many different emphases. This can range from a billionaire commodities trader trying to assess the risk of a small drop in the price of precious metals all the way to my Buddy Frank trying to judge the likelihood that thieves may break into his house in Ballard and steal his sole possessions, a collectible Atari video console and a well-used 70-inch plasma TV.   Frank may not realize it, but he is attempting to estimate something called "Single Loss Expectancy" and which is calculated in the formula:
+The field of risk assessment covers a lot of territory and can have many different emphases. This can range from a billionaire commodities trader trying to assess the risk of a small drop in the price of precious metals all the way to my Buddy Frank trying to judge the likelihood that thieves may break into his house in Ballard and steal his two prized possessions, a collectible Atari video console and a well-used 70-inch plasma TV.   Frank may not realize it, but he is attempting to estimate something called "Single Loss Expectancy" and which is calculated in the formula:
   
   ![SLE](http://upload.wikimedia.org/math/f/7/6/f76081ec21b408d1f1e1488fb335e2d7.png)
 
@@ -106,18 +112,32 @@ Let's not belabor this but suffice it to say that Frank will calculate the asset
 
 Okay, Frank thinks he could sell the TV on Craigslist for $500, but knows he could sell the Atari on eBay for $2000.  It would be nearly impossible for thieves to haul off the big TV, but the Atari would be a cinch to steal.  So his total Asset Value is $2500 but his Exposure Factor would be .80, reflecting that Atari would be stolen while the TV remained.  So his Single Loss Expectancy is $2000.  This is a simple example and might seem a bit circular, but it is the basis for more complicated estimates.    
 
+- Asset Value = Atari ($2000) + Plasma TV ($500)
+- Exposure? Atari, YES. Plasma TV, NO.
+- Exposure Factor = 0.80
+- Single Loss Expectancy = $2000
 
+"Exposure" is not limited to specific object, but can be an expression of likelihoods and probabilities.  Example: Frank might use the annual probability of 8.0+ earthquakes in Ballard to estimate the chance of his Plasma TV being destroyed by a natural disaster.
 
+<!-- VIDEO PART THREE -->
 
-
-
-Controls
+Part 3: Controls
 ========================================================
 
-A successful information security and data management plan will address specific risks by means of specific measures or  "controls". These can be looked at in a few different ways. One main way is the type of control. Several important types along with some examples include:
+What is a Control?
+====================
 
-– administrative (for example written policies)
-– logical (computer accounts are the most common example)
+To paraphrase conflicting definitions, "Security controls are safeguards or countermeasures to avoid, counteract, minimize and/or recover from risks and threats related to security"
+
+
+
+Types of Controls
+===================
+
+A successful information security and data management plan will address specific identified risks by means of specific measures or "controls". These can be looked at in a few different ways. One main way is the type of control. Several important types along with some examples include:
+
+– administrative (for example written policies that are enforced)
+– logical (required computer accounts are the most common example)
 – physical (door locks and access cards for example)
 
 Another primary way to look at security controls is whether they attempt to prevent the occurrence of a risk event, reduce the impact of a risk event if it does occur, or restore your systems and information when a risk event occurs with full impact.  So, we have controls that are:
@@ -131,7 +151,7 @@ Saving Frank's Atari
 
 ![Frank's Atari](http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Atari-2600-Wood-4Sw-Set.jpg/320px-Atari-2600-Wood-4Sw-Set.jpg)
 
-Let's look at Frank's attempt at domestic burglary risk management.
+Let's look at Frank's attempt at domestic burglary risk management and his decision-making about controls.
 
 Having his friendly Rex patrol the front yard would definitely be a preventative control, as might the "Protected by ADT" yard sign that Frank bought on eBay.
 
@@ -141,9 +161,12 @@ Frank is at a loss for a restorative control.  Unlike in information security wh
 
 So, faced with the cost issues, and based on how watchful Rex is, Frank decides that having Rex patrol the yard will be good enough. 
 
+>Are surveillance cameras a preventative control? A corrective/mitigating control?  A restorative control? 
+
+
 How does this apply to Information Security?
 ===============================================
-One truism that most information security professionals would agree with is that "There is no silver bullet.", meaning that there is no single technology or technique or philosophy that will adequately protect information in a complex world. They recognize that somebody might give faithful Rex some tranquilizers or enter Frank's house through a windo in the back
+One truism that most information security professionals would agree with is that "There is no silver bullet.", meaning that there is no single technology or technique or philosophy that will adequately protect information in a complex world. They recognize that somebody might give faithful Rex some tranquilizers or enter Frank's house through a window in the back
 
 Most every decent information security plan will require a multifaceted approach that combines preventative/defensive methods along with procedures that mitigate the adverse effects of security exploits and breaches. If you ever hear someone proclaim "We are okay. We have a firewall!" You are probably looking through a window into a future information security disaster. successful security practice is implemented in multiple layers, or a "layered defense".
 
@@ -151,7 +174,7 @@ With other topics remaining to be discussed we may be forced to give risk manage
 
 This is not cut and dried. While it might be easy to identify a risk such as losing data on a laptop that gets stolen, other risks might be less tangible yet important. For example, what if the lost data on that laptop leads to the cancellation of a project or an unsuccessful grant renewal?
 
-Paradoxically an asset can be a risk. For example think about the very bright data analyst you hired for the project and who is the only person in the project who truly understands some of your statistical methods. They are an asset to the project until they take a new, highly paid position in Paris. In impersonal terms, they were always a risk really.
+Paradoxically an asset can be a risk. For example think about the very bright data analyst you hired for the project and who is the only person in the project who truly understands some of your statistical methods. The data analyst is a great asset to the project until they take a new, highly-paid position in Paris. In impersonal terms, they were always a risk really.
 
 One risk is that you could spend too much time on risk assessment!
 
@@ -174,9 +197,6 @@ Typical Controls in information Security
  + Environmental conditions (temp, smoke, fire)
 * Redundancy
 * Backups
-
-
-
 
 
 Access control
@@ -207,6 +227,11 @@ Probably much more important and of much more utility to average folks managing 
 - Snapshots
 - Archives
 - Version control
+
+<!-- VIDEO PART FOUR -->
+
+Part 4: Encryption Technologies
+====================================
 
 Encryption
 ========================================================
@@ -263,11 +288,13 @@ Question: If I have set a password on my laptop, is the data on my laptop secure
 Best practices
 ========================================================
 
+[Web application security: OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10)
+
 List and discuss data security best practices.
 
 Some practical resources on network/Internet security:
 
-Krebs on Security http://http://krebsonsecurity.com/
+[Krebs on Security Blog](http://krebsonsecurity.com/)
 
 More to work in
 =======================
@@ -275,6 +302,8 @@ More to work in
 Understand the baseline security environment and leverage it. Don't reinvent.
 
 Privilege escalation
+
+Brute Force
 
 Links
 ======================

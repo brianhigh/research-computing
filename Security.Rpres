@@ -24,6 +24,7 @@ Information Security Outline
 * Encryption
 * Best Practices
 
+>"He who defends""   
 
 CIA (AAA)
 ========================================================

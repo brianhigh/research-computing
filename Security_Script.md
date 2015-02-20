@@ -57,7 +57,7 @@ Working for the CIA
 
 Information Security, often referred to as "InfoSec" uses a number a number of different frameworks to pursue its desired result.  The most commonly-used InfoSec principles revolve around the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
 
-Confidentiality should be ready self-explanatory: only parties who should have access to information get it. 
+Confidentiality should be really self-explanatory: only parties who should have access to information get it. 
 
 Integrity means that the accuracy and consistency of data throughout its life-cycle is assured.  It means that data can't be modified in an unplanned or unauthorized way and that your data is correct at least with respect to your expectation of what the data should be. 
 
@@ -117,7 +117,7 @@ Okay, Frank thinks he could sell the TV on Craigslist for $500, but knows he cou
 - Exposure Factor = 0.80
 - Single Loss Expectancy = $2000
 
-"Exposure" is not limited to specific object, but can be an expression of likelihoods and probabilities.  Example: Frank might use the annual probability of 8.0+ earthquakes in Ballard to estimate the chance of his Plasma TV being destroyed by a natural disaster.
+"Exposure" is not limited to a specific object, but can be an expression of likelihoods and probabilities.  Example: Frank might use the annual probability of 8.0+ earthquakes in Ballard to estimate the chance of his Plasma TV being destroyed by a natural disaster.
 
 <!-- VIDEO PART THREE -->
 
@@ -183,18 +183,39 @@ Typical Risks and Threats in Information Security
 
 There is a danger in saying "typical" in this context, as risk profiles can cover a lot of different areas across different environments.   Where a company in the Swiss Alps may need to account for the risk of avalaches, their subsidiary in the Phillipines will need to pay attention to the dangers of the Monsoon season.  
 
+In this day and age, however, most of the threats that we see highlighted on the nightly news are ones that are specifically malicious and leverage access to computers over the Internet.  Many of these threats may target a range of networked computers including general-purpose computers along with more specialized machines such as this operating Web servers.   Threats will also vary based on whether a computer system is the primary target of criminals, say a bank system or a large retailier, or whether the threat is indented to have a more general target and result, like pulling PCs into a so-called Botnet or getting Web servers to serve malicious material and scripts,  An attack against a high value target like a retailer could combine all of the above to execute an attack and compromise.
+
+Common Internet and Web-borne Threats and Terms
+===================================================
+![Trojan Horse](images/trojan.png)
+
+----
+
+* Trojans
+* Phishing
+* Spear Phishing
+* Escalation of Privilege
+* Advance Persistent Threat
+* Zero-Day Exploits
+* SQL Injection
+
+
 
 Typical Controls in information Security
 =========================================
 
 * Access Control
- + Physical
- + Logical
- + Network 
+   + Physical
+   + Logical
+   + Network 
+* Software
+   + Anti-Virus
+   + Browser configuration and add-ins
+  
 * Alarm Systems and Monitoring
- + Intrusion Detection (physical and logical)
- + Server hardware health 
- + Environmental conditions (temp, smoke, fire)
+   + Intrusion Detection (physical and logical)
+   + Server hardware health 
+   + Environmental conditions (temp, smoke, fire)
 * Redundancy
 * Backups
 
@@ -261,6 +282,9 @@ File based:
 - PDF
 - PGP
 
+A Public Key Encryption Diagram
+=================================
+
 ![Public Key Encryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
 
 Encryption Standards
@@ -277,7 +301,6 @@ Some Basic Security Tips
 ========================================================
 
 Question: If I have set a password on my laptop, is the data on my laptop secure?
-
 
 * Security on personal computers and devices is easily subverted.
 

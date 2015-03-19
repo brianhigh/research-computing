@@ -1,15 +1,15 @@
-== Research Computing
+== Research Computing ==
 
 This resource contains teaching materials for an overview course in 
 *research computing*.
 
-=== Audience
+=== Audience ===
 
 The target audience is primarily college students, particularly graduate 
 students, who conduct academic or scientific research. The information will 
 also be useful for working professionals.
 
-=== Course Goals
+=== Course Goals ===
 
 The main goal of this course is to help students improve their technical 
 readiness for engaging in the increasingly data-centric work that they face 
@@ -19,7 +19,7 @@ key concepts in research computing and data management, including overviews
 of systems analysis techniques, data security and integrity, and database 
 tools, among others.
 
-=== Learning Objectives
+=== Learning Objectives ===
 
 At the end of this course students should be able to:
 
@@ -29,21 +29,21 @@ At the end of this course students should be able to:
 * Identify factors that affect performance in the collection and preparation of data for analysis.
 * Describe the core technologies most frequently employed in large-scale research data management.
 
-=== File Contents
+=== File Contents ===
 
 The files hosted in the repository consist of the presentation slides in 
 Markdown format as well as transcripts to go with those slides. The transcripts 
-are posted as wiki pages in ASCIIDoc format and are also offered as PDF and Epub 
+are posted as wiki pages in ASCIIDoc format and are also offered as PDF and EPUB 
 eBooks.
 
-=== The Research Computing Team
+=== The Research Computing Team ===
 
 Thanks to the following people who have contributed to this resource (in
 no particular order):
 
 _Brian High, Jim Hogan, John Yocum, Elliot Norwood, and Lianne Sheppard_
 
-=== Copyright, License and Disclaimer
+=== Copyright, License and Disclaimer ===
 
 Copyright © The https://github.com/brianhigh/research-computing[Research Computing
 Team]. This information is provided for educational purposes

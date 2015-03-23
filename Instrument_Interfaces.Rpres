@@ -78,7 +78,7 @@ Remote Data Aquisition
 Source: [1sfoerster, CC-BY-SA-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:UnoConnections.jpg)
 </small>
 
-Instrument Data Acquisition Software
+Data Acquisition Software
 ========================================================
 
 * LabVIEW
@@ -88,9 +88,39 @@ Instrument Data Acquisition Software
 * Torrent Suite
   * Open source sequence analyzer
 
+Legacy Systems
+========================================================
+
+* Limited hardware compatbility
+  * Interface isn't supported on modern computers
+* Operating system support
+  * Requires outdated operating system
+* Quirky behaviour, such as inability to print
+
+***
+
+![Intertec Superbrain](http://upload.wikimedia.org/wikipedia/commons/4/40/Intertec_Superbrain.jpg)
+
+<small style="font-size:.5em">
+Source: [Brighterorange, CC-BY-SA-3.0, (Wikimedia)](http://commons.wikimedia.org/wiki/File:Intertec_Superbrain.jpg)
+</small>
+
+Instrument Overload
+========================================================
+
+* Too many devices
+  * Can your software, hardware, and instruments get along?
+* Bus technology limitations
+  * More devices = Lower performance
+* Resource consumption
+  * Bus bandwidth
+  * Processing power
+  * Memory
+
 Summary
 ========================================================
 
 - Peripherals
 - Interfaces
 - Data Aquisition
+- Legacy Systems

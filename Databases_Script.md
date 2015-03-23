@@ -21,7 +21,7 @@ Research produces data, and information that need to stored for future review or
 Databases
 ========================================================
 
-Databases come in all shapes and sizes. In general, there are three basic types. The flat file, which is much like a spreadsheet. Relational, which is like a series of spreadsheets linked by common identifiers. And, the family of NoSQL databases, which have various storage models for different use cases.
+Databases come in all shapes and sizes. In general, there are three basic types. The flat file, which is much like a spreadsheet. Relational, which is like a series of spreadsheets linked by common identifiers. And finally, the family of NoSQL databases, which have various storage models for different use cases.
 
 Much like the variety of database types, there are a variety of query languages. A query language is how you interact with the database. With it, you can insert new data, update records, etc. We'll go over some specific languages like Structured Query Language later in the presentation.
 
@@ -39,31 +39,25 @@ Key Terms
 
 Before we can discuss the details of each database type, and their related query languages, we have to get some key terms out of the way. These terms will come up again later, in addition to being found in numerous database books, and articles.
 
-- CRUD: Create, Read, Update, Delete
+- CRUD: Create, Read, Update, Delete (http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
 
 CRUD represents the four most basic database operations. Create refers to creating new entries, or adding new data to the database. Read, as the name implies is retrieving data from the database. Update is simply changing the contents of an existing database record. And, Delete, is the removal of a record.
 
-- ACID: Atomicity, Consistency, Isolation, Durability
+- ACID: Atomicity, Consistency, Isolation, Durability (http://en.wikipedia.org/wiki/ACID)
 
 ACID is a method of ensuring that data is stored reliably. Atomicity or an atomic operation, means either the transaction or query is completed fully, or not completed at all. In other words, if the query fails, the database must not be changed. Consistency means that database must remain in a valid state. If the database has any data validation rules, all data must be in compliance with them. Isolation is important in multi-user databases. With Isolation, each users transactions must not interfere with each other, so that each user has a consistent view of the database. Durability means the data has been commited to disk. So, that in the event of a power failure, crash, etc. your data is safe.
 
-- Normalization
+- Normalization (http://en.wikipedia.org/wiki/Database_normalization)
 
 Normalization is all about removing redundant data. For example instead of storing a customer's contact information with their order. The order would refer to a customer ID number, which refers to their contact information. Thus, multiple orders can refer to the same data.
 
-- CAP Theorem
+- CAP Theorem (http://en.wikipedia.org/wiki/CAP_theorem)
 
 CAP Theorem is mostly relevant to distributed NoSQL databases. That is databases which are spread across many servers. It states that you can not deliver a consistent database view, ensure that every query is responded to, and tolerate a failure in the system at the same time. In other words, you must compromise in one of those areas, to guarantee the other two.
 
-- Schema
+- Schema (http://en.wikipedia.org/wiki/Database_schema)
 
 A database schema is a formal description of the database structure. It defines the tables, datatypes, and other rules governing the database.
-
-http://en.wikipedia.org/wiki/CAP_theorem
-http://en.wikipedia.org/wiki/ACID
-http://en.wikipedia.org/wiki/Create,_read,_update_and_delete
-http://en.wikipedia.org/wiki/Database_normalization
-http://en.wikipedia.org/wiki/Database_schema
 
 Types
 ========================================================
@@ -107,7 +101,7 @@ Flat File Examples
 Relational
 ========================================================
 
-Relational databases, as their name implies, relate data from one table to another. These relations reduce the duplication of data that is common to multiple records. For example, in an ordering system, you could tie your customers with one table, and link their orders to them via a customer identification number.
+Relational databases, as their name implies, relate data from one table to another. These relations reduce the duplication of data that is common to multiple records. For example, in an ordering system, you could store your customers within one table, and link their orders to them via a customer identification number.
 
 Relational databases are basically the jack of all trades in the database world. They are highly flexible enabling them to meet the widest number of use cases. But, that flexibility comes at a price. You have to tell the database about the data you plan to store. In other words, a relational database requires a schema to define the structure of your data, and how it relates.
 
@@ -148,11 +142,11 @@ NoSQL
 
 NoSQL or "Not Only SQL" databases serve a variety of niches. Each implementation is geared towards a limited set of use cases, in other words, they don't try to be general purpose databases. NoSQL databases are most commonly associated with Big Data, and High Performance Computing. By Big Data, we're talking about databases in the multi terabyte and larger range. But, not only are they big, they generally require high throughput either from thousands of concurrent requests or simply doing a query across a few billion rows of data in a short period of time.
 
-Within the NoSQL arena, there are a lot of options. A couple commonly used are Apache's Cassandra, which functions similarly to a traditional database. It has tables, which consist of rows and columns. However, the method you query across multiple tables is a bit different than a Relational Database. mongoDB on the other hand, is known as a Document Store. A document being an object containing a series of values. Where a value could be as simple as a name, to an entire PDF. In addition, objects can be related to each other through their unique IDs.
+Within the NoSQL arena, there are a lot of options. A couple commonly used are Apache's Cassandra, which functions similarly to a traditional database. It has tables, which consist of rows and columns. However, the method you query across multiple tables is a bit different than a relational database. mongoDB on the other hand, is known as a document store. A document being an object containing a series of values. Where a value could be as simple as a name, to an entire PDF. In addition, objects can be related to each other through their unique IDs.
 
 With all this variation in data storage methods, there has to be a catch. While many relational databases offer ACID compliance, NoSQL databases rarely do. They make many sacrifices in order to scale massively. The guiding rule with NoSQL is the CAP Theorem which basically says you can't ensure every server shows the exact same data, handle every query, and not lose access to something in the event of a crash.
 
-So, which NoSQL option to go with? That isn't an easy question to answer. Since each database system varies from the next, you have to closely evaluate your needs. You need to consider what questions you are asking from your data. Also factor in, what is your data. For example, is it a huge table of values, or millions of documents. Finally, look at the other tools you are using. They may include support for one or maybe two options. In which case, you are either stuck with those choices, or recondier the tools being used.
+So, which NoSQL option to go with? That isn't an easy question to answer. Since each database system varies from the next, you have to closely evaluate your needs. You need to consider what questions you are asking from your data. And, also factor in, what is your data. For example, is it a huge table of values, or millions of documents. Finally, look at the other tools you are using. They may include support for one or maybe two options. In which case, you are either stuck with those choices, or reconsider the tools being used.
 
 - "Not Only SQL"
 - Big Data
@@ -196,9 +190,9 @@ Structured Query Language
 
 SQL or Structured Query Language is the most widely used database query language. With SQL, you can query for data, create new databases, etc. At the core, SQL is an ANSI standardized language, enabling multiple database vendors to implement it. That said, SQL itself doesn't meet everyone's needs, resulting in proprietary extensions to it.
 
-When possible, it's best to avoid the use of proprietary extensions. Otherwise, in the future should you need to change your database backend, for example switching from MySQL to Postgres, you may find yourself rewriting a lot of queries, and adjusting your database schema.
+When possible, it's best to avoid the use of proprietary extensions. Otherwise, in the future should you need to change your database backend, for example switching from MySQL to Postgres. You may find yourself rewriting a lot of you queries, and adjusting your database schema.
 
-So, what does SQL look like? It has a lot of commands, though there are 4 basic commands which you'll want to get mose comfortable with. The SELECT command, which is used to select or retrieve data from the database. The INSERT command, which as the name states, is used to insert new data. UPDATE, which is used to change values within the database. And, DELETE, which removes records from the database.
+So, what does SQL look like? It has a lot of commands, though there are 4 basic commands which you'll want to get most comfortable with. The SELECT command, which is used to select or retrieve data from the database. The INSERT command, which as the name states, is used to insert new data. UPDATE, which is used to change values within the database. And, DELETE, which removes records from the database.
 
 - ANSI Standard
 - Proprietary Extensions
@@ -209,7 +203,7 @@ Cut to a demo of using SQL with MySQL Workbench.
 Other Query Languages
 ========================================================
 
-Among the numerous non-standard query languages, here are few examples. Apache's Cassandra implements their Cassandra Query Language, which is SQL inspired. Oracle, Microsoft, and others offer Procedural Languages which embed some kind of scripting language within the database. Procedural Languages enable you to complex operations using things like Loops and Arrays within the database engine itself. By embeding the language into the engine, you gain performance from not having to transmit data across the network. As well, gaining capabilities like having some code executed upon a database insert or update.
+Among the numerous non-standard query languages, here are few examples. Apache's Cassandra implements their Cassandra Query Language, which is SQL inspired. Oracle, Microsoft, and others offer Procedural Languages which embed some kind of scripting language within the database. Procedural Languages enable you to complex operations using things like loops and arrays within the database engine itself. By embeding the language into the engine, you gain performance from not having to transmit data across the network. As well, gaining capabilities like having some code executed upon a database insert or update.
 
 In short, it's best to use a standardized language like SQL whenever possible. However, you shouldn't hinder yourself when the database engine offers an option that will improve performance or reduce data processing time.
 
@@ -222,9 +216,9 @@ Summary
 
 We've gone over quite a bit of basics on databases. So, let's review the key points to remember.
 
-CRUD or Create, Read, Update, Delete are the basic operations performed on a database. In SQL these operations are represented with INSERT, SELECT, UPDATE, and DELETE.
+CRUD (or Create, Read, Update, Delete) are the basic operations performed on a database. In SQL these operations are represented with INSERT, SELECT, UPDATE, and DELETE.
 
-ACID or Atomicity, Consistency, Isolation, Durability compliance controls how data is stored. It ensures that all queries are atomic, e.g. all or nothing. That data stored is in full compliance with any validation rules. And, that data written to submitted, is really stored on disk.
+ACID (or Atomicity, Consistency, Isolation, Durability) compliance controls how data is stored. It ensures that all queries are atomic, e.g. all or nothing. That data stored is in full compliance with any validation rules. And, that database changes are really stored on disk.
 
 Normalization is the process of reducing duplication in a database by relating records, instead of repeating the same information in each record.
 
@@ -232,7 +226,7 @@ Schema is the design and specifications for the database. It defines tables, con
 
 CAP Theorem applies mostly to NoSQL. It states that all database servers in a group can't show the exact same data, respond to every query, and tolerate a node failure without compromising in one of those areas. 
 
-We covered the three basic types of databases, Flat, Relational, and NoSQL. With flat files being generally frowned upon unless you have specific reasons for them. NoSQL typically only required when working with Big Data. And, relational being the most general  purpose database you can use.
+We covered the three basic types of databases, flat, relational, and NoSQL. With flat files being generally frowned upon unless you have specific reasons for them. NoSQL typically only required when working with big data. And, relational being the most general purpose database you can use.
 
 We've also covered ODBC, or Open Database Connectivity. Which is a standardized scheme for connecting applications, and languages with databases. In the Java world, the equivalent is JDBC or Java Databae Connectivity. Regardless of language, these interfaces are your friend.
 

@@ -18,21 +18,10 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 <!-- VIDEO PART ONE -->
 
 
-Welcome
-=================
-
-Welcome to our session on Information Security.  I'd like to start on a positive note by showing you a picture of my buddy Frank's friendly dog "Rex":
-
-----
-
-![Guard Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Military_dog_barking.JPG/640px-Military_dog_barking.JPG)
-
-We'll spend some time with Rex a little later in the program.  But first....
-
 Introduction and Outline
 ========================================================
 
-Some terms may be meaningful to you yet, but in this session we'll cover:
+Welcome to our session on Information Security. Some terms may be meaningful to you yet, but in this session we'll cover:
 
 * Part 1: Some philosophical foundations of information security
 * Part 2: Risk assessment
@@ -40,22 +29,21 @@ Some terms may be meaningful to you yet, but in this session we'll cover:
 * Part 4: Encryption
 * Part 5: Security best practices
 
-
-
 Part 1: Philosphies and Foundations
 ========================================
 
 Why Security?
 =========================================================
 
-So why is security in general a good thing?  Some folks manage to form the impression that people who are enthusiastic about "security" are people with some control issues.  While I'm sure you can find some security enthusiasts who might be described as "control freaks", a more fair picture is that mature security professionals are not interested in control anywhere near as much as they are committed to the pursuit of risk management.  We'll come back to that.
+So why is security in general a good thing?  Some folks manage to form the impression that people who are enthusiastic about "security" are people with some control issues.  While I'm sure you can find some security enthusiasts who might be described as "control freaks", a more fair picture is that mature security professionals are not interested in control anywhere near as much as they are committed to the pursuit of risk management.
+So we see security, and Information security, not as an control-freak end in and of itself but rather as a means of identifying and dealing with risk.
 
-So we see security, and Information security, not as an control-freak end in and of itself but rather as a means of identifying and dealing with risk. 
+You might still ask "What does security matter to me?  Why should I care?"  You don't have to work hard to identify examples of how security, or the lack of it, can have a profound impact on your work and career.  We'll see a few examples in he next sections.
 
 Working for the CIA
 ===========================
 
-Information Security, often referred to as "InfoSec" uses a number a number of different frameworks to pursue its desired result.  The most commonly-used InfoSec principles revolve around the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
+Information Security, often referred to as "InfoSec" uses a number of different frameworks to pursue its desired result.  The most commonly-used InfoSec principles revolve around the triad "CIA", standing for confidentiality, integrity, and availability. There are more complex expressions of this concept but for our purposes will stick with CIA.
 
 Confidentiality should be really self-explanatory: only parties who should have access to information get it. 
 
@@ -66,13 +54,13 @@ Availability is a lofty term for making sure that you can get your data – that
 What does CIA address? (Examples)
 =====================================
 
-It should be easy to think of some reasons why these three concepts are important. Let's take the example of a research study that you are working on. It has been funded to the tune of $5 million over five years, and there is the possibility of renewal. By chance, the  study collects and stores some private health information. 
+It should be easy to think of some reasons why these three concepts are important. Let's take the example of a research study that you are working on. It has been funded to the tune of $5 million over five years, and there is the possibility of renewal. By chance, the  study collects and stores some private health information (PHI). 
 
 Possible results of a failure to assure data confidentiality should be obvious these days. Harm to study subjects, lawsuits against the sponsoring institution, disciplinary actions, loss of funding… The list goes on.
 
 Integrity, and a failure to maintain it, are probably easiest to think of with an example like a large study that spent millions of dollars, collected lots of data, but then discovered at some point that the data was more or less corrupt, incorrect, inconsistent, invalid. Possible harms? Incorrect conclusions making their way into the scientific literature would be one. Withdrawal of funding would be another on top of damage to professional reputations.
 
-Availability would seem more straightforward, but also requires considerable thought and planning. What good is confidentiality and integrity if all of your study data was lost in a fire or stolen from an airport lounge? How good are your backups?
+Availability would seem more straightforward, but also requires considerable thought and planning. What good is confidentiality and integrity if all of your study data was lost in a fire or stolen from your laptop in an airport lounge? How good are your backups?
 
 CIA is a mainstay of good Information Security practice, but there are many additional elements that form a more complete InfoSec framework.  Let's start with a vignette:
 
@@ -93,7 +81,7 @@ Frederick II the Great
 >"He who defends everything defends nothing."
 
 
-There is a quote, attributed to Frederick the Great, that posits "he who defends everything defends nothing". Which is popular among some security professionals.  Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion"He who does not defend everything defends nothing" matters a lot in the "InfoSec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.  This is something we'll talk about when we cover the concept of "privilege escalation".
+There is a quote, attributed to Frederick the Great, that posits "He who defends everything defends nothing". Which is popular among some security professionals.  Frederick was talking about war and the need to manage limited resources and logistics to achieve a strategic victory. This does have bearing in information security as the resources that any one organization can bring to bear to secure the organization are limited. The contrary assertion"He who does not defend everything defends nothing" matters a lot in the "InfoSec" world, where the failure to secure even innocent – looking assets could lead to a much greater compromise of the organization's information.  This is something we'll talk about when we cover the concept of "privilege escalation".
 
 
 Allocating Resources for Information Security
@@ -146,10 +134,17 @@ Another primary way to look at security controls is whether they attempt to prev
 - corrective or mitigating
 - restorative
 
-Saving Frank's Atari
-======================
+Example Controls
+==================
+![Security Camera (Dummy)](images/dummy-camera.png)
+![Guard Dog (Rex)](images/rex320.jpg)
+![Concertina Wire](images/320concertina.jpg)
+----
+![Electronic Keypad Lock](images/185-electronic_lock.jpg)
+![Biometric Lock](images/265biometric.jpg)
 
-![Frank's Atari](http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Atari-2600-Wood-4Sw-Set.jpg/320px-Atari-2600-Wood-4Sw-Set.jpg)
+An excercise in Risk Mangement Calculation and Control selection
+======================
 
 Let's look at Frank's attempt at domestic burglary risk management and his decision-making about controls.
 
@@ -296,6 +291,10 @@ National standards (NIST):
 - 3DES
 - AES
 
+<!-- VIDEO PART FIVE -->
+
+Part 5: Security Best Pracices
+====================================
 
 Some Basic Security Tips
 ========================================================
@@ -313,7 +312,9 @@ Best practices
 
 [Web application security: OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10)
 
-List and discuss data security best practices.
+(More non-OWASP security best practices.)
+
+
 
 Some practical resources on network/Internet security:
 

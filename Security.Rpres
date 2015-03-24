@@ -1,8 +1,9 @@
 Information Security
 ========================================================
-author: Brian High
-date: 2014-12-16
+author: Jim Hogan
+date: 2015-01-08
 transition: fade
+incremental: true
 
 Research Computing and Data Management
 -------------------------------------------------------
@@ -14,13 +15,16 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 </small>
 
 
-Information Security 
+Information Security Outline
 ========================================================
 
-- CIA (AAA)
-- Controls
-- Encryption
-- Best Practices
+* Philosophies and Foundations 
+* CIA (AAA)
+* Controls
+* Encryption
+* Best Practices
+
+>"He who defends""   
 
 CIA (AAA)
 ========================================================
@@ -44,6 +48,8 @@ Access control
 - Identification
 - Authentication
 - Authorization
+
+![Pattern Token](https://commons.wikimedia.org/wiki/File:Array-Card.gif)
 
 Securing Storage
 ========================================================
@@ -81,6 +87,9 @@ File based:
 - PDF
 - PGP
 
+![Public-Key Ecryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
+
+
 Encryption Standards
 ========================================================
 
@@ -104,4 +113,8 @@ Best practices
 ========================================================
 
 List and discuss data security best practices.
+
+
+![Guard Dog](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Military_dog_barking.JPG/640px-Military_dog_barking.JPG)
+
 

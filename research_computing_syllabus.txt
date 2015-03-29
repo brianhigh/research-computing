@@ -1,0 +1,164 @@
+                     Research Computing and Data Management
+
+                      ENVH 590 D/BIOST 578 E; Spring 2015
+
+                        Thursdays 2:30 - 3:20, SOCC 308
+
+   Course Instructors:
+
+   +------------------------------------------------------------------------+
+   | Lianne Sheppard, PhD         | Brian High                              |
+   |------------------------------+-----------------------------------------|
+   | E-mail: sheppard @ UW        | E-mail: high @ UW                       |
+   +------------------------------------------------------------------------+
+
+   Course Goals:
+
+   The main goal of this 1-credit class is to help students improve their
+   technical readiness for engaging in the increasingly data-centric work
+   that they face in their degree programs, in their related research, and in
+   their future professional and research practice. Students will become
+   acquainted with key concepts in research computing and data management,
+   including overviews of systems analysis techniques, data security and
+   integrity, and database tools, among others.
+
+   Learning Objectives:
+
+   At the end of this course students should be able to:
+
+     * Analyze requirements for management of data in different situations
+       and projects.
+
+     * Choose appropriate technical tools and techniques to support that data
+       management.
+
+     * Identify hazards and pitfalls in data-related projects.
+
+     * Identify factors that affect performance in the collection and
+       preparation of data for analysis.
+
+     * Describe the core technologies most frequently employed in large-scale
+       research data management.
+
+   Requirements:
+
+   The requirements for receiving credit for ENVH 590/BIOST 578: Research
+   Computing and Data Management are listed below. Each of these requirements
+   will be evaluated to determine whether credit will be given for the
+   course.
+
+    1. Participate (10 hours): Come to class and participate in discussions
+       and group exercises. Also, contribute to class-related online forums.
+
+    2. Complete assignments, including five online quizzes (10 hours): 
+       Quizzes will be based on discussions, readings, and additional course
+       content such as videos and exercises. Quizzes will be completed online
+       through Canvas.
+
+    3. Complete a term project (10 hours): Each student will complete a term
+       project culminating in a “how to” resource: either a short (3-10
+       minute) recorded “screencast” presentation or a tutorial document
+       including “screenshots”. Some homework will be assigned to help guide
+       this effort. The “how to” should demonstrate a computing task
+       associated with research computing. Provide project peer-review to
+       others through Canvas.
+
+   Readings:
+
+   Readings, videos, exercises, and additional resources will be found on the
+   course website. (No textbook)
+
+   Grading:
+
+   This is a credit/no credit course. A grade of 70% or higher is required to
+   receive credit based on: participation (35% of grade), five online quizzes
+   (30% of grade), a term project (30% of grade), and project peer-review (5%
+   of grade).Access and Accommodations:
+
+   Your experience in this class is important to us, and it is the policy and
+   practice of the University of Washington to create inclusive and
+   accessible learning environments consistent with federal and state law. If
+   you experience barriers based on a disability or temporary health
+   condition, please seek a meeting with DRS to discuss and address them. If
+   you have already established accommodations with DRS, please communicate
+   your approved accommodations to your instructor at your earliest
+   convenience so we can discuss your needs in this course.
+
+   Disability Resources for Students (DRS) offers resources and coordinates
+   reasonable accommodations for students with disabilities and/or temporary
+   health conditions.  Reasonable accommodations are established through an
+   interactive process between you, your instructor(s) and DRS.  If you have
+   not yet established services through DRS, but have a temporary health
+   condition or permanent disability that requires accommodations (this can
+   include but not limited to; mental health, attention-related, learning,
+   vision, hearing, physical or health impacts), you are welcome to contact
+   DRS at 206-543-8924 or uwdrs@uw.edu or disability.uw.edu
+
+   Academic Integrity Statement:
+
+   Students at the University of Washington (UW) are expected to maintain the
+   highest standards of academic conduct, professional honesty, and personal
+   integrity.
+
+   The UW School of Public Health (SPH) is committed to upholding standards
+   of academic integrity consistent with the academic and professional
+   communities of which it is a part. Plagiarism, cheating, and other
+   misconduct are serious violations of the University of Washington Student
+   Conduct Code (WAC 478-120). We expect you to know and follow the
+   university's policies on cheating and plagiarism, and the [1]SPH Academic
+   Integrity Policy. Any suspected cases of academic misconduct will be
+   handled according to University of Washington regulations. For more
+   information, see the University of Washington Community Standards and
+   Student Conduct website.
+
+           ENVH 590 / BIOST 578 Research Computing and Data Management
+
+                                 CLASS SCHEDULE
+
+                              (Subject to change)
+
+   +------------------------------------------------------------------------+
+   |                                    | Week 6                            |
+   |                                    |                                   |
+   | Week 1                             |   * Data Sharing and Data         |
+   |                                    |     Management Plans              |
+   |   * Information Systems and        |                                   |
+   |     Systems Analysis               |   * Quiz 3: Covers weeks 5-6, due |
+   |                                    |     4/30 @ 2:30pm                 |
+   | Week 2                             |                                   |
+   |                                    | Week 7                            |
+   |   * Networking and Information     |                                   |
+   |     Security                       |   * Programming and and Version   |
+   |                                    |     Control                       |
+   |   * Quiz 1: Covers weeks 1-2, due  |                                   |
+   |     4/2 @ 2:30pm                   | Week 8                            |
+   |                                    |                                   |
+   | Week 3                             |   * Data Analysis and             |
+   |                                    |     Visualization Tools           |
+   |   * Software Application           |                                   |
+   |     Interfaces                     |   * Quiz 4: Covers weeks 7-8, due |
+   |                                    |     5/14 @ 2:30pm                 |
+   |   * Instrument Interfaces and Data |                                   |
+   |     Acquisition                    | Week 9                            |
+   |                                    |                                   |
+   |   * Resource Management            |   * Big Data and Cloud Computing  |
+   |                                    |                                   |
+   | Week 4                             |   * Data Science and Data Mining  |
+   |                                    |                                   |
+   |   * Project Management             |   * Projects due: 5/28 @ 2:30pm,  |
+   |                                    |     Begin review                  |
+   |   * Data Files and Manipulation    |                                   |
+   |                                    | Week 10                           |
+   |   * Quiz 2: Covers weeks 3-4, due  |                                   |
+   |     4/16 @ 2:30pm                  |   * In-class exercise:            |
+   |                                    |     Requirements Analysis         |
+   | Week 5                             |                                   |
+   |                                    | Week 11 (Finals Week)             |
+   |   * Databases                      |                                   |
+   |                                    |   * Quiz 5: Project Review, due   |
+   |                                    |     6/11 @ 2:30pm                 |
+   +------------------------------------------------------------------------+
+
+References
+
+   1. http://sph.washington.edu/students/academicintegrity/

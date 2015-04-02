@@ -255,23 +255,21 @@ Threat: DoS/DDoS
 These stand for Denial of Service and Distributed Denial of Service.  The latter has become increasingy common, whereby a large number of computers are employed to overload another computer by sending vast numbers of requests to that computer over an internet. 
 
 
-
-
 Typical Controls in information Security
 =========================================
 
 * Access Control
-   + Physical
-   + Logical
-   + Network 
+  - Physical
+  - Logical
+  - Network 
 * Software
-   + Anti-Virus
-   + Browser configuration and add-ins
+  - Anti-Virus
+  - Browser configuration and add-ins
   
 * Alarm Systems and Monitoring
-   + Intrusion Detection (physical and logical)
-   + Server hardware health 
-   + Environmental conditions (temp, smoke, fire)
+  - Intrusion Detection (physical and logical)
+  - Server hardware health 
+  - Environmental conditions (temp, smoke, fire)
 * Redundancy
 * Backups
 
@@ -373,14 +371,18 @@ Other Encryption Elements and Factors
 * Codes/cyphers: the mathematics continue to evolve to defeat code breakers 
 * Keys: Length is a "key" factor in strength
 * Standards include NIST standards like 
-   + DES
-   + 3DES
-   + AES
+  - DES
+  - 3DES
+  - AES
 
 A Public Key Encryption Diagram
 =================================
+A breakthrough in cryptography led to the technology referred to a Publis Key Encryption.  A diagram shows how users can make available their public key available to a friend or the whole world while retaining the complementary private key that is required to crypt and decrypt.  
+
 
 ![Public Key Encryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)
+
+PGP is a popular software that employs this public key method.
 
 
 <!-- VIDEO PART FIVE -->
@@ -410,7 +412,8 @@ Subscribe to relevant security announcement lists
 
 Use widely adopted industry standards like OWASP
 
-[Web application security: OWASP Top 10](https://www.owasp.org/index.php/Top_10_2013-Top_10)
+[Web application security: OWASP Top 10]
+(https://www.owasp.org/index.php/Top_10_2013-Top_10)
 
 
 

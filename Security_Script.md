@@ -2,7 +2,7 @@ Information Security
 ========================================================
 author: Jim Hogan
 date: 2015-01-06
-transition: fade
+ transition: fade
 incremental: true
 
 Research Computing and Data Management
@@ -371,13 +371,13 @@ Other Encryption Elements and Factors
 * Codes/cyphers: the mathematics continue to evolve to defeat code breakers 
 * Keys: Length is a "key" factor in strength
 * Standards include NIST standards like 
-  - DES
-  - 3DES
-  - AES
+  + DES
+  + 3DES
+  + AES
 
 A Public Key Encryption Diagram
 =================================
-A breakthrough in cryptography led to the technology referred to a Publis Key Encryption.  A diagram shows how users can make available their public key available to a friend or the whole world while retaining the complementary private key that is required to crypt and decrypt.  
+A breakthrough in cryptography led to the technology referred to a Public Key Encryption.  A diagram shows how users can make available their public key available to a friend or the whole world while retaining the complementary private key that is required to crypt and decrypt.  
 
 
 ![Public Key Encryption](https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_key_encryption.svg)

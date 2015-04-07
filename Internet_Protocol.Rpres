@@ -1,0 +1,68 @@
+Internet Protocol Basics
+========================================================
+author: Jim Hogan
+date: 2015-04-05
+transition: fade
+incremental: true
+
+Research Computing and Data Management
+-------------------------------------------------------
+[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+
+<small style="font-size:.5em">
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</small>
+
+Introduction
+========================================================
+
+
+Recognize this number?
+
+  128.95.112.1
+  
+How about this one?
+
+  10000000010111110111000000000001
+
+
+Data Flow of the Layered TCP/IP Model
+=============================================================
+
+![TCP/IP Model](http://upload.wikimedia.org/wikipedia/commons/b/b2/Data_Flow_of_the_Internet_Protocol_Suite.PNG)
+
+[The Internet Protocol Suite Wikipedia Page](http://en.wikipedia.org/wiki/Internet_protocol_suite)
+
+Layers, Protocols, and Encapsulation
+=============================================================
+(Not translated from the Dutch)
+
+![encapsulation](https://upload.wikimedia.org/wikipedia/commons/5/54/Inkapseling_bij_tcp-ip-nl.svg)
+
+Types of Networks
+=============================================================
+
+* LAN - Local Area Network
+* WAN - Wide Area Network
+
+* LAN - less need for routing
+* WAN - more need for routing
+
+
+![Switch](images/switch.png)
+
+
+Using the Network Effectively
+========================================================
+
+* network could be performance bottleneck
+* wired connection more reliable than wireless
+* read and write speed to local disk always faster
+* troubleshooting: 
+  + start with closest component
+  + learn how to use simple tool "ping"
+  + get a grip on name resolution/DNS
+  + know how to determine your IP address
+  
+[Networking on Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki/networking)

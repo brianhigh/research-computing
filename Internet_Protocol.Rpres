@@ -106,12 +106,12 @@ So subnet being 192.168.1.0, all devices on this subnetwork need to use the same
 Subnet Mask Example Table
 =============================
 
-Parameter |  Binary Value                   | Readable Result
-----------|---------------------------------| ---------------
-IP Addr   | `11000000101010000000000100001010`|192.168.1.10 
-Mask      | `11111111111111111111111100000000`|255.255.255.0
-Net Bits  | `110000001010100000000001________`|192.168.1.0 
-Host Bits | `________________________00001010`|10
+Parameter |Binary Value                      |Readable Result
+----------|----------------------------------|---------------
+IP Addr   |`11000000101010000000000100001010`|192.168.1.10 
+Mask      |`11111111111111111111111100000000`|255.255.255.0
+Net Bits  |`110000001010100000000001________`|192.168.1.0 
+Host Bits |`________________________00001010`|10
 
 So subnet is 192.168.1.0, and all devices on this subnetwork need to use the same mask in order to know what subnet they are on and to communicate with other devices on the subnet.  
 

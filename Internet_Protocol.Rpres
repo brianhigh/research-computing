@@ -17,52 +17,193 @@ This work is licensed under a <a rel="license" href="http://creativecommons.org/
 Introduction
 ========================================================
 
+This short tutorial is on the basics of the Internet Protocol, or "IP".
 
-Recognize this number?
+Brian High's [Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki/networking) provides a lot of complementary information on networking and troubleshooting.  This short tutorial will cover many of the basic components of IP.
 
-  128.95.112.1
+When we say "your computer" that could mean almost any IP-connected device like PC, tablet or smart phone whether connected over a wired network or wireless network. 
+
+How Do I get on the Internet?
+=================================
+
+* Being on the Internet requires that a computer have an "IP address". 
+* Some other parameters related to the IP address need to be configured to make the Internet connection useful.
+
+* The typical format of IP addresses are referred to as haveing 4 octets and the dotted notation is common:
+* Example: 128.95.112.1
+
+
+How does an IP address get set?
+================================
+There are 2 main ways to set an IP address:
+
+* Statically
+* Dynamically
+
+Static Addresses
+===================
+You may be familiar with a settings page like this:
+
+![Static IP Settings](images/ip-3.png)
+
+----
+
+All values are set manually and do not change unless manually altered. 
+
+
+Dynamic Addresses
+===================
+But you have the option in many cases to set IP address info automatically
+
+![Static IP Settings](images/ip-4.png)
+
+----
+
+Dynamic addresses require a server on the network running the protocol "DHCP"" (Dynamic Host Control Protocol). 
+
+Addresses set with DHCP can change.
+
+DHCP negotiation takes the form of a call-and-response.   
+
+DHCP can be set to supply other parameters like subnet mask and default gateway.
+
+What are "Subnet Mask and "Default Gateway"?
+===========================================
+
+* Subnet Mask is required for your computer to communicate with other devices on the same local subnetwork or "Subnet".
+* Default Gateway is required for your computer to communicate with devices on other networks.  
+
+Subnet Mask in a Nutshell
+=======================
+
+Let's say you plug in a laptop to your home network and it gets a dynamic address like this from the little blue box provided by your ISP....
+
+The address is 192.168.1.10, but remember that it operated really is binary?:
+
+ 11000000101010000000000100001010
+
+The subnet mask exists to divide this number into 2 sections, the network bits and the host bits
+
+So, if you take a typical value of subnet mask like 255.255.255.0, that translates into binary:
   
-How about this one?
+  11111111111111111111111100000000  
+  
+Subnet Mask: too complicated!
+============================
 
-  10000000010111110111000000000001
+* IP Addr   : 11000000101010000000000100001010
+
+* Mask      : 11111111111111111111111100000000
+
+* Net Bits  : 110000001010100000000001________
+  + Network is 192.168.1.0 
+
+* Host Bits : ------------------------00001010  
+  + Host bits = 10 so address is 192.168.1.10
+  
+So subnet being 192.168.1.0, all devices on this subnetwork need to use the same mask in order to know what subnet they are on and to communicate with other devices on the subnet.  
+
+Subnet Mask Example Table
+=============================
+
+Parameter |  Binary Value                   | Readable Result
+----------|---------------------------------| ---------------
+IP Addr   | 11000000101010000000000100001010|192.168.1.10 
+Mask      | 11111111111111111111111100000000|255.255.255.0
+Net Bits  | 110000001010100000000001________|192.168.1.0 
+Host Bits | ________________________00001010|10
+
+So subnet is 192.168.1.0, and all devices on this subnetwork need to use the same mask in order to know what subnet they are on and to communicate with other devices on the subnet.  
+
+  
+Default Gateway: maybe simpler!
+================================
+
+![Default Gateway](images/ip-8.png)
+
+----
+
+An Example:
 
 
-Data Flow of the Layered TCP/IP Model
-=============================================================
-
-![TCP/IP Model](http://upload.wikimedia.org/wikipedia/commons/b/b2/Data_Flow_of_the_Internet_Protocol_Suite.PNG)
-
-[The Internet Protocol Suite Wikipedia Page](http://en.wikipedia.org/wiki/Internet_protocol_suite)
-
-Layers, Protocols, and Encapsulation
-=============================================================
-(Not translated from the Dutch)
-
-![encapsulation](https://upload.wikimedia.org/wikipedia/commons/5/54/Inkapseling_bij_tcp-ip-nl.svg)
-
-Types of Networks
-=============================================================
-
-* LAN - Local Area Network
-* WAN - Wide Area Network
-
-* LAN - less need for routing
-* WAN - more need for routing
+<-- Where you want to get, say www.washington.edu
 
 
-![Switch](images/switch.png)
+<-- What you travel over (The Internet)
 
 
-Using the Network Effectively
-========================================================
+<-- Your home router/wifi device.  This would be default gateway.
 
-* network could be performance bottleneck
-* wired connection more reliable than wireless
-* read and write speed to local disk always faster
-* troubleshooting: 
-  + start with closest component
-  + learn how to use simple tool "ping"
-  + get a grip on name resolution/DNS
-  + know how to determine your IP address
+How Does Routing Work?
+==========================
+
+![Default Gateway](images/ip-8.png)
+
+----
+
+All devices in this communications meash maintain something called routing tables that determine how packets should best be routed based on the destination address contained in the packet header.
+
+Routing tables may be very simple or they may be very complex.
+
+Public and Private Addressing
+================================
+
+Aside from static and dynamic, IP addresses can also be either public or private.
+
+An IETF "RFC" defines ranges of IP addresses that are not routed by default and so are "private".  The 3 main ones are like so:
+
+ 10.0.0.0 through 10.255.255.255
+ 172.16.0.0 through 172.31.255.255
+ 192.168.0.0 through 192.168.255.255 
+ 
+So these ranges are not reachable from other networks, but they can be used to build extensive private networks.
+
+Private Addressing and NAT
+============================
+
+If you are using a device with a private address, it would not, by itself, be able to reach the Internet.
+
+To enable access from private address, a technique is used called "NAT" (Network Address Translation) that maps your private address to a public, routable one.
+
+Your small router at home probably uses NAT, as do large networks like here at UW.
+
+Excercise: look to see what address is assigned to your computer and then see what address it shows to the work via a site like http://whatismyip.com.  Same? Different?
+
+NAT Serves Another Purpose
+============================
+
+Available addresses in the "IPv4" address space are nearly exhausted.
+
+The use of NAT has allowed many computers to connect to the Internet without the assignment of a (scarce) public IP address.
+
+What is to become of the Internet with no IPv4 addresses left?
+================================================================
+
+The short answer is Internet Protocol version 6 (IPv6) which has a hugely bigger address space.
+
+IPv6 a topic for another day of year!
+
+A List of bigger Internet terms and protocols you can safely ignore
+=====================================================================
+
+But if you are hyper-curious or can't fall asleep, take a look at:
+
+[IPv6](http://en.wikipedia.org/wiki/IPv6)
+[AS - Autonomous System](http://en.wikipedia.org/wiki/Autonomous_system_%28Internet%29) 
+[BGP - Border Gateway Protocol](http://en.wikipedia.org/wiki/Border_Gateway_Protocol)
+[OSPF - Open Shortest Path First](http://en.wikipedia.org/wiki/Open_Shortest_Path_First)
+
+
+What we should cover next
+==========================
+Internet Name Resolution
+
+
+
+
+
+
+
+
   
 [Networking on Computing Basics Wiki](https://github.com/brianhigh/computing-basics/wiki/networking)

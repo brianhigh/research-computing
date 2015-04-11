@@ -120,8 +120,8 @@
    +------------------------------------------------------------------------+
    |                                    | Week 6                            |
    |                                    |                                   |
-   | Week 1                             |   * Data Sharing and Data         |
-   |                                    |     Management Plans              |
+   | Week 1                             |   * Data Sharing, Data Mgmt Plans |
+   |                                    |     and Reproducible Research     |
    |   * Information Systems and        |                                   |
    |     Systems Analysis               |   * Quiz 3: Covers weeks 5-6, due |
    |                                    |     4/30 @ 2:30pm                 |
@@ -141,13 +141,13 @@
    |   * Instrument Interfaces and Data |                                   |
    |     Acquisition                    | Week 9                            |
    |                                    |                                   |
-   |   * Resource Management            |   * Big Data and Cloud Computing  |
+   |   * Data Files and Manipulation    |   * Big Data and Cloud Computing  |
    |                                    |                                   |
    | Week 4                             |   * Data Science and Data Mining  |
    |                                    |                                   |
    |   * Project Management             |   * Projects due: 5/28 @ 2:30pm,  |
    |                                    |     Begin review                  |
-   |   * Data Files and Manipulation    |                                   |
+   |   * * Resource Management          |                                   |
    |                                    | Week 10                           |
    |   * Quiz 2: Covers weeks 3-4, due  |                                   |
    |     4/16 @ 2:30pm                  |   * In-class exercise:            |

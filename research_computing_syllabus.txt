@@ -147,14 +147,14 @@
    |                                    |                                   |
    |   * Project Management             |   * Projects due: 5/28 @ 2:30pm,  |
    |                                    |     Begin review                  |
-   |   * * Resource Management          |                                   |
+   |   * Resource Management            |                                   |
    |                                    | Week 10                           |
    |   * Quiz 2: Covers weeks 3-4, due  |                                   |
    |     4/16 @ 2:30pm                  |   * In-class exercise:            |
    |                                    |     Requirements Analysis         |
    | Week 5                             |                                   |
    |                                    | Week 11 (Finals Week)             |
-   |   * Databases                      |                                   |
+   |   * Databases and SQL              |                                   |
    |                                    |   * Quiz 5: Project Review, due   |
    |                                    |     6/11 @ 2:30pm                 |
    +------------------------------------------------------------------------+

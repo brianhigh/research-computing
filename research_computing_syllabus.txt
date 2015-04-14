@@ -124,20 +124,20 @@
    |                                    |     and Reproducible Research     |
    |   * Information Systems and        |                                   |
    |     Systems Analysis               |   * Quiz 3: Covers weeks 5-6, due |
-   |                                    |     4/30 @ 2:30pm                 |
+   |                                    |     5/7 @ 2:30pm                  |
    | Week 2                             |                                   |
    |                                    | Week 7                            |
    |   * Networking and Information     |                                   |
    |     Security                       |   * Programming and and Version   |
    |                                    |     Control                       |
    |   * Quiz 1: Covers weeks 1-2, due  |                                   |
-   |     4/2 @ 2:30pm                   | Week 8                            |
+   |     4/9 @ 2:30pm                   | Week 8                            |
    |                                    |                                   |
    | Week 3                             |   * Data Analysis and             |
    |                                    |     Visualization Tools           |
    |   * Software Application           |                                   |
    |     Interfaces                     |   * Quiz 4: Covers weeks 7-8, due |
-   |                                    |     5/14 @ 2:30pm                 |
+   |                                    |     5/21 @ 2:30pm                 |
    |   * Instrument Interfaces and Data |                                   |
    |     Acquisition                    | Week 9                            |
    |                                    |                                   |
@@ -150,8 +150,8 @@
    |   * Resource Management            |                                   |
    |                                    | Week 10                           |
    |   * Quiz 2: Covers weeks 3-4, due  |                                   |
-   |     4/16 @ 2:30pm                  |   * In-class exercise:            |
-   |                                    |     Requirements Analysis         |
+   |     4/23 @ 2:30pm                  |   * Case studies, Reviews due     |
+   |                                    |     6/4 @ 2:30pm                  |
    | Week 5                             |                                   |
    |                                    | Week 11 (Finals Week)             |
    |   * Databases and SQL              |                                   |

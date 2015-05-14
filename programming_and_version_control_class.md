@@ -70,6 +70,7 @@ Work in *pairs* to fork, clone, commit, push, and send a "pull request".
 Pick a project (from course modules page, GitHub):
 
 - [Airquality-example](https://github.com/brianhigh/airquality-example)
+- [WA Water Quality](https://github.com/brianhigh/wa-water-quality)
 - [Medicare-ipps](https://github.com/brianhigh/medicare-ipps)
 - [Amazon-search](https://github.com/brianhigh/amzn-srch)
 - [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds)

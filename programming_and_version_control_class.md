@@ -36,16 +36,17 @@ foreach thing in mylist: dostuff to thing
 
 ## Programming Examples
 
-* Web programming: Panopto Link Maker (HTML/JavaScript/Regex)
+* Web programming: [Panopto Link Maker](https://github.com/brianhigh/panopto-linkmaker) (HTML/JavaScript/Regex)
     - Input validation with Regular Expressions
     - GitHub fork example
-* API Programming: Amazon Search (Python/R/Bash)
+* API Programming: [Amazon Search](https://github.com/brianhigh/amzn-srch) (Python/R/Bash)
     - Embedding non-R in Rmd
     - Converting Markdown to HTML in Bash
     - Creating a new GitHub repo example
-* Functions: Reddit Wordclouds (Python/R/Bash)
+* Functions: [Reddit Wordclouds](https://github.com/brianhigh/reddit-wordclouds) (Python/R/Bash)
     - Loops versus *apply functions
     - Shell script pipe example (Bash)
+* Regular expressions filtering (search and replace): [Fasta-filter](https://github.com/brianhigh/fasta-filter)
 
 ## Version Control
 
@@ -70,6 +71,6 @@ Pick a project (from course modules page, GitHub):
 
 - [Airquality-example](https://github.com/brianhigh/airquality-example)
 - [Medicare-ipps](https://github.com/brianhigh/medicare-ipps)
-- Amazon-search
+- [Amazon-search](https://github.com/brianhigh/amzn-srch)
 - [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds)
-- Fasta-filter
+- [Fasta-filter](https://github.com/brianhigh/fasta-filter)

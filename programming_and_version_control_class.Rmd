@@ -36,7 +36,7 @@ output:
 
 ```
 function task:
-    steps 1, 2, 3, 4, and 5
+    do steps: [1, 2, 3, 4, 5]
 
 mylist = [A, B, C, D]
 foreach item in mylist: do task to item

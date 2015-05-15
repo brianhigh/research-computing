@@ -21,7 +21,7 @@
 
 ## Common Programming Solutions
 
-* Code reuse, modular design (functions, loops), comments, clear naming scheme
+* Code reuse, modular design (functions, loops)
 
 ```
 function task:
@@ -35,6 +35,7 @@ foreach item in mylist: do task to item
 * Validate input (with e.g., regular expressions)
 * Use resources wisely (RAM, CPU, storage)
 * Use language "idiomatically" - as designed to be used
+* Use clear comments, descriptive and consistent variable naming scheme
 
 ## Programming Examples
 

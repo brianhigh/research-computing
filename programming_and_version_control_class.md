@@ -70,6 +70,7 @@ Try to fork, clone, commit, push, and send a "pull request" with these projects.
 
 Pick a project (from course modules page, GitHub):
 
+- [Panopto-linkmaker](https://github.com/brianhigh/panopto-linkmaker)
 - [Airquality-example](https://github.com/brianhigh/airquality-example)
 - [WA Water Quality](https://github.com/brianhigh/wa-water-quality)
 - [Medicare-ipps](https://github.com/brianhigh/medicare-ipps)

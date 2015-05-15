@@ -38,15 +38,15 @@ foreach thing in mylist: dostuff to thing
 
 * Web programming: [Panopto Link Maker](https://github.com/brianhigh/panopto-linkmaker) (HTML/JavaScript/Regex)
     - Input validation with Regular Expressions
-    - GitHub fork example
+    - Completely client-side programming: completely portable
 * API Programming: [Amazon Search](https://github.com/brianhigh/amzn-srch) (Python/R/Bash)
     - Embedding non-R in Rmd
     - Converting Markdown to HTML in Bash
-    - Creating a new GitHub repo example
+    - Small "remove duplicates" Python script to use with pipe
 * Functions: [Reddit Wordclouds](https://github.com/brianhigh/reddit-wordclouds) (Python/R/Bash)
     - Loops versus *apply functions
-    - Shell script pipe example (Bash)
-* Regular expressions filtering (search and replace): [Fasta-filter](https://github.com/brianhigh/fasta-filter)
+    - Example of Rmd ioslides presentation with license info and icon
+* Regular expressions filtering, streaming: [Filter-fastq](https://github.com/brianhigh/filter-fastq)
 
 ## Version Control
 
@@ -62,10 +62,11 @@ Demo basic "git" workflow:
 * fork, clone, pull, edit, commit, push, pull-request
     - From RStudio GUI
     - From command line
+    - From other GUI or web browser (GitHub site)
 
 ## Exercise: Practice Git
 
-Work in *pairs* to fork, clone, commit, push, and send a "pull request".
+Try to fork, clone, commit, push, and send a "pull request" with these projects.
 
 Pick a project (from course modules page, GitHub):
 
@@ -74,4 +75,4 @@ Pick a project (from course modules page, GitHub):
 - [Medicare-ipps](https://github.com/brianhigh/medicare-ipps)
 - [Amazon-search](https://github.com/brianhigh/amzn-srch)
 - [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds)
-- [Fasta-filter](https://github.com/brianhigh/fasta-filter)
+- [Filter-fastq](https://github.com/brianhigh/filter-fastq)

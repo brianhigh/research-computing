@@ -5,7 +5,7 @@
 ## Common Programming Issues
 
 * Poorly formatted, not following "best practices" style guides
-    - Hard to read
+    - Long sections of poorly commented code with obscure vairable names
     - Not enough blank lines separating code sections
     - No spaces between list items, function parameters
 * Too much copy and paste
@@ -21,19 +21,19 @@
 
 ## Common Programming Solutions
 
-* Code reuse: loops and functions (subroutines, methods)
+* Code reuse, modular design (functions, loops), comments, clear naming scheme
 
 ```
-function dostuff:
+function task:
     steps 1, 2, 3, 4, and 5
 
 mylist = [A, B, C, D]
-foreach thing in mylist: dostuff to thing
+foreach item in mylist: do task to item
 ```
 
 * Consider dependencies, anticipate problems
 * Validate input (with e.g., regular expressions)
-* Use resources wisely
+* Use resources wisely (RAM, CPU, storage)
 * Use language "idiomatically" - as designed to be used
 
 ## Programming Examples
@@ -48,6 +48,10 @@ foreach thing in mylist: dostuff to thing
     - Loops versus *apply functions
     - Example of Rmd ioslides presentation with license info and icon
 * Regular expressions filtering, streaming: [Filter-fastq](https://github.com/brianhigh/filter-fastq) (Python/Perl/Regex)
+* Validation: [Get-logo-png](https://github.com/brianhigh/research-computing/blob/master/get_logo_png.sh) (Bash/Regex)
+    - Checking requirements, command-line arguments
+    - Input validation with Regular Expressions
+    - Automation using CLI tools, pipes
 
 ## Version Control
 
@@ -78,3 +82,4 @@ Pick a project (from course modules page, GitHub):
 - [Amazon-search](https://github.com/brianhigh/amzn-srch) (R, Python)
 - [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds) (R, Python)
 - [Filter-fastq](https://github.com/brianhigh/filter-fastq) (Python, Perl)
+- [Get-logo-png](https://github.com/brianhigh/research-computing/blob/master/get_logo_png.sh) (Bash)

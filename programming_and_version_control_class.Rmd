@@ -15,17 +15,19 @@ output:
 
 ## Common Programming Issues
 
-* Too much copy and paste
+* Poorly formatted, not following "best practices" style guides
     - Hard to read
-    - Difficult to debug and maintain
+    - Not enough blank lines separating code sections
+    - No spaces between list items, function parameters
+* Too much copy and paste
+    - Difficult to read, debug and maintain
 * Fail to check for problems
     - Packages, utilities, files or folders missing
     - Invalid data entry
 * Inefficient 
     - Redoing work already done (installing, downloading, etc.)
-    - Processing more data than needed
-    - Looping more than needed
-    - Filling RAM more than needed
+    - Processing more data than needed, usinfg more RAM
+    - Looping more times than needed
     - Not taking advantage of language features
 
 ## Common Programming Solutions
@@ -50,14 +52,13 @@ foreach thing in mylist: dostuff to thing
 * Web programming: [Panopto Link Maker](https://github.com/brianhigh/panopto-linkmaker) (HTML/JavaScript/Regex)
     - Input validation with Regular Expressions
     - Completely client-side programming: completely portable
-* API Programming: [Amazon Search](https://github.com/brianhigh/amzn-srch) (Python/R/Bash)
-    - Embedding non-R in Rmd
-    - Converting Markdown to HTML in Bash
-    - Small "remove duplicates" Python script to use with pipe
-* Functions: [Reddit Wordclouds](https://github.com/brianhigh/reddit-wordclouds) (Python/R/Bash)
+* API Programming: [Amazon Search](https://github.com/brianhigh/amzn-srch) (Python/R)
+    - Embedding non-R system commands in Rmd
+    - Small "remove duplicates" Python script to use from shell with pipe
+* Functions: [Reddit Wordclouds](https://github.com/brianhigh/reddit-wordclouds) (Python/R)
     - Loops versus *apply functions
     - Example of Rmd ioslides presentation with license info and icon
-* Regular expressions filtering, streaming: [Filter-fastq](https://github.com/brianhigh/filter-fastq)
+* Regular expressions filtering, streaming: [Filter-fastq](https://github.com/brianhigh/filter-fastq) (Python/Perl/Regex)
 
 ## Version Control
 
@@ -81,10 +82,10 @@ Try to fork, clone, commit, push, and send a "pull request" with these projects.
 
 Pick a project (from course modules page, GitHub):
 
-- [Panopto-linkmaker](https://github.com/brianhigh/panopto-linkmaker)
-- [Airquality-example](https://github.com/brianhigh/airquality-example)
-- [WA Water Quality](https://github.com/brianhigh/wa-water-quality)
-- [Medicare-ipps](https://github.com/brianhigh/medicare-ipps)
-- [Amazon-search](https://github.com/brianhigh/amzn-srch)
-- [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds)
-- [Filter-fastq](https://github.com/brianhigh/filter-fastq)
+- [Panopto-linkmaker](https://github.com/brianhigh/panopto-linkmaker) (HTML, JavaScript, CSS)
+- [Airquality-example](https://github.com/brianhigh/airquality-example) (R)
+- [WA Water Quality](https://github.com/brianhigh/wa-water-quality) (R)
+- [Medicare-ipps](https://github.com/brianhigh/medicare-ipps) (R)
+- [Amazon-search](https://github.com/brianhigh/amzn-srch) (R, Python)
+- [Reddit-wordclouds](https://github.com/brianhigh/reddit-wordclouds) (R, Python)
+- [Filter-fastq](https://github.com/brianhigh/filter-fastq) (Python, Perl)

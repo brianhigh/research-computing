@@ -14,7 +14,7 @@
 
    Course Goals:
 
-   The main goal of this 1-credit class is to help students improve their
+   The main goal of this 2-credit class is to help students improve their
    technical readiness for engaging in the increasingly data-centric work
    that they face in their degree programs, in their related research, and in
    their future professional and research practice. Students will become
@@ -47,15 +47,15 @@
    will be evaluated to determine whether credit will be given for the
    course.
 
-    1. Participate (10 hours): Come to class and participate in discussions
+    1. Participate (20 hours): Come to class and participate in discussions
        and group exercises. Also, contribute to class-related online forums.
 
-    2. Complete assignments, including five online quizzes (10 hours): 
+    2. Complete assignments, including five online quizzes (25 hours): 
        Quizzes will be based on discussions, readings, and additional course
        content such as videos and exercises. Quizzes will be completed online
        through Canvas.
 
-    3. Complete a term project (10 hours): Each student will complete a term
+    3. Complete a term project (15 hours): Each student will complete a term
        project culminating in a “how to” resource: either a short (3-10
        minute) recorded “screencast” presentation or a tutorial document
        including “screenshots”. Some homework will be assigned to help guide
@@ -73,7 +73,9 @@
    This is a credit/no credit course. A grade of 70% or higher is required to
    receive credit based on: participation (35% of grade), five online quizzes
    (30% of grade), a term project (30% of grade), and project peer-review (5%
-   of grade).Access and Accommodations:
+   of grade).
+   
+   Access and Accommodations:
 
    Your experience in this class is important to us, and it is the policy and
    practice of the University of Washington to create inclusive and
@@ -112,9 +114,7 @@
    Student Conduct website.
 
            ENVH 590 / BIOST 578 Research Computing and Data Management
-
                                  CLASS SCHEDULE
-
                               (Subject to change)
 
 +--------------------------------------+----------------------------------------+
@@ -162,12 +162,12 @@
 |    o Databases and SQL               |                                        |
 |                                      | Week 11: (meet 3/14)                   |
 |                                      |                                        |
-|                                      | Quiz 5: Covers projects, due 3/14 @    |
-|                                      | 2:30pm                                 |
+|                                      | Quiz 5: Covers projects, due 3/14      |
+|                                      | @ 2:30pm                               |
 |                                      |                                        |
-+---------------------------------------+---------------------------------------+
++--------------------------------------+----------------------------------------+
 
-  Classroom: Health Science Library Classroom C, Mondays 3:30 pm to 5:30 pm
+ Classroom: Health Science Library (HSL) Classroom C, Mondays 3:30 pm to 5:30 pm
 
 References
 

@@ -1,8 +1,8 @@
                      Research Computing and Data Management
 
-                      ENVH 590 D/BIOST 578 E; Spring 2015
+                      ENVH 590 D/BIOST 578 E; Winter 2016
 
-                        Thursdays 2:30 - 3:20, SOCC 308
+                        Mondays 3:30 - 5:20, HSL Classroom C
 
    Course Instructors:
 
@@ -117,47 +117,57 @@
 
                               (Subject to change)
 
-   +------------------------------------------------------------------------+
-   |                                    | Week 6                            |
-   |                                    |                                   |
-   | Week 1                             |   * Data Sharing, Data Mgmt Plans |
-   |                                    |     and Reproducible Research     |
-   |   * Information Systems and        |                                   |
-   |     Systems Analysis               |   * Quiz 3: Covers weeks 5-6, due |
-   |                                    |     5/7 @ 2:30pm                  |
-   | Week 2                             |                                   |
-   |                                    | Week 7                            |
-   |   * Networking and Information     |                                   |
-   |     Security                       |   * Programming and and Version   |
-   |                                    |     Control                       |
-   |   * Quiz 1: Covers weeks 1-2, due  |                                   |
-   |     4/9 @ 2:30pm                   | Week 8                            |
-   |                                    |                                   |
-   | Week 3                             |   * Data Analysis and             |
-   |                                    |     Visualization Tools           |
-   |   * Software Application           |                                   |
-   |     Interfaces                     |   * Quiz 4: Covers weeks 7-8, due |
-   |                                    |     5/21 @ 2:30pm                 |
-   |   * Instrument Interfaces and Data |                                   |
-   |     Acquisition                    | Week 9                            |
-   |                                    |                                   |
-   |   * Data Files and Manipulation    |   * Big Data and Cloud Computing  |
-   |                                    |                                   |
-   | Week 4                             |   * Data Science and Data Mining  |
-   |                                    |                                   |
-   |   * Project Management             |   * Projects due: 5/28 @ 2:30pm,  |
-   |                                    |     Begin review                  |
-   |   * Resource Management            |                                   |
-   |                                    | Week 10                           |
-   |   * Quiz 2: Covers weeks 3-4, due  |                                   |
-   |     4/23 @ 2:30pm                  |   * Case studies, Reviews due     |
-   |                                    |     6/4 @ 2:30pm                  |
-   | Week 5                             |                                   |
-   |                                    | Week 11 (Finals Week)             |
-   |   * Databases and SQL              |                                   |
-   |                                    |   * Quiz 5: Project Review, due   |
-   |                                    |     6/11 @ 2:30pm                 |
-   +------------------------------------------------------------------------+
++--------------------------------------+----------------------------------------+
+|                                      | Week 6: (meet 2/8)                     |
+|                                      |                                        |
+|                                      |   o Data Sharing and Data Management   |
+|  Week 1: (meet 1/4)                  |     Plans                              |
+|                                      |   o Reproducible Research              |
+|    o Course Introduction             |   o Quiz 3: Covers weeks 5-6, due      |
+|    o Software Tools Orientation      |     2/8 @ 2:30pm                       |
+|                                      |                                        |
+|                                      |                                        |
+|                                      |                                        |
+|  Week 2: (meet 1/11)                 | Week 7: Holiday - NO CLASS 2/15        |
+|                                      |                                        |
+|    o Information Systems             |   o Programming and and Version        |
+|    o Networking                      |     Control                            |
+|    o Information Security            |                                        |
+|    o Quiz 1: Covers weeks 1-2, due   |                                        |
+|      1/11 @ 2:30pm                   |                                        |
+|                                      | Week 8: (meet 2/22)                    |
+|                                      |                                        |
+|                                      |   o Data Analysis and Visualization    |
+|  Week 3: Holiday - NO CLASS 1/18     |     Tools                              |
+|                                      |   o Quiz 4: Covers weeks 7-8, due      |
+|    o Systems Analysis                |     2/22 @ 2:30pm                      |
+|    o Project Management              |                                        |
+|    o Resource Management             |                                        |
+|                                      |                                        |
+|                                      | Week 9: (meet 2/29)                    |
+|                                      |                                        |
+|  Week 4: (meet 1/25)                 |   o Big Data and Cloud Computing       |
+|                                      |   o Data Science and Data Mining       |
+|    o Software Application Interfaces |   o Projects due: 2/29 @ 2:30pm        |
+|    o Instrument Interfaces and Data  |   o Begin peer-reviews                 |
+|      Acquisition                     |                                        |
+|    o Data Files and Manipulation     |                                        |
+|    o Quiz 2: Covers weeks 3-4, due   |                                        |
+|      1/25 @ 2:30pm                   | Week 10: (meet 3/7)                    |
+|                                      |                                        |
+|                                      |   o Systems Analysis Case Studies      |
+|                                      |   o Peer-reviews due 3/7 @ 2:30 pm     |
+|  Week 5: (meet 2/1)                  |                                        |
+|                                      |                                        |
+|    o Databases and SQL               |                                        |
+|                                      | Week 11: (meet 3/14)                   |
+|                                      |                                        |
+|                                      | Quiz 5: Covers projects, due 3/14 @    |
+|                                      | 2:30pm                                 |
+|                                      |                                        |
++---------------------------------------+---------------------------------------+
+
+  Classroom: Health Science Library Classroom C, Mondays 3:30 pm to 5:30 pm
 
 References
 

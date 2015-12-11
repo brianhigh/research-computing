@@ -76,52 +76,52 @@ previously compiled software.
 
 *Remote Access, Remote Desktop, Encryption, Network Troubleshooting*
 
-Microsoft Remote Desktop Client
+* Microsoft Remote Desktop Client
 (https://www.microsoft.com/en-us/store/apps/remote-desktop/9wzdncrfj3ps[Windows],
 https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12[OSX])
 
-http://www.rdesktop.org/[X2Go] (Windows, OSX, Linux: use your package
+* http://www.rdesktop.org/[X2Go] (Windows, OSX, Linux: use your package
 manager)
 
-* For OSX, requires: http://www.xquartz.org/[XQuartz]
+** For OSX, requires: http://www.xquartz.org/[XQuartz]
 
-PuTTY
+* PuTTY
 (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[Windows];
 provides "SSH")
 
-http://remmina.sourceforge.net/[Remmina] (Linux: use your package
+* http://remmina.sourceforge.net/[Remmina] (Linux: use your package
 manager)
 
-http://www.rdesktop.org/[Rdesktop] (Linux: use your package manager)
+* http://www.rdesktop.org/[Rdesktop] (Linux: use your package manager)
 
-CoRD (alternative remote desktop client for
+* CoRD (alternative remote desktop client for
 http://cord.sourceforge.net/[OSX])
 
-https://filezilla-project.org/download.php?show_all=1[FileZilla]
+* https://filezilla-project.org/download.php?show_all=1[FileZilla]
 (Windows, OSX, Linux: use your package manager; provides "SFTP")
 
-* *Note*: Do not install any additional software "bundled" with this
+** *Note*: Do not install any additional software "bundled" with this
 installer.
 
-Eduroam https://cat.eduroam.org/[Configuration Assistance Tool] (CAT)
+* Eduroam https://cat.eduroam.org/[Configuration Assistance Tool] (CAT)
 (Windows, OSX, Linux)
 
-http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
+* http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
 package manager)
 
-https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
+* https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
 OSX, Linux)
 
-https://www.gnupg.org/download/[GnuPG] (Windows, OSX, Linux: use your
+* https://www.gnupg.org/download/[GnuPG] (Windows, OSX, Linux: use your
 package manager)
 
-https://www.wireshark.org/download.html[Wireshark] (Windows, OSX, Linux)
+* https://www.wireshark.org/download.html[Wireshark] (Windows, OSX, Linux)
 
-http://www.tcpdump.org/[Tcpdump] ([use Windump on]
+* http://www.tcpdump.org/[Tcpdump] ([use Windump on]
 https://www.winpcap.org/windump/install/default.htm[Windows], [comes
 with] OSX, Linux: use your package manager)
 
-Some network troubleshooting tools like ping and traceroute (tracert)
+* Some network troubleshooting tools like ping and traceroute (tracert)
 come with the operating system.
 
 *Note*: Tools that perform encryption or network reconnaissance may
@@ -131,99 +131,99 @@ restrictions] on their use.
 
 ==== Version Control and Terminal (Shell) ====
 
-https://git-scm.com/downloads[Git]
+* https://git-scm.com/downloads[Git]
 (https://git-for-windows.github.io/[Windows], OSX, Linux: use your
 package manager; provides GitBash on Windows)
 
-https://desktop.github.com/[GitHub Desktop] (Windows, OSX)
+* https://desktop.github.com/[GitHub Desktop] (Windows, OSX)
 
-* Provides GUI for git, specific to GitHub website interaction
+** Provides GUI for git, specific to GitHub website interaction
 
-https://tortoisegit.org/download/[TortoiseGit] (Windows; provides GUI
+* https://tortoisegit.org/download/[TortoiseGit] (Windows; provides GUI
 for git)
 
-Terminal (OSX, Linux; included with operating system; provides "Bash"
+* Terminal (OSX, Linux; included with operating system; provides "Bash"
 and "SSH")
 
-DOS (Windows; included with operating system)
+* DOS (Windows; included with operating system)
 
-PowerShell
+* PowerShell
 (https://www.microsoft.com/en-us/download/details.aspx?id=40855[Windows];
 included with newer versions of operating system)
 
-ConEmu (https://conemu.github.io/[Windows])
+* ConEmu (https://conemu.github.io/[Windows])
 
-GitBash (Windows; provides "Bash"; see "Git", above)
+* GitBash (Windows; provides "Bash"; see "Git", above)
 
 ==== Data Management, Databases, and File Conversion ====
 
-http://openrefine.org/download.html[OpenRefine] (Windows, OSX, Linux)
+* http://openrefine.org/download.html[OpenRefine] (Windows, OSX, Linux)
 
-* Requires https://www.java.com/en/download/[Java]
+** Requires https://www.java.com/en/download/[Java]
 
-https://www.sqlite.org/download.html[SQLite] (Windows, OSX, Linux: use
+* https://www.sqlite.org/download.html[SQLite] (Windows, OSX, Linux: use
 your package manager)
 
-http://openrefine.org/download.html[MySQL Workbench] (Windows, OSX,
+* http://openrefine.org/download.html[MySQL Workbench] (Windows, OSX,
 Linux: use your package manager)
 
-* For Windows, requires:
-** http://www.microsoft.com/download/en/details.aspx?id=17113[Microsoft
+** For Windows, requires:
+*** http://www.microsoft.com/download/en/details.aspx?id=17113[Microsoft
 .NET Framework 4 Client Profile]
-** http://www.microsoft.com/en-us/download/details.aspx?id=40784[Visual
+*** http://www.microsoft.com/en-us/download/details.aspx?id=40784[Visual
 C++ Redistributable for Visual Studio 2013]
 
-http://openrefine.org/download.html[Csvkit] (Windows, OSX, Linux)
+* http://openrefine.org/download.html[Csvkit] (Windows, OSX, Linux)
 
-* Requires Python. See "Python" under _Programming Languages_ below.
+** Requires Python. See "Python" under _Programming Languages_ below.
 
-http://sourceforge.net/projects/briss/[Briss] (Windows, OSX, Linux;
+* http://sourceforge.net/projects/briss/[Briss] (Windows, OSX, Linux;
 Requires Java)
 
-http://www.ghostscript.com/download/gsdnld.html[Ghostscript] (Windows,
+* http://www.ghostscript.com/download/gsdnld.html[Ghostscript] (Windows,
 OSX: use brew or third party installer, Linux)
 
-http://www.foolabs.com/xpdf/download.html[Xpdf] (Windows, OSX, Linux)
+* http://www.foolabs.com/xpdf/download.html[Xpdf] (Windows, OSX, Linux)
 
-http://pandoc.org/installing.html[Pandoc] (Windows, OSX, Linux)
+* http://pandoc.org/installing.html[Pandoc] (Windows, OSX, Linux)
 
 ==== Text Editors ====
 
-Notepad++ (https://notepad-plus-plus.org/download/[Windows])
+* Notepad++ (https://notepad-plus-plus.org/download/[Windows])
 
-TextWrangler
+* TextWrangler
 (http://www.barebones.com/products/textwrangler/download.html[OSX])
 
-http://jedit.org/index.php?page=download[jEdit] (Windows, OSX, Linux)
+* http://jedit.org/index.php?page=download[jEdit] (Windows, OSX, Linux)
 
-* Requires https://www.java.com/en/download/[Java]
+** Requires https://www.java.com/en/download/[Java]
 
-https://wiki.gnome.org/Apps/Gedit#Download[Gedit] (Windows, OSX, Linux:
+* https://wiki.gnome.org/Apps/Gedit#Download[Gedit] (Windows, OSX, Linux:
 use your package manager)
 
 ==== Programming Languages and Integrated Development Environments (IDEs) ====
 
-https://cran.fhcrc.org/[R] (Windows, OSX, Linux)
+* https://cran.fhcrc.org/[R] (Windows, OSX, Linux)
 
-https://www.rstudio.com/products/rstudio/download/[RStudio] (Windows,
+* https://www.rstudio.com/products/rstudio/download/[RStudio] (Windows,
 OSX, Linux)
 
-https://www.rforge.net/JGR/files/[JGR] (Windows, OSX, Linux; Use R
+* https://www.rforge.net/JGR/files/[JGR] (Windows, OSX, Linux; Use R
 command: install.packages('JGR',,'http://www.rforge.net/') to install.)
 
-* Requires https://www.java.com/en/download/[Java]
+** Requires https://www.java.com/en/download/[Java]
 
-https://www.perl.org/get.html[Perl] (Windows, OSX, Linux; *Note*: OSX
+* https://www.perl.org/get.html[Perl] (Windows, OSX, Linux; *Note*: OSX
 and Linux come with Perl pre-installed, almost always)
 
-Python (https://www.python.org/downloads/windows/[Windows],
+* Python (https://www.python.org/downloads/windows/[Windows],
 https://www.python.org/downloads/mac-osx/[OSX],
 https://www.python.org/downloads/source/[Linux]; *Note*: OSX and Linux
 come with Python pre-installed, almost always)
 
-https://pythonhosted.org/spyder/[Spyder] (Windows, OSX, Linux)
+* https://pythonhosted.org/spyder/[Spyder] (Windows, OSX, Linux)
 
-http://www.aptana.com/products/studio3.html[Aptana Studio] (Windows,
+* http://www.aptana.com/products/studio3.html[Aptana Studio] (Windows,
 OSX, Linux)
 
 *Note*: HTML, CSS, and JavaScript will be used within the web browser.
@@ -231,31 +231,31 @@ See _Web Browsers_ section.
 
 ==== Web Browsers and Plugins ====
 
-Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
+* Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
 (Windows, OSX, Linux)
 
-* https://addons.mozilla.org/en-US/firefox/addon/downthemall/[DownThemAll!]
+** https://addons.mozilla.org/en-US/firefox/addon/downthemall/[DownThemAll!]
 (Plugin) - useful for automated data collection
-* http://firefogg.org/[Firefogg] (Plugin) - useful for converting
+** http://firefogg.org/[Firefogg] (Plugin) - useful for converting
 multimedia files to ogg or webm
-* https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
+** https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
 encryption
 
-Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
+* Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
 OSX, Linux)
 
-* https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
+** https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
 encryption
 
-Command-line web browsers - useful for automated data collection
+* Command-line web browsers - useful for automated data collection
 
-* http://curl.haxx.se/download.html[CuRL] (Windows, [comes with] OSX,
+** http://curl.haxx.se/download.html[CuRL] (Windows, [comes with] OSX,
 Linux: use your package manager; *Note*: Similar to "wget")
-* Wget (https://eternallybored.org/misc/wget/[Windows], OSX: install
+** Wget (https://eternallybored.org/misc/wget/[Windows], OSX: install
 with http://rudix.org/[Rudix] or
 http://coolestguidesontheplanet.com/installing-homebrew-os-x-yosemite-10-10-package-manager-unix-apps/[Homebrew],
 Linux: use your package manager)
-* Lynx (http://invisible-island.net/lynx/#installers[Windows], OSX:
+** Lynx (http://invisible-island.net/lynx/#installers[Windows], OSX:
 install with http://rudix.org/packages/lynx.html[Rudix] or
 http://coolestguidesontheplanet.com/installing-homebrew-os-x-yosemite-10-10-package-manager-unix-apps/[Homebrew],
 Linux: use your package manager)
@@ -274,11 +274,11 @@ browser.
 
 ==== Email Clients and Plugins ====
 
-https://www.mozilla.org/en-US/thunderbird/[Mozilla Thunderbird]
+* https://www.mozilla.org/en-US/thunderbird/[Mozilla Thunderbird]
 (Windows, OSX, Linux)
 
-https://www.enigmail.net/download/[Enigmail] (Windows, OSX, Linux) -
+* https://www.enigmail.net/download/[Enigmail] (Windows, OSX, Linux) -
 useful for email encryption
 
-* Requires: https://www.gnupg.org/download/[GnuPG]
+** Requires: https://www.gnupg.org/download/[GnuPG]
 

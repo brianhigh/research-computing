@@ -72,8 +72,9 @@ previously compiled software.
 
 === Software Tools List ===
 
-==== Security and Networking: Remote Access, Remote Desktop, Encryption,
-Network Troubleshooting ====
+==== Security and Networking ====
+
+*Remote Access, Remote Desktop, Encryption, Network Troubleshooting*
 
 Microsoft Remote Desktop Client
 (https://www.microsoft.com/en-us/store/apps/remote-desktop/9wzdncrfj3ps[Windows],
@@ -259,7 +260,7 @@ install with http://rudix.org/packages/lynx.html[Rudix] or
 http://coolestguidesontheplanet.com/installing-homebrew-os-x-yosemite-10-10-package-manager-unix-apps/[Homebrew],
 Linux: use your package manager)
 
-==== Browser Notes ====
+*Browser Notes*
 
 * Windows comes with
 http://windows.microsoft.com/en-us/internet-explorer/download-ie[Internet

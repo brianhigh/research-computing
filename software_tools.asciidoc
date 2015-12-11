@@ -229,7 +229,7 @@ OSX, Linux)
 *Note*: HTML, CSS, and JavaScript will be used within the web browser.
 See _Web Browsers_ section.
 
-==== Web Browsers, Email Clients, and Plugins ====
+==== Web Browsers and Plugins ====
 
 Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
 (Windows, OSX, Linux)
@@ -271,6 +271,8 @@ https://www.microsoft.com/en-us/windows/microsoft-edge[Edge]).
 supported only on OSX.)
 * Linux usually comes with Firefox, Chrome or a similar open-source web
 browser.
+
+==== Email Clients and Plugins ====
 
 https://www.mozilla.org/en-US/thunderbird/[Mozilla Thunderbird]
 (Windows, OSX, Linux)

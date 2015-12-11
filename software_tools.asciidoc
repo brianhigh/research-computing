@@ -1,0 +1,281 @@
+== Software Tools ==
+
+We will use (or at least mention) several software tools (utilities and
+applications) in this course. Here is a list of them for *Windows*, *Mac
+(OSX)* and *Linux*. Please note that this is _not_ a comprehensive list
+of all software useful for research computing and data management. We
+have restricted this list to _just_ the tools we will cover to some
+degree in this course. Most of these tools are considered "desktop
+applications", but many are "command-line utilities".
+
+=== Free Software ===
+
+Almost all of these tools are "free software" (no monetary cost to
+use). Many of them are also "Free Software" (non-proprietary and usually
+freely distributable, "open source" -- publicly available source code
+often with some kind of "copyleft" or "share-alike" license and usually
+with a "community" development model). There is no cost to download,
+share, and use the tools in this list.
+
+=== Operating Systems ===
+
+"Desktop applications" (as opposed to web applications, which run on a
+server or in your web browser) are software packages that run locally on
+your computer. Usually, this type of software needs to be installed onto
+your computer by you or an administrator. This means you need to
+download an installer file and execute it to install the software. The
+particular installer file you download and execute will often be
+specific to the operating system you using on that device. Therefore, in
+the list below, we provide links which are specific to the three most
+popular desktop (or laptop) operating systems: Microsoft Windows, Apple
+OSX, and Linux. (Google Chrome OS, based on Linux, will not be covered
+in this class, nor will we be using Apple iOS or Google Android, which
+is also based on Linux.) In some cases, when you download an installer,
+you will have the choice of system architecture (ie., 32-bit or 64-bit)
+or operating system version. You should
+http://www.stata.com/support/faqs/windows/64-bit-compliance/[look up]
+these operating system attributes if you do not know already know them
+before you download these installers.
+
+=== Installation ===
+
+In most cases, these tools do not come with the operating system and
+must be installed by the system user (or administrator). Linux users can
+use their package manager to get and install most software packages
+available for these systems, in a (more or less) automated fashion,
+which is one of the appealing features of Linux. Similarly, Windows and
+Mac (OSX) users can get some of these from the "app store" associated
+with those operating systems and their product lines. However, for
+Windows and OSX, you will often have to download the installer directly
+from the developer's website and run the installer manually.
+
+We provide links to the download pages for the installers in the list
+below, where applicable. If given the choice between "source", "zip
+files", "tarballs", "binaries", or "installers", you will usually want
+"binaries" or "installers" when possible. In some cases, though, you
+might want to just extract a "zip file" or "tarball" (containing either
+"binaries" or "source") to a specific folder.
+
+*Note*: If you need to compile "source" code into "binaries" yourself,
+you will need a compiler, which is a separate software application. Look
+to the documentation that comes with the source for instructions on
+this. Almost all of the tools below offer "installers". You are not
+required to compile software for this course. (However, Mac OSX users
+who install software with http://brew.sh/[Homebrew] will be compiling
+software with https://gcc.gnu.org/[GCC], distributed with
+https://developer.apple.com/xcode/[Xcode].) Some software, such as Bash,
+Python, and R scripts, need to be run in the associated environment
+(language interpreter) in order to execute. While we will be using and
+writing such scripts in this course, most of the tools in this list run
+independently of an interpreter because they are run as "binaries" --
+previously compiled software.
+
+=== Software Tools List ===
+
+==== Security and Networking: Remote Access, Remote Desktop, Encryption,
+Network Troubleshooting ====
+
+Microsoft Remote Desktop Client
+(https://www.microsoft.com/en-us/store/apps/remote-desktop/9wzdncrfj3ps[Windows],
+https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12[OSX])
+
+http://www.rdesktop.org/[X2Go] (Windows, OSX, Linux: use your package
+manager)
+
+* For OSX, requires: http://www.xquartz.org/[XQuartz]
+
+PuTTY
+(http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[Windows];
+provides "SSH")
+
+http://remmina.sourceforge.net/[Remmina] (Linux: use your package
+manager)
+
+http://www.rdesktop.org/[Rdesktop] (Linux: use your package manager)
+
+CoRD (alternative remote desktop client for
+http://cord.sourceforge.net/[OSX])
+
+https://filezilla-project.org/download.php?show_all=1[FileZilla]
+(Windows, OSX, Linux: use your package manager; provides "SFTP")
+
+* *Note*: Do not install any additional software "bundled" with this
+installer.
+
+Eduroam https://cat.eduroam.org/[Configuration Assistance Tool] (CAT)
+(Windows, OSX, Linux)
+
+http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
+package manager)
+
+https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
+OSX, Linux)
+
+https://www.gnupg.org/download/[GnuPG] (Windows, OSX, Linux: use your
+package manager)
+
+https://www.wireshark.org/download.html[Wireshark] (Windows, OSX, Linux)
+
+http://www.tcpdump.org/[Tcpdump] ([use Windump on]
+https://www.winpcap.org/windump/install/default.htm[Windows], [comes
+with] OSX, Linux: use your package manager)
+
+Some network troubleshooting tools like ping and traceroute (tracert)
+come with the operating system.
+
+*Note*: Tools that perform encryption or network reconnaissance may
+have http://mcaf.ee/cryptolaw[legal] or
+link:/courses/1020726/pages/asking-for-approval-to-sniff-wifi[institutional
+restrictions] on their use.
+
+==== Version Control and Terminal (Shell) ====
+
+https://git-scm.com/downloads[Git]
+(https://git-for-windows.github.io/[Windows], OSX, Linux: use your
+package manager; provides GitBash on Windows)
+
+https://desktop.github.com/[GitHub Desktop] (Windows, OSX)
+
+* Provides GUI for git, specific to GitHub website interaction
+
+https://tortoisegit.org/download/[TortoiseGit] (Windows; provides GUI
+for git)
+
+Terminal (OSX, Linux; included with operating system; provides "Bash"
+and "SSH")
+
+DOS (Windows; included with operating system)
+
+PowerShell
+(https://www.microsoft.com/en-us/download/details.aspx?id=40855[Windows];
+included with newer versions of operating system)
+
+ConEmu (https://conemu.github.io/[Windows])
+
+GitBash (Windows; provides "Bash"; see "Git", above)
+
+==== Data Management, Databases, and File Conversion ====
+
+http://openrefine.org/download.html[OpenRefine] (Windows, OSX, Linux)
+
+* Requires https://www.java.com/en/download/[Java]
+
+https://www.sqlite.org/download.html[SQLite] (Windows, OSX, Linux: use
+your package manager)
+
+http://openrefine.org/download.html[MySQL Workbench] (Windows, OSX,
+Linux: use your package manager)
+
+* For Windows, requires:
+** http://www.microsoft.com/download/en/details.aspx?id=17113[Microsoft
+.NET Framework 4 Client Profile]
+** http://www.microsoft.com/en-us/download/details.aspx?id=40784[Visual
+C++ Redistributable for Visual Studio 2013]
+
+http://openrefine.org/download.html[Csvkit] (Windows, OSX, Linux)
+
+* Requires Python. See "Python" under _Programming Languages_ below.
+
+http://sourceforge.net/projects/briss/[Briss] (Windows, OSX, Linux;
+Requires Java)
+
+http://www.ghostscript.com/download/gsdnld.html[Ghostscript] (Windows,
+OSX: use brew or third party installer, Linux)
+
+http://www.foolabs.com/xpdf/download.html[Xpdf] (Windows, OSX, Linux)
+
+http://pandoc.org/installing.html[Pandoc] (Windows, OSX, Linux)
+
+==== Text Editors ====
+
+Notepad++ (https://notepad-plus-plus.org/download/[Windows])
+
+TextWrangler
+(http://www.barebones.com/products/textwrangler/download.html[OSX])
+
+http://jedit.org/index.php?page=download[jEdit] (Windows, OSX, Linux)
+
+* Requires https://www.java.com/en/download/[Java]
+
+https://wiki.gnome.org/Apps/Gedit#Download[Gedit] (Windows, OSX, Linux:
+use your package manager)
+
+==== Programming Languages and Integrated Development Environments (IDEs) ====
+
+https://cran.fhcrc.org/[R] (Windows, OSX, Linux)
+
+https://www.rstudio.com/products/rstudio/download/[RStudio] (Windows,
+OSX, Linux)
+
+https://www.rforge.net/JGR/files/[JGR] (Windows, OSX, Linux; Use R
+command: install.packages('JGR',,'http://www.rforge.net/') to install.)
+
+* Requires https://www.java.com/en/download/[Java]
+
+https://www.perl.org/get.html[Perl] (Windows, OSX, Linux; *Note*: OSX
+and Linux come with Perl pre-installed, almost always)
+
+Python (https://www.python.org/downloads/windows/[Windows],
+https://www.python.org/downloads/mac-osx/[OSX],
+https://www.python.org/downloads/source/[Linux]; *Note*: OSX and Linux
+come with Python pre-installed, almost always)
+
+https://pythonhosted.org/spyder/[Spyder] (Windows, OSX, Linux)
+
+http://www.aptana.com/products/studio3.html[Aptana Studio] (Windows,
+OSX, Linux)
+
+*Note*: HTML, CSS, and JavaScript will be used within the web browser.
+See _Web Browsers_ section.
+
+==== Web Browsers, Email Clients, and Plugins ====
+
+Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
+(Windows, OSX, Linux)
+
+* https://addons.mozilla.org/en-US/firefox/addon/downthemall/[DownThemAll!]
+(Plugin) - useful for automated data collection
+* http://firefogg.org/[Firefogg] (Plugin) - useful for converting
+multimedia files to ogg or webm
+* https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
+encryption
+
+Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
+OSX, Linux)
+
+* https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
+encryption
+
+Command-line web browsers - useful for automated data collection
+
+* http://curl.haxx.se/download.html[CuRL] (Windows, [comes with] OSX,
+Linux: use your package manager; *Note*: Similar to "wget")
+* Wget (https://eternallybored.org/misc/wget/[Windows], OSX: install
+with http://rudix.org/[Rudix] or
+http://coolestguidesontheplanet.com/installing-homebrew-os-x-yosemite-10-10-package-manager-unix-apps/[Homebrew],
+Linux: use your package manager)
+* Lynx (http://invisible-island.net/lynx/#installers[Windows], OSX:
+install with http://rudix.org/packages/lynx.html[Rudix] or
+http://coolestguidesontheplanet.com/installing-homebrew-os-x-yosemite-10-10-package-manager-unix-apps/[Homebrew],
+Linux: use your package manager)
+
+==== Browser Notes ====
+
+* Windows comes with
+http://windows.microsoft.com/en-us/internet-explorer/download-ie[Internet
+Explorer] (and now
+https://www.microsoft.com/en-us/windows/microsoft-edge[Edge]).
+(Currently supported only on Windows.)
+* OSX comes with http://www.apple.com/safari/[Safari]. (Currently
+supported only on OSX.)
+* Linux usually comes with Firefox, Chrome or a similar open-source web
+browser.
+
+https://www.mozilla.org/en-US/thunderbird/[Mozilla Thunderbird]
+(Windows, OSX, Linux)
+
+https://www.enigmail.net/download/[Enigmail] (Windows, OSX, Linux) -
+useful for email encryption
+
+* Requires: https://www.gnupg.org/download/[GnuPG]
+

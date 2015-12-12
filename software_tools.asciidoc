@@ -10,12 +10,17 @@ applications", but many are "command-line utilities".
 
 === Free Software ===
 
-Almost all of these tools are "free software" (no monetary cost to
-use). Many of them are also "Free Software" (non-proprietary and usually
-freely distributable, "open source" -- publicly available source code
-often with some kind of "copyleft" or "share-alike" license and usually
-with a "community" development model). There is no cost to download,
-share, and use the tools in this list.
+All of these tools listed below are "free" (no monetary cost to
+use). Many of them are also 
+(http://www.gnu.org/philosophy/free-sw.en.html)[Free Software] 
+(free as in "freedom" to use, study, share, and modify) or 
+(https://opensource.com/resources/what-open-source)[Open Source] (publicly 
+available and modifiable source code). Both are similar terms meaning that the 
+source code for the software is non-proprietary, often with some kind of 
+(http://www.gnu.org/licenses/copyleft.en.html)[copyleft] or 
+(https://en.wikipedia.org/wiki/Share-alike)[share-alike] license and are 
+usually created and maintained with a "community" development model). There 
+is no monetary cost to use the tools in this list.
 
 === Operating Systems ===
 

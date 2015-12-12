@@ -19,7 +19,7 @@ available and modifiable source code). Both are similar terms meaning that the
 source code for the software is non-proprietary, often with some kind of 
 http://www.gnu.org/licenses/copyleft.en.html[copyleft] or 
 https://en.wikipedia.org/wiki/Share-alike[share-alike] license and are 
-usually created and maintained with a "community" development model). There 
+usually created and maintained with a "community" development model. There 
 is no monetary cost to use the tools in this list.
 
 === Operating Systems ===

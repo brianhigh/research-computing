@@ -141,7 +141,7 @@ with] OSX and Linux)
 dig, and whois) come with the operating system or are easy to obtain.
 
 *Note*: Tools that perform encryption or network reconnaissance may
-have http://mcaf.ee/cryptolaw[legal] or nstitutional
+have http://mcaf.ee/cryptolaw[legal] or institutional
 restrictions on their use.
 
 ==== Version Control and Terminal (Shell) ====

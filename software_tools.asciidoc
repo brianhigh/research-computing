@@ -125,17 +125,24 @@ package manager)
 
 * https://www.wireshark.org/download.html[Wireshark] (Windows, OSX, Linux)
 
+* http://thesz.diecru.eu/content/york.php[York] (Windows)
+
 * http://www.tcpdump.org/[Tcpdump] ([use Windump on]
 https://www.winpcap.org/windump/install/default.htm[Windows], [comes
 with] OSX, Linux: use your package manager)
 
-* Some network troubleshooting tools like ping and traceroute (tracert)
-come with the operating system.
+* Hexdump (http://www.richpasco.org/utilities/hexdump.html[Windows], [comes
+with] OSX and Linux)
+
+* Base64 (http://www.fourmilab.ch/webtools/base64/[Windows], [comes
+with] OSX and Linux)
+
+* Some network troubleshooting tools (like ping, traceroute (tracert), nslookup, 
+dig, and whois) come with the operating system or are easy to obtain.
 
 *Note*: Tools that perform encryption or network reconnaissance may
-have http://mcaf.ee/cryptolaw[legal] or
-link:/courses/1020726/pages/asking-for-approval-to-sniff-wifi[institutional
-restrictions] on their use.
+have http://mcaf.ee/cryptolaw[legal] or nstitutional
+restrictions on their use.
 
 ==== Version Control and Terminal (Shell) ====
 
@@ -159,7 +166,11 @@ and "SSH")
 (https://www.microsoft.com/en-us/download/details.aspx?id=40855[Windows];
 included with newer versions of operating system)
 
-* ConEmu (https://conemu.github.io/[Windows])
+* ConEmu (https://conemu.github.io/[Windows], a nicer terminal interface 
+for DOS)
+
+* Clink (http://mridgers.github.io/clink/[Windows], provides features for 
+DOS that are already present in Bash)
 
 * GitBash (Windows; provides "Bash"; see "Git", above)
 
@@ -194,6 +205,10 @@ OSX: use brew or third party installer, Linux)
 * http://www.foolabs.com/xpdf/download.html[Xpdf] (Windows, OSX, Linux)
 
 * http://pandoc.org/installing.html[Pandoc] (Windows, OSX, Linux)
+
+* http://www.gimp.org/[Gimp] (Windows, OSX, Linux)
+
+* http://www.imagemagick.org/script/index.php[ImageMagick] (Windows, OSX, Linux)
 
 ==== Text Editors ====
 

@@ -137,6 +137,10 @@ with] OSX and Linux)
 * Base64 (http://www.fourmilab.ch/webtools/base64/[Windows], [comes
 with] OSX and Linux)
 
+* shasum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX, Linux)
+
+* md5sum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX: use md5, Linux)
+
 * Some network troubleshooting tools (like ping, traceroute (tracert), nslookup, 
 dig, and whois) come with the operating system or are easy to obtain.
 

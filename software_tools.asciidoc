@@ -88,12 +88,12 @@ previously compiled software.
 (https://www.microsoft.com/en-us/store/apps/remote-desktop/9wzdncrfj3ps[Windows],
 https://itunes.apple.com/us/app/microsoft-remote-desktop/id715768417?mt=12[OSX])
 
-* &#9757; http://wiki.x2go.org/doku.php/download:start[X2Go] (Windows, OSX, Linux: use your package
+* &#9755; http://wiki.x2go.org/doku.php/download:start[X2Go] (Windows, OSX, Linux: use your package
 manager)
 
 ** For OSX, requires: http://www.xquartz.org/[XQuartz]
 
-* &#9757; PuTTY
+* &#9755; PuTTY
 (http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[Windows];
 provides "SSH")
 
@@ -105,7 +105,7 @@ manager)
 * CoRD (alternative remote desktop client for
 http://cord.sourceforge.net/[OSX])
 
-* &#9757; https://filezilla-project.org/download.php?show_all=1[FileZilla]
+* &#9755; https://filezilla-project.org/download.php?show_all=1[FileZilla]
 (Windows, OSX, Linux: use your package manager; provides "SFTP")
 
 ** *Note*: Do not install any additional software "bundled" with this
@@ -114,10 +114,10 @@ installer.
 * Eduroam https://cat.eduroam.org/[Configuration Assistance Tool] (CAT)
 (Windows, OSX, Linux)
 
-* &#9757; http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
+* &#9755; http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
 package manager)
 
-* &#9757; https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
+* &#9755; https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
 OSX, Linux)
 
 * https://www.gnupg.org/download/[GnuPG] (Windows, OSX, Linux: use your
@@ -125,7 +125,7 @@ package manager)
 
 * https://www.wireshark.org/download.html[Wireshark] (Windows, OSX, Linux)
 
-* &#9757; http://thesz.diecru.eu/content/york.php[York] (Windows)
+* &#9755; http://thesz.diecru.eu/content/york.php[York] (Windows)
 
 * http://www.tcpdump.org/[Tcpdump] ([use Windump on]
 https://www.winpcap.org/windump/install/default.htm[Windows], [comes
@@ -137,9 +137,9 @@ with] OSX and Linux)
 * Base64 (http://www.fourmilab.ch/webtools/base64/[Windows], [comes
 with] OSX and Linux)
 
-* &#9757; shasum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX, Linux)
+* &#9755; shasum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX, Linux)
 
-* &#9757; md5sum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX: use md5, Linux)
+* &#9755; md5sum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX: use md5, Linux)
 
 * Some network troubleshooting tools (like ping, traceroute (tracert), nslookup, 
 dig, and whois) come with the operating system or are easy to obtain.
@@ -150,7 +150,7 @@ restrictions on their use.
 
 ==== Version Control and Terminal (Shell) ====
 
-* &#9757; https://git-scm.com/downloads[Git]
+* &#9755; https://git-scm.com/downloads[Git]
 (https://git-for-windows.github.io/[Windows], OSX, Linux: use your
 package manager; provides GitBash on Windows)
 
@@ -170,24 +170,24 @@ and "SSH")
 (https://www.microsoft.com/en-us/download/details.aspx?id=40855[Windows];
 included with newer versions of operating system)
 
-* &#9757; ConEmu (https://conemu.github.io/[Windows], a nicer terminal interface 
+* &#9755; ConEmu (https://conemu.github.io/[Windows], a nicer terminal interface 
 for DOS)
 
-* &#9757; Clink (http://mridgers.github.io/clink/[Windows], provides features for 
+* &#9755; Clink (http://mridgers.github.io/clink/[Windows], provides features for 
 DOS that are already present in Bash)
 
 * GitBash (Windows; provides "Bash"; see "Git", above)
 
 ==== Data Management, Databases, and File Conversion ====
 
-* &#9757; http://openrefine.org/download.html[OpenRefine] (Windows, OSX, Linux)
+* &#9755; http://openrefine.org/download.html[OpenRefine] (Windows, OSX, Linux)
 
 ** Requires https://www.java.com/en/download/[Java]
 
-* &#9757; https://www.sqlite.org/download.html[SQLite] (Windows, OSX, Linux: use
+* &#9755; https://www.sqlite.org/download.html[SQLite] (Windows, OSX, Linux: use
 your package manager)
 
-* &#9757; https://dev.mysql.com/downloads/workbench/[MySQL Workbench] (Windows, OSX,
+* &#9755; https://dev.mysql.com/downloads/workbench/[MySQL Workbench] (Windows, OSX,
 Linux: use your package manager)
 
 ** For Windows, requires:
@@ -216,12 +216,12 @@ OSX: use brew or third party installer, Linux)
 
 ==== Text Editors ====
 
-* &#9757;  Notepad++ (https://notepad-plus-plus.org/download/[Windows])
+* &#9755;  Notepad++ (https://notepad-plus-plus.org/download/[Windows])
 
 * TextWrangler
 (http://www.barebones.com/products/textwrangler/download.html[OSX])
 
-* &#9757; http://jedit.org/index.php?page=download[jEdit] (Windows, OSX, Linux)
+* &#9755; http://jedit.org/index.php?page=download[jEdit] (Windows, OSX, Linux)
 
 ** Requires https://www.java.com/en/download/[Java]
 
@@ -230,12 +230,12 @@ use your package manager)
 
 ==== Programming Languages and Integrated Development Environments (IDEs) ====
 
-* &#9757; https://cran.fhcrc.org/[R] (Windows, OSX, Linux)
+* &#9755; https://cran.fhcrc.org/[R] (Windows, OSX, Linux)
 
-* &#9757; https://www.rstudio.com/products/rstudio/download/[RStudio] (Windows,
+* &#9755; https://www.rstudio.com/products/rstudio/download/[RStudio] (Windows,
 OSX, Linux)
 
-* &#9757; https://www.rforge.net/JGR/files/[JGR] (Windows, OSX, Linux; Use R
+* &#9755; https://www.rforge.net/JGR/files/[JGR] (Windows, OSX, Linux; Use R
 command: install.packages('JGR',,'http://www.rforge.net/') to install.)
 
 ** Requires https://www.java.com/en/download/[Java]
@@ -258,7 +258,7 @@ See _Web Browsers_ section.
 
 ==== Web Browsers and Plugins ====
 
-* &#9757; Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
+* &#9755; Mozilla https://www.mozilla.org/en-US/firefox/desktop/[Firefox]
 (Windows, OSX, Linux)
 
 ** https://addons.mozilla.org/en-US/firefox/addon/downthemall/[DownThemAll!]
@@ -268,7 +268,7 @@ multimedia files to ogg or webm
 ** https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
 encryption
 
-* &#9757; Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
+* &#9755; Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
 OSX, Linux)
 
 ** https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail

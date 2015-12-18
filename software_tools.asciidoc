@@ -141,6 +141,12 @@ with] OSX and Linux)
 
 * &#9755; md5sum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX: use md5, Linux)
 
+* &#9755; diff (http://gnuwin32.sourceforge.net/packages/diffutils.htm[Windows], OSX, Linux)
+
+* &#9755; find (http://gnuwin32.sourceforge.net/packages/findutils.htm[Windows], OSX, Linux)
+
+* &#9755; grep (http://gnuwin32.sourceforge.net/packages/grep.htm[Windows], OSX, Linux)
+
 * Some network troubleshooting tools (like ping, traceroute (tracert), nslookup, 
 dig, and whois) come with the operating system or are easy to obtain.
 

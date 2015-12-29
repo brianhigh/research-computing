@@ -117,7 +117,7 @@ installer.
 * &#9755; http://www.7-zip.org/download.html[7-Zip] (Windows, OSX, Linux: use your
 package manager)
 
-* &#9755; https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
+* https://www.grc.com/misc/truecrypt/truecrypt.htm[TrueCrypt] (Windows,
 OSX, Linux)
 
 * https://www.gnupg.org/download/[GnuPG] (Windows, OSX, Linux: use your
@@ -131,10 +131,10 @@ package manager)
 https://www.winpcap.org/windump/install/default.htm[Windows], [comes
 with] OSX, Linux: use your package manager)
 
-* Hexdump (http://www.richpasco.org/utilities/hexdump.html[Windows], [comes
+* &#9755; Hexdump (http://www.richpasco.org/utilities/hexdump.html[Windows], [comes
 with] OSX and Linux)
 
-* Base64 (http://www.fourmilab.ch/webtools/base64/[Windows], [comes
+* &#9755; Base64 (http://www.fourmilab.ch/webtools/base64/[Windows], [comes
 with] OSX and Linux)
 
 * &#9755; shasum (http://gnuwin32.sourceforge.net/packages/coreutils.htm[Windows], OSX, Linux)

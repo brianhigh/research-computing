@@ -279,7 +279,12 @@ See _Web Browsers_ section.
 multimedia files to ogg or webm
 ** https://www.mailvelope.com/[Mailvelope] (Plugin) - useful for webmail
 encryption
-** https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/[SQLite Manager] (Plugin) - useful for managing SQLite databases
+** https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/[SQLite Manager] 
+(Plugin) - useful for managing SQLite databases
+
+* Mozilla https://www.mozilla.org/en-US/firefox/developer/[Firefox Developer Edition]
+(Windows, OSX, Linux) - has features very similar to 
+https://developer.chrome.com/devtools[Chrome Developer Tools]
 
 * &#9755; Google https://www.google.com/chrome/browser/desktop/[Chrome] (Windows,
 OSX, Linux)

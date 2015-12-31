@@ -234,6 +234,12 @@ OSX: use brew or third party installer, Linux)
 * https://wiki.gnome.org/Apps/Gedit#Download[Gedit] (Windows, OSX, Linux:
 use your package manager)
 
+* http://www.nano-editor.org/download.php[nano] 
+(http://www.nano-editor.org/dist/v2.5/NT/nano-2.5.0.zip[Windows], OSX, Linux)
+
+* http://www.vim.org/download.php[vim] (Windows, OSX, Linux:
+use your package manager)
+
 ==== Programming Languages and Integrated Development Environments (IDEs) ====
 
 * &#9755; https://cran.fhcrc.org/[R] (Windows, OSX, Linux)

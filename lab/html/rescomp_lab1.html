@@ -66,113 +66,102 @@ img {
 </div>
 
 
-<div id="research-computing-and-data-management-lab-1" class="section level1">
-<h1>Research Computing and Data Management – Lab 1</h1>
-<div id="expectations-and-grading" class="section level2">
-<h2><strong>Expectations and Grading</strong></h2>
+<div id="research-computing-and-data-management-lab-1" class="section level2">
+<h2>Research Computing and Data Management – Lab 1</h2>
+<div id="expectations-and-grading" class="section level3">
+<h3>Expectations and Grading</h3>
 <p>This lab assignment is worth two points of your participation grade. You will be required to turn in (through Canvas) evidence of your work (as described below). The assignment is due one hour after the end of the class session. Late lab submissions will lose one point.</p>
+</div>
+<div id="ask-for-help" class="section level3">
+<h3>Ask for help</h3>
+<p>Ask for help if you run into trouble. We will have some helpers available, so just raise your hand (or put a sticky note on your monitor) if you need help.</p>
 <p><strong><em>Before proceeding, please read the DISCLAIMER.</em></strong></p>
 </div>
+</div>
 <div id="disclaimer" class="section level2">
-<h2><strong>DISCLAIMER</strong></h2>
+<h2>DISCLAIMER</h2>
 <p>While we encourage you to explore the capabilities and operation of your own personal computing devices, we caution you that the activities described in this course (and its laboratory exercises) do carry some risk to the computing device used. For this reason, we conduct the lab exercises in a classroom with computers provided for each student and we also provide access to a server which is managed on your behalf.</p>
 <p>We are unable to provide repair services in the event that your own personal equipment malfunctions due to any of the activities suggested in the exercises or any other activity related to this course. If you choose to use your own personal equipment for the purposes of this course, please be aware that it will be your responsibility to address and correct any problems with your own personal equipment or data. We strongly encourage making backups of your important user documents and system files before attempting modifications to your computer such as the installation of new software or the configuration of system properties.</p>
 <p>Please consult authoritative documentation and seek qualified assistance if you need help making backups or any other operation pertaining to the administration of your personal devices.</p>
 </div>
 <div id="software-installation---1-pt" class="section level2">
-<h2><strong>1. Software Installation - 1 pt</strong></h2>
+<h2>Software Installation - 1 pt</h2>
 <p>On the computer you are using in the lab (either the computer provided or your own laptop), make sure you have installed at least the more important software applications listed in <a href="https://github.com/brianhigh/research-computing/blob/master/software_tools.asciidoc">Software Tools</a>.</p>
 <p>Since the Health Sciences Library (HSL) lab PCs do not have all of the applications we want, and will lose what we install upon reboot, we can use “Portable Apps” instead.</p>
-<div id="a.-portable-apps" class="section level4">
-<h4><strong>A. Portable Apps…</strong></h4>
+<div id="portable-apps" class="section level3">
+<h3>Portable Apps</h3>
 <p>These can be installed to your “<a href="http://www.washington.edu/itconnect/wares/online-storage/u-drive-central-file-storage-for-users/#accesson">U Drive</a>” and will be available later.</p>
 <ul>
 <li><em>Hint</em>: Store them in a folder such as, e.g., “U:\Apps”. You will first need to create this “Apps” folder in your “U Drive” before proceeding.</li>
 </ul>
 <p>You may also install them onto a portable device like a USB flash drive (“thumb drive”) or external hard disk.</p>
 <ul>
-<li><p><a href="http://sourceforge.net/projects/gitportable/">Git</a></p></li>
-<li><p><a href="http://portableapps.com/node/38586">ConEmu</a></p></li>
-<li><p><a href="http://portableapps.com/apps/development/notepadpp_portable">Notepad</a>++</p></li>
-<li><p><a href="http://portableapps.com/node/11617">jEdit</a></p></li>
+<li><a href="http://sourceforge.net/projects/gitportable/">Git</a></li>
+<li><a href="http://portableapps.com/node/38586">ConEmu</a></li>
+<li><a href="http://portableapps.com/apps/development/notepadpp_portable">Notepad</a>++</li>
+<li><a href="http://portableapps.com/node/11617">jEdit</a></li>
 </ul>
 </div>
-<div id="b.-apps-you-have-already" class="section level4">
-<h4><strong>B. Apps you have already…</strong></h4>
+<div id="apps-you-have-already" class="section level3">
+<h3>Apps you have already</h3>
 <p>The are already installed on HSL lab PCs:</p>
 <ul>
-<li><p>PuTTY</p></li>
-<li><p>FileZilla</p></li>
-<li><p>7-Zip</p></li>
-<li><p>R</p></li>
-<li><p>RStudio</p></li>
-<li><p>Mozilla Firefox</p></li>
-<li><p>Notepad</p></li>
+<li>PuTTY</li>
+<li>FileZilla</li>
+<li>7-Zip</li>
+<li>R</li>
+<li>RStudio</li>
+<li>Mozilla Firefox</li>
+<li>Notepad</li>
 </ul>
 </div>
-<div id="c.-command-line-utilities" class="section level4">
-<h4><strong>C. Command-line utilities…</strong></h4>
+<div id="command-line-utilities" class="section level3">
+<h3>Command-line utilities</h3>
 <p>These utilities will need to be installed to your U: drive (or USB media). They are very powerful command-line tools, commonly used in data management. OSX and Linux come with them, but Windows does not.</p>
-<p>For each of the downloads below, you <em>could</em> download “binaries” (and any dependencies) in a zip file and extract to, e.g., U:\bin. You would need to create this “bin” folder first. After extraction of the ZIP archives, you would move all of the files you have extracted directly into the “bin” folder. However, there is an easier way – described next, so <em>don’t</em> actually bother doing all of this. (Plus these versions are rather old, anyway.)</p>
+<p>You can get many of the popular command-line tools for Windows by installing:</p>
 <ul>
-<li>diff (<a href="http://gnuwin32.sourceforge.net/packages/diffutils.htm">Windows</a>)
-<ul>
-<li>a standard text comparison tool</li>
-</ul></li>
-<li>find (<a href="http://gnuwin32.sourceforge.net/packages/findutils.htm">Windows</a>)
-<ul>
-<li>a standard file search tool</li>
-</ul></li>
-<li>grep (<a href="http://gnuwin32.sourceforge.net/packages/grep.htm">Windows</a>)
-<ul>
-<li>a standard text search tool</li>
-</ul></li>
-<li>GNU CoreUtils (<a href="http://gnuwin32.sourceforge.net/packages/coreutils.htm">Windows</a>)
-<ul>
-<li>a collection of standard file, text, and shell utilities commonly found on Mac OSX, Unix and Linux systems</li>
-</ul></li>
-</ul>
-<p><em>Instead</em> of doing that, you can get <em>all</em> of these tools by simply installing:</p>
-<ul>
-<li>Rtools (<a href="https://cran.r-project.org/bin/windows/Rtools/">Windows</a>) - a collection of standard utilities, including many GNU CoreUtils, diff, find, and grep, plus software compiling tools</li>
+<li><a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a> - a collection of standard GNU utilities, including many GNU CoreUtils, diff, find, and grep, plus software compiling tools</li>
 </ul>
 <p>So, please install RTools to U:\RTools. We will use the PATH “<a href="https://en.wikipedia.org/wiki/Environment_variable">environment variable</a>” to tell your computer how to find these when you try to execute them later.</p>
 <p>Note: Many of these utilities also come with GitBash (with Git for Windows).</p>
 </div>
-<div id="d.-apps-to-install-as-needed-not-today-unless-you-have-extra-time" class="section level4">
-<h4><strong>D. Apps to install as needed… (not today unless you have extra time)</strong></h4>
+<div id="apps-to-install-as-needed-but-not-today-unless-you-have-extra-time" class="section level3">
+<h3>Apps to install as needed (but not today unless you have extra time)</h3>
 <p>These apps will need to be installed to C: drive, as needed. We will install these during <strong><em>future lab sessions</em></strong>. As stated above, software installed to the C: (default) drive will be lost upon reboot of your HSL lab PC. This is because the HSL lab PCs have been configured to revert to a default configuration each time the computer is turned on. So, if you install the apps listed below to the C: drive, do not expect them to be there for you later. This would not normally be the case on a computer you own, or is managed in a different way, like a PC you have in a different lab setting. If you try to install them to the U: drive, the application files may be installed there, but important software library (i.e., “DLL files”) and configuration (i.e., “registry”) settings may still be written to C:.</p>
 <ul>
-<li><p><a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html">Google Chrome</a></p></li>
-<li><p><a href="http://wiki.x2go.org/doku.php/download:start">X2Go</a></p></li>
-<li><p><a href="https://www.sqlite.org/download.html">SQLite</a></p>
+<li><a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html">Google Chrome</a></li>
+<li><a href="http://wiki.x2go.org/doku.php/download:start">X2Go</a></li>
+<li><a href="https://www.sqlite.org/download.html">SQLite</a>
 <ul>
 <li>Download the “command-line shell program” under <strong>Precompiled Binaries for Windows</strong></li>
 </ul></li>
-<li><p><a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a>– Note: Windows users will also need:</p>
+<li><a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench</a>– Note: Windows users will also need:
 <ul>
-<li><p><a href="http://www.microsoft.com/download/en/details.aspx?id=17113">Microsoft .NET Framework 4 Client Profile</a></p></li>
-<li><p>and <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ Redistributable for Visual Studio 2013</a></p></li>
+<li><a href="http://www.microsoft.com/download/en/details.aspx?id=17113">Microsoft .NET Framework 4 Client Profile</a></li>
+<li>and <a href="http://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ Redistributable for Visual Studio 2013</a></li>
 </ul></li>
-<li><p><a href="https://code.visualstudio.com/Download">Visual Studio Code</a></p></li>
-<li><p><a href="http://thesz.diecru.eu/content/york.php">York</a></p></li>
+<li><a href="https://code.visualstudio.com/Download">Visual Studio Code</a></li>
+<li><a href="http://thesz.diecru.eu/content/york.php">York</a></li>
 </ul>
 </div>
-<div id="e.-ask-for-help" class="section level4">
-<h4><strong>E. Ask for help…</strong></h4>
-<p>Ask for help if you run into trouble. We will have some helpers available, so just raise your hand (or put a sticky note on your monitor) if you need help.</p>
+<div id="what-to-turn-in" class="section level3">
+<h3>What to turn in</h3>
+<p><strong><em>You will be shown</em></strong> how to make a list of software (or enumerate the items in folders containing software) installed during the class session. Use this method to first make a list both <strong><em>before and after</em></strong> software installation and compare the two lists. Turn in the resulting comparison (a list). You may either paste in the list or upload it to Canvas as a plain-text file (with a .txt file suffix) attachment. (We will also <strong><em>show you</em></strong> <a href="http://windows.microsoft.com/en-us/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7">how to see file suffixes</a> in Windows, as well as <a href="http://windows.microsoft.com/en-us/windows/take-screen-capture-print-screen#take-screen-capture-print-screen=windows-7">how to make a “screen shot”</a>– since these are both very handy to know.)</p>
 </div>
-<div id="f.-what-to-turn-in" class="section level4">
-<h4><strong>F. What to turn in:</strong></h4>
-<p><strong><em>You will be shown</em></strong> how to make a list of software (or enumerate the items in folders containing software) installed during the class session. Use this method to first make a list both <strong><em>before and after</em></strong> software installation and compare the two lists. Turn in the resulting comparison (a list). You may either paste in the list or upload it to Canvas as a plain-text file (with a .txt file suffix) attachment. (We will also <strong><em>show you</em></strong> <a href="http://windows.microsoft.com/en-us/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7">how to see file suffixes</a>in Windows, as well as <a href="http://windows.microsoft.com/en-us/windows/take-screen-capture-print-screen#take-screen-capture-print-screen=windows-7">how to make a “screen shot”</a>– since these are both very handy to know.)</p>
 </div>
-<div id="command-line-utilities---1-pt" class="section level3">
-<h3><strong>2. Command-Line Utilities - 1 pt</strong></h3>
+<div id="command-line-utilities---1-pt" class="section level2">
+<h2>Command-Line Utilities - 1 pt</h2>
 <p>We will try out various command-line utilities from the “shell” (operating system command prompt within a “terminal”). The purpose of this exercise is to increase familiarity with this mode of computing and also to increase awareness of some of the interesting and useful things one can do from the command-line that may not be possible or as convenient to do from a graphical user interface (GUI).</p>
 <p>One of the primary reasons to learn how to use these tools is to enable the automation of repetitive tasks which would otherwise be tedious and time-consuming using a mouse and GUI. Shell commands can be linked together into “scripts” (short programs) which can be run on thousands of files at once to quickly process data. Putting commands in scripts (i.e., “scripting”) also improves reproducibility – the ability to repeat an operation at a later date (or by another person) and still get the same results.</p>
-<div id="a.-commonly-used-command-line-utilities" class="section level4">
-<h4><strong>A. Commonly Used Command-Line Utilities</strong></h4>
-<p>Examples of <a href="http://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html">common utilities</a>found on Unix and Linux (i.e. “<a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>-compliant”) systems are (with analogous utilities for Windows/<a href="https://en.wikipedia.org/wiki/List_of_DOS_commands">DOS</a>[in brackets]) are:</p>
+<div id="opening-a-terminal-shell-session" class="section level3">
+<h3>Opening a terminal (“shell”) session</h3>
+<p>In Windows, you can start DOS from the Start button by clicking the Start button and then typing CMD in the textbox and pressing the Enter key. You may also have a shortcut to the DOS Command Window, but with recent updates to Windows, it is harder to find these. Unix and Linux systems will often have a Terminal or Shell icon (or menu choice) that will launch a terminal, using defaulting to the Bash interpreter. If you connect to one of these machines with SSH, you will usually be presented with a Bash shell prompt once you login. On Windows systems with Git installed, you may also get a GitBash terminal by launching GitBash. You can do this is the same way you launched CMD (described above) or from a program icon. If you would like to have an icon for a program launcher stored in a handy place, you can make a shortcut. Lastly, if you installed a third-party terminal application like ConEmu, then you can launch that from the Program menu, etc., as with any other desktop application. By default, ConEmu will use the DOS command-line interpreter.</p>
+</div>
+<div id="commonly-used-command-line-utilities" class="section level3">
+<h3>Commonly Used Command-Line Utilities</h3>
+<p>Examples of <a href="http://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html">common utilities</a>found on Unix and Linux (i.e. “<a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>-compliant”) systems are (with analogous utilities for Windows/<a href="https://en.wikipedia.org/wiki/List_of_DOS_commands">DOS</a> [in brackets]) are:</p>
+<div id="folder-directory-navigation-and-management" class="section level4">
+<h4>Folder (Directory) Navigation and Management</h4>
 <ul>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cd.html">cd</a>, <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/pwd.html">pwd</a> [cd]
 <ul>
@@ -182,6 +171,11 @@ img {
 <ul>
 <li><strong>m</strong>a<strong>k</strong>e (create), <strong>r</strong>e<strong>m</strong>ove a <strong>dir</strong>ectory (folder)</li>
 </ul></li>
+</ul>
+</div>
+<div id="file-management" class="section level4">
+<h4>File Management</h4>
+<ul>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html">ls</a>, <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/find.html">find</a> [dir]
 <ul>
 <li><strong>l</strong>i<strong>s</strong>t, <strong>find</strong> (search for) files and folders, etc. (using pattern matching with a special character syntax called “<a href="https://en.wikipedia.org/wiki/Glob_%28programming%29">glob constructs</a>”)</li>
@@ -190,6 +184,11 @@ img {
 <ul>
 <li><strong>c</strong>o<strong>p</strong>y, <strong>m</strong>o<strong>v</strong>e, <strong>r</strong>e<strong>m</strong>ove (delete), rename files (A move to a new name is a rename.)</li>
 </ul></li>
+</ul>
+</div>
+<div id="file-contents-viewing" class="section level4">
+<h4>File contents viewing</h4>
+<ul>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html">cat</a> [type]
 <ul>
 <li>display (or combine, “con<strong>cat</strong>enate”) the contents of text files (i.e., any screen output is displayed all at once)</li>
@@ -198,6 +197,11 @@ img {
 <ul>
 <li>“page” (display to screen with pausing) through (long) text files (with keyboard navigation)</li>
 </ul></li>
+</ul>
+</div>
+<div id="text-manipulation" class="section level4">
+<h4>Text manipulation</h4>
+<ul>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/echo.html">echo</a> [echo]
 <ul>
 <li>repeat text (printing it to the terminal screen or redirecting it to a file, etc.)</li>
@@ -218,6 +222,11 @@ img {
 <ul>
 <li>sort text (alpha-numerically, with or without duplicates included)</li>
 </ul></li>
+</ul>
+</div>
+<div id="environment" class="section level4">
+<h4>Environment</h4>
+<ul>
 <li>export [set]
 <ul>
 <li>set (environment) variables. (In Bash, “export” makes them available to sub-processes. In DOS, “set” is used for assignment.)</li>
@@ -229,11 +238,10 @@ img {
 </ul>
 <p>We will also look at tab-completion, command-history navigation, I/O redirection, pipes, and job control, as much as we can (time permitting). Otherwise, we will finish covering those additional topics next week.</p>
 </div>
-<div id="b.-what-to-turn-in" class="section level4">
-<h4><strong>B. What to turn in:</strong></h4>
+</div>
+<div id="what-to-turn-in-1" class="section level3">
+<h3>What to turn in</h3>
 <p>You will be expected to turn in your command history and output into Canvas, either as pasted text or as a plain-text file (with a .txt file suffix) attachment. <strong><em>You will be shown</em></strong> how to do this in class.</p>
-</div>
-</div>
 </div>
 </div>
 

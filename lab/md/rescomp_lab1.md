@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: pdf_document
+output: html_document
 Date: '2015-01-04'
 ---
 
@@ -99,7 +99,7 @@ You can get many of the popular command-line tools for Windows by installing:
      of standard GNU utilities, including many GNU CoreUtils, diff, find, and 
      grep, plus software compiling tools
 
-So, please install RTools to U:\\RTools. We will use the PATH "[environment 
+So, please install Rtools to U:\\Rtools. We will use the PATH "[environment 
 variable](https://en.wikipedia.org/wiki/Environment_variable)" to tell
 your computer how to find these when you try to execute them later.
 

@@ -10,8 +10,8 @@ DIR /B /O:N /A:D "%PROGRAMFILES%" "%PROGRAMFILES(X86)%"
 :: List folders in U:\Apps folder.
 DIR /B /O:N /A:D U:\Apps
 
-:: List files and folders in U:\RTools folder.
-DIR /B /O:N U:\RTools
+:: List files and folders in U:\Rtools folder.
+DIR /B /O:N U:\Rtools
 
 :: List files and folders in U:\bin folder.
 DIR /B /O:N U:\bin

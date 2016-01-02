@@ -1,7 +1,7 @@
 ---
 title: "Software Tools Orientation"
-author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
-  License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
+author: "Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing). 
+  License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
 output: html_document
 Date: '2015-01-04'
 ---
@@ -104,6 +104,14 @@ variable](https://en.wikipedia.org/wiki/Environment_variable)" to tell
 your computer how to find these when you try to execute them later.
 
 Note: Many of these utilities also come with GitBash (with Git for Windows).
+
+You might also find this command-line web browser handy to have around:
+
+-    [cURL](http://curl.haxx.se/download.html) - For Windows, get the one 
+     labeled, "Win64 - MinGW64" and "binary", extract the archive, and place 
+     the binary executable file (`curl.exe`) in a folder in your PATH.
+     
+It also comes with GitBash, part of Git for Windows.
 
 ### Apps to install as needed (but not today unless you have extra time)
 
@@ -223,7 +231,7 @@ brackets]) are:
     - **c**o**p**y, **m**o**v**e, **r**e**m**ove
     (delete), rename files (A move to a new name is a rename.)
 
-#### File contents viewing
+#### File viewing and retrieval
 
 -   [cat](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html) [type]
     - display (or combine, "con**cat**enate") the contents of text files
@@ -233,6 +241,8 @@ brackets]) are:
     less [more] 
     - "page" (display to screen with pausing) through (long)
     text files (with keyboard navigation)
+-   [curl](http://curl.haxx.se/)
+    - fetch files from the web
 
 #### Text manipulation
 
@@ -246,17 +256,24 @@ brackets]) are:
     expressions](https://en.wikipedia.org/wiki/Regular_expression)")
 
 -   [diff](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/diff.html) [fc]
-    - show differences between texts
+    - show **diff**erences between texts
 
 -   [head](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/head.html),
     [tail](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html),
     [cut](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cut.html)
-    - slice text in various ways (first n lines, last n lines, specific
-    columns, etc.)
+    - slice text in various ways: first n lines (**head**), last n lines 
+    (**tail**), **cut** (select) specific columns (fields, variables, features)
 
 -   [sort](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sort.html),
     [uniq](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/uniq.html) [sort]
-    - sort text (alpha-numerically, with or without duplicates included)
+    - **sort** text: alpha-numerically, with or without duplicates (**uniq**ue)
+    
+-   [wc](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/wc.html)
+    - **c**ount **w**ords, lines, and characters in text
+    - Example: echo 'fooling' | wc -c    # counts number of characters
+-   [sed](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sed.html)
+    - **s**tream **e**ditor: make changes to text such as search-and-replace
+    - Example: echo 'fooling' | sed 's/o/e/g'    # changes all "o" to "e"
 
 #### Environment
 
@@ -274,6 +291,74 @@ We will also look at tab-completion, command-history navigation, I/O
 redirection, pipes, and job control, as much as we can (time
 permitting). Otherwise, we will finish covering those additional topics
 next week.
+
+### Exercise
+
+Take a look at the `iris` 
+[data set](https://archive.ics.uci.edu/ml/datasets/Iris) 
+at the UCI Machine Learning Repository. Read the "Data Set Information" and note
+how the "data differs from the data presented in Fishers article". How can we
+easily confirm this using the command-line tools we now have at our disposal?
+
+First, using `bash`, make a folder, `iris`, with `mkdir` to store the data and 
+then enter that folder with `cd`.
+
+Second, using `curl`, download the two versions of the data set as CSV files. 
+Use either the `-o` argument for the output file, or redirect the text to the 
+output file using the `>` operator.
+
+-   "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data" 
+    - Save as: "iris_data_1.csv"
+
+-   "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/bezdekIris.data"
+    - Save as: "iris_data_2.csv"
+
+How would we quickly confirm the differences mentioned at the UCI site?
+
+R comes with the `iris` data set (built-in). Export it to a CSV file.
+
+```
+Rscript -e "write.table(format(iris, digits=2), 'iris_data_r.csv', sep=',', 
+    col.names=F, row.names=F, quote=F)"
+```
+
+(We wrapped this one-line command here, but enter it all on one line in Bash.)
+
+Which of the two versions does R have? Since R's version lists the species in
+a different format, how can you easily ignore that difference and just look at 
+the differences in numeric variables? (Hint: Use `sed` or `cut`.)
+
+We can do a similar comparison in R using `sqldf`, which allow us to perform 
+SQL queries on data frames. (SQL is the most common database query language.)
+
+```
+if (!require("sqldf")) { install.packages("sqldf"); require("sqldf") }
+iris_data_r <- iris
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+iris_data_1 <- read.csv(url, header = F)
+names(iris_data_1) <- names(iris_data_r)
+iris_data_1$Species <- gsub("Iris-", "", iris_data_1$Species)
+iris_data_r$id <- row.names(iris_data_r)
+iris_data_1$id <- row.names(iris_data_1)
+cat("What's in R's iris data but not in UCI's iris data?", "\n")
+sqldf('SELECT * FROM iris_data_r EXCEPT SELECT * FROM iris_data_1')
+cat("What's in UCI's iris data but not in R's iris data?", "\n")
+sqldf('SELECT * FROM iris_data_1 EXCEPT SELECT * FROM iris_data_r')
+```
+
+Save these commands as diff.R and run them using this command:
+
+```
+Rscript diff.R
+```
+
+Which method (`bash` versus `R`) is more work or more complicated? Is there an 
+easier way to do this in either `bash` or in `R`?
+
+If there is time, compare the files graphically in [meld](http://meldmerge.org/)
+or [Winmerge](http://winmerge.org/?lang=en). Aside from ease of use, how else
+might these graphical tools make it easier to identify subtle differences? 
+When would the command-line tools be preferable?
 
 ### What to turn in
 

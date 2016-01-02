@@ -124,6 +124,11 @@ img {
 </ul>
 <p>So, please install Rtools to U:\Rtools. We will use the PATH “<a href="https://en.wikipedia.org/wiki/Environment_variable">environment variable</a>” to tell your computer how to find these when you try to execute them later.</p>
 <p>Note: Many of these utilities also come with GitBash (with Git for Windows).</p>
+<p>You might also find this command-line web browser handy to have around:</p>
+<ul>
+<li><a href="http://curl.haxx.se/download.html">cURL</a> - For Windows, get the one labeled, “Win64 - MinGW64” and “binary”, extract the archive, and place the binary executable file (<code>curl.exe</code>) in a folder in your PATH.</li>
+</ul>
+<p>It also comes with GitBash, part of Git for Windows.</p>
 </div>
 <div id="apps-to-install-as-needed-but-not-today-unless-you-have-extra-time" class="section level3">
 <h3>Apps to install as needed (but not today unless you have extra time)</h3>
@@ -186,8 +191,8 @@ img {
 </ul></li>
 </ul>
 </div>
-<div id="file-contents-viewing" class="section level4">
-<h4>File contents viewing</h4>
+<div id="file-viewing-and-retrieval" class="section level4">
+<h4>File viewing and retrieval</h4>
 <ul>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html">cat</a> [type]
 <ul>
@@ -196,6 +201,10 @@ img {
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/more.html">more</a>, less [more]
 <ul>
 <li>“page” (display to screen with pausing) through (long) text files (with keyboard navigation)</li>
+</ul></li>
+<li><a href="http://curl.haxx.se/">curl</a>
+<ul>
+<li>fetch files from the web</li>
 </ul></li>
 </ul>
 </div>
@@ -212,15 +221,25 @@ img {
 </ul></li>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/diff.html">diff</a> [fc]
 <ul>
-<li>show differences between texts</li>
+<li>show <strong>diff</strong>erences between texts</li>
 </ul></li>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/head.html">head</a>, <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/tail.html">tail</a>, <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cut.html">cut</a>
 <ul>
-<li>slice text in various ways (first n lines, last n lines, specific columns, etc.)</li>
+<li>slice text in various ways: first n lines (<strong>head</strong>), last n lines (<strong>tail</strong>), <strong>cut</strong> (select) specific columns (fields, variables, features)</li>
 </ul></li>
 <li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sort.html">sort</a>, <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/uniq.html">uniq</a> [sort]
 <ul>
-<li>sort text (alpha-numerically, with or without duplicates included)</li>
+<li><strong>sort</strong> text: alpha-numerically, with or without duplicates (<strong>uniq</strong>ue)</li>
+</ul></li>
+<li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/wc.html">wc</a>
+<ul>
+<li><strong>c</strong>ount <strong>w</strong>ords, lines, and characters in text</li>
+<li>Example: echo ‘fooling’ | wc -c # counts number of characters</li>
+</ul></li>
+<li><a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/sed.html">sed</a>
+<ul>
+<li><strong>s</strong>tream <strong>e</strong>ditor: make changes to text such as search-and-replace</li>
+<li>Example: echo ‘fooling’ | sed ‘s/o/e/g’ # changes all “o” to “e”</li>
 </ul></li>
 </ul>
 </div>
@@ -238,6 +257,45 @@ img {
 </ul>
 <p>We will also look at tab-completion, command-history navigation, I/O redirection, pipes, and job control, as much as we can (time permitting). Otherwise, we will finish covering those additional topics next week.</p>
 </div>
+</div>
+<div id="exercise" class="section level3">
+<h3>Exercise</h3>
+<p>Take a look at the <code>iris</code> <a href="https://archive.ics.uci.edu/ml/datasets/Iris">data set</a> at the UCI Machine Learning Repository. Read the “Data Set Information” and note how the “data differs from the data presented in Fishers article”. How can we easily confirm this using the command-line tools we now have at our disposal?</p>
+<p>First, using <code>bash</code>, make a folder, <code>iris</code>, with <code>mkdir</code> to store the data and then enter that folder with <code>cd</code>.</p>
+<p>Second, using <code>curl</code>, download the two versions of the data set as CSV files. Use either the <code>-o</code> argument for the output file, or redirect the text to the output file using the <code>&gt;</code> operator.</p>
+<ul>
+<li>“<a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data" class="uri">https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data</a>”
+<ul>
+<li>Save as: “iris_data_1.csv”</li>
+</ul></li>
+<li>“<a href="https://archive.ics.uci.edu/ml/machine-learning-databases/iris/bezdekIris.data" class="uri">https://archive.ics.uci.edu/ml/machine-learning-databases/iris/bezdekIris.data</a>”
+<ul>
+<li>Save as: “iris_data_2.csv”</li>
+</ul></li>
+</ul>
+<p>How would we quickly confirm the differences mentioned at the UCI site?</p>
+<p>R comes with the <code>iris</code> data set (built-in). Export it to a CSV file.</p>
+<pre><code>Rscript -e &quot;write.table(format(iris, digits=2), 'iris_data_r.csv', sep=',', 
+    col.names=F, row.names=F, quote=F)&quot;</code></pre>
+<p>(We wrapped this one-line command here, but enter it all on one line in Bash.)</p>
+<p>Which of the two versions does R have? Since R’s version lists the species in a different format, how can you easily ignore that difference and just look at the differences in numeric variables? (Hint: Use <code>sed</code> or <code>cut</code>.)</p>
+<p>We can do a similar comparison in R using <code>sqldf</code>, which allow us to perform SQL queries on data frames. (SQL is the most common database query language.)</p>
+<pre><code>if (!require(&quot;sqldf&quot;)) { install.packages(&quot;sqldf&quot;); require(&quot;sqldf&quot;) }
+iris_data_r &lt;- iris
+url &lt;- &quot;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&quot;
+iris_data_1 &lt;- read.csv(url, header = F)
+names(iris_data_1) &lt;- names(iris_data_r)
+iris_data_1$Species &lt;- gsub(&quot;Iris-&quot;, &quot;&quot;, iris_data_1$Species)
+iris_data_r$id &lt;- row.names(iris_data_r)
+iris_data_1$id &lt;- row.names(iris_data_1)
+cat(&quot;What's in R's iris data but not in UCI's iris data?&quot;, &quot;\n&quot;)
+sqldf('SELECT * FROM iris_data_r EXCEPT SELECT * FROM iris_data_1')
+cat(&quot;What's in UCI's iris data but not in R's iris data?&quot;, &quot;\n&quot;)
+sqldf('SELECT * FROM iris_data_1 EXCEPT SELECT * FROM iris_data_r')</code></pre>
+<p>Save these commands as diff.R and run them using this command:</p>
+<pre><code>Rscript diff.R</code></pre>
+<p>Which method (<code>bash</code> versus <code>R</code>) is more work or more complicated? Is there an easier way to do this in either <code>bash</code> or in <code>R</code>?</p>
+<p>If there is time, compare the files graphically in <a href="http://meldmerge.org/">meld</a> or <a href="http://winmerge.org/?lang=en">Winmerge</a>. Aside from ease of use, how else might these graphical tools make it easier to identify subtle differences? When would the command-line tools be preferable?</p>
 </div>
 <div id="what-to-turn-in-1" class="section level3">
 <h3>What to turn in</h3>

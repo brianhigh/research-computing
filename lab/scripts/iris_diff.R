@@ -1,3 +1,4 @@
+# Compare the iris data set from UCI with the one that comes with R. 
 if (!require("sqldf")) { install.packages("sqldf"); require("sqldf") }
 iris_data_r <- iris
 url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"

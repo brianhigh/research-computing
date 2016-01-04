@@ -6,12 +6,13 @@
 
 ### Today's Agenda
 
-- Introductions
-- Syllabus
-- Grading
-- Term Project
-- Schedule
-- Week 1 Lab: Software Tools Orientation
+- Course Introduction (20 min.)
+    - Introductions
+    - Syllabus
+    - Grading
+    - Term Project
+    - Schedule
+- Week 1 Lab: Software Tools Orientation (90 min.)
 
 ## Introductions
 
@@ -99,3 +100,9 @@ Week  | Date | Topics
 - Participation through class discussions are encouraged.
 - There will be no other classroom sessions for this course.
 
+## Today's Lab Schedule
+
+- Week 1 Lab: Software Tools Orientation (90 min.)
+    - Software installation (just a few portable apps, 15 min)
+    - Command-line tutorial (45 min)
+    - Lab exercise (30 min)

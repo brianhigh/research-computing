@@ -75,10 +75,11 @@ You may also install them onto a portable device like a USB flash drive
 -   [Notepad](http://portableapps.com/apps/development/notepadpp_portable)++
 -   [jEdit](http://portableapps.com/node/11617)
 -   [Meld](http://meldmerge.org/)
+-   [7-Zip](http://portableapps.com/apps/utilities/7-zip_portable) (You may need this, too.)
 
-### Apps you have already
+### Apps you (should) have already
 
-The are already installed on HSL lab PCs:
+The should already be installed on HSL lab PCs:
 
 -   PuTTY
 -   FileZilla

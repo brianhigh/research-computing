@@ -46,5 +46,5 @@ echo "---------------------------------------------------------------"
 echo "Compare all three (1=${v[1]}, 2=${v[2]} and 3=R):"
 which diff3 && diff3 iris_data_{1,2,r}.csv || echo "Can't find diff3."
 
-# Try this same comparison with "meld" http://meldmerge.org/.
+# Try this same comparison with "meld" (http://meldmerge.org/).
 which meld && meld iris_data_{1,2,r}.csv || echo "Can't find meld."

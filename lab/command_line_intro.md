@@ -104,13 +104,13 @@ terminal "emulator". Before the days of graphical computer systems,
 one would access the computer through a text-mode terminal. There was
 no mouse and nothing to click on. You just had a keyboard, screen,
 the computer, a printer, cables, and maybe a communications device
-like a modem. (In earlier days, you had even less.)
+like a modem. (In earlier days, you may not have had even this much.)
 
 Anyway, this terminal emulator may have limited features. Some do not have
 very good copy/cut/paste features (like, for example, the DOS command console).
 
 Unix systems (like OSX) and Linux systems tend to have much better terminals
-because those systems have a historical tradition of greater use of the
+because those systems have a cultural tradition of greater use of the
 command-line in performing routine tasks. For this same reason, the shell
 (such as Bash) on these systems also tends to be more powerful and
 user-friendly. (Well, more friendly toward the more experienced user, at least.)
@@ -124,8 +124,8 @@ the examples to work.
 
 ## The prompt
 
-The prompt is just a symbol (> or $, etc.) that let's know the shell is
-awaiting commands.
+The prompt is just a symbol (`>` or `$`, etc.) that let's us know that the 
+shell is awaiting our commands.
 
 It may have some text in front of it, such as your username, the current
 working directory (the folder you are "in"), the date and time, and so on.
@@ -154,11 +154,11 @@ user@host:folder$
 
 A command-line will usually take the form of: 
 
-> command option(s) argument(s)
+> command -option(s) argument(s)
 
 ... where the command is either a built-in shell command or a separate program.
 
-The command may be followed by command options and arguments. 
+The command may be followed by command options and arguments, sometimes optional. 
 
 We will see some exceptions to this general format, but usually this is 
 how most shell commands are constructed, as shown in the following examples.

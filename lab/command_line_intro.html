@@ -109,9 +109,19 @@
           </hgroup>
   </slide>
 
-<slide class=''><hgroup><h2>The Command-line</h2></hgroup><article  id="the-command-line" class="smaller ">
+<slide class=''><hgroup><h2>What is the &quot;command-line&quot;?</h2></hgroup><article  id="what-is-the-command-line" class="smaller ">
 
-<p>When we speak of &quot;the command-line&quot;, we are referring to the command-line interface (CLI) known as the &quot;shell&quot;, &quot;terminal&quot;, or &quot;console&quot;.</p>
+<p>When we speak of &quot;the command-line&quot;, we are referring to the command-line interface (CLI) known as the &quot;shell&quot;, &quot;terminal&quot;, or &quot;console&quot;. While many data-analysis systems use a command-line interface, today we are specifically focusing on the general-purpose command-line interface that either comes with the &quot;operating system&quot; (Windows, OSX, etc.) or one which can be installed as a third-party application.</p>
+
+<p>You will find that gaining a solid foundation in command-line skills will help prepare you for use of more advanced or specialized systems (such as R) which were inspired and influenced by the more general-purpose command-line systems.</p>
+
+<p>You can use the command-line to examine, organize, and clean-up data files before importing into other software applications. For those experienced with the command-line, this can be much more efficient and powerful than using a graphical application. But to achieve these benefits, you will need some training and practice. So, today, we will invest some time in skill-building.</p>
+
+</article></slide><slide class=''><hgroup><h2>The shell</h2></hgroup><article  id="the-shell" class="smaller ">
+
+<p>It is called &quot;the shell&quot; because it is an outer layer (interface) surrounding an inner core (the operating system), like a shell of a nut (or crustacean).</p>
+
+<p>In practical terms, the shell is an interactive command interpreter and display system that is accessed through a &quot;terminal&quot; or &quot;console&quot; program.</p>
 
 <p>On Windows systems, this has historically been the DOS shell:</p>
 
@@ -168,6 +178,16 @@ Welcome to Bio-Linux on phage (based on Ubuntu 14.04.3 LTS)
 Last login: Fri Dec 25 22:07:19 2015 from yyyyy
 xxxxx@phage:~$</pre>
 
+</article></slide><slide class=''><hgroup><h2>The terminal</h2></hgroup><article  id="the-terminal" class="smaller ">
+
+<p>The software application that you open to get to the shell is actually a terminal &quot;emulator&quot;. Before the days of graphical computer systems, one would access the computer through a text-mode terminal. There was no mouse and nothing to click on. You just had a keyboard, screen, the computer, a printer, cables, and maybe a communications device like a modem. (In earlier days, you had even less.)</p>
+
+<p>Anyway, this terminal emulator may have limited features. Some do not have very good copy/cut/paste features (like, for example, the DOS command console).</p>
+
+<p>Unix systems (like OSX) and Linux systems tend to have much better terminals because those systems have a historical tradition of greater use of the command-line in performing routine tasks. For this same reason, the shell (such as Bash) on these systems also tends to be more powerful and user-friendly. (Well, more friendly toward the more experienced user, at least.)</p>
+
+<p><strong><em>Note</em></strong>: In the examples to follow, we will use <code>/u</code> as the path to your &quot;home directory&quot; since in this computer lab, you have access to a &quot;U Drive&quot; which can be addressed in this way. If you want to try these examples on your personal computer, subsitute <code>~</code> instead. This is an alias to your &quot;home directory&quot; (folder). Otherwise, you would need to create a <code>/u</code> folder for the examples to work.</p>
+
 </article></slide><slide class=''><hgroup><h2>The prompt</h2></hgroup><article  id="the-prompt" class="smaller ">
 
 <p>The prompt is just a symbol (&gt; or $, etc.) that let&#39;s know the shell is awaiting commands.</p>
@@ -184,7 +204,7 @@ xxxxx@phage:~$</pre>
 
 <pre class = 'prettyprint lang-r'>user@host:folder$</pre>
 
-</article></slide><slide class=''><hgroup><h2>The Command-line</h2></hgroup><article  id="the-command-line-1" class="smaller ">
+</article></slide><slide class=''><hgroup><h2>The command-line</h2></hgroup><article  id="the-command-line" class="smaller ">
 
 <p>A command-line will usually take the form of:</p>
 
@@ -194,12 +214,34 @@ xxxxx@phage:~$</pre>
 
 <p>&#8230; where the command is either a built-in shell command or a separate program.</p>
 
-<p>The command may be followed by command options and arguments. Examples:</p>
+<p>The command may be followed by command options and arguments.</p>
+
+<p>We will see some exceptions to this general format, but usually this is how most shell commands are constructed, as shown in the following examples.</p>
 
 <pre class = 'prettyprint lang-bash'>cd /u
 mkdir -p fee/phi
 cd fee
 ls</pre>
+
+<p>We will generally not show the output in our examples. Please try them on your own. Generally, Bash commands only show output when output is requested or expected by the function of the command. For example, only the last comand above (<code>ls</code>) should show output, unless you encounter an error.</p>
+
+</article></slide><slide class=''><hgroup><h2>Help</h2></hgroup><article  id="help" class="smaller ">
+
+<p>You can get help for most Bash commands by adding <code>-?</code>, <code>-h</code>, or <code>--help</code> as the only option to the command. (Most DOS commands will take <code>/?</code> instead.)</p>
+
+<p>Examples:</p>
+
+<pre class = 'prettyprint lang-bash'>ls -?
+cd -h
+mkdir --help</pre>
+
+<p>If the command does not recognize your option, it may offer some limited help.</p>
+
+<p>If you are using a Linux, Unix, or OSX system with a full set of documentation installed, you can also bring up &quot;<code>man</code> pages&quot;:</p>
+
+<pre class = 'prettyprint lang-bash'>man ls</pre>
+
+<p>You can navigate this help system with PGUP, PGDN, and SPACE and arrow keys. Press <code>q</code> to quit.</p>
 
 </article></slide><slide class=''><hgroup><h2>Redirection</h2></hgroup><article  id="redirection" class="smaller ">
 
@@ -212,12 +254,17 @@ cat fum.txt</pre>
 
 <p>The <code>&gt;</code> symbol redirects the <code>echo</code> command output to a file <code>fum.txt</code>. If we used the <code>&gt;&gt;</code> instead, this would have appended instead of overwriting. With either of these, a new file will be created if one does not already exist.</p>
 
+<p>You can also redirect <em>from</em> a file to use it as input:</p>
+
+<pre class = 'prettyprint lang-bash'>&lt; fum.txt</pre>
+
+<p>In this example, the <code>&lt;</code> symbol works like <code>cat</code>, reading and displaying the contents of the file.</p>
+
 </article></slide><slide class=''><hgroup><h2>Scripts</h2></hgroup><article  id="scripts" class="smaller ">
 
-<p>Scripts are regular text files which are interpreted by a special program called an interpreter to execute the commands (code) in the script. Example:</p>
+<p>Scripts are regular text files which are interpreted by a special program called an interpreter to execute the commands (code) in the script.</p>
 
-<pre class = 'prettyprint lang-r'>cat myscript.sh 
-
+<pre class = 'prettyprint lang-r'>$ cat myscript.sh 
 # This is a comment. It will not be shown in the script output.
 cd /u
 mkdir -p fee/phi
@@ -228,16 +275,15 @@ echo &quot;pho&quot; &gt; fum.txt
 ls *.txt
 cat fum.txt
 
-bash myscript.sh 
-
+$ bash myscript.sh 
 phi
 ls: *.txt: No such file or directory
 fum.txt
 pho</pre>
 
-<p>Blank lines were added to help separate the commands from their ouput.</p>
+<p>(The <code>$</code> prompt and command output have been included in this example for clarity.)</p>
 
-</article></slide><slide class=''><hgroup><h2>Folder (directory) navigation and management commands</h2></hgroup><article  id="folder-directory-navigation-and-management-commands" class="smaller ">
+</article></slide><slide class=''><hgroup><h2>Folder navigation and management</h2></hgroup><article  id="folder-navigation-and-management" class="smaller ">
 
 <p>For the rest of the tutorial, we will list Bash commands and their DOS equivalents (where possible) in [brackets].</p>
 
@@ -261,6 +307,8 @@ pwd
 rmdir scripts
 cd ..</pre>
 
+<p>Here, the &quot;..&quot; folder is an alias for the next folder &quot;up&quot; (the &quot;parent&quot;) in the folder strucure.</p>
+
 </article></slide><slide class=''><hgroup><h2>File management commands</h2></hgroup><article  id="file-management-commands" class="smaller ">
 
 <ul>
@@ -283,7 +331,9 @@ cp path.txt bin/
 rm -f bin/path.txt
 mv path.txt bin/setpath.sh</pre>
 
-</article></slide><slide class=''><hgroup><h2>File viewing and retrieval Commands</h2></hgroup><article  id="file-viewing-and-retrieval-commands" class="smaller ">
+<p>Here, the &quot;.&quot; folder is an alias for the current folder. Notice how <code>find</code> takes the file/folder argument <strong>before</strong> the command options. The <code>/</code> following <code>bin/</code> is optional, but helps to identify this as a folder.</p>
+
+</article></slide><slide class=''><hgroup><h2>File viewing and retrieval commands</h2></hgroup><article  id="file-viewing-and-retrieval-commands" class="smaller ">
 
 <ul>
 <li><a href='http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html' title=''>cat</a> [type]
@@ -307,6 +357,8 @@ mv path.txt bin/setpath.sh</pre>
 curl -o &#39;iris.csv&#39; \
   &#39;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&#39;
 less iris.csv</pre>
+
+<p>The <code>\</code> is a line-continuation character to allow a long line to be wrapped into additional lines as needed. We indented the second line to show that this is actually part of the previous line. <strong>Note</strong>: GitBash does not include <code>more</code>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Text manipulation commands</h2></hgroup><article  id="text-manipulation-commands" class="smaller ">
 
@@ -339,7 +391,7 @@ tail iris.csv
 cut -d, -f5 iris.csv
 echo &quot;With so many lines, the output runs off the screen!!! What to do???&quot;</pre>
 
-</article></slide><slide class=''><hgroup><h2>Pipes and Pipelines</h2></hgroup><article  id="pipes-and-pipelines" class="smaller ">
+</article></slide><slide class=''><hgroup><h2>Pipes and pipelines</h2></hgroup><article  id="pipes-and-pipelines" class="smaller ">
 
 <p>The <code>pipe</code> (vertical bar) symbol, <code>|</code> streams output into another command as input.</p>
 
@@ -349,6 +401,10 @@ grep &#39;Iris-virginica&#39; iris.csv | tail
 grep &#39;Iris-virginica&#39; iris.csv | cut -d, -f5</pre>
 
 <p>This allows you to connect commands into a data processing &quot;pipeline&quot;.</p>
+
+<p>Command output which would otherwise print to the screen is instead routed to the next command in the pipe. Most utilites used in Bash are designed to take input from both files and pipes. So, if the command is taking input from a pipe, you do not use a file argument to the command. For example, <code>head</code>, <code>tail</code>, and <code>cut</code> as used above do not have a file argument, as they take their input from the output of <code>grep</code>.</p>
+
+<p>As you can imagine, several commands can be strung together to create very powerful and flexible pipelines to use the utilities in ways their designers may not have imagined. This is generally not true for &quot;monolithic&quot; applications.</p>
 
 </article></slide><slide class=''><hgroup><h2>More text manipulation commands</h2></hgroup><article  id="more-text-manipulation-commands" class="smaller ">
 
@@ -400,7 +456,9 @@ echo $PATH</pre>
 
 </article></slide><slide class=''><hgroup><h2>Configuring a custom default PATH</h2></hgroup><article  id="configuring-a-custom-default-path" class="smaller ">
 
-<p>You can set various configuration options in <code>~/.bash_profile</code>. This is a special file containing commands that are run when Bash launches. The <code>~</code> symbol (known as &quot;tilde&quot; or &quot;squiggle&quot;) is an alias for your home directory (<code>$HOME</code>).</p>
+<p>You can set various configuration options in <code>~/.bash_profile</code>. This is a special file containing commands that are run when Bash launches.</p>
+
+<p>Again, the <code>~</code> symbol (known as &quot;tilde&quot; or &quot;squiggle&quot;) is an alias for your home directory (also equivalent to <code>$HOME</code> in Bash).</p>
 
 <pre class = 'prettyprint lang-bash'>echo &quot;export PATH=/u/bin:/usr/local/bin:/bin:/u/Rtools/bin&quot; &gt;&gt; ~/.bash_profile
 cat ~/.bash_profile
@@ -409,7 +467,15 @@ echo $PATH</pre>
 
 <p>If you open a new Bash shell and show the value of $PATH you will see the new path setting. Because we appended with <code>&gt;&gt;</code>, we did not overwrite the contents of the <code>~/.bash_profile</code> file.</p>
 
-<p>Note: Some systems use other files, like <code>~/.bashrc</code> instead of, or in addition to, <code>~/.bash_profile</code>.</p></article></slide>
+<p>Note: Some systems use other files, like <code>~/.bashrc</code> instead of, or in addition to, <code>~/.bash_profile</code>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Exercise</h2></hgroup><article  id="exercise" class="smaller ">
+
+<p>If you have the time and interest, please complete the exercise described in detail in your <a href='https://github.com/brianhigh/research-computing/blob/master/lab/01/rescomp_lab1.md' title=''>lab assignment</a>.</p>
+
+<p>This exercise will provide an opportunity for you to apply what you have learned in this tutorial with a very practical data exploration example.</p>
+
+<p>Be sure to save your command history (and output) and turn it in for credit through Canvas.</p></article></slide>
 
 
   <slide class="backdrop"></slide>

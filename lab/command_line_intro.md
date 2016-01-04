@@ -2,10 +2,33 @@
 [Brian High](https://github.com/brianhigh)  
 ![CC BY-SA 4.0](cc_by-sa_4.png)  
 
-## The Command-line
+## What is the "command-line"?
 
 When we speak of "the command-line", we are referring to the command-line
-interface (CLI) known as the "shell", "terminal", or "console".
+interface (CLI) known as the "shell", "terminal", or "console". While many 
+data-analysis systems use a command-line interface, today we are specifically
+focusing on the general-purpose command-line interface that either comes with
+the "operating system" (Windows, OSX, etc.) or one which can be installed 
+as a third-party application.
+
+You will find that gaining a solid foundation in command-line skills will 
+help prepare you for use of more advanced or specialized systems (such as R) 
+which were inspired and influenced by the more general-purpose command-line 
+systems.
+
+You can use the command-line to examine, organize, and clean-up data files
+before importing into other software applications. For those experienced 
+with the command-line, this can be much more efficient and powerful than using
+a graphical application. But to achieve these benefits, you will need some
+training and practice. So, today, we will invest some time in skill-building.
+
+## The shell
+
+It is called "the shell" because it is an outer layer (interface) surrounding 
+an inner core (the operating system), like a shell of a nut (or crustacean).
+
+In practical terms, the shell is an interactive command interpreter and
+display system that is accessed through a "terminal" or "console" program.
 
 On Windows systems, this has historically been the DOS shell:
 
@@ -74,6 +97,31 @@ Last login: Fri Dec 25 22:07:19 2015 from yyyyy
 xxxxx@phage:~$
 ```
 
+## The terminal
+
+The software application that you open to get to the shell is actually a 
+terminal "emulator". Before the days of graphical computer systems, 
+one would access the computer through a text-mode terminal. There was
+no mouse and nothing to click on. You just had a keyboard, screen,
+the computer, a printer, cables, and maybe a communications device
+like a modem. (In earlier days, you had even less.)
+
+Anyway, this terminal emulator may have limited features. Some do not have
+very good copy/cut/paste features (like, for example, the DOS command console).
+
+Unix systems (like OSX) and Linux systems tend to have much better terminals
+because those systems have a historical tradition of greater use of the
+command-line in performing routine tasks. For this same reason, the shell
+(such as Bash) on these systems also tends to be more powerful and
+user-friendly. (Well, more friendly toward the more experienced user, at least.)
+
+***Note***: In the examples to follow, we will use `/u` as the path to your 
+"home directory" since in this computer lab, you have access to a "U Drive" 
+which can be addressed in this way. If you want to try these examples on your 
+personal computer, subsitute `~` instead. This is an alias to your "home 
+directory" (folder). Otherwise, you would need to create a `/u` folder for
+the examples to work.
+
 ## The prompt
 
 The prompt is just a symbol (> or $, etc.) that let's know the shell is
@@ -102,7 +150,7 @@ PS U:\>
 user@host:folder$
 ```
 
-## The Command-line
+## The command-line
 
 A command-line will usually take the form of: 
 
@@ -110,7 +158,10 @@ A command-line will usually take the form of:
 
 ... where the command is either a built-in shell command or a separate program.
 
-The command may be followed by command options and arguments. Examples:
+The command may be followed by command options and arguments. 
+
+We will see some exceptions to this general format, but usually this is 
+how most shell commands are constructed, as shown in the following examples.
 
 
 ```bash
@@ -119,6 +170,38 @@ mkdir -p fee/phi
 cd fee
 ls
 ```
+
+We will generally not show the output in our examples. Please try them on your 
+own. Generally, Bash commands only show output when output is requested or 
+expected by the function of the command. For example, only the last comand 
+above (`ls`) should show output, unless you encounter an error.
+
+## Help
+
+You can get help for most Bash commands by adding `-?`, `-h`, or `--help` as 
+the only option to the command. (Most DOS commands will take `/?` instead.)
+
+Examples:
+
+
+```bash
+ls -?
+cd -h
+mkdir --help
+```
+
+If the command does not recognize your option, it may offer some limited help.
+
+If you are using a Linux, Unix, or OSX system with a full set of documentation
+installed, you can also bring up "`man` pages":
+
+
+```bash
+man ls
+```
+
+You can navigate this help system with PGUP, PGDN, and SPACE and arrow keys. 
+Press `q` to quit.
 
 ## Redirection
 
@@ -136,15 +219,24 @@ The `>` symbol redirects the `echo` command output to a file `fum.txt`. If we
 used the `>>` instead, this would have appended instead of overwriting. With
 either of these, a new file will be created if one does not already exist.
 
+You can also redirect *from* a file to use it as input:
+
+
+```bash
+< fum.txt
+```
+
+In this example, the `<` symbol works like `cat`, reading and displaying the
+contents of the file.
+
 ## Scripts
 
 Scripts are regular text files which are interpreted by a special program
-called an interpreter to execute the commands (code) in the script. Example:
+called an interpreter to execute the commands (code) in the script.
 
 
 ```r
-cat myscript.sh 
-
+$ cat myscript.sh 
 # This is a comment. It will not be shown in the script output.
 cd /u
 mkdir -p fee/phi
@@ -155,17 +247,16 @@ echo "pho" > fum.txt
 ls *.txt
 cat fum.txt
 
-bash myscript.sh 
-
+$ bash myscript.sh 
 phi
 ls: *.txt: No such file or directory
 fum.txt
 pho
 ```
 
-Blank lines were added to help separate the commands from their ouput.
+(The `$` prompt and command output have been included in this example for clarity.)
 
-## Folder (directory) navigation and management commands
+## Folder navigation and management
 
 For the rest of the tutorial, we will list Bash commands and their DOS
 equivalents (where possible) in [brackets].
@@ -192,6 +283,9 @@ rmdir scripts
 cd ..
 ```
 
+Here, the ".." folder is an alias for the next folder "up" (the "parent") in 
+the folder strucure.
+
 ## File management commands
 
 -   [ls](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/ls.html), 
@@ -217,7 +311,11 @@ rm -f bin/path.txt
 mv path.txt bin/setpath.sh
 ```
 
-## File viewing and retrieval Commands
+Here, the "." folder is an alias for the current folder. Notice how `find`
+takes the file/folder argument **before** the command options. The `/` 
+following `bin/` is optional, but helps to identify this as a folder.
+
+## File viewing and retrieval commands
 
 -   [cat](http://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html) [type]
     - display (or combine, "con**cat**enate") the contents of text files
@@ -237,6 +335,10 @@ curl -o 'iris.csv' \
   'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 less iris.csv
 ```
+
+The `\` is a line-continuation character to allow a long line to be wrapped
+into additional lines as needed. We indented the second line to show that this
+is actually part of the previous line. **Note**: GitBash does not include `more`.
 
 ## Text manipulation commands
 
@@ -267,7 +369,7 @@ cut -d, -f5 iris.csv
 echo "With so many lines, the output runs off the screen!!! What to do???"
 ```
 
-## Pipes and Pipelines
+## Pipes and pipelines
 
 The `pipe` (vertical bar) symbol, `|` streams output into another command 
 as input.
@@ -281,6 +383,17 @@ grep 'Iris-virginica' iris.csv | cut -d, -f5
 ```
 
 This allows you to connect commands into a data processing "pipeline".
+
+Command output which would otherwise print to the screen is instead routed to 
+the next command in the pipe. Most utilites used in Bash are designed to take 
+input from both files and pipes. So, if the command is taking input from a
+pipe, you do not use a file argument to the command. For example, `head`,
+`tail`, and `cut` as used above do not have a file argument, as they take
+their input from the output of `grep`.
+
+As you can imagine, several commands can be strung together to create very
+powerful and flexible pipelines to use the utilities in ways their designers
+may not have imagined. This is generally not true for "monolithic" applications.
 
 ## More text manipulation commands
 
@@ -328,8 +441,10 @@ the script, we see that the PATH was indeed changed.
 ## Configuring a custom default PATH
 
 You can set various configuration options in `~/.bash_profile`. This is a 
-special file containing commands that are run when Bash launches. The `~`
-symbol (known as "tilde" or "squiggle") is an alias for your home directory (`$HOME`).
+special file containing commands that are run when Bash launches. 
+
+Again, the `~` symbol (known as "tilde" or "squiggle") is an alias for your 
+home directory (also equivalent to `$HOME` in Bash).
 
 
 ```bash
@@ -345,3 +460,15 @@ of the `~/.bash_profile` file.
 
 Note: Some systems use other files, like `~/.bashrc` instead of, or in addition
 to, `~/.bash_profile`.
+
+## Exercise
+
+If you have the time and interest, please complete the exercise described in
+detail in your 
+[lab assignment](https://github.com/brianhigh/research-computing/blob/master/lab/01/rescomp_lab1.md).
+
+This exercise will provide an opportunity for you to apply what you have 
+learned in this tutorial with a very practical data exploration example.
+
+Be sure to save your command history (and output) and turn it in for credit 
+through Canvas.

@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: html_document
+output: pdf_document
 Date: '2015-01-04'
 ---
 
@@ -299,7 +299,7 @@ Take a look at the `iris`
 at the UCI Machine Learning Repository. Read the "Data Set Information" and note
 how the "data differs from the data presented in Fishers article". 
 
-Those interested in some more background on this issue, may want to read:
+Those interested in more background on this issue may wish to read:
 
 > Bezdek, J.C. and Keller, J.M. and Krishnapuram, R. and Kuncheva, L.I. 
 > and Pal, N.R. (1999). "Will the real iris data please stand up?". IEEE 
@@ -310,7 +310,7 @@ Those interested in some more background on this issue, may want to read:
 
 How can we easily confirm these differences using the command-line tools we now 
 have at our disposal? And which version is the "correct" version? Which version
-of the data set is inluded with R?
+of the data set is included with R?
 
 #### How you might go about answering those questions:
 

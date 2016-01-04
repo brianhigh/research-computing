@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: pdf_document
+output: html_document
 Date: '2015-01-04'
 ---
 
@@ -74,6 +74,7 @@ You may also install them onto a portable device like a USB flash drive
 -   [ConEmu](http://portableapps.com/node/38586)
 -   [Notepad](http://portableapps.com/apps/development/notepadpp_portable)++
 -   [jEdit](http://portableapps.com/node/11617)
+-   [Meld](http://meldmerge.org/)
 
 ### Apps you have already
 

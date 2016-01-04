@@ -17,12 +17,16 @@ output:
 
 ### Today's Agenda
 
-- Introductions
-- Syllabus
-- Grading
-- Term Project
-- Schedule
+- Course Introduction (20 min.)
+    - Introductions
+    - Syllabus
+    - Grading
+    - Term Project
+    - Schedule
 - Week 1 Lab: Software Tools Orientation
+    - Software installation (just a few portable apps, 15 min)
+    - Command-line tutorial (45 min)
+    - Lab exercise (30 min)
 
 ## Introductions
 

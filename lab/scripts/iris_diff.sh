@@ -28,6 +28,9 @@ rcode="write.table(format(iris, digits=2), 'iris_data_r.csv',
            sep=',', col.names=F, row.names=F, quote=F)"
 echo "$rcode" | Rscript -
 
+# Remove any carriage-return characters from the CSV made from R (in Windows).
+sed -i.bak 's/\r//g' iris_data_r.csv
+
 # Add a newline character to end of file to match the others.
 echo "" >> iris_data_r.csv 
 
@@ -41,7 +44,7 @@ done
 # Compare the differences in all three files at once.
 echo "---------------------------------------------------------------"
 echo "Compare all three (1=${v[1]}, 2=${v[2]} and 3=R):"
-diff3 iris_data_{1,2,r}.csv
+which diff3 %% diff3 iris_data_{1,2,r}.csv || echo "Can't find diff3."
 
 # Try this same comparison with "meld" http://meldmerge.org/.
 which meld && meld iris_data_{1,2,r}.csv || echo "Can't find meld."

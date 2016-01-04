@@ -260,7 +260,17 @@ img {
 </div>
 <div id="exercise" class="section level3">
 <h3>Exercise</h3>
-<p>Take a look at the <code>iris</code> <a href="https://archive.ics.uci.edu/ml/datasets/Iris">data set</a> at the UCI Machine Learning Repository. Read the “Data Set Information” and note how the “data differs from the data presented in Fishers article”. How can we easily confirm this using the command-line tools we now have at our disposal?</p>
+<p>Take a look at the <code>iris</code> <a href="https://archive.ics.uci.edu/ml/datasets/Iris">data set</a> at the UCI Machine Learning Repository. Read the “Data Set Information” and note how the “data differs from the data presented in Fishers article”.</p>
+<p>Those interested in some more background on this issue, may want to read:</p>
+<blockquote>
+<p>Bezdek, J.C. and Keller, J.M. and Krishnapuram, R. and Kuncheva, L.I. and Pal, N.R. (1999). “Will the real iris data please stand up?”. IEEE Transactions on Fuzzy Systems 7 (3): 368–369. <a href="doi:10.1109/91.771092" class="uri">doi:10.1109/91.771092</a> URL: <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=771092" class="uri">http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=771092</a></p>
+</blockquote>
+<div id="some-questions-to-consider" class="section level4">
+<h4>Some questions to consider:</h4>
+<p>How can we easily confirm these differences using the command-line tools we now have at our disposal? And which version is the “correct” version? Which version of the data set is inluded with R?</p>
+</div>
+<div id="how-you-might-go-about-answering-those-questions" class="section level4">
+<h4>How you might go about answering those questions:</h4>
 <p>First, using <code>bash</code>, make a folder, <code>iris</code>, with <code>mkdir</code> to store the data and then enter that folder with <code>cd</code>.</p>
 <p>Second, using <code>curl</code>, download the two versions of the data set as CSV files. Use either the <code>-o</code> argument for the output file, or redirect the text to the output file using the <code>&gt;</code> operator.</p>
 <ul>
@@ -274,6 +284,9 @@ img {
 </ul></li>
 </ul>
 <p>How would we quickly confirm the differences mentioned at the UCI site?</p>
+</div>
+<div id="compare-with-the-r-iris-data-set" class="section level4">
+<h4>Compare with the R <code>iris</code> data set:</h4>
 <p>R comes with the <code>iris</code> data set (built-in). Export it to a CSV file.</p>
 <pre><code>Rscript -e &quot;write.table(format(iris, digits=2), 'iris_data_r.csv', sep=',', 
     col.names=F, row.names=F, quote=F)&quot;</code></pre>
@@ -292,10 +305,11 @@ cat(&quot;What's in R's iris data but not in UCI's iris data?&quot;, &quot;\n&qu
 sqldf('SELECT * FROM iris_data_r EXCEPT SELECT * FROM iris_data_1')
 cat(&quot;What's in UCI's iris data but not in R's iris data?&quot;, &quot;\n&quot;)
 sqldf('SELECT * FROM iris_data_1 EXCEPT SELECT * FROM iris_data_r')</code></pre>
-<p>Save these commands as diff.R and run them using this command:</p>
-<pre><code>Rscript diff.R</code></pre>
+<p>Save these commands as iris_diff.R and run them using this command:</p>
+<pre><code>Rscript iris_diff.R</code></pre>
 <p>Which method (<code>bash</code> versus <code>R</code>) is more work or more complicated? Is there an easier way to do this in either <code>bash</code> or in <code>R</code>?</p>
 <p>If there is time, compare the files graphically in <a href="http://meldmerge.org/">meld</a> or <a href="http://winmerge.org/?lang=en">Winmerge</a>. Aside from ease of use, how else might these graphical tools make it easier to identify subtle differences? When would the command-line tools be preferable?</p>
+</div>
 </div>
 <div id="what-to-turn-in-1" class="section level3">
 <h3>What to turn in</h3>

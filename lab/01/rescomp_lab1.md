@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: pdf_document
+output: html_document
 Date: '2015-01-04'
 ---
 
@@ -297,8 +297,22 @@ next week.
 Take a look at the `iris` 
 [data set](https://archive.ics.uci.edu/ml/datasets/Iris) 
 at the UCI Machine Learning Repository. Read the "Data Set Information" and note
-how the "data differs from the data presented in Fishers article". How can we
-easily confirm this using the command-line tools we now have at our disposal?
+how the "data differs from the data presented in Fishers article". 
+
+Those interested in some more background on this issue, may want to read:
+
+> Bezdek, J.C. and Keller, J.M. and Krishnapuram, R. and Kuncheva, L.I. 
+> and Pal, N.R. (1999). "Will the real iris data please stand up?". IEEE 
+> Transactions on Fuzzy Systems 7 (3): 368–369. doi:10.1109/91.771092
+> URL: http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=771092
+
+#### Some questions to consider:
+
+How can we easily confirm these differences using the command-line tools we now 
+have at our disposal? And which version is the "correct" version? Which version
+of the data set is inluded with R?
+
+#### How you might go about answering those questions:
 
 First, using `bash`, make a folder, `iris`, with `mkdir` to store the data and 
 then enter that folder with `cd`.
@@ -314,6 +328,8 @@ output file using the `>` operator.
     - Save as: "iris_data_2.csv"
 
 How would we quickly confirm the differences mentioned at the UCI site?
+
+#### Compare with the R `iris` data set:
 
 R comes with the `iris` data set (built-in). Export it to a CSV file.
 
@@ -346,10 +362,10 @@ cat("What's in UCI's iris data but not in R's iris data?", "\n")
 sqldf('SELECT * FROM iris_data_1 EXCEPT SELECT * FROM iris_data_r')
 ```
 
-Save these commands as diff.R and run them using this command:
+Save these commands as iris_diff.R and run them using this command:
 
 ```
-Rscript diff.R
+Rscript iris_diff.R
 ```
 
 Which method (`bash` versus `R`) is more work or more complicated? Is there an 

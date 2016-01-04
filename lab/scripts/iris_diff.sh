@@ -7,6 +7,12 @@
 #    http://tldp.org/LDP/abs/html/arrays.html
 #    http://tldp.org/LDP/abs/html/exit-status.html
 #    http://www.tldp.org/LDP/abs/html/ops.html
+#
+# And:
+#    Bezdek, J.C. and Keller, J.M. and Krishnapuram, R. and Kuncheva, L.I. 
+#       and Pal, N.R. (1999). "Will the real iris data please stand up?". IEEE 
+#       Transactions on Fuzzy Systems 7 (3): 368–369. doi:10.1109/91.771092
+#       URL: http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=771092
 
 # UCI iris data set versions to compare. Store as an array.
 v[1]="iris.data"

@@ -1,8 +1,8 @@
 ---
 title: "Software Tools Orientation"
-author: "Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing). 
-  License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)."
-output: html_document
+author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
+  License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
+output: pdf_document
 Date: '2015-01-04'
 ---
 
@@ -328,7 +328,7 @@ Which of the two versions does R have? Since R's version lists the species in
 a different format, how can you easily ignore that difference and just look at 
 the differences in numeric variables? (Hint: Use `sed` or `cut`.)
 
-We can do a similar comparison in R using `sqldf`, which allow us to perform 
+We can do a similar comparison in R using `sqldf`, which allows us to perform 
 SQL queries on data frames. (SQL is the most common database query language.)
 
 ```

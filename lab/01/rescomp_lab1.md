@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: html_document
+output: pdf_document
 Date: '2015-01-04'
 ---
 
@@ -352,7 +352,7 @@ SQL queries on data frames. (SQL is the most common database query language.)
 ```
 if (!require("sqldf")) { install.packages("sqldf"); require("sqldf") }
 iris_data_r <- iris
-url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
+url <- "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 iris_data_1 <- read.csv(url, header = F)
 names(iris_data_1) <- names(iris_data_r)
 iris_data_1$Species <- gsub("Iris-", "", iris_data_1$Species)

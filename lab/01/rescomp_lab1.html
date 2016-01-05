@@ -101,11 +101,12 @@ img {
 <li><a href="http://portableapps.com/apps/development/notepadpp_portable">Notepad</a>++</li>
 <li><a href="http://portableapps.com/node/11617">jEdit</a></li>
 <li><a href="http://meldmerge.org/">Meld</a></li>
+<li><a href="http://portableapps.com/apps/utilities/7-zip_portable">7-Zip</a> (You may need this, too.)</li>
 </ul>
 </div>
-<div id="apps-you-have-already" class="section level3">
-<h3>Apps you have already</h3>
-<p>The are already installed on HSL lab PCs:</p>
+<div id="apps-you-should-have-already" class="section level3">
+<h3>Apps you (should) have already</h3>
+<p>The should already be installed on HSL lab PCs:</p>
 <ul>
 <li>PuTTY</li>
 <li>FileZilla</li>
@@ -296,7 +297,7 @@ img {
 <p>We can do a similar comparison in R using <code>sqldf</code>, which allows us to perform SQL queries on data frames. (SQL is the most common database query language.)</p>
 <pre><code>if (!require(&quot;sqldf&quot;)) { install.packages(&quot;sqldf&quot;); require(&quot;sqldf&quot;) }
 iris_data_r &lt;- iris
-url &lt;- &quot;https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&quot;
+url &lt;- &quot;http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data&quot;
 iris_data_1 &lt;- read.csv(url, header = F)
 names(iris_data_1) &lt;- names(iris_data_r)
 iris_data_1$Species &lt;- gsub(&quot;Iris-&quot;, &quot;&quot;, iris_data_1$Species)

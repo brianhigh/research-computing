@@ -2,7 +2,7 @@
 title: "Software Tools Orientation"
 author: 'Copyright © [The Research Computing Team](https://github.com/brianhigh/research-computing).
   License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).'
-output: pdf_document
+output: html_document
 Date: '2015-01-04'
 ---
 
@@ -75,7 +75,6 @@ You may also install them onto a portable device like a USB flash drive
 -   [Notepad](http://portableapps.com/apps/development/notepadpp_portable)++
 -   [jEdit](http://portableapps.com/node/11617)
 -   [Meld](http://meldmerge.org/)
--   [7-Zip](http://portableapps.com/apps/utilities/7-zip_portable) (You may need this, too.)
 
 ### Apps you (should) have already
 
@@ -88,6 +87,7 @@ The should already be installed on HSL lab PCs:
 -   RStudio
 -   Mozilla Firefox
 -   Notepad
+-   Winmerge
 
 ### Command-line utilities
 
@@ -197,8 +197,8 @@ application. By default, ConEmu will use the DOS command-line interpreter.
 ### Commonly Used Command-Line Utilities
 
 Examples of [common
-utilities](http://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html)found
-on Unix and Linux (i.e.
+utilities](http://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html) 
+found on Unix and Linux (i.e.
 "[POSIX](https://en.wikipedia.org/wiki/POSIX)-compliant") systems are
 (with analogous utilities for
 Windows/[DOS](https://en.wikipedia.org/wiki/List_of_DOS_commands) [in

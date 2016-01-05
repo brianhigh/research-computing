@@ -78,7 +78,7 @@ Week  | Date | Topics
 
 ## Schedule: Second Half of Qtr
 
-### Data Managament (Plus)
+### Data Management (Plus)
 
 Week  | Date | Topics
 ----- | ---- | -------------

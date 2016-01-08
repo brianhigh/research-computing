@@ -85,6 +85,10 @@ your data management workflkow and also when troubleshooting network problems.
 Most of these utilities are command-line tools, but we will also show how visual 
 tools can be created from command-line tools.
 
+Try running these utilities with different domain names. Some 
+[examples](https://github.com/brianhigh/visual-tracerouter/blob/master/domains.txt) 
+have been provided for you.
+
 ## ping
 
 `ping` is an extremely basic (and handy) network troubleshooting tool. It probes

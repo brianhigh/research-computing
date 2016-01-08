@@ -21,7 +21,8 @@ Desktop) and open "Network Connections".
 Then double-click a connection (interface) icon to get its status. Look 
 for the "Speed" value.
 
-## Network Speed
+
+## Network Speed (wmic)
 
 Type this command to see the link speed for all enabled interfaces:
 
@@ -37,6 +38,7 @@ Save the output of this command with:
 > wmic NIC where NetEnabled=true get Name, Speed > link_speed.txt
 ```
 
+
 ## Discussion
 
 - Do you believe that this speed is actually what you are getting?
@@ -44,10 +46,12 @@ Save the output of this command with:
 - What could present a bottleneck?
 - How could you tell if the problem was with the U drive and not your PC?
 
+
 ## What to turn in
 
 Please save and turn in the text output from the command which shows your link
 speed. We will show you how to capture this as text. 
+
 
 ## Connecting to our server
 
@@ -64,6 +68,7 @@ then we will connect using SSH (using Putty), and then try SFTP (using
 FileZilla or WinSCP). Lastly, we will demonstrate how to connect with X2Go
 as well. You do not have to do this yourselves, just watch the demo for now.
 
+
 ## Discussion
 
 - Why might we prefer to use a server for our coursework or research versus a
@@ -73,6 +78,7 @@ desktop computer (like those in the lab) or a laptop?
 a server?
 
 (There is nothing that you need to turn in for this lab segment.)
+
 
 ## Explore with command-line utilities 
 
@@ -88,6 +94,7 @@ tools can be created from command-line tools.
 Try running these utilities with different domain names. Some 
 [examples](https://github.com/brianhigh/visual-tracerouter/blob/master/domains.txt) 
 have been provided for you.
+
 
 ## ping
 
@@ -111,6 +118,7 @@ Approximate round trip times in milli-seconds:
     Minimum = 3ms, Maximum = 9ms, Average = 5ms
 ```
 
+
 ## traceroute (tracert)
 
 Linux and Unix systems (like OSX) come with the `traceroute` utility. It allows
@@ -132,12 +140,14 @@ The DOS command, `tracert` uses ICMP by default:
 C:\> tracert who.int
 ```
 
+
 ## whois in Linux or Unix
 
 The `whois` command uses the `NICNAME/WHOIS` protocol to find information about 
 network address blocks and Internet domains.
 
 We will run this command on Phage to look up information on `who.int`.
+
 
 ## Output from whois
 
@@ -159,6 +169,7 @@ address:      Geneva Geneva CH-1211
 address:      Switzerland
 ```
 
+
 ## whois in Windows (GetWhois)
 
 Windows does not come with the `whois` command, though it can be 
@@ -177,17 +188,20 @@ PS C:\> gc whois.txt | select -first 11
 
 As you can see, you have to type a lot more in Powershell to get the same results.
 
+
 ## What to turn in
 
 You will be expected to turn in your command history and output into
 Canvas, either as pasted text or as a plain-text file (with a `.txt` file
-suffix) attachment. (We used this same method for last week's lab also.)
+suffix) attachment. We used this same method for completing last week's lab.
+
 
 ## Visualize with route maps (in R)
 
 You will also be making some network route maps using R. Here is an example: 
 
-![](networking_intro_files/figure-html/unnamed-chunk-1-1.png) 
+![](networking_intro_files/figure-html/unnamed-chunk-1-1.png)\
+
 
 ## What to turn in
 
@@ -199,12 +213,14 @@ software we have written (in R) for the purposes of this course.
 *Note*: Do not simply upload the example maps provided for you. That would be
 too easy.
 
+
 ## Visual Tracert (web app)
 
 You can use [Visual Tracert](http://www.yougetsignal.com/tools/visual-tracert/)
 to make a route map in your web browser (without using R).
 
-![](networking_intro_files/figure-html/unnamed-chunk-2-1.png) 
+![](networking_intro_files/figure-html/unnamed-chunk-2-1.png)\
+
 
 ## Making screenshots
 
@@ -225,6 +241,7 @@ PDF file. Please upload your file to Canvas with your other lab submissions.
 [PortableApp version](http://portableapps.com/apps/graphics_pictures/irfanview_portable) 
 is also available for IrfanView.
 
+
 ## Verbalize your discoveries
 
 - Please also write a short paragraph explaining what you learned in today's 
@@ -232,6 +249,7 @@ networking exercises that was new and interesting to you.
 - How has this knowledge changed your view of how the Internet works? 
 - How can you apply this knowledge in your work?
 - Be prepared to share your insights during a short class discussion.
+
 
 ## What to turn in
 

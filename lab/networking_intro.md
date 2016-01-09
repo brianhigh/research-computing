@@ -68,6 +68,27 @@ then we will connect using SSH (using Putty), and then try SFTP (using
 FileZilla or WinSCP). Lastly, we will demonstrate how to connect with X2Go
 as well. You do not have to do this yourselves, just watch the demo for now.
 
+## Server Performance
+
+You may notice that some tasks are much faster to run on Phage. Here, we use 
+the Bash `time` command time a Bash 
+[script](https://github.com/brianhigh/research-computing/blob/master/lab/scripts/iris_diff.sh) 
+on a Windows PC and on our Phage server:
+
+```
+user@windows:~/research-computing/lab/scripts$ time ./iris_diff.sh
+real    0m34.631s
+user    0m0.522s
+sys     0m2.643s
+
+user@phage:~/research-computing/lab/scripts$ time ./iris_diff.sh
+real	0m2.116s
+user	0m0.730s
+sys	0m0.483s
+```
+
+In both cases, the script was ended by closing Meld once the differences had 
+been displayed.
 
 ## Discussion
 
@@ -211,7 +232,7 @@ if you prefer not to use the server.
 
 You will also be making some network route maps using R. Here is an example: 
 
-![](networking_intro_files/figure-html/unnamed-chunk-1-1.png)\
+![](networking_intro_files/figure-html/unnamed-chunk-1-1.png) 
 
 
 ## What to turn in
@@ -230,7 +251,7 @@ too easy.
 You can use [Visual Tracert](http://www.yougetsignal.com/tools/visual-tracert/)
 to make a route map in your web browser (without using R).
 
-![](networking_intro_files/figure-html/unnamed-chunk-2-1.png)\
+![](networking_intro_files/figure-html/unnamed-chunk-2-1.png) 
 
 
 ## Making screenshots

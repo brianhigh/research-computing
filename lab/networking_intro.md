@@ -195,7 +195,7 @@ You will be expected to turn in your command history and output into
 Canvas, either as pasted text or as a plain-text file (with a `.txt` file
 suffix) attachment. We used this same method for completing last week's lab.
 
-## Your R evironment
+## Your R environment
 
 Before we start using R and RStudio, we should note that all of our R examples 
 and exercises should work in whatever platform you are using: Windows, Mac OSX,

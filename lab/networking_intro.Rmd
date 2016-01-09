@@ -206,6 +206,17 @@ You will be expected to turn in your command history and output into
 Canvas, either as pasted text or as a plain-text file (with a `.txt` file
 suffix) attachment. We used this same method for completing last week's lab.
 
+## Your R evironment
+
+Before we start using R and RStudio, we should note that all of our R examples 
+and exercises should work in whatever platform you are using: Windows, Mac OSX,
+Linux. Most should work in RStudio server on Phage. The only ones which won't
+will be those using the "Shiny" packages and others which run their own 
+webserver. So, if you try to run our R examples on your own machine, make sure
+that you have a working R and Rstudio installation. The lab PCs have R and 
+RStudio, but not Git. We use Git to fetch the code from the web, so Git is
+pretty important. You can install Git on your lab PC at the beginning of class
+if you prefer not to use the server.
 
 ## Visualize with route maps (in R)
 

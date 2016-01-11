@@ -1,0 +1,219 @@
+---
+title: 'Information Security Lab Exercise'
+author: "[Brian High](https://github.com/brianhigh)"
+date: "![CC BY-SA 4.0](cc_by-sa_4.png)"
+output:
+  ioslides_presentation:
+    fig_caption: yes
+    fig_retina: 1
+    fig_width: 5
+    fig_height: 4
+    keep_md: yes
+    smaller: no
+    logo: logo_128.png
+---
+
+## See network data in transit
+
+First, we will be look at the
+flow and contents of network data packets as they leave and enter our
+own computers. 
+
+This will reveal what sorts of information someone else
+could see if they had the motivation, knowledge and skills to peer into
+your network traffic.
+
+***Note***:
+
+> Tools that perform encryption or network reconnaissance may have
+> [legal](http://mcaf.ee/cryptolaw) or institutional restrictions on their
+> use. Please consult with your information security officer for details.
+
+## York or Wireshark
+
+For this exercise, you will need to install one of the two applications 
+listed below. York is easier to use. Wireshark is more instructive, but also 
+more advanced.
+
+* [York](http://thesz.diecru.eu/content/york.php)
+* [Wireshark](https://www.wireshark.org/download.html) (for advanced use)
+
+As we do not *entirely* trust the "York" application, please do *not* install 
+it on your own personally-owner computer and please *reboot* your PC *after* 
+you are done with this exercise so that the lab PC will be restored to its 
+original state.
+
+To consider: Why might we distrust one application more than the other?
+
+## Configuration
+
+We will show you how to configure York for the next part of the exercise.
+
+Wireshark users may wish to reference a 
+[PDF](https://canvas.uw.edu/courses/1020726/files/33769006/download?wrap=1) 
+with screenshots of Wireshark usage for this particular exercise. It also
+explains how the test website was configured for HTTP 
+[Basic Auth](https://en.wikipedia.org/wiki/Basic_access_authentication).
+
+If you are feeling really geeky, you can use 
+[tshark](https://www.wireshark.org/docs/man-pages/tshark.html), the CLI for 
+Wireshark. Hints are available in 
+[Canvas](https://canvas.uw.edu/courses/1020726/pages/demo-the-value-of-encryption).
+
+## Packet sniffing
+
+To see network data, you will see a demonstration of York (and maybe Wireshark) for
+"sniffing" network "packets". Once your packet sniffing application has been
+configured, load the webpage: 
+[http://staff.washington.edu/high/rescomp](http://staff.washington.edu/high/rescomp)
+
+This page presents a login prompt. We will log in with a ficticous account:
+
+* Username: test
+* Password: sph
+
+This site was created just for this exercise. We would not normally use such a 
+simple password and we would certainly not publish the password on the web or
+put it in a presentation slide!
+
+## What to turn in
+
+If you have York or Wireshark running and configured properly, you should be 
+able to capture the username and password from the network packets that you 
+have sent to the webserver. 
+
+Please turn in a screen capture of the captured password as a PNG file or a 
+PDF document. (`tshark` users can turn in a text capture instead.)
+
+## Encryption of data "in motion"
+
+Next, we will repeat the previous exercise after we have enabled encryption.
+
+Start capturing packets again with York or Wireshark (or` tshark`).
+
+Simply add an "s" to "http" to get "https" -- and use that with the previous web 'address (URL): 
+
+[https://staff.washington.edu/high/rescomp](https://staff.washington.edu/high/rescomp)
+
+Load that address in your web browser and capture packets. See if you can find the
+packets containing the password.
+
+## What to turn in
+
+You should not be able to see the password. If you do, something went wrong. 
+So, ideally, there would just be encrypted text. York users would have nothing 
+to turn in.
+
+But you are using Wireshark (or tshark), 
+you should see the initiation of the encryption session. In those packets, you 
+should also see a certificate exchange. 
+
+So, Wireshark users, please capture at least one packet of this certificate 
+exchange and turn it in as text, PNG or PDF. We will show you how to do export 
+packet information from Wireshark as text.
+
+## What about wireless? U-Drive?
+
+So, we have seen that Ethernet traffic is not encrypted by default. You have to
+rely on specific protocols to use encryption.
+
+Is wireless (WiFi) encrypted? If not, how would you encrypt it?
+
+Are file transfers to the U-Drive encrypted? If not, how would you encrypt them?
+
+## Encryption of data "at rest"
+
+You can encrypt files and folders with popular compression utilities like 
+[7-Zip](http://www.7-zip.org/). You
+may have 7-Zip on your lab PC. If not, you can install it for free, either
+as the full application, or the 
+[PortableApp](http://portableapps.com/apps/utilities/7-zip_portable) version.
+
+7-Zip is free, open source, and supports many compression formats as well 
+as [NIST AES-256](http://www.nist.org/nist_plugins/content/content.php?content.39) 
+strong encryion.
+
+This level of encryption is recommended by the U.S. government for 
+[top secret](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+information.
+
+AES-256 is also used for lots of other applications, such as the 
+[LastPass](https://lastpass.com/support.php?cmd=showfaq&id=1096) password 
+manager.
+
+## Further protect data with backups
+
+[RoboCopy](https://technet.microsoft.com/en-us/magazine/ee851678.aspx) is a 
+very popular utility to make backups of Windows machines from the command-line.
+
+We have a DOS script called 
+[mirror.bat](https://github.com/brianhigh/research-computing/blob/master/lab/scripts/mirror.bat) 
+that we have shared with you. This script makes it very 
+easy to use RoboCopy to "mirror" a folder and then "sync" it once it has been 
+mirrored. Feel free to give this a try with a folder on your computer. 
+
+You can mirror "to" or "from" the U:\ drive and then try a sync after changing 
+a file. Was the sync faster that the original mirror? If so, what made it 
+faster? Would simply copying the entire folder over (each time you sync) be 
+just as fast?
+
+## mirror.bat example
+
+Here is how to use the script to backup "MyFolder" from "Documents" to U:
+
+First create the destination folder, then run `mirror.bat`:
+
+```
+C:\Users\xxxxx\Documents\> mkdir U:\MyFolder
+C:\Users\xxxxx\Documents\> mirror.bat MyFolder U:\MyFolder
+```
+
+The backup.log file should be in `U:\MyFolder`. If you run the same command a 
+second time, the backup will be overwritten.
+
+## Encrypted backups
+
+But is sending files over the network in this way secure? Is it encrypted?
+
+Could you use 7-Zip with mirror.bat (or similar) to automate AES-256 encrypted
+backups? Would syncing of encrypted backups also benefit from the efficient syncing
+ability of RoboCopy? If you have the time and interest, give this idea a try.
+
+## What to turn in
+
+If you had time to try `mirror.bat`, please turn in the first few lines of the 
+log which show the RoboCopy options and arguments and last few lines of the log
+which indicate the transfer stats for the mirror/sync operation. 
+
+This will
+indicate that you have successfully used this script to perform the backup. You
+do not need to turn in the whole logfile, nor do we need to see anything in
+the logfile found between those two sections of the file, such as the long
+list of filenames.
+
+## What to turn in: head and tail example
+
+Here is an example of how you can easily capture the beginning and ending of 
+the logfile using the `head` and `tail` commands from the `bash` shell:
+
+```
+$ head -20 backup.log > backup_report.txt
+$ tail -11 backup.log >> backup_report.txt
+```
+
+Now, the file `backup_report.txt` can be turned in.
+
+## Other backup options
+
+There are other fancier backup tools, of course. The purpose of sharing this
+simple script is to show how backups can be implemented with basic tools. 
+
+Unix, Linux and Mac systems often come with 
+[rsync](https://en.wikipedia.org/wiki/Rsync) and there are lots of 
+tutorials available online on how to use it. Rsync can use SSH for encryption.
+
+Another option that will provide a graphical user interface and AES-256 encryption 
+is [Duplicati](http://www.duplicati.com/). We will not have time to try this in
+the lab, but you might like to explore it (or other similar tools) on your own.
+
+What do you do for backups? Are they encrypted?

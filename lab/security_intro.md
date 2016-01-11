@@ -18,7 +18,7 @@ your network traffic.
 > [legal](http://mcaf.ee/cryptolaw) or institutional restrictions on their
 > use. Please consult with your information security officer for details.
 
-## York or Wireshark
+## Install York or Wireshark
 
 For this exercise, you will need to install one of the two applications 
 listed below. York is easier to use. Wireshark is more instructive, but also 
@@ -28,7 +28,7 @@ more advanced.
 * [Wireshark](https://www.wireshark.org/download.html) (for advanced use)
 
 As we do not *entirely* trust the "York" application, please do *not* install 
-it on your own personally-owner computer and please *reboot* your PC *after* 
+it on your personally-owned computer and please *reboot* your PC *after* 
 you are done with this exercise so that the lab PC will be restored to its 
 original state.
 

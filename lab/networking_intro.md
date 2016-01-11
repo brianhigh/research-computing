@@ -68,6 +68,7 @@ then we will connect using SSH (using Putty), and then try SFTP (using
 FileZilla or WinSCP). Lastly, we will demonstrate how to connect with X2Go
 as well. You do not have to do this yourselves, just watch the demo for now.
 
+
 ## Server Performance
 
 You may notice that some tasks are much faster to run on Phage. Here, we use 
@@ -89,6 +90,7 @@ sys	0m0.483s
 
 In both cases, the script was ended by closing Meld once the differences had 
 been displayed.
+
 
 ## Discussion
 
@@ -158,7 +160,7 @@ this option. `-I` specifies to use ICMP packets.
 The DOS command, `tracert` uses ICMP by default:
 
 ```
-C:\> tracert who.int
+> tracert who.int
 ```
 
 
@@ -210,11 +212,143 @@ PS C:\> gc whois.txt | select -first 11
 As you can see, you have to type a lot more in Powershell to get the same results.
 
 
+## About your network interface
+
+For you to be able to access hosts on the Internet and local network, your
+computer needs to have a network interface. Usually this is either an 
+"Ethernet" (wired) interface or a wireless (e.g. "WiFi") interface.
+
+You can find out about the network interfaces on your computer with `ipconfig` 
+for Windows (DOS) and `ifconfig` for Linux, Unix, and OSX.
+
+Run this in DOS (or Powershell):
+
+```
+> ipconfig /all
+```
+
+You will see hostnames, IP addresses, connection status, default gateway, and 
+DNS servers. We will learn about all of these today and why they matter.
+
+
+## The domain name system (DNS)
+
+We have domain names like `udrive.uw.edu` and numerical addresses like 
+`128.95.155.222`. How are they connected?
+
+The domain name system (DNS) is a distributed database on the Internet that
+provides the ability to look up and translate back and forth between domain
+names and numerical IP addresses. Here is a DNS lookup of Phage:
+
+```
+$ host phage.deohs.washington.edu
+phage.deohs.washington.edu has address 128.95.230.32
+```
+
+```
+$ host 128.95.230.32
+32.230.95.128.in-addr.arpa domain name pointer phage.deohs.washington.edu.
+```
+
+Look up the IP address of `udrive.uw.edu` with the `host` command. Do you
+see anything interesting?
+
+
+## DNS lookups with nslookup
+
+Here is an example DNS query from Windows (DOS) using `nslookup`:
+
+```
+> nslookup -querytype=any udrive.uw.edu
+```
+
+Try this for yourself and see what results you get back.
+
+
+## DNS lookups with dig
+
+In Linux, Unix, or OSX, you could run:
+
+```
+dig udrive.uw.edu
+```
+
+Dig is also available for Windows, but does not come with it pre-installed.
+
+Try looking up DNS information on some other domains. What does this tell
+you about them that the other tools did not tell you?
+
+
+## DNS in practice
+
+When you type a domain name in a web browser,
+a DNS lookup will take so that you computer can send packets to the IP address
+of the web server. 
+
+Understanding just this much about DNS may help you when troubleshooting
+networking problems with your computer. What if you can reach a host by IP
+address but not by domain name? What does this tell you? How can you confirm 
+this?
+
+We already know how to `ping` internet hosts to verify connectivity. We can
+`ping` by DNS hostname or by IP address. And we now know how to look up
+one given the other. If any of those tasks fail, we know a little more about
+the source of our network troubles. 
+
+
+## Network routing
+
+To get to remote hosts, your computer needs to know how to find them. Once
+the DNS lookup has provided the IP address, the computer has to determine
+how to route the traffic. 
+
+If you only have one network interface, and you
+are on a network with only one router, this is simple. If the remote host
+is on the same network segment, just send the traffic directly to the host.
+Otherwise, send to the router. 
+
+That "nearest" router is your "default route" or "default gateway".
+
+
+## View your routing table
+
+`ipconfig` (or `ifconfig`) showed us the address of our default gateway. But
+what if we have other options? You can see your computer's routing table with
+the `route` command or the `netstat` command.
+
+DOS:
+
+```
+> route print
+```
+
+Linux, Unix, or OSX:
+
+```
+$ route -n
+```
+
+## Confirm connectivity
+
+Ping your default gateway IP address to confirm you can reach it. When you
+have network problems, sometimes you can reach your gateway, but you can't
+reach beyond that. What does this tell you?
+
+If your home Internet connection wasn't working, and you could not do DNS 
+lookups, you would have trouble reaching websites. But you might be able to
+ping your home Internet router (or DSL or cable modem). This would tell you
+that your network device was "up" even though your link to the outside was "down".
+
+On the other hand if you could not even ping your default gateway, your network
+device may have lost power or simply need a reboot.
+
+
 ## What to turn in
 
 You will be expected to turn in your command history and output into
 Canvas, either as pasted text or as a plain-text file (with a `.txt` file
 suffix) attachment. We used this same method for completing last week's lab.
+
 
 ## Your R environment
 
@@ -228,11 +362,12 @@ RStudio, but not Git. We use Git to fetch the code from the web, so Git is
 pretty important. You can install Git on your lab PC at the beginning of class
 if you prefer not to use the server.
 
+
 ## Visualize with route maps (in R)
 
 You will also be making some network route maps using R. Here is an example: 
 
-![](networking_intro_files/figure-html/unnamed-chunk-1-1.png) 
+![](networking_intro_files/figure-html/unnamed-chunk-1-1.png)\
 
 
 ## What to turn in
@@ -251,7 +386,7 @@ too easy.
 You can use [Visual Tracert](http://www.yougetsignal.com/tools/visual-tracert/)
 to make a route map in your web browser (without using R).
 
-![](networking_intro_files/figure-html/unnamed-chunk-2-1.png) 
+![](networking_intro_files/figure-html/unnamed-chunk-2-1.png)\
 
 
 ## Making screenshots

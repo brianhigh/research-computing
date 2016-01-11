@@ -52,6 +52,63 @@ Save the output of this command with:
 Please save and turn in the text output from the command which shows your link
 speed. We will show you how to capture this as text. 
 
+## Computer specifications
+
+If we wanted to explore the performance issue futher, we could query the PC
+for its specifications and search online for reviews and benchmarks.
+
+```
+> wmic computersystem get model,name,manufacturer,systemtype
+Manufacturer     Model                    Name     SystemType
+Hewlett-Packard  HP EliteDesk 800 G1 SFF  LIB-C25  x64-based PC
+
+> wmic bios get serialnumber
+SerialNumber
+MXL532164G
+```
+
+Online reviews show this model to be a no-frills business desktop computer.
+
+## cpu information
+
+This computer has a quad-core Intel i5-4590 processor @ 3.30GHz.
+
+```
+> wmic cpu get Name
+Name
+Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz
+
+> wmic cpu get NumberOfCores, NumberOfLogicalProcessors
+NumberOfCores  NumberOfLogicalProcessors
+4              4
+
+> wmic path Win32_WinSAT get CPUScore, D3DScore, DIskScore, Graphics
+Score, MemoryScore, WinSPRLevel
+CPUScore  D3DScore  DiskScore  GraphicsScore  MemoryScore  WinSPRLevel
+7.6       6.6       5.9        5.1            7.6          5.1
+```
+
+Online benchmarks show this is a midrange CPU.
+
+## Operating system version and build
+
+This computer is running Windows 7 Enterprise.
+
+```
+> wmic os get Name
+Name
+Microsoft Windows 7 Enterprise |C:\Windows|\Device\Harddisk0\Partition1
+
+> wmic os get BuildNumber, BuildType, Version
+BuildNumber  BuildType            Version
+7601         Multiprocessor Free  6.1.7601
+```
+
+This information, plus the hardware specs shown previously, could be helpful
+when troubleshooting performance problems.
+
+However, we will instead look to our server for better performance. It has
+already been configured and it ready to use.
 
 ## Connecting to our server
 

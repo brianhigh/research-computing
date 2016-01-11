@@ -109,7 +109,32 @@
           </hgroup>
   </slide>
 
-<slide class=''><hgroup><h2>See network data &quot;in transit&quot;</h2></hgroup><article  id="see-network-data-in-transit">
+<slide class=''><hgroup><h2>Information Security Lab Exercise</h2></hgroup><article  id="information-security-lab-exercise">
+
+<p><strong><em>Today&#39;s agenda:</em></strong></p>
+
+<ul>
+<li>Security bulletins and updates (10 min.)</li>
+<li>See network data &quot;in transit&quot; (20 min.)</li>
+<li>Encryption of data &quot;at rest&quot; (5 min.)</li>
+<li>Further protect data with backups (15 min.)</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Security bulletins and updates</h2></hgroup><article  id="security-bulletins-and-updates">
+
+<p>Lastly, we will take a quick look at <a href='https://www.us-cert.gov/' title=''>US CERT</a>, a good source for <a href='https://www.us-cert.gov/ncas/bulletins/SB16-011' title=''>vulnerablity summaries</a>, <a href='https://www.kb.cert.org/vuls/' title=''>vulnerability notes</a> and <a href='https://www.us-cert.gov/ncas/current-activity' title=''>current activity</a>.</p>
+
+<p>We have a R script that will help you view and analyze recent bulletins:</p>
+
+<ul>
+<li><a href='https://github.com/brianhigh/us-cert-bulletins' title=''>us-cert-bulletins</a></li>
+</ul>
+
+<p>You can scroll down from that link and just look at the sample output, updated for today&#39;s lab. (Or you can clone the repo and run the script.) You will see a list of recent vulnerabilities and a plot of severity.</p>
+
+<p>Do you run any of these applications? Are you up-to-date? Do these applications automatically update themeselves or do you have to do updates manually?</p>
+
+</article></slide><slide class=''><hgroup><h2>See network data &quot;in transit&quot;</h2></hgroup><article  id="see-network-data-in-transit">
 
 <p>First, we will be look at the flow and contents of network data packets as they leave and enter our own computers.</p>
 
@@ -249,21 +274,7 @@ $ tail -11 backup.log &gt;&gt; backup_report.txt</pre>
 
 <p>Another option that will provide a graphical user interface and AES-256 encryption is <a href='http://www.duplicati.com/' title=''>Duplicati</a>. We will not have time to try this in the lab, but you might like to explore it (or other similar tools) on your own.</p>
 
-<p>What do you do for backups? Are they encrypted?</p>
-
-</article></slide><slide class=''><hgroup><h2>Security bulletins and updates</h2></hgroup><article  id="security-bulletins-and-updates">
-
-<p>Lastly, we will take a quick look at <a href='https://www.us-cert.gov/' title=''>US CERT</a>, a good source for <a href='https://www.us-cert.gov/ncas/bulletins/SB16-011' title=''>vulnerablity summaries</a>, <a href='https://www.kb.cert.org/vuls/' title=''>vulnerability notes</a> and <a href='https://www.us-cert.gov/ncas/current-activity' title=''>current activity</a>.</p>
-
-<p>We have a R script that will help you view and analyze recent bulletins:</p>
-
-<ul>
-<li><a href='https://github.com/brianhigh/us-cert-bulletins' title=''>us-cert-bulletins</a></li>
-</ul>
-
-<p>You can scroll down from that link and just look at the sample output, updated for today&#39;s lab. (Or you can clone the repo and run the script.) You will see a list of recent vulnerabilities and a plot of severity.</p>
-
-<p>Do you run any of these applications? Are you up-to-date? Do these applications automatically update themeselves or do you have to do updates manually?</p></article></slide>
+<p>What do you do for backups? Are they encrypted?</p></article></slide>
 
 
   <slide class="backdrop"></slide>

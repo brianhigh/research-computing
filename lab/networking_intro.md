@@ -2,6 +2,18 @@
 [Brian High](https://github.com/brianhigh)  
 ![CC BY-SA 4.0](cc_by-sa_4.png)  
 
+## Networking Lab Exercise
+
+***Today's agenda:***
+
+* Debrief from last week's lab (5 min.)
+* Network Speed (5 min.)
+* Computer specifications (5 min.)
+* Connecting to our server (10 min.)
+* Explore with command-line utilities (15 min.)
+* Visualize with route maps (in R) (15 min.)
+* Making screenshots (5 min.)
+
 ## Network Speed
 
 Last time, we noticed some performance issues when we tried to install software

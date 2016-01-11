@@ -2,6 +2,35 @@
 [Brian High](https://github.com/brianhigh)  
 ![CC BY-SA 4.0](cc_by-sa_4.png)  
 
+## Information Security Lab Exercise
+
+***Today's agenda:***
+
+* Security bulletins and updates (10 min.)
+* See network data "in transit" (20 min.)
+* Encryption of data "at rest" (5 min.)
+* Further protect data with backups (15 min.)
+
+
+## Security bulletins and updates
+
+Lastly, we will take a quick look at [US CERT](https://www.us-cert.gov/), 
+a good source for 
+[vulnerablity summaries](https://www.us-cert.gov/ncas/bulletins/SB16-011), 
+[vulnerability notes](https://www.kb.cert.org/vuls/) and 
+[current activity](https://www.us-cert.gov/ncas/current-activity).
+
+We have a R script that will help you view and analyze recent bulletins:
+
+* [us-cert-bulletins](https://github.com/brianhigh/us-cert-bulletins)
+
+You can scroll down from that link and just look at the sample output, 
+updated for today's lab. (Or you can clone the repo and run the script.) You 
+will see a list of recent vulnerabilities and a plot of severity.
+
+Do you run any of these applications? Are you up-to-date? Do these applications 
+automatically update themeselves or do you have to do updates manually?
+
 ## See network data "in transit"
 
 First, we will be look at the
@@ -208,22 +237,3 @@ is [Duplicati](http://www.duplicati.com/). We will not have time to try this in
 the lab, but you might like to explore it (or other similar tools) on your own.
 
 What do you do for backups? Are they encrypted?
-
-## Security bulletins and updates
-
-Lastly, we will take a quick look at [US CERT](https://www.us-cert.gov/), 
-a good source for 
-[vulnerablity summaries](https://www.us-cert.gov/ncas/bulletins/SB16-011), 
-[vulnerability notes](https://www.kb.cert.org/vuls/) and 
-[current activity](https://www.us-cert.gov/ncas/current-activity).
-
-We have a R script that will help you view and analyze recent bulletins:
-
-* [us-cert-bulletins](https://github.com/brianhigh/us-cert-bulletins)
-
-You can scroll down from that link and just look at the sample output, 
-updated for today's lab. (Or you can clone the repo and run the script.) You 
-will see a list of recent vulnerabilities and a plot of severity.
-
-Do you run any of these applications? Are you up-to-date? Do these applications 
-automatically update themeselves or do you have to do updates manually?

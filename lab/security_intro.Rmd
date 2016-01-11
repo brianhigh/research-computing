@@ -217,3 +217,20 @@ is [Duplicati](http://www.duplicati.com/). We will not have time to try this in
 the lab, but you might like to explore it (or other similar tools) on your own.
 
 What do you do for backups? Are they encrypted?
+
+## Security bulletins and updates
+
+Lastly, we will take a quick look at a good source for security bulletins: US CERT.
+
+We have a R script that will help you view and analyze recent bulletins:
+
+* [us-cert-bulletins](https://github.com/brianhigh/us-cert-bulletins)
+
+Download this script (or use Git to clone the repo) and run it in RStudio.
+
+You will see a list of recent vulnerabilities and a plot of severity.
+
+Do you run any of these applications? Are are patches available? Have you 
+installed them? Do these applications automatically update themeselves or
+do you have to do updates manually? How would you keep up-to-date manually
+in a timely fashion?

@@ -2,7 +2,7 @@
 [Brian High](https://github.com/brianhigh)  
 ![CC BY-SA 4.0](cc_by-sa_4.png)  
 
-## See network data in transit
+## See network data "in transit"
 
 First, we will be look at the
 flow and contents of network data packets as they leave and enter our
@@ -17,6 +17,8 @@ your network traffic.
 > Tools that perform encryption or network reconnaissance may have
 > [legal](http://mcaf.ee/cryptolaw) or institutional restrictions on their
 > use. Please consult with your information security officer for details.
+
+***This exercise is entirely optional. You can skip this if you like.***
 
 ## Install York or Wireshark
 

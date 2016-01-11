@@ -30,7 +30,7 @@ Type this command to see the link speed for all enabled interfaces:
 > wmic NIC where NetEnabled=true get Name, Speed
 ```
 
-This is in units of bps, to divide by 1000000 for Mbps or 1000000000 for Gbps.
+This is in units of bps, so divide by 1,000,000 for Mbps or 1,000,000,000 for Gbps.
 
 Save the output of this command with:
 

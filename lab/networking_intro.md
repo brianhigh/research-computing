@@ -267,10 +267,10 @@ Try this for yourself and see what results you get back.
 
 ## DNS lookups with dig
 
-In Linux, Unix, or OSX, you could run:
+In Linux, Unix, or OSX, assuming `dig` in installed, you could run:
 
 ```
-dig udrive.uw.edu
+$ dig udrive.uw.edu
 ```
 
 Dig is also available for Windows, but does not come with it pre-installed.
@@ -296,16 +296,18 @@ one given the other. If any of those tasks fail, we know a little more about
 the source of our network troubles. 
 
 
-## Network routing
+## Network routing and gateways
 
 To get to remote hosts, your computer needs to know how to find them. Once
 the DNS lookup has provided the IP address, the computer has to determine
 how to route the traffic. 
 
 If you only have one network interface, and you
-are on a network with only one router, this is simple. If the remote host
+are on a network with only one router, this is simple. 
+
+* If the remote host
 is on the same network segment, just send the traffic directly to the host.
-Otherwise, send to the router. 
+* Otherwise, send to the nearest router -- the one on your network segment. 
 
 That "nearest" router is your "default route" or "default gateway".
 
@@ -322,11 +324,10 @@ DOS:
 > route print
 ```
 
-Linux, Unix, or OSX:
+On Linux, try `route -nev` or on OSX, try `netstat -nr`.
 
-```
-$ route -n
-```
+Do you see your own interface name and your default gateway IP address? If you
+had multiple active interfaces, you would see more lines in the routing table.
 
 ## Confirm connectivity
 

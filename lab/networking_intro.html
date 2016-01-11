@@ -294,9 +294,9 @@ phage.deohs.washington.edu has address 128.95.230.32</pre>
 
 </article></slide><slide class=''><hgroup><h2>DNS lookups with dig</h2></hgroup><article  id="dns-lookups-with-dig">
 
-<p>In Linux, Unix, or OSX, you could run:</p>
+<p>In Linux, Unix, or OSX, assuming <code>dig</code> in installed, you could run:</p>
 
-<pre >dig udrive.uw.edu</pre>
+<pre >$ dig udrive.uw.edu</pre>
 
 <p>Dig is also available for Windows, but does not come with it pre-installed.</p>
 
@@ -310,11 +310,16 @@ phage.deohs.washington.edu has address 128.95.230.32</pre>
 
 <p>We already know how to <code>ping</code> internet hosts to verify connectivity. We can <code>ping</code> by DNS hostname or by IP address. And we now know how to look up one given the other. If any of those tasks fail, we know a little more about the source of our network troubles.</p>
 
-</article></slide><slide class=''><hgroup><h2>Network routing</h2></hgroup><article  id="network-routing">
+</article></slide><slide class=''><hgroup><h2>Network routing and gateways</h2></hgroup><article  id="network-routing-and-gateways">
 
 <p>To get to remote hosts, your computer needs to know how to find them. Once the DNS lookup has provided the IP address, the computer has to determine how to route the traffic.</p>
 
-<p>If you only have one network interface, and you are on a network with only one router, this is simple. If the remote host is on the same network segment, just send the traffic directly to the host. Otherwise, send to the router.</p>
+<p>If you only have one network interface, and you are on a network with only one router, this is simple.</p>
+
+<ul>
+<li>If the remote host is on the same network segment, just send the traffic directly to the host.</li>
+<li>Otherwise, send to the nearest router &#8211; the one on your network segment.</li>
+</ul>
 
 <p>That &quot;nearest&quot; router is your &quot;default route&quot; or &quot;default gateway&quot;.</p>
 
@@ -326,9 +331,9 @@ phage.deohs.washington.edu has address 128.95.230.32</pre>
 
 <pre >&gt; route print</pre>
 
-<p>Linux, Unix, or OSX:</p>
+<p>On Linux, try <code>route -nev</code> or on OSX, try <code>netstat -nr</code>.</p>
 
-<pre >$ route -n</pre>
+<p>Do you see your own interface name and your default gateway IP address? If you had multiple active interfaces, you would see more lines in the routing table.</p>
 
 </article></slide><slide class=''><hgroup><h2>Confirm connectivity</h2></hgroup><article  id="confirm-connectivity">
 

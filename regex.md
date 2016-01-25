@@ -186,40 +186,54 @@ To try text replacement at Regex101, press the (+) button next to the SUBSTITUTI
 
 
 
-## Next: Lab Exercise
+## Up Next: A Lab Exercise
+
+We will spend a few minutes doing a text replacement exercise using
+regular expressions. The specific details of the exercise will 
+be explained in the next few slides.
 
 *_What to turn in_*:
 
-Please turn in your final text output and the search (match) expressions and replacement expressions you used to get your list.
+Please turn in your final text output and the search (match) expressions
+and replacement expressions you will use to get your output.
 
-## Change location format
+You can turn in PNG image screenshots, pasted text, text files, or PDFs
+containing these outputs. There is no need to make a fancy report. Just
+collect the expressions and output and turn it in.
 
-Given these locations:
+Note: If you want to do this exercise in a programming language, feel 
+free to do so.
+
+Okay, let's get started!
+
+## Change geo-location format
+
+Given these cities and their coordinates:
 
 ```
 Seattle: 47.6097° N, 122.3331° W
 Paris: 48.8567° N, 2.3508° E
-Bogotá: 4.5981° N, 74.0758° W
 Adelaide: 34.9290° S, 138.6010° E
 Casablanca: 33.5333° N, 7.5833° W
 Beijing: 39.9167° N, 116.3833° E
 Tokyo: 35.6833° N, 139.6833° E
 ```
 
-Change the locations to used the signed format:
+Change the coordinates to used a signed format:
 
 * Precede S latitudes and W longitudes with a minus sign.
-* Remove the N, S, E, and W compass directions.
+* Remove the N, S, E, and W compass direction characters.
 
 Do this in two steps (two sets of expressions). So, after your first step, copy the output text and paste it as the input string.
 
 
 
-## Create URL with query string
+## Create URLs with a query string
 
-Now that you have the coordinates in the signed format, try to more substitution steps:
+Now that you have the coordinates in the signed format, try some more substitution steps:
 
-* Replace the comma-space (", ") with "%2C+".
+* Replace the comma-space (", ") with "%2C+". (Called "URL-encoding".)
+* Replace the degree symbol (°) with "%b0". (More "URL-encoding".)
 * Replace the city names and colon-space (": ") with this URL string:
 
 ```
@@ -229,7 +243,7 @@ https://www.google.com/search?q=
 This should convert all locations URLs to a format like this:
 
 ```
-https://www.google.com/search?q=47.6097°%2C+-122.3331°
+https://www.google.com/search?q=47.6097%b0%2C+-122.3331%b0
 ```
 
 ... which you can use to find the specific locations of the coordinates.
@@ -242,7 +256,7 @@ Tip: These can use literal expressions with no need to group and capture.
 
 ## More resources
 
-Tutorials an reference information:
+Tutorials and reference information:
 
 * [http://www.regular-expressions.info](http://www.regular-expressions.info)
 

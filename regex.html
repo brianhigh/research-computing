@@ -459,7 +459,7 @@ eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06</pre>
 
 <p>You can use pattern matching (and group-capture) for replacement (substitution).</p>
 
-<p>Your replacement string may contain variables (\1, \2, etc.) to represent captured strings.</p>
+<p>Your replacement string may contain variables (\1, \2, etc.) to represent captured strings. Replacement strings are not regular expressions. They just contain literal characters and variables.</p>
 
 <p>In this example, we will take a name, &quot;First Last&quot;, and convert it to &quot;Last, First&quot;.</p>
 
@@ -521,7 +521,7 @@ Paris: 48.8567° N, 2.3508° E
 Adelaide: 34.9290° S, 138.6010° E
 Casablanca: 33.5333° N, 7.5833° W
 Beijing: 39.9167° N, 116.3833° E
-Tokyo: 35.6833° N, 139.6833° E</pre>
+Rio de Janeiro: 22.9068° S, 43.1729° W</pre>
 
 <p>Change the coordinates to use a signed format:</p>
 
@@ -532,25 +532,25 @@ Tokyo: 35.6833° N, 139.6833° E</pre>
 
 <p>Do this in two steps (two sets of expressions). So, after your first step, copy the output text and paste it as the input string. Keep a text editor window open to keep a record of your work and serve as a &quot;text buffer&quot;.</p>
 
-</article></slide><slide class=''><hgroup><h2>Create URLs with a query string</h2></hgroup><article  id="create-urls-with-a-query-string" class="smaller ">
+</article></slide><slide class=''><hgroup><h2>Create URLs from coordinates</h2></hgroup><article  id="create-urls-from-coordinates" class="smaller ">
 
 <p>Now that you have the coordinates in the signed format, try some more substitution steps:</p>
 
 <ul>
-<li>Replace the comma-space (&quot;, &quot;) with &quot;%2C+&quot;. (Called &quot;URL-encoding&quot;.)</li>
-<li>Replace the degree symbol (°) with &quot;%b0&quot;. (More &quot;URL-encoding&quot;.)</li>
+<li>Replace the comma-space (&quot;, &quot;) with a plus symbol (+).</li>
+<li>Remove the degree symbol (°).</li>
 <li>Replace the city names and colon-space (&quot;: &quot;) with this URL string:</li>
 </ul>
 
-<pre >https://www.google.com/search?q=</pre>
+<pre >https://www.google.com/maps/place/</pre>
 
-<p>This should convert all locations URLs to a format like this:</p>
+<p>This should convert all locations to URLs in a format like this:</p>
 
-<pre >https://www.google.com/search?q=47.6097%b0%2C+-122.3331%b0</pre>
+<pre >https://www.google.com/maps/place/35.6833+139.6833</pre>
 
-<p>&#8230; which you can use to find the specific locations of the coordinates.</p>
+<p>&#8230; which you can use to get maps of the locations.</p>
 
-<p>Tip: These replacements can use literal expressions with no need to group and capture. They should be very simple replacements, like a normal &quot;search and replace&quot; you would perform in any document editor.</p>
+<p>Tip: Although you could do all three replacements in one regular expression substitution, you can also use three separate literal substitutions.</p>
 
 </article></slide><slide class=''><hgroup><h2>How could we do this in R?</h2></hgroup><article  id="how-could-we-do-this-in-r" class="smaller ">
 
@@ -580,6 +580,7 @@ Tokyo: 35.6833° N, 139.6833° E</pre>
 
 <ul>
 <li><a href='http://practicalcomputing.org/' title=''>Practical Computing for Biologists</a></li>
+<li><a href='http://shop.oreilly.com/product/0636920030157.do' title=''>Bioinformatics Data Skills</a></li>
 <li><a href='http://shop.oreilly.com/product/9780596528126.do' title=''>Mastering Regular Expressions, 3rd Edition</a></li>
 </ul></article></slide>
 

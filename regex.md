@@ -254,7 +254,8 @@ the can be the source of subtle "bugs", hard to troubleshoot later.
 You can use pattern matching (and group-capture) for replacement (substitution).
 
 Your replacement string may contain variables (\\1, \\2, etc.) to represent 
-captured strings.
+captured strings. Replacement strings are not regular expressions. They just
+contain literal characters and variables.
 
 In this example, we will take a name, "First Last", and convert it to "Last, First".
 
@@ -328,7 +329,7 @@ Paris: 48.8567° N, 2.3508° E
 Adelaide: 34.9290° S, 138.6010° E
 Casablanca: 33.5333° N, 7.5833° W
 Beijing: 39.9167° N, 116.3833° E
-Tokyo: 35.6833° N, 139.6833° E
+Rio de Janeiro: 22.9068° S, 43.1729° W
 ```
 
 Change the coordinates to use a signed format:
@@ -342,30 +343,29 @@ window open to keep a record of your work and serve as a "text buffer".
 
 
 
-## Create URLs with a query string
+## Create URLs from coordinates
 
 Now that you have the coordinates in the signed format, try some more 
 substitution steps:
 
-* Replace the comma-space (", ") with "%2C+". (Called "URL-encoding".)
-* Replace the degree symbol (°) with "%b0". (More "URL-encoding".)
+* Replace the comma-space (", ") with a plus symbol (+).
+* Remove the degree symbol (°).
 * Replace the city names and colon-space (": ") with this URL string:
 
 ```
-https://www.google.com/search?q=
+https://www.google.com/maps/place/
 ```
 
-This should convert all locations URLs to a format like this:
+This should convert all locations to URLs in a format like this:
 
 ```
-https://www.google.com/search?q=47.6097%b0%2C+-122.3331%b0
+https://www.google.com/maps/place/35.6833+139.6833
 ```
 
-... which you can use to find the specific locations of the coordinates.
+... which you can use to get maps of the locations.
 
-Tip: These replacements can use literal expressions with no need to group 
-and capture. They should be very simple replacements, like a normal "search
-and replace" you would perform in any document editor.
+Tip: Although you could do all three replacements in one regular expression
+substitution, you can also use three separate literal substitutions.
 
 ## How could we do this in R?
 
@@ -390,4 +390,5 @@ Videos:
 Books:
 
 * [Practical Computing for Biologists](http://practicalcomputing.org/)
+* [Bioinformatics Data Skills](http://shop.oreilly.com/product/0636920030157.do)
 * [Mastering Regular Expressions, 3rd Edition](http://shop.oreilly.com/product/9780596528126.do)

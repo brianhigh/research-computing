@@ -12,10 +12,10 @@ A powerful, flexible, nearly universal "wildcard" syntax is available to you.
 It is called, "Regular Expressions", among other names...
 
 Regular expressions are "wildcard" search patterns that can be used to _match_
-text and also to help replace text. They use a special syntax which we will 
+text and also to help _replace_ text. They use a special syntax which we will 
 learn today.
 
-Regular expressions are supported by applications such as MS-Word, NotePad++,
+Regular expressions are supported by applications such as MS-Word, Notepad++,
 TextWrangler, jEdit, Gedit, and RStudio. They are also supported by programming
 languages like Perl, Python, JavaScript, R, C#, and Bash.
 
@@ -70,11 +70,11 @@ Matches:
 * With nothing else remaining in the string (or line)
 * Regardless of the case of any of the letters (upper or lower).
 
-So, it matches the common terms used for "Regular Expressions".
+So, it matches the common terms used for "Regular Expressions", like "regex".
 
 ## Pattern Modifiers
 
-We used a pattern modifer "i" for "case insensitive". We will be using
+We used a pattern modifer `i` for "case insensitive". We will be using
 some others today as well. We need them in order to control the usage modes
 of our regular expressions.
 
@@ -89,15 +89,13 @@ m         | multiline  | ^$ applies to lines _and_ strings
 g         | global     | find _all_ matches in string
 
 
-Complicated, isn't it? _Don't worry, help is on the way!_
-
 ## Regular Expressions Tester: Regex101.com
 
 ![Regex101](images/regex101_sm.png)
 
 ## Character classes
 
-Beyond simple literal matches, we can also match by character classes.
+Beyond simple literal matches, we can also match by "character classes".
 
 A character class a list of one or more characters of a certain 
 type that you want to match. It is represented by a special symbol or group
@@ -122,10 +120,12 @@ Symbol(s)      | Meaning
 [A-Za-z]       | alphabet letters
 [A-Z]          | upper-case alphabet letters
 [a-z]          | lower-case alphabet letters
-[0-9.]         | digits and decimal (period)
-[0-9A-Fa-f:-]  | hexadecimal digits plus colon and dash
+[0-9.-]        | digits, decimal (period), and dash (minus sign)
+[0-9A-Fa-f]    | hexadecimal digits
 [01]           | binary digits
-[^abc]         | ^ as first item means "not one of these"
+[^aeiou]       | ^ as first item means "not one of these"
+
+So, `(a|b)` is like to `[ab]`, meaning "a or b". `[a-b]` means "a to b".
 
 ## POSIX character classes
 
@@ -160,7 +160,7 @@ Symbol(s) | Meaning
 {n,}      | n or more
 {,m}      | at most m
 
-So, X+ means one or more X and (ant|bear)* means 0, 1, or more ant or bear.
+So, `X+` means one or more "X" and `(deer|elk)*` means 0, 1, or more "deer or elk".
 
 ## Backslashes
 
@@ -175,12 +175,12 @@ These characters become special when preceded by a backslash.
 dswbDSWBntr
 ```
 
-Capitalizing the letter will make it have an opposite meaning.
+Capitalizing the letter may give it an opposite meaning.
 
-\\D, \\S, \\W, and \\B mean the opposite of \\d, \\s, \\w, and \\b, respectively.
+`\D`, `\S`, `\W`, and `\B` mean the opposite of `\d`, `\s`, `\w`, and `\b`, respectively.
 
-So, for example, \\d (digit) and [0-9] mean the same thing and \\D (non-digit) 
-and [^0-9] mean the same thing.
+So, for example, `\d` (digit) and `[0-9]` mean the same thing and `\D` (non-digit) 
+and `[^0-9]` mean the same thing.
 
 There are a few [more of these](https://www.hscripts.com/tutorials/regular-expression/metacharacter-list.php).
 
@@ -195,25 +195,25 @@ These symbols need to be escaped to make them literal:
 {}[]()^$.|*+?\
 ```
 
-For example, if you want to include one of these special symbols as a 
+That is, if you want to include one of these special symbols as a 
 literal (ordinary) character, you may have to "escape" it with a backslash 
-to take away its special meaning. 
+to take away its special meaning. Example: `Wh(o|at|ere|en|y)\?`
 
-Escaping usually applies outside of character classes, [], not within them. 
+Escaping usually applies outside of character classes, `[]`, not within them. 
 This is because the square bracket notation implies most punctuation symbols are
 being used in their ordinary sense. There are exceptions to this (such as the
-[ and ] characters, which need to be escaped if within a character class).
+"[" and "]" characters, which need to be escaped if within a character class).
 
 ## Anchors
 
 Anchors are very special because they do not match any characters.
 
-For example, ^ and $ tie a match to a location: `^` = start, `$` = end.
+For example, `^` and `$` tie a match to a location: `^` = start, `$` = end.
 
-\\b is an anchor for a "word-boundary" -- the beginning or ending of a word or a string like a word.
+`\b` is an anchor for a "word-boundary" -- the beginning or ending of a word or a string like a word.
 
 That is, a word-boundary is a zero-width boundary between a word-class
-character (\w) and a non-word-class character (\W).
+character (`\w`) and a non-word-class character (`\W`).
 
 Why would you need that?
 
@@ -221,7 +221,7 @@ Why would you need that?
 
 Remember the `ifconfig` command that shows information about your network
 interface? How to we match _just_ the Ethernet hardware address (HWaddr) in
-the output from the `ifconfig` command? See the effect of \\b?
+the output from the `ifconfig` command? See the effect of `\b`?
 
 ![ifconfig grep for HWaddr](images/ifconfig_mac_regex.png)
 
@@ -247,15 +247,17 @@ preceding space. In many situations, this difference would
 matter.
 
 Try to make your expressions as precise as possible. Otherwise,
-the can be the source of subtle "bugs", hard to troubleshoot later.
+they can be the source of subtle "bugs", often hard to troubleshoot later.
 
 ## Find and Replace
 
-You can use pattern matching (and group-capture) for replacement (substitution).
+Parentheses also let you "capture" groups of characters for replacement. Each 
+group surrounded in parentheses can be referenced by a numbered variable in a 
+replacement string.
 
-Your replacement string may contain variables (\\1, \\2, etc.) to represent 
-captured strings. Replacement strings are not regular expressions. They just
-contain literal characters and variables.
+Replacement strings are not regular expressions. They just contain literal 
+characters and numbered variables (like `\1`, `\2`, etc. or sometimes `$1`, 
+`$2`, ...).
 
 In this example, we will take a name, "First Last", and convert it to "Last, First".
 
@@ -264,10 +266,10 @@ In this example, we will take a name, "First Last", and convert it to "Last, Fir
 * Replace: `\2, \1` 
 * Output: `Last, First` 
 
-Try this with your own name.
+Try this with your own name. To use text replacement at Regex101, press the 
+(+) button next to the SUBSTITUTION section heading.
 
-To use text replacement at Regex101, press the (+) button next to the 
-SUBSTITUTION section heading.
+Note: For non-capturing groups, use `(?:)` as in `Wh(?:o|at|ere|en|y)\?`
 
 ## Abbreviation Example
 
@@ -334,7 +336,7 @@ Rio de Janeiro: 22.9068° S, 43.1729° W
 
 Change the coordinates to use a signed format:
 
-* Precede S latitudes and W longitudes with a minus sign.
+* Precede S latitudes and W longitudes with a minus sign ("-").
 * Remove the N, S, E, and W compass direction characters.
 
 Do this in two steps (two sets of expressions). So, after your first step, 
@@ -348,8 +350,8 @@ window open to keep a record of your work and serve as a "text buffer".
 Now that you have the coordinates in the signed format, try some more 
 substitution steps:
 
-* Replace the comma-space (", ") with a plus symbol (+).
-* Remove the degree symbol (°).
+* Replace the comma-space (", ") with a plus symbol ("+").
+* Remove the degree symbol ("°").
 * Replace the city names and colon-space (": ") with this URL string:
 
 ```

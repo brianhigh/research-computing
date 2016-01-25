@@ -132,17 +132,15 @@ So, `(a|b)` is like to `[ab]`, meaning "a or b". `[a-b]` means "a to b".
 To make your expressions more readable, and to allow for more possible
 pre-defined and standard classes, we also have POSIX classes.
 
-Here are a few of these:
-
-| POSIX     |  Same as      |
-|-----------|---------------| 
-| [:alnum:] | [A-Za-z0-9]   |
-| [:alpha:] | [A-Za-z]      |
-| [:digit:] | [0-9]         |
-| [:lower:] | [a-z]         |
-| [:upper:] | [A-Z]         |
-| [:blank:] | [ \t]         |
-| [:space:] | [ \t\r\n\v\f] | 
+| POSIX     |  Same as [ ]      | Description         |
+|-----------|-------------------|---------------------| 
+| [:alnum:] | [A-Za-z0-9]       | alphabet and digits |
+| [:alpha:] | [A-Za-z]          | alphabet letters    |
+| [:digit:] | [0-9]             | digit, zero to nine |
+| [:lower:] | [a-z]             | lower case letter   |
+| [:upper:] | [A-Z]             | upper case letter   |
+| [:blank:] | [ \\t]            | space and tab       |
+| [:space:] | [ \\t\\r\\n\\v\\f]| all whitespace      | 
 
 Regex101.com does not support them, but R and many other languages do.
 

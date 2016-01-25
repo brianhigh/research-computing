@@ -7,9 +7,17 @@
 
 Ever need to search and replace text?
 
-A powerful, flexible, nearly universal "wildcard" syntax is available to you. For free!
+A powerful, flexible, nearly universal "wildcard" syntax is available to you. 
 
 It is called, "Regular Expressions", among other names...
+
+Regular expressions are "wildcard" search patterns that can be used to _match_
+text and also to help replace text. They use a special syntax which we will 
+learn today.
+
+Regular expressions are supported by applications such as MS-Word, NotePad++,
+TextWrangler, jEdit, Gedit, and RStudio. They are also supported by programming
+languages like Perl, Python, JavaScript, R, C#, and Bash.
 
 ## Regular Expressions Meta-Example
 
@@ -32,7 +40,7 @@ These are all common names for today's topic.
 
 ## WTF?
 
-Let's decode this: `/^Reg(exp?|ular Expression)s?$/`
+Let's decode this: `/^Reg(exp?|ular Expression)s?$/i`
 
 
 Symbol(s) | Meaning 
@@ -42,27 +50,33 @@ Symbol(s) | Meaning
 Reg       | Matches the text string "Reg" (literally)
 (stuff)   | Group stuff inside, and capture for later use
 (a\|b)    | Matches "a" _or_ "b"
-?         | Matches O or 1 of whater is directly to the left
+?         | Matches O or 1 of whatever is directly to the left
 $         | Matches the end of the text (or line)
+i         | Modifier to use "case insensitive mode"
 
 ## in english plz!
 
+The expression:
+
 ```
-/^Reg(exp?|ular Expression)s?$/
+/^Reg(exp?|ular Expression)s?$/i
 ```
 
 Matches:
 
-* A text string (or line) that starts (^) with "Reg"
+* A text string that starts with "Reg"
 * Followed by "ex" or "exp" or "ular Expression"
-* Followed by nothing or maybe by "s"
+* Followed by nothing, or maybe by an "s"
 * With nothing else remaining in the string (or line)
+* Regardless of the case of any of the letters (upper or lower).
 
 So, it matches the common terms used for "Regular Expressions".
 
 ## Pattern Modifiers
 
-But wait, what about the "img" stuff on the end, after the last /?
+We used a pattern modifer "i" for "case insensitive". We will be using
+some others today as well. We need them in order to control the usage modes
+of our regular expressions.
 
 ```
 /^Reg(exp?|ular Expression)s?$/img
@@ -85,6 +99,9 @@ Complicated, isn't it? _Don't worry, help is on the way!_
 
 Beyond simple literal matches, we can also match by character classes.
 
+A character class a list of one or more characters of a certain 
+type that you want to match. It is represented by a special symbol or group
+of symbols.
 
 Symbol(s) | Meaning 
 --------- | ------------- 
@@ -95,8 +112,6 @@ Symbol(s) | Meaning
 \\n       | newline (an end-of-line character)
 \\d       | digit
 .         | any character except end-of-line characters
-
-The backslash character \ gives special meaning to an ordinary character.
 
 ## Custom character classes
 
@@ -110,17 +125,49 @@ Symbol(s)      | Meaning
 [0-9.]         | digits and decimal (period)
 [0-9A-Fa-f:-]  | hexadecimal digits plus colon and dash
 [01]           | binary digits
+[^abc]         | ^ as first item means "not one of these"
 
-## Backslashes and Escapes
+## POSIX character classes
 
-If you want to include some of these special symbols as a literal string,
-you may have to "escape" it with a backslash.
+To make your expressions more readable, and to allow for more possible
+pre-defined and standard classes, we also have POSIX classes.
 
-These symbols need to be escaped to make them literal:
+Here are a few of these:
 
-```
-{}[]()^$.|*+?\
-```
+| POSIX     |  Same as    |
+|-----------|-------------| 
+| [:alnum:] | [A-Za-z0-9] |
+| [:alpha:] | [A-Za-z]    |
+| [:digit:] | [0-9]       |
+| [:lower:] | [a-z]       |
+| [:upper:] | [A-Z]       |
+| [:space:] | \\s         | 
+
+Regex101.com does not support them, but R and many other languages do.
+
+## Quantifiers: How many?
+
+To specify _how many_ characters of a character class we want to match, we can
+use these quanitifiers right after the class:
+
+Symbol(s) | Meaning 
+--------- | ------------- 
+?         | 0 or 1 ("optionally one")
++         | 1 or more ("at least one", "some")
+*         | 0, 1 or more ("optionally some")
+{n}       | exactly n
+{n,m}     | n to m
+{n,}      | n or more
+{,m}      | at most m
+
+So, X+ means one or more X and (ant|bear)* means 0, 1, or more ant or bear.
+
+## Backslashes
+
+The backslash character \ is used to control special meaning. 
+
+Preceding a ordinary character, like certain letters, with a backslash will 
+give it a special meaning.
 
 These characters become special when preceded by a backslash.
 
@@ -128,15 +175,40 @@ These characters become special when preceded by a backslash.
 dswbDSWBntr
 ```
 
+Capitalizing the letter will make it have an opposite meaning.
+
 \\D, \\S, \\W, and \\B mean the opposite of \\d, \\s, \\w, and \\b, respectively.
+
+So, for example, \\d (digit) and [0-9] mean the same thing and \\D (non-digit) 
+and [^0-9] mean the same thing.
 
 There are a few [more of these](https://www.hscripts.com/tutorials/regular-expression/metacharacter-list.php).
 
+## Escapes
+
+When used to take away special meaning, the backslash is said to "escape" 
+the character. This applies spefically to some of the punctuation symbols.
+
+These symbols need to be escaped to make them literal:
+
+```
+{}[]()^$.|*+?\
+```
+
+For example, if you want to include one of these special symbols as a 
+literal (ordinary) character, you may have to "escape" it with a backslash 
+to take away its special meaning. 
+
+Escaping usually applies outside of character classes, [], not within them. 
+This is because the square bracket notation implies most punctuation symbols are
+being used in their ordinary sense. There are exceptions to this (such as the
+[ and ] characters, which need to be escaped if within a character class).
+
 ## Anchors
 
-Achors are very special because they do not match any characters.
+Anchors are very special because they do not match any characters.
 
-For example, ^ and $ tie a match to a location: ^=start, $=end.
+For example, ^ and $ tie a match to a location: `^` = start, `$` = end.
 
 \\b is an anchor for a "word-boundary" -- the beginning or ending of a word or a string like a word.
 
@@ -148,15 +220,55 @@ Why would you need that?
 ## Anchor example
 
 Remember the `ifconfig` command that shows information about your network
-interface? How to we match the Ethernet hardware address (HWaddr)?
+interface? How to we match _just_ the Ethernet hardware address (HWaddr) in
+the output from the `ifconfig` command? See the effect of \\b?
 
-![ifconfig and grep](images/ifconfig_mac_regex.png)
+![ifconfig grep for HWaddr](images/ifconfig_mac_regex.png)
 
-This expression would also work: `' [0-9A-Fa-f:-]{17}'`
+## Um, what about...
+
+Why not just add a space in front of the first expression and
+just use: 
+
+```
+' [0-9A-Fa-f:-]{17}'
+```
+
+As in:
+
+```
+$ ifconfig eth0 | egrep ' [0-9A-Fa-f:-]{17}'
+eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06
+```
+
+This expression would _sort of_ work. This shortcut does
+not match _just_ the HWaddr, though. It _also_ matches the 
+preceding space. In many situations, this difference would 
+matter.
+
+Try to make your expressions as precise as possible. Otherwise,
+the can be the source of subtle "bugs", hard to troubleshoot later.
 
 ## Find and Replace
 
 You can use pattern matching (and group-capture) for replacement (substitution).
+
+Your replacement string may contain variables (\\1, \\2, etc.) to represent 
+captured strings.
+
+In this example, we will take a name, "First Last", and convert it to "Last, First".
+
+* Input: `First Last`
+* Find: `/(\w+) (\w+)/`
+* Replace: `\2, \1` 
+* Output: `Last, First` 
+
+Try this with your own name.
+
+To use text replacement at Regex101, press the (+) button next to the 
+SUBSTITUTION section heading.
+
+## Abbreviation Example
 
 Given these ingredients:
 
@@ -178,11 +290,11 @@ Water
 
 How might you do this? What if "Water" was "dihydrogen monoxide"?
 
-## Regex101: Substitution
-
-To try text replacement at Regex101, press the (+) button next to the SUBSTITUTION section heading.
+## Abbreviation Example: Regex101
 
 ![Regex101 Substitution](images/regex101_beer_pre_sm.png)
+
+What search expression did you use? What replacement string?
 
 
 
@@ -219,18 +331,21 @@ Beijing: 39.9167° N, 116.3833° E
 Tokyo: 35.6833° N, 139.6833° E
 ```
 
-Change the coordinates to used a signed format:
+Change the coordinates to use a signed format:
 
 * Precede S latitudes and W longitudes with a minus sign.
 * Remove the N, S, E, and W compass direction characters.
 
-Do this in two steps (two sets of expressions). So, after your first step, copy the output text and paste it as the input string.
+Do this in two steps (two sets of expressions). So, after your first step, 
+copy the output text and paste it as the input string. Keep a text editor
+window open to keep a record of your work and serve as a "text buffer".
 
 
 
 ## Create URLs with a query string
 
-Now that you have the coordinates in the signed format, try some more substitution steps:
+Now that you have the coordinates in the signed format, try some more 
+substitution steps:
 
 * Replace the comma-space (", ") with "%2C+". (Called "URL-encoding".)
 * Replace the degree symbol (°) with "%b0". (More "URL-encoding".)
@@ -248,7 +363,9 @@ https://www.google.com/search?q=47.6097%b0%2C+-122.3331%b0
 
 ... which you can use to find the specific locations of the coordinates.
 
-Tip: These can use literal expressions with no need to group and capture.
+Tip: These replacements can use literal expressions with no need to group 
+and capture. They should be very simple replacements, like a normal "search
+and replace" you would perform in any document editor.
 
 ## How could we do this in R?
 

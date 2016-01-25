@@ -134,14 +134,15 @@ pre-defined and standard classes, we also have POSIX classes.
 
 Here are a few of these:
 
-| POSIX     |  Same as    |
-|-----------|-------------| 
-| [:alnum:] | [A-Za-z0-9] |
-| [:alpha:] | [A-Za-z]    |
-| [:digit:] | [0-9]       |
-| [:lower:] | [a-z]       |
-| [:upper:] | [A-Z]       |
-| [:space:] | \\s         | 
+| POSIX     |  Same as      |
+|-----------|---------------| 
+| [:alnum:] | [A-Za-z0-9]   |
+| [:alpha:] | [A-Za-z]      |
+| [:digit:] | [0-9]         |
+| [:lower:] | [a-z]         |
+| [:upper:] | [A-Z]         |
+| [:blank:] | [ \t]         |
+| [:space:] | [ \t\r\n\v\f] | 
 
 Regex101.com does not support them, but R and many other languages do.
 
@@ -273,7 +274,7 @@ Note: For non-capturing groups, use `(?:)` as in `Wh(?:o|at|ere|en|y)\?`
 
 ## Abbreviation Example
 
-Given these ingredients:
+Given these ingredients (three plants and water):
 
 ```
 Hordeum vulgare

@@ -1,6 +1,17 @@
-# Regular Expressions
-[Brian High](https://github.com/brianhigh)  
-![CC BY-SA 4.0](cc_by-sa_4.png)  
+---
+title: "Regular Expressions"
+author: "[Brian High](https://github.com/brianhigh)"
+date: "![CC BY-SA 4.0](cc_by-sa_4.png)"
+output:
+  ioslides_presentation:
+    fig_caption: yes
+    fig_retina: 1
+    fig_width: 5
+    fig_height: 4
+    keep_md: yes
+    smaller: yes
+    logo: logo_128.png
+---
 
 
 ## Regular Expressions
@@ -322,7 +333,9 @@ How might you do this? What if "Water" was "dihydrogen monoxide"?
 
 What search expression did you use? What replacement string?
 
-
+```{r, echo=FALSE, eval=FALSE}
+# (\w)\w+  # ([A-Z])\w+  # ([A-Z])\w+ (\w+)
+```
 
 ## Up Next: A Lab Exercise
 
@@ -366,7 +379,12 @@ Do this in two steps (two sets of expressions). So, after your first step,
 copy the output text and paste it as the input string. Keep a text editor
 window open to keep a record of your work and serve as a "text buffer".
 
-
+```{r, echo=FALSE, eval=FALSE}
+# ([0-9.]+°) [WS]\b
+# -\1
+# ([0-9.]+°) [NE]\b
+# \1
+```
 
 ## Create URLs from coordinates
 
@@ -394,7 +412,20 @@ substitution, you can also use three separate literal substitutions.
 
 ## How could we do this in R?
 
-
+```{r, , echo=FALSE, eval=FALSE}
+a <- "Seattle: 47.6097° N, 122.3331° W
+Paris: 48.8567° N, 2.3508° E
+Adelaide: 34.9290° S, 138.6010° E
+Casablanca: 33.5333° N, 7.5833° W
+Beijing: 39.9167° N, 116.3833° E
+Rio de Janeiro: 22.9068° S, 43.1729° W"
+b <- unlist(strsplit(a, "\n"))
+c <- gsub("([[:digit:].]+°) [WS]", "-\\1", b)
+d <- gsub("([[:digit:].]+°) [NE]", "\\1", c)
+e <- gsub("^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$",
+          "https://www.google.com/maps/place/\\1+\\2", d)
+e
+```
 
 ## More resources
 

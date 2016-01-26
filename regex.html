@@ -402,6 +402,24 @@ Regex</pre>
 
 <p>So, <code>X+</code> means one or more &quot;X&quot; and <code>(deer|elk)*</code> means 0, 1, or more &quot;deer or elk&quot;.</p>
 
+</article></slide><slide class=''><hgroup><h2>Greedy Quantifiers</h2></hgroup><article  id="greedy-quantifiers" class="smaller ">
+
+<p>The quantifiers <code>+</code> and <code>*</code> will try to match as many characters as they can. Therefore, they are &quot;greedy&quot;. Sometimes, you don&#39;t want this.</p>
+
+<p>Let&#39;s say we have a line of data like <code>GATTACAAGATTACAAAAAAA</code> in our dataset.</p>
+
+<p>We want to match everything but the string of <code>AAAAAAA</code> at the very end, no matter how many <code>A</code>s there are, we might try the expression: <code>(\w+)A*</code>.</p>
+
+<p>Here is what this would match: <code>GATTACAAGATTACAAAAAAA</code>. That&#39;s too much. The <code>+</code> was greedy and matched as much as it could, to the end of the string.</p>
+
+<p>To make <code>+</code> non-greedy, we can place a <code>?</code> after it like this: <code>+?</code>.</p>
+
+<p>But <code>(\w+)A*</code> matches only <code>GA</code>. If we use the <code>$</code> anchor, then we get the match we want. Now <code>(\w+?)A*$</code> matches only <code>GATTACAAGATTAC</code>.</p>
+
+<p>Try this in Regex101.com and see for yourself.</p>
+
+<p>Note: You may also use the <code>U</code> pattern modifier to turn off greediness.</p>
+
 </article></slide><slide class=''><hgroup><h2>Backslashes</h2></hgroup><article  id="backslashes" class="smaller ">
 
 <p>The backslash character  is used to control special meaning.</p>
@@ -417,8 +435,6 @@ Regex</pre>
 <p><code>\D</code>, <code>\S</code>, <code>\W</code>, and <code>\B</code> mean the opposite of <code>\d</code>, <code>\s</code>, <code>\w</code>, and <code>\b</code>, respectively.</p>
 
 <p>So, for example, <code>\d</code> (digit) and <code>[0-9]</code> mean the same thing and <code>\D</code> (non-digit) and <code>[^0-9]</code> mean the same thing.</p>
-
-<p>There are a few <a href='https://www.hscripts.com/tutorials/regular-expression/metacharacter-list.php' title=''>more of these</a>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Escapes</h2></hgroup><article  id="escapes" class="smaller ">
 

@@ -307,7 +307,7 @@ Note: For non-capturing groups, use `(?:)` as in `Wh(?:o|at|ere|en|y)\?`
 
 ## Abbreviation Example
 
-Given these ingredients (three plants and water):
+Given these ingredients (three bio-ingredients and water):
 
 ```
 Hordeum vulgare

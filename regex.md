@@ -322,8 +322,6 @@ How might you do this? What if "Water" was "dihydrogen monoxide"?
 
 What search expression did you use? What replacement string?
 
-
-
 ## Up Next: A Lab Exercise
 
 We will spend a few minutes doing a text replacement exercise using
@@ -366,8 +364,6 @@ Do this in two steps (two sets of expressions). So, after your first step,
 copy the output text and paste it as the input string. Keep a text editor
 window open to keep a record of your work and serve as a "text buffer".
 
-
-
 ## Create URLs from coordinates
 
 Now that you have the coordinates in the signed format, try some more 
@@ -393,8 +389,6 @@ Tip: Although you could do all three replacements in one regular expression
 substitution, you can also use three separate literal substitutions.
 
 ## How could we do this in R?
-
-
 
 ## More resources
 

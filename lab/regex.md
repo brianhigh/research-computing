@@ -223,7 +223,7 @@ to take away its special meaning. Example: `Wh(o|at|ere|en|y)\?`
 Escaping applies more outside of character classes, `[ ]`, than within them. 
 This is because the square bracket notation implies most punctuation symbols are
 being used in their ordinary sense. There a few exceptions to this, such as the
-backslash and forward slash characters: `[\\\/]` matches `\` and `/`.
+backslash and forward slash characters: `[\\\/]` matches `\` or `/`.
 
 ## Anchors
 

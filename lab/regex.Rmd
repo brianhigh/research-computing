@@ -176,7 +176,7 @@ So, `X+` means one or more "X" and `(deer|elk)*` means 0, 1, or more
 ## Greedy Quantifiers
 
 The quantifiers `+` and `*` will try to match as many characters as they can.
-Therefore, they are "greedy". Sometimes, you don't want this. 
+Therefore, they are "greedy" by default. Sometimes, you don't want this. 
 
 Let's say we have a line of data like `GATTACAAGATTACAAAAAAA` in our dataset.
 
@@ -186,7 +186,7 @@ matter how many `A`s there are, we might try the expression: `(\w+)A*`.
 Here is what this would match: `GATTACAAGATTACAAAAAAA`. That's too much. The
 `+` was greedy and matched as much as it could, to the end of the string.
 
-To make `+` non-greedy, we can place a `?` after it like this: `+?`.
+To make `+` non-greedy ("lazy"), we can place a `?` after it like this: `+?`.
 
 But `(\w+)A*` matches only `GA`. If we use the `$` anchor, then we get the
 match we want. Now `(\w+?)A*$` matches only `GATTACAAGATTAC`. 
@@ -202,7 +202,7 @@ The backslash character \ is used to control special meaning.
 Preceding a ordinary character, like certain letters, with a backslash will 
 give it a special meaning.
 
-These characters become special when preceded by a backslash.
+These characters become special when preceded by a backslash:
 
 ```
 dswbDSWBntr
@@ -219,22 +219,22 @@ So, for example, `\d` (digit) and `[0-9]` mean the same thing and `\D`
 ## Escapes
 
 When used to take away special meaning, the backslash is said to "escape" 
-the character. This applies spefically to some of the punctuation symbols.
+the character. This applies specifically to some of the punctuation symbols.
 
-These symbols need to be escaped to make them literal:
+These symbols have special meaning by default and need to be escaped to make them literal:
 
 ```
 {}[]()^$.|*+?\
 ```
 
-That is, if you want to include one of these special symbols as a 
+That is, if you want to use one of these special symbols ("metacharacters") as a 
 literal (ordinary) character, you may have to "escape" it with a backslash 
 to take away its special meaning. Example: `Wh(o|at|ere|en|y)\?`
 
-Escaping usually applies outside of character classes, `[]`, not within them. 
+Escaping usually applies more outside of character classes, `[]` than within them. 
 This is because the square bracket notation implies most punctuation symbols are
-being used in their ordinary sense. There are exceptions to this (such as the
-"[" and "]" characters, which need to be escaped if within a character class).
+being used in their ordinary sense. There are some exceptions to this (such as the
+"[" and "]" characters), which need to be escaped if within a character class.
 
 ## Anchors
 
@@ -253,7 +253,7 @@ Why would you need that?
 ## Anchor example
 
 Remember the `ifconfig` command that shows information about your network
-interface? How to we match _just_ the Ethernet hardware address (HWaddr) in
+interface? How do we match _just_ the Ethernet hardware address (HWaddr) in
 the output from the `ifconfig` command? See the effect of `\b`?
 
 ![ifconfig grep for HWaddr](images/ifconfig_mac_regex.png)

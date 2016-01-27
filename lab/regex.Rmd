@@ -125,7 +125,9 @@ to create a regex, and how to use regex for
 matching and replacing textual data in files.
 ```
 
-Want to see how this works, visually?
+This Perl command will do the same thing:
+
+`perl -wpl -e 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 
 ## Regex Substitution -- in Color!
 

@@ -422,7 +422,7 @@ Regex</pre>
 
 </article></slide><slide class=''><hgroup><h2>Backslashes</h2></hgroup><article  id="backslashes" class="smaller ">
 
-<p>The backslash character  is used to control special meaning.</p>
+<p>The backslash character <code>\</code> is used to control special meaning.</p>
 
 <p>Preceding a ordinary character, like certain letters, with a backslash will give it a special meaning.</p>
 
@@ -446,7 +446,7 @@ Regex</pre>
 
 <p>That is, if you want to use one of these special symbols (&quot;metacharacters&quot;) as a literal (ordinary) character, you may have to &quot;escape&quot; it with a backslash to take away its special meaning. Example: <code>Wh(o|at|ere|en|y)\?</code></p>
 
-<p>Escaping usually applies more outside of character classes, <code>[]</code> than within them. This is because the square bracket notation implies most punctuation symbols are being used in their ordinary sense. There are some exceptions to this (such as the &quot;[&quot; and &quot;]&quot; characters), which need to be escaped if within a character class.</p>
+<p>Escaping applies more outside of character classes, <code>[ ]</code>, than within them. This is because the square bracket notation implies most punctuation symbols are being used in their ordinary sense. There a few exceptions to this, such as the backslash and forward slash characters: <code>[\\\/]</code> matches <code>\</code> and <code>/</code>.</p>
 
 </article></slide><slide class=''><hgroup><h2>Anchors</h2></hgroup><article  id="anchors" class="smaller ">
 

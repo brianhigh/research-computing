@@ -197,7 +197,7 @@ Note: You may also use the `U` pattern modifier to turn off greediness.
 
 ## Backslashes
 
-The backslash character \ is used to control special meaning. 
+The backslash character `\` is used to control special meaning. 
 
 Preceding a ordinary character, like certain letters, with a backslash will 
 give it a special meaning.
@@ -231,10 +231,10 @@ That is, if you want to use one of these special symbols ("metacharacters") as a
 literal (ordinary) character, you may have to "escape" it with a backslash 
 to take away its special meaning. Example: `Wh(o|at|ere|en|y)\?`
 
-Escaping usually applies more outside of character classes, `[]` than within them. 
+Escaping applies more outside of character classes, `[ ]`, than within them. 
 This is because the square bracket notation implies most punctuation symbols are
-being used in their ordinary sense. There are some exceptions to this (such as the
-"[" and "]" characters), which need to be escaped if within a character class.
+being used in their ordinary sense. There a few exceptions to this, such as the
+backslash and forward slash characters: `[\\\/]` matches `\` and `/`.
 
 ## Anchors
 

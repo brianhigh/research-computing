@@ -334,7 +334,7 @@ This is because the square bracket notation implies most punctuation symbols are
 being used in their ordinary sense. There a few exceptions to this, such as the
 backslash and forward slash characters: `[\\\/]` matches `\` or `/`.
 
-## Data clean-up: Find and Replace
+## Replacement with Capture Groups
 
 Parentheses also let you "capture" groups of characters for replacement. Each 
 group surrounded in parentheses can be referenced by a numbered variable in a 

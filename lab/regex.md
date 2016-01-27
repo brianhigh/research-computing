@@ -19,6 +19,28 @@ Regular expressions are supported by applications such as MS-Word, Notepad++,
 TextWrangler, jEdit, Gedit, and RStudio. They are also supported by programming
 languages like Perl, Python, JavaScript, R, C#, and Bash.
 
+## As universal as "OK"
+
+* "OK" is understood all over the world (almost everywhere).
+
+Just as speakers of many different spoken languages around the world
+will likely understand the word "OK", various programs and most computer
+popular languages will know what you mean when you provide them with a 
+"regular expression" in the right context.
+
+* Regular expressions are (almost) universally supported for match/replace.
+
+The regular expression "syntax" is a nearly universal way to represent text
+patterns symbolically in order to match text for use with search and
+replace operations of software Applications like MS-Word, command-line
+utilities like sed, and programming languages like R and Python.
+
+* Regular expressions will help you manage data in many situations.
+
+The time you invest in learning this one skill will pay off in most of the
+data management and analysis environment you will use. They have been around 
+for decades and will continue to be popular for years to come. OK?
+
 ## Regular Expressions Meta-Example
 
 This expression:
@@ -80,8 +102,9 @@ to create a Regexp, and how to use regex for
 matching and replacing textual data in files.
 ```
 
-Then a simple `sed` command would replace all variations of "regular expressions" 
-with "regex". `sed` is one of many tools which support regex. 
+Then a simple `sed` command (in Bash) would replace all variations of 
+"regular expressions" with "regex". `sed` is one of many tools which support 
+regex. 
 
 `sed -r 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 ```
@@ -206,7 +229,7 @@ Here is what this would match: `GATTACAAGATTACAAAAAAA`. That's too much. The
 
 To make `+` non-greedy ("lazy"), we can place a `?` after it like this: `+?`.
 
-But `(\w+)A*` matches only `GA`. If we use the `$` anchor, then we get the
+But `(\w+?)A*` matches only `GA`. If we use the `$` anchor, then we get the
 match we want. Now `(\w+?)A*$` matches only `GATTACAAGATTAC`. 
 
 Try this in Regex101.com and see for yourself.

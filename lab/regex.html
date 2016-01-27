@@ -121,6 +121,26 @@
 
 <p>Regular expressions are supported by applications such as MS-Word, Notepad++, TextWrangler, jEdit, Gedit, and RStudio. They are also supported by programming languages like Perl, Python, JavaScript, R, C#, and Bash.</p>
 
+</article></slide><slide class=''><hgroup><h2>As universal as &quot;OK&quot;</h2></hgroup><article  id="as-universal-as-ok" class="smaller ">
+
+<ul>
+<li>&quot;OK&quot; is understood all over the world (almost everywhere).</li>
+</ul>
+
+<p>Just as speakers of many different spoken languages around the world will likely understand the word &quot;OK&quot;, various programs and most computer popular languages will know what you mean when you provide them with a &quot;regular expression&quot; in the right context.</p>
+
+<ul>
+<li>Regular expressions are (almost) universally supported for match/replace.</li>
+</ul>
+
+<p>The regular expression &quot;syntax&quot; is a nearly universal way to represent text patterns symbolically in order to match text for use with search and replace operations of software Applications like MS-Word, command-line utilities like sed, and programming languages like R and Python.</p>
+
+<ul>
+<li>Regular expressions will help you manage data in many situations.</li>
+</ul>
+
+<p>The time you invest in learning this one skill will pay off in most of the data management and analysis environment you will use. They have been around for decades and will continue to be popular for years to come. OK?</p>
+
 </article></slide><slide class=''><hgroup><h2>Regular Expressions Meta-Example</h2></hgroup><article  id="regular-expressions-meta-example" class="smaller ">
 
 <p>This expression:</p>
@@ -197,7 +217,7 @@ learn what a Regular Expression is used for, how
 to create a Regexp, and how to use regex for
 matching and replacing textual data in files.</pre>
 
-<p>Then a simple <code>sed</code> command would replace all variations of &quot;regular expressions&quot; with &quot;regex&quot;. <code>sed</code> is one of many tools which support regex.</p>
+<p>Then a simple <code>sed</code> command (in Bash) would replace all variations of &quot;regular expressions&quot; with &quot;regex&quot;. <code>sed</code> is one of many tools which support regex.</p>
 
 <p><code>sed -r &#39;s/Reg(exp?|ular Expression)s?/regex/i&#39; regex.txt</code></p>
 
@@ -433,7 +453,7 @@ matching and replacing textual data in files.</pre>
 
 <p>To make <code>+</code> non-greedy (&quot;lazy&quot;), we can place a <code>?</code> after it like this: <code>+?</code>.</p>
 
-<p>But <code>(\w+)A*</code> matches only <code>GA</code>. If we use the <code>$</code> anchor, then we get the match we want. Now <code>(\w+?)A*$</code> matches only <code>GATTACAAGATTAC</code>.</p>
+<p>But <code>(\w+?)A*</code> matches only <code>GA</code>. If we use the <code>$</code> anchor, then we get the match we want. Now <code>(\w+?)A*$</code> matches only <code>GATTACAAGATTAC</code>.</p>
 
 <p>Try this in Regex101.com and see for yourself.</p>
 

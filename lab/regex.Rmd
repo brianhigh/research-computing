@@ -129,7 +129,13 @@ This Perl command will do the same thing:
 
 `perl -wpl -e 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 
-## Regex Substitution -- in Color!
+## Regex Substitution -- in RStudio
+
+![RStudio has a checkbox to enable Regex search.](images/rstudio_regex_pre.png)
+
+![RStudio replaced all four variations.](images/rstudio_regex_post.png)
+
+## Regex Substitution -- at Regex101.com
 
 ![Regex Substitution - Regex101.com](images/regex_substitution.png)
 

@@ -91,11 +91,11 @@ to create a regex, and how to use regex for
 matching and replacing textual data in files.
 ```
 
-What does this look like at Regex101.com?
+Want to see how this works, visually?
 
-## Regex Substitution
+## Color-coded Regex Substitution
 
-![regex substitution](images/regex_substitution.png)
+![Regex101.com](images/regex_substitution.png)
 
 And that's just the beginning! But before we put "regular expressions" to use, 
 we need to learn more about the symbols and syntax.
@@ -118,9 +118,9 @@ g         | global     | find _all_ matches in string
 
 ... Where `^` and `$` are "anchors" marking the beginning end ending of the text.
 
-## Regular Expressions Tester: Regex101.com
+## Regular Expressions Tester
 
-![Regex101](images/regex101_sm.png)
+![Regex101.com](images/regex101_sm.png)
 
 ## Character classes
 

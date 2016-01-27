@@ -397,22 +397,20 @@ https://uw.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?id=2cbd859c-05da-
 
 Example from: [Whois Demo](https://github.com/brianhigh/visual-tracerouter/blob/master/whois-demo.md)
 
-Remove extra characters, change the delimiter, etc.
+Change the delimiter, etc.
 
 ```
-# Try out the whois utility, removing any carriage-return (\r) characters.
-whois.data <- gsub(pattern = "\\r", replacement = "", 
-                   x = system(paste(exefile, "who.int"), intern = TRUE))
-
-# Use the vertical bar symbol (|) as the delimiter instead of the colon (:).
-whois.data <- gsub(pattern = ":[[:space:]]", replacement = "|", x = whois.data)
-
-# Remove lines which do not contain the delimiter.
-whois.data <- whois.data[grepl(x = whois.data, pattern = "\\|")]
-
-# Remove any '>>>' and '<<<' strings, if present.
-whois.data <- gsub("[[:space:]]?[<>]{3}[[:space:]]?", "", whois.data)
+whois.data <- gsub(pattern = ":[[:space:]]+", replacement = "|", x = whois.data)
 ```
+
+Try at [https://regex101.com](https://regex101.com):
+
+* Find: /:\s+/g
+* Replace: `|`
+
+Use the vertical bar symbol (|) as the delimiter instead of colon-and-spaces.
+
+Data source: [IANA](http://www.iana.org/whois?q=who.int)
 
 Example data:
 
@@ -428,36 +426,6 @@ address:      20, Avenue Appia
 address:      Geneva 27
 address:      Geneva Geneva CH-1211
 address:      Switzerland
-
-contact:      administrative
-name:         WHO-HQ-NOC (at ITS/NTS)
-address:      20, Avenue Appia
-address:      Geneva 27
-address:      Geneva  CH-1211
-address:      Switzerland
-phone:        +41 22 791 2411
-fax-no:       +41 22 791 4779
-e-mail:       hostmaster@who.int
-
-contact:      technical
-name:         WHO-HQ-NOC (at ITS/NTS)
-address:      20, Avenue Appia
-address:      Geneva 27
-address:      Geneva  CH-1211
-address:      Switzerland
-phone:        +41 22 791 2411
-fax-no:       +41 22 791 4779
-e-mail:       hostmaster@who.int
-
-nserver:      EXT-DNS-2.CERN.CH 192.91.245.85
-nserver:      NS1.WPRO.WHO.INT 123.176.64.11
-nserver:      WHQDNS1.WHO.INT 158.232.12.5
-nserver:      WHQDNS2.WHO.INT 158.232.12.6
-nserver:      WHQDNS3.WHO.INT 202.188.122.155
-
-created:      1998-06-05
-changed:      2015-10-05
-source:       IANA
 ```
 
 ## US CERT Bulletins: VendProd clean-up
@@ -632,3 +600,43 @@ file sample_data.txt
 ```
 
 Only the valid report message types should be printed to the screen.
+
+Try at [https://regex101.com](https://regex101.com):
+
+* Find: 
+```
+/
+    ^                                      # beginning of line
+    \d{9};                                 #  1:  Nine digits (MMSI num.)
+    [^;]+;                                 #  2:  nav. status (freeform)
+    \d{3}°';                               #  3:  three digits, deg. min.
+    (\s0\.[0-9]|\s[1-9]\.\d|\d\d\.\d) kt;  #  4:  spc 0.0 to 99.9 kt   
+    \d{1,3}\.\d{6} [NS];                   #  5:  ###.###### N/S lat.
+    \d{1,3}\.\d{6} [EW];                   #  6:  ###.###### E/W long.
+    \s{0,2}\d{1,3}\.\d°;                   #  7:  (spc) #.# to ###.# deg.
+    \d{3}°;                                #  8:  ### deg.
+    \d{2} s;                               #  9:  ## sec.
+    \s\d{6}\s\d{6};                        #  10: spc ###### spc ######
+    [^;]+                                  #  11: freeform (msg type code)
+    $
+/gmx   
+```
+
+Or:
+
+* Find: 
+```
+/
+    ^                                      # beginning of line
+    \d{9};                                 #  1:  Nine digits (MMSI num.)
+    \([\d\s]{7}\);                         #  2:  Seven digits in () (IMO)
+    \([A-Z0-9\s]{7}\);                     #  3:  Seven AlphaNum in () (Call)
+    .{20};                                 #  4:  20 freeform chars (Ves. Name)
+    .{11};                                 #  5:  11 freeform chars (Type)
+    ->.{33};                               #  6:  -> 33 freeform chars (Dest.)
+    \d+\s\d+\s[\d.]+\s\d+\s\d+;            #  7:  Length Width Draught D4 D5
+    \s\d{6}\s\d{6};                        #  8:  spc ###### spc ######
+    serial\#1\(B\)\[5\][^;]*               #  9:  AIS Msg Type 5 code
+    $
+/gmx
+```

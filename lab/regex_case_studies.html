@@ -328,19 +328,15 @@ https://uw.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?id=2cbd859c-05da-
 <div id="whois-demo" class="section level2">
 <h2>Whois Demo</h2>
 <p>Example from: <a href="https://github.com/brianhigh/visual-tracerouter/blob/master/whois-demo.md">Whois Demo</a></p>
-<p>Remove extra characters, change the delimiter, etc.</p>
-<pre><code># Try out the whois utility, removing any carriage-return (\r) characters.
-whois.data &lt;- gsub(pattern = &quot;\\r&quot;, replacement = &quot;&quot;, 
-                   x = system(paste(exefile, &quot;who.int&quot;), intern = TRUE))
-
-# Use the vertical bar symbol (|) as the delimiter instead of the colon (:).
-whois.data &lt;- gsub(pattern = &quot;:[[:space:]]&quot;, replacement = &quot;|&quot;, x = whois.data)
-
-# Remove lines which do not contain the delimiter.
-whois.data &lt;- whois.data[grepl(x = whois.data, pattern = &quot;\\|&quot;)]
-
-# Remove any '&gt;&gt;&gt;' and '&lt;&lt;&lt;' strings, if present.
-whois.data &lt;- gsub(&quot;[[:space:]]?[&lt;&gt;]{3}[[:space:]]?&quot;, &quot;&quot;, whois.data)</code></pre>
+<p>Change the delimiter, etc.</p>
+<pre><code>whois.data &lt;- gsub(pattern = &quot;:[[:space:]]+&quot;, replacement = &quot;|&quot;, x = whois.data)</code></pre>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
+<ul>
+<li>Find: /:+/g</li>
+<li>Replace: <code>|</code></li>
+</ul>
+<p>Use the vertical bar symbol (|) as the delimiter instead of colon-and-spaces.</p>
+<p>Data source: <a href="http://www.iana.org/whois?q=who.int">IANA</a></p>
 <p>Example data:</p>
 <pre><code>% IANA WHOIS server
 % for more information on IANA, visit http://www.iana.org
@@ -352,37 +348,7 @@ organisation: World Health Organization (WHO)
 address:      20, Avenue Appia
 address:      Geneva 27
 address:      Geneva Geneva CH-1211
-address:      Switzerland
-
-contact:      administrative
-name:         WHO-HQ-NOC (at ITS/NTS)
-address:      20, Avenue Appia
-address:      Geneva 27
-address:      Geneva  CH-1211
-address:      Switzerland
-phone:        +41 22 791 2411
-fax-no:       +41 22 791 4779
-e-mail:       hostmaster@who.int
-
-contact:      technical
-name:         WHO-HQ-NOC (at ITS/NTS)
-address:      20, Avenue Appia
-address:      Geneva 27
-address:      Geneva  CH-1211
-address:      Switzerland
-phone:        +41 22 791 2411
-fax-no:       +41 22 791 4779
-e-mail:       hostmaster@who.int
-
-nserver:      EXT-DNS-2.CERN.CH 192.91.245.85
-nserver:      NS1.WPRO.WHO.INT 123.176.64.11
-nserver:      WHQDNS1.WHO.INT 158.232.12.5
-nserver:      WHQDNS2.WHO.INT 158.232.12.6
-nserver:      WHQDNS3.WHO.INT 202.188.122.155
-
-created:      1998-06-05
-changed:      2015-10-05
-source:       IANA</code></pre>
+address:      Switzerland</code></pre>
 </div>
 <div id="us-cert-bulletins-vendprod-clean-up" class="section level2">
 <h2>US CERT Bulletins: VendProd clean-up</h2>
@@ -517,6 +483,42 @@ iconv -f &quot;ISO-8859-1&quot; -t &quot;utf-8&quot; -o sample_data.txt sample_d
 file sample_data.txt
 &gt; sample_data.txt: UTF-8 Unicode text</code></pre>
 <p>Only the valid report message types should be printed to the screen.</p>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
+<ul>
+<li><p>Find:</p>
+<pre><code>/
+^                                      # beginning of line
+\d{9};                                 #  1:  Nine digits (MMSI num.)
+[^;]+;                                 #  2:  nav. status (freeform)
+\d{3}°';                               #  3:  three digits, deg. min.
+(\s0\.[0-9]|\s[1-9]\.\d|\d\d\.\d) kt;  #  4:  spc 0.0 to 99.9 kt   
+\d{1,3}\.\d{6} [NS];                   #  5:  ###.###### N/S lat.
+\d{1,3}\.\d{6} [EW];                   #  6:  ###.###### E/W long.
+\s{0,2}\d{1,3}\.\d°;                   #  7:  (spc) #.# to ###.# deg.
+\d{3}°;                                #  8:  ### deg.
+\d{2} s;                               #  9:  ## sec.
+\s\d{6}\s\d{6};                        #  10: spc ###### spc ######
+[^;]+                                  #  11: freeform (msg type code)
+$
+/gmx   </code></pre></li>
+</ul>
+<p>Or:</p>
+<ul>
+<li><p>Find:</p>
+<pre><code>/
+^                                      # beginning of line
+\d{9};                                 #  1:  Nine digits (MMSI num.)
+\([\d\s]{7}\);                         #  2:  Seven digits in () (IMO)
+\([A-Z0-9\s]{7}\);                     #  3:  Seven AlphaNum in () (Call)
+.{20};                                 #  4:  20 freeform chars (Ves. Name)
+.{11};                                 #  5:  11 freeform chars (Type)
+-&gt;.{33};                               #  6:  -&gt; 33 freeform chars (Dest.)
+\d+\s\d+\s[\d.]+\s\d+\s\d+;            #  7:  Length Width Draught D4 D5
+\s\d{6}\s\d{6};                        #  8:  spc ###### spc ######
+serial\#1\(B\)\[5\][^;]*               #  9:  AIS Msg Type 5 code
+$
+/gmx</code></pre></li>
+</ul>
 </div>
 
 

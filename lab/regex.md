@@ -95,7 +95,7 @@ Want to see how this works, visually?
 
 ## Regex Substitution -- in Color!
 
-![Regex101.com](images/regex_substitution.png)
+![Regex Substitution - Regex101.com](images/regex_substitution.png)
 
 And that's just the beginning! But before we put "regular expressions" to use, 
 we need to learn more about the symbols and syntax.
@@ -118,17 +118,15 @@ g         | global     | find _all_ matches in string
 
 ... Where `^` and `$` are "anchors" marking the beginning end ending of the text.
 
-## Regular Expressions Tester
+## Pattern Modifiers in Action!
 
-![Regex101.com](images/regex101_sm.png)
+![Pattern Modifiers - Regex101.com](images/regex101_sm.png)
 
 ## Character classes
 
-Beyond simple literal matches, we can also match by "character classes".
-
-A character class a list of one or more characters of a certain 
-type that you want to match. It is represented by a special symbol or group
-of symbols.
+We can match a single character (or a "string" of many characters) either 
+literally, or by a "character class", a set of one or more characters of a 
+certain type. 
 
 Symbol(s) | Meaning 
 --------- | ------------- 
@@ -139,6 +137,8 @@ Symbol(s) | Meaning
 \\n       | newline (an end-of-line character)
 \\d       | digit
 .         | any character except end-of-line characters
+
+Example: `\d\w.` matches `1A.` and `22#`, but not `A1.` or `#22`.
 
 ## Custom character classes
 

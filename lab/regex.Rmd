@@ -104,7 +104,7 @@ matching and replacing textual data in files.
 
 Want to see how this works, visually?
 
-## Color-coded Regex Substitution
+## Regex Substitution -- in Color!
 
 ![Regex101.com](images/regex_substitution.png)
 

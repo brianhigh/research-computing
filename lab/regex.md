@@ -91,6 +91,12 @@ to create a regex, and how to use regex for
 matching and replacing textual data in files.
 ```
 
+What does this look like at Regex101.com?
+
+## Regex Substitution
+
+![regex substitution](images/regex_substitution.png)
+
 And that's just the beginning! But before we put "regular expressions" to use, 
 we need to learn more about the symbols and syntax.
 

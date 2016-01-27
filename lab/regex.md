@@ -236,6 +236,55 @@ Try this in Regex101.com and see for yourself.
 
 Note: You may also use the `U` pattern modifier to turn off greediness.
 
+## Anchors
+
+Anchors tie an expression to a place in your data (string or line of text).
+
+For example, `^` and `$` tie a match to a location: `^` = start, `$` = end.
+
+This expression `/^Reg(exp?|ular Expression)s?$/i` will _only_ match text
+like "Regular Expressions" (or "regex", etc.), containing _no other text_.
+
+`\b` is an anchor for a "word-boundary" -- the beginning or ending of a word or 
+a string like a word (such as `GATTACAAGATTACAAAAAAA`).
+
+That is, a word-boundary is a zero-width boundary between a word-class
+character (`\w`) and a non-word-class character (`\W`).
+
+Why would you need that?
+
+## Anchor example
+
+Remember the `ifconfig` command that shows information about your network
+interface? How do we match _just_ the Ethernet hardware address (HWaddr) in
+the output from the `ifconfig` command? See the effect of `\b`?
+
+![ifconfig grep for HWaddr](images/ifconfig_mac_regex.png)
+
+## Um, what about...
+
+Why not just add a space in front of the first expression and
+just use: 
+
+```
+' [0-9A-Fa-f:-]{17}'
+```
+
+As in:
+
+```
+$ ifconfig eth0 | egrep ' [0-9A-Fa-f:-]{17}'
+eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06
+```
+
+This expression would _sort of_ work. This shortcut does
+not match _just_ the HWaddr, though. It _also_ matches the 
+preceding space. In many situations, this difference would 
+matter.
+
+Try to make your expressions as precise as possible. Otherwise,
+they can be the source of subtle "bugs", often hard to troubleshoot later.
+
 ## Backslashes
 
 The backslash character `\` is used to control special meaning. 
@@ -276,55 +325,6 @@ Escaping applies more outside of character classes, `[ ]`, than within them.
 This is because the square bracket notation implies most punctuation symbols are
 being used in their ordinary sense. There a few exceptions to this, such as the
 backslash and forward slash characters: `[\\\/]` matches `\` or `/`.
-
-## Anchors
-
-Anchors are very special because they do not match any characters.
-
-For example, `^` and `$` tie a match to a location: `^` = start, `$` = end.
-
-This expression `/^Reg(exp?|ular Expression)s?$/regex/i` will _only_ match text
-like "Regular Expressions" (or "regex", etc.), containing _no other text_.
-
-`\b` is an anchor for a "word-boundary" -- the beginning or ending of a word or 
-a string like a word.
-
-That is, a word-boundary is a zero-width boundary between a word-class
-character (`\w`) and a non-word-class character (`\W`).
-
-Why would you need that?
-
-## Anchor example
-
-Remember the `ifconfig` command that shows information about your network
-interface? How do we match _just_ the Ethernet hardware address (HWaddr) in
-the output from the `ifconfig` command? See the effect of `\b`?
-
-![ifconfig grep for HWaddr](images/ifconfig_mac_regex.png)
-
-## Um, what about...
-
-Why not just add a space in front of the first expression and
-just use: 
-
-```
-' [0-9A-Fa-f:-]{17}'
-```
-
-As in:
-
-```
-$ ifconfig eth0 | egrep ' [0-9A-Fa-f:-]{17}'
-eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06
-```
-
-This expression would _sort of_ work. This shortcut does
-not match _just_ the HWaddr, though. It _also_ matches the 
-preceding space. In many situations, this difference would 
-matter.
-
-Try to make your expressions as precise as possible. Otherwise,
-they can be the source of subtle "bugs", often hard to troubleshoot later.
 
 ## Data clean-up: Find and Replace
 

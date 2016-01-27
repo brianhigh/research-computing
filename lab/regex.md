@@ -5,7 +5,7 @@
 
 ## Regular Expressions
 
-Ever need to search and replace text?
+Ever need to "clean-up" data? To find, replace or reformat data within a file?
 
 A powerful, flexible, nearly universal "wildcard" syntax is available to you. 
 
@@ -24,7 +24,7 @@ languages like Perl, Python, JavaScript, R, C#, and Bash.
 This expression:
 
 ```
-/^Reg(exp?|ular Expression)s?$/i
+/Reg(exp?|ular Expression)s?/i
 ```
 
 Matches these lines:
@@ -33,7 +33,7 @@ Matches these lines:
 Regular Expressions
 Regular Expression
 Regexp
-Regex
+regex
 ```
 
 These are all common names for today's topic.
@@ -46,12 +46,10 @@ Let's decode this: `/^Reg(exp?|ular Expression)s?$/i`
 Symbol(s) | Meaning 
 --------- | ------------- 
 /stuff/   | The pattern sequence (stuff) is between slashes       
-^         | Matches the beginning of the text (or line)  
 Reg       | Matches the text string "Reg" (literally)
 (stuff)   | Group stuff inside, and capture for later use
 (a\|b)    | Matches "a" _or_ "b"
 ?         | Matches O or 1 of whatever is directly to the left
-$         | Matches the end of the text (or line)
 i         | Modifier to use "case insensitive mode"
 
 ## in english plz!
@@ -59,18 +57,42 @@ i         | Modifier to use "case insensitive mode"
 The expression:
 
 ```
-/^Reg(exp?|ular Expression)s?$/i
+/Reg(exp?|ular Expression)s?/i
 ```
 
 Matches:
 
 * A text string that starts with "Reg"
 * Followed by "ex" or "exp" or "ular Expression"
-* Followed by nothing, or maybe by an "s"
-* With nothing else remaining in the string (or line)
+* Maybe followed by an "s"
 * Regardless of the case of any of the letters (upper or lower).
 
 So, it matches the common terms used for "Regular Expressions", like "regex".
+
+## So, what?
+
+If you had a file called "regex.txt" that contained the following lines:
+
+```
+Today's topic is "Regular Expressions". We will
+learn what a Regular Expression is used for, how
+to create a Regexp, and how to use regex for
+matching and replacing textual data in files.
+```
+
+Then a simple `sed` command would replace all variations of "regular expressions" 
+with "regex". `sed` is one of many tools which support regex. 
+
+`sed -r 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
+```
+Today's topic is "regex". We will
+learn what a regex is used for, how
+to create a regex, and how to use regex for
+matching and replacing textual data in files.
+```
+
+And that's just the beginning! But before we put "regular expressions" to use, 
+we need to learn more about the symbols and syntax.
 
 ## Pattern Modifiers
 
@@ -88,6 +110,7 @@ i         | insensitive| case _insensitive_
 m         | multiline  | ^$ applies to lines _and_ strings
 g         | global     | find _all_ matches in string
 
+... Where `^` and `$` are "anchors" marking the beginning end ending of the text.
 
 ## Regular Expressions Tester: Regex101.com
 
@@ -231,6 +254,9 @@ Anchors are very special because they do not match any characters.
 
 For example, `^` and `$` tie a match to a location: `^` = start, `$` = end.
 
+This expression `/^Reg(exp?|ular Expression)s?$/regex/i` will _only_ match text
+like "Regular Expressions" (or "regex", etc.), containing _no other text_.
+
 `\b` is an anchor for a "word-boundary" -- the beginning or ending of a word or 
 a string like a word.
 
@@ -271,7 +297,7 @@ matter.
 Try to make your expressions as precise as possible. Otherwise,
 they can be the source of subtle "bugs", often hard to troubleshoot later.
 
-## Find and Replace
+## Data clean-up: Find and Replace
 
 Parentheses also let you "capture" groups of characters for replacement. Each 
 group surrounded in parentheses can be referenced by a numbered variable in a 

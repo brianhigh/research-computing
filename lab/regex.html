@@ -111,7 +111,7 @@
 
 <slide class=''><hgroup><h2>Regular Expressions</h2></hgroup><article  id="regular-expressions" class="smaller ">
 
-<p>Ever need to search and replace text?</p>
+<p>Ever need to &quot;clean-up&quot; data? To find, replace or reformat data within a file?</p>
 
 <p>A powerful, flexible, nearly universal &quot;wildcard&quot; syntax is available to you.</p>
 
@@ -125,14 +125,14 @@
 
 <p>This expression:</p>
 
-<pre >/^Reg(exp?|ular Expression)s?$/i</pre>
+<pre >/Reg(exp?|ular Expression)s?/i</pre>
 
 <p>Matches these lines:</p>
 
 <pre >Regular Expressions
 Regular Expression
 Regexp
-Regex</pre>
+regex</pre>
 
 <p>These are all common names for today&#39;s topic.</p>
 
@@ -150,28 +150,20 @@ Regex</pre>
 <td align="left">The pattern sequence (stuff) is between slashes</td>
 </tr>
 <tr class="even">
-<td align="left">^</td>
-<td align="left">Matches the beginning of the text (or line)</td>
-</tr>
-<tr class="odd">
 <td align="left">Reg</td>
 <td align="left">Matches the text string &quot;Reg&quot; (literally)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">(stuff)</td>
 <td align="left">Group stuff inside, and capture for later use</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">(a|b)</td>
 <td align="left">Matches &quot;a&quot; <em>or</em> &quot;b&quot;</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">?</td>
 <td align="left">Matches O or 1 of whatever is directly to the left</td>
-</tr>
-<tr class="odd">
-<td align="left">$</td>
-<td align="left">Matches the end of the text (or line)</td>
 </tr>
 <tr class="even">
 <td align="left">i</td>
@@ -183,19 +175,38 @@ Regex</pre>
 
 <p>The expression:</p>
 
-<pre >/^Reg(exp?|ular Expression)s?$/i</pre>
+<pre >/Reg(exp?|ular Expression)s?/i</pre>
 
 <p>Matches:</p>
 
 <ul>
 <li>A text string that starts with &quot;Reg&quot;</li>
 <li>Followed by &quot;ex&quot; or &quot;exp&quot; or &quot;ular Expression&quot;</li>
-<li>Followed by nothing, or maybe by an &quot;s&quot;</li>
-<li>With nothing else remaining in the string (or line)</li>
+<li>Maybe followed by an &quot;s&quot;</li>
 <li>Regardless of the case of any of the letters (upper or lower).</li>
 </ul>
 
 <p>So, it matches the common terms used for &quot;Regular Expressions&quot;, like &quot;regex&quot;.</p>
+
+</article></slide><slide class=''><hgroup><h2>So, what?</h2></hgroup><article  id="so-what" class="smaller ">
+
+<p>If you had a file called &quot;regex.txt&quot; that contained the following lines:</p>
+
+<pre >Today&#39;s topic is &quot;Regular Expressions&quot;. We will
+learn what a Regular Expression is used for, how
+to create a Regexp, and how to use regex for
+matching and replacing textual data in files.</pre>
+
+<p>Then a simple <code>sed</code> command would replace all variations of &quot;regular expressions&quot; with &quot;regex&quot;. <code>sed</code> is one of many tools which support regex.</p>
+
+<p><code>sed -r &#39;s/Reg(exp?|ular Expression)s?/regex/i&#39; regex.txt</code></p>
+
+<pre >Today&#39;s topic is &quot;regex&quot;. We will
+learn what a regex is used for, how
+to create a regex, and how to use regex for
+matching and replacing textual data in files.</pre>
+
+<p>And that&#39;s just the beginning! But before we put &quot;regular expressions&quot; to use, we need to learn more about the symbols and syntax.</p>
 
 </article></slide><slide class=''><hgroup><h2>Pattern Modifiers</h2></hgroup><article  id="pattern-modifiers" class="smaller ">
 
@@ -225,6 +236,8 @@ Regex</pre>
 <td align="left">find <em>all</em> matches in string</td>
 </tr>
 </table>
+
+<p>&#8230; Where <code>^</code> and <code>$</code> are &quot;anchors&quot; marking the beginning end ending of the text.</p>
 
 </article></slide><slide class=''><hgroup><h2>Regular Expressions Tester: Regex101.com</h2></hgroup><article  id="regular-expressions-tester-regex101.com" class="smaller ">
 
@@ -454,6 +467,8 @@ Regex</pre>
 
 <p>For example, <code>^</code> and <code>$</code> tie a match to a location: <code>^</code> = start, <code>$</code> = end.</p>
 
+<p>This expression <code>/^Reg(exp?|ular Expression)s?$/regex/i</code> will <em>only</em> match text like &quot;Regular Expressions&quot; (or &quot;regex&quot;, etc.), containing <em>no other text</em>.</p>
+
 <p><code>\b</code> is an anchor for a &quot;word-boundary&quot; &#8211; the beginning or ending of a word or a string like a word.</p>
 
 <p>That is, a word-boundary is a zero-width boundary between a word-class character (<code>\w</code>) and a non-word-class character (<code>\W</code>).</p>
@@ -481,7 +496,7 @@ eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06</pre>
 
 <p>Try to make your expressions as precise as possible. Otherwise, they can be the source of subtle &quot;bugs&quot;, often hard to troubleshoot later.</p>
 
-</article></slide><slide class=''><hgroup><h2>Find and Replace</h2></hgroup><article  id="find-and-replace" class="smaller ">
+</article></slide><slide class=''><hgroup><h2>Data clean-up: Find and Replace</h2></hgroup><article  id="data-clean-up-find-and-replace" class="smaller ">
 
 <p>Parentheses also let you &quot;capture&quot; groups of characters for replacement. Each group surrounded in parentheses can be referenced by a numbered variable in a replacement string.</p>
 

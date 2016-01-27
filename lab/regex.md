@@ -40,7 +40,7 @@ These are all common names for today's topic.
 
 ## WTF?
 
-Let's decode this: `/^Reg(exp?|ular Expression)s?$/i`
+Let's decode this: `/Reg(exp?|ular Expression)s?/i`
 
 
 Symbol(s) | Meaning 

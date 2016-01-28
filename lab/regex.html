@@ -654,25 +654,24 @@ Rio de Janeiro: 22.9068° S, 43.1729° W</pre>
 
 <p>Here is an example in R using <code>gsub()</code> and POSIX character classes:</p>
 
-<pre class = 'prettyprint lang-r'>a &lt;- &quot;Seattle: 47.6097° N, 122.3331° W
+<pre class = 'prettyprint lang-r'>library(magrittr)
+&quot;Seattle: 47.6097° N, 122.3331° W
 Paris: 48.8567° N, 2.3508° E
 Adelaide: 34.9290° S, 138.6010° E
 Casablanca: 33.5333° N, 7.5833° W
 Beijing: 39.9167° N, 116.3833° E
-Rio de Janeiro: 22.9068° S, 43.1729° W&quot;
-b &lt;- unlist(strsplit(a, &quot;\n&quot;))
-c &lt;- gsub(&quot;([[:digit:].]+°) [WS]&quot;, &quot;-\\1&quot;, b)
-d &lt;- gsub(&quot;([[:digit:].]+°) [NE]&quot;, &quot;\\1&quot;, c)
-e &lt;- gsub(&quot;^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$&quot;,
-          &quot;https://www.google.com/maps/place/\\1+\\2&quot;, d)
-e</pre>
+Rio de Janeiro: 22.9068° S, 43.1729° W&quot; %&gt;%
+gsub(&quot;([[:digit:].]+°) [WS]&quot;, &quot;-\\1&quot;, .) %&gt;%
+gsub(&quot;([[:digit:].]+°) [NE]&quot;, &quot;\\1&quot;, .) %&gt;%
+gsub(&quot;^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$&quot;,
+          &quot;https://www.google.com/maps/place/\\1+\\2&quot;, .) %&gt;% cat()</pre>
 
-<pre >## [1] &quot;https://www.google.com/maps/place/47.6097+-122.3331&quot;
-## [2] &quot;https://www.google.com/maps/place/48.8567+2.3508&quot;   
-## [3] &quot;https://www.google.com/maps/place/-34.9290+138.6010&quot;
-## [4] &quot;https://www.google.com/maps/place/33.5333+-7.5833&quot;  
-## [5] &quot;https://www.google.com/maps/place/39.9167+116.3833&quot; 
-## [6] &quot;https://www.google.com/maps/place/-22.9068+-43.1729&quot;</pre>
+<pre >Seattle: 47.6097°, -122.3331°
+Paris: 48.8567°, 2.3508°
+Adelaide: -34.9290°, 138.6010°
+Casablanca: 33.5333°, -7.5833°
+Beijing: 39.9167°, 116.3833°
+Rio de Janeiro: -22.9068°, -43.1729°</pre>
 
 </article></slide><slide class=''><hgroup><h2>More resources</h2></hgroup><article  id="more-resources" class="smaller ">
 

@@ -496,27 +496,26 @@ Here is an example in R using `gsub()` and POSIX character classes:
 
 
 ```r
-a <- "Seattle: 47.6097° N, 122.3331° W
+library(magrittr)
+"Seattle: 47.6097° N, 122.3331° W
 Paris: 48.8567° N, 2.3508° E
 Adelaide: 34.9290° S, 138.6010° E
 Casablanca: 33.5333° N, 7.5833° W
 Beijing: 39.9167° N, 116.3833° E
-Rio de Janeiro: 22.9068° S, 43.1729° W"
-b <- unlist(strsplit(a, "\n"))
-c <- gsub("([[:digit:].]+°) [WS]", "-\\1", b)
-d <- gsub("([[:digit:].]+°) [NE]", "\\1", c)
-e <- gsub("^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$",
-          "https://www.google.com/maps/place/\\1+\\2", d)
-e
+Rio de Janeiro: 22.9068° S, 43.1729° W" %>%
+gsub("([[:digit:].]+°) [WS]", "-\\1", .) %>%
+gsub("([[:digit:].]+°) [NE]", "\\1", .) %>%
+gsub("^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$",
+          "https://www.google.com/maps/place/\\1+\\2", .) %>% cat()
 ```
 
 ```
-## [1] "https://www.google.com/maps/place/47.6097+-122.3331"
-## [2] "https://www.google.com/maps/place/48.8567+2.3508"   
-## [3] "https://www.google.com/maps/place/-34.9290+138.6010"
-## [4] "https://www.google.com/maps/place/33.5333+-7.5833"  
-## [5] "https://www.google.com/maps/place/39.9167+116.3833" 
-## [6] "https://www.google.com/maps/place/-22.9068+-43.1729"
+Seattle: 47.6097°, -122.3331°
+Paris: 48.8567°, 2.3508°
+Adelaide: -34.9290°, 138.6010°
+Casablanca: 33.5333°, -7.5833°
+Beijing: 39.9167°, 116.3833°
+Rio de Janeiro: -22.9068°, -43.1729°
 ```
 
 ## More resources

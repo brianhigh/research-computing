@@ -34,7 +34,7 @@ popular languages will know what you mean when you provide them with a
 
 The regular expression "syntax" is a nearly universal way to represent text
 patterns symbolically in order to match text for use with search and
-replace operations of software Applications like MS-Word, command-line
+replace operations of software Applications like text editors, command-line
 utilities like sed, and programming languages like R and Python.
 
 * Regular expressions will help you manage data in many situations.
@@ -110,7 +110,7 @@ replace all variations of "regular expressions" with "regex".
 [sed](https://www.gnu.org/software/sed/manual/sed.html) is one of many tools 
 which support regex. 
 
-`sed -r 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
+`sed -E -e 's/Reg(exp?|ular Expression)s?/regex/' regex.txt`
 ```
 Today's topic is "regex". We will
 learn what a regex is used for, how
@@ -122,7 +122,32 @@ This [Perl](https://www.perl.org/) command will do the same thing:
 
 `perl -wpl -e 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 
-## Regex Substitution -- in RStudio
+## Regex Substitution -- in R
+
+
+```r
+data <- 'Today\'s topic is "Regular Expressions". We will
+learn what a Regular Expression is used for, how
+to create a Regexp, and how to use regex for
+matching and replacing textual data in files.'
+
+cat(gsub("Reg(exp?|ular Expression)s?", "regex", data, 
+         ignore.case = TRUE))
+```
+
+```
+Today's topic is "regex". We will
+learn what a regex is used for, how
+to create a regex, and how to use regex for
+matching and replacing textual data in files.
+```
+
+You will note that we had to use the `gsub` function to perform a "global" 
+substitution and we used `ignore.case = TRUE` to use case-insensitive mode.
+
+We also had to "escape" the `'` in "Today's" as `Today\'s`. More on that later!
+
+## Regex Substitution -- in RStudio Editor
 
 ![RStudio has a checkbox to enable Regex search.](images/rstudio_regex_pre.png)
 
@@ -132,8 +157,7 @@ This [Perl](https://www.perl.org/) command will do the same thing:
 
 ![Regex Substitution - Regex101.com](images/regex_substitution.png)
 
-And that's just the beginning! But before we put "regular expressions" to use, 
-we need to learn more about the symbols and syntax.
+And that's just the beginning! Now, let's learn how to make our own expressions...
 
 ## Pattern Modifiers
 

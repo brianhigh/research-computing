@@ -365,7 +365,9 @@ language and on the position of the character within the brackets.
 
 With most regex "flavors", `]`, `\`, `^`, and `-` will still have special 
 meaning. "POSIX" and "GNU" regular expressions do _not_ recognize escaping 
-using `\` within a character class. See the regex(7) "manpage" (`man 7 regex`) 
+using `\` within a character class. See the 
+[regex(7)](http://man7.org/linux/man-pages/man7/regex.7.html) 
+"manpage" (`man 7 regex`) 
 or [regular-expressions.info](http://www.regular-expressions.info/charclass.html).
 
 ## Replacement with Capture Groups

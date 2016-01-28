@@ -16,12 +16,13 @@ output:
 
 ## Regular Expressions
 
-Ever need to "clean-up" data? To find, replace or reformat data within a file?
+Ever need to "clean-up" data? To find, replace or reformat data within a text 
+file?
 
 A powerful, flexible, nearly universal "wildcard" syntax is available to you. 
 
 It is called, 
-[Regular Expressions(https://en.wikipedia.org/wiki/Regular_expression), 
+[Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression), 
 among other names...
 
 Regular expressions are "wildcard" search patterns that can be used to _match_

@@ -9,7 +9,9 @@ Ever need to "clean-up" data? To find, replace or reformat data within a file?
 
 A powerful, flexible, nearly universal "wildcard" syntax is available to you. 
 
-It is called, "Regular Expressions", among other names...
+It is called, 
+[Regular Expressions(https://en.wikipedia.org/wiki/Regular_expression), 
+among other names...
 
 Regular expressions are "wildcard" search patterns that can be used to _match_
 text and also to help _replace_ text. They use a special syntax which we will 
@@ -102,9 +104,11 @@ to create a Regexp, and how to use regex for
 matching and replacing textual data in files.
 ```
 
-Then a simple `sed` command (in Bash) would replace all variations of 
-"regular expressions" with "regex". `sed` is one of many tools which support 
-regex. 
+Then a simple [sed](https://en.wikipedia.org/wiki/Sed) command (in 
+[Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29)) would 
+replace all variations of "regular expressions" with "regex". 
+[sed](https://www.gnu.org/software/sed/manual/sed.html) is one of many tools 
+which support regex. 
 
 `sed -r 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 ```
@@ -114,7 +118,7 @@ to create a regex, and how to use regex for
 matching and replacing textual data in files.
 ```
 
-This Perl command will do the same thing:
+This [Perl](https://www.perl.org/) command will do the same thing:
 
 `perl -wpl -e 's/Reg(exp?|ular Expression)s?/regex/i' regex.txt`
 
@@ -202,7 +206,8 @@ pre-defined and standard classes, we also have POSIX classes.
 | [:blank:] | [ \\t]            | space and tab       |
 | [:space:] | [ \\t\\r\\n\\v\\f]| all whitespace      | 
 
-Regex101.com does not support them, but R and many other languages do.
+[Regex101.com](https://regex101.com/) does not support them, but R and many 
+other languages do.
 
 ## Quantifiers: How many?
 
@@ -240,7 +245,7 @@ To make `+` non-greedy ("lazy"), we can place a `?` after it like this: `+?`.
 But `(\w+?)A*` matches only `GA`. If we use the `$` anchor, then we get the
 match we want. Now `(\w+?)A*$` matches only `GATTACAAGATTAC`. 
 
-Try this in Regex101.com and see for yourself.
+Try this in [Regex101.com](https://regex101.com/) and see for yourself.
 
 Note: You may also use the `U` pattern modifier to turn off greediness.
 
@@ -352,7 +357,8 @@ In this example, we will take a name, "First Last", and convert it to
 * Replace: `\2, \1` 
 * Output: `Last, First` 
 
-Try this with your own name. To use text replacement at Regex101, press the 
+Try this with your own name. To use text replacement at 
+[Regex101.com](https://regex101.com/), press the 
 (+) button next to the SUBSTITUTION section heading.
 
 Note: For non-capturing groups, use `(?:)` as in `Wh(?:o|at|ere|en|y)\?`

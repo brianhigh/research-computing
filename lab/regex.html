@@ -115,7 +115,7 @@
 
 <p>A powerful, flexible, nearly universal &quot;wildcard&quot; syntax is available to you.</p>
 
-<p>It is called, &quot;Regular Expressions&quot;, among other names&#8230;</p>
+<p>It is called, [Regular Expressions(<a href='https://en.wikipedia.org/wiki/Regular_expression' title=''>https://en.wikipedia.org/wiki/Regular_expression</a>), among other names&#8230;</p>
 
 <p>Regular expressions are &quot;wildcard&quot; search patterns that can be used to <em>match</em> text and also to help <em>replace</em> text. They use a special syntax which we will learn today.</p>
 
@@ -217,7 +217,7 @@ learn what a Regular Expression is used for, how
 to create a Regexp, and how to use regex for
 matching and replacing textual data in files.</pre>
 
-<p>Then a simple <code>sed</code> command (in Bash) would replace all variations of &quot;regular expressions&quot; with &quot;regex&quot;. <code>sed</code> is one of many tools which support regex.</p>
+<p>Then a simple <a href='https://en.wikipedia.org/wiki/Sed' title=''>sed</a> command (in <a href='https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29' title=''>Bash</a>) would replace all variations of &quot;regular expressions&quot; with &quot;regex&quot;. <a href='https://www.gnu.org/software/sed/manual/sed.html' title=''>sed</a> is one of many tools which support regex.</p>
 
 <p><code>sed -r &#39;s/Reg(exp?|ular Expression)s?/regex/i&#39; regex.txt</code></p>
 
@@ -226,7 +226,7 @@ learn what a regex is used for, how
 to create a regex, and how to use regex for
 matching and replacing textual data in files.</pre>
 
-<p>This Perl command will do the same thing:</p>
+<p>This <a href='https://www.perl.org/' title=''>Perl</a> command will do the same thing:</p>
 
 <p><code>perl -wpl -e &#39;s/Reg(exp?|ular Expression)s?/regex/i&#39; regex.txt</code></p>
 
@@ -406,7 +406,7 @@ matching and replacing textual data in files.</pre>
 </tr>
 </table>
 
-<p>Regex101.com does not support them, but R and many other languages do.</p>
+<p><a href='https://regex101.com/' title=''>Regex101.com</a> does not support them, but R and many other languages do.</p>
 
 </article></slide><slide class=''><hgroup><h2>Quantifiers: How many?</h2></hgroup><article  id="quantifiers-how-many" class="smaller ">
 
@@ -463,7 +463,7 @@ matching and replacing textual data in files.</pre>
 
 <p>But <code>(\w+?)A*</code> matches only <code>GA</code>. If we use the <code>$</code> anchor, then we get the match we want. Now <code>(\w+?)A*$</code> matches only <code>GATTACAAGATTAC</code>.</p>
 
-<p>Try this in Regex101.com and see for yourself.</p>
+<p>Try this in <a href='https://regex101.com/' title=''>Regex101.com</a> and see for yourself.</p>
 
 <p>Note: You may also use the <code>U</code> pattern modifier to turn off greediness.</p>
 
@@ -545,7 +545,7 @@ eth0      Link encap:Ethernet  HWaddr 00:1d:72:8e:0b:06</pre>
 <li>Output: <code>Last, First</code></li>
 </ul>
 
-<p>Try this with your own name. To use text replacement at Regex101, press the (+) button next to the SUBSTITUTION section heading.</p>
+<p>Try this with your own name. To use text replacement at <a href='https://regex101.com/' title=''>Regex101.com</a>, press the (+) button next to the SUBSTITUTION section heading.</p>
 
 <p>Note: For non-capturing groups, use <code>(?:)</code> as in <code>Wh(?:o|at|ere|en|y)\?</code></p>
 

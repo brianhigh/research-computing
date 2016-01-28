@@ -518,6 +518,8 @@ https://www.google.com/maps/place/39.9167+116.3833
 https://www.google.com/maps/place/-22.9068+-43.1729
 ```
 
+In R, we have to use double-escapes: `\\1` and `\\2` instead of `\1` and `\2`. 
+
 ## More resources
 
 Tutorials and reference information:

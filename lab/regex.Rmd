@@ -21,17 +21,18 @@ file?
 
 A powerful, flexible, nearly universal "wildcard" syntax is available to you. 
 
-It is called, 
-[Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression), 
-among other names...
+This "mini language" allows you to create 
+[Regular Expressions](https://en.wikipedia.org/wiki/Regular_expression).
 
-Regular expressions are "wildcard" search patterns that can be used to _match_
-text and also to help _replace_ text. They use a special syntax which we will 
-learn today.
+Regular expressions are "wildcard" search expressions that can be used to 
+_match_ patterns of text and also to help you _replace_ text. They use a 
+special syntax which we will learn today.
 
 Regular expressions are supported by applications such as MS-Word, Notepad++,
-TextWrangler, jEdit, Gedit, and RStudio. They are also supported by programming
-languages like Perl, Python, JavaScript, R, C#, and Bash.
+TextWrangler, jEdit, Gedit, and RStudio. 
+
+They are also supported by programming languages like Perl, Python, JavaScript, 
+R, C#, and Bash.
 
 ## As universal as "OK"
 

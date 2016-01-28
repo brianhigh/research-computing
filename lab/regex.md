@@ -32,7 +32,7 @@ will likely understand the word "OK", various programs and most computer
 popular languages will know what you mean when you provide them with a 
 "regular expression" in the right context.
 
-* Regular expressions are (almost) universally supported for match/replace.
+* Regular expressions are (almost) universally supported for pattern matching.
 
 The regular expression "syntax" is a nearly universal way to represent text
 patterns symbolically in order to match text for use with search and

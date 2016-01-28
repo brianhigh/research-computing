@@ -53,7 +53,7 @@ utilities like sed, and programming languages like R and Python.
 * Regular expressions will help you manage data in many situations.
 
 The time you invest in learning this one skill will pay off in most of the
-data management and analysis environment you will use. They have been around 
+data management and analysis environments you will use. They have been around 
 for decades and will continue to be popular for years to come. OK?
 
 ## Regular Expressions Meta-Example

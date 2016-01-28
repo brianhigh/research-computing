@@ -36,7 +36,7 @@ popular languages will know what you mean when you provide them with a
 
 The regular expression "syntax" is a nearly universal way to represent text
 patterns symbolically in order to match text for use with search and
-replace operations of software Applications like text editors, command-line
+replace operations of software applications like text editors, command-line
 utilities like sed, and programming languages like R and Python.
 
 * Regular expressions will help you manage data in many situations.

@@ -505,17 +505,17 @@ Beijing: 39.9167° N, 116.3833° E
 Rio de Janeiro: 22.9068° S, 43.1729° W" %>%
 gsub("([[:digit:].]+°) [WS]", "-\\1", .) %>%
 gsub("([[:digit:].]+°) [NE]", "\\1", .) %>%
-gsub("^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$",
+gsub("[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°",
           "https://www.google.com/maps/place/\\1+\\2", .) %>% cat()
 ```
 
 ```
-Seattle: 47.6097°, -122.3331°
-Paris: 48.8567°, 2.3508°
-Adelaide: -34.9290°, 138.6010°
-Casablanca: 33.5333°, -7.5833°
-Beijing: 39.9167°, 116.3833°
-Rio de Janeiro: -22.9068°, -43.1729°
+https://www.google.com/maps/place/47.6097+-122.3331
+https://www.google.com/maps/place/48.8567+2.3508
+https://www.google.com/maps/place/-34.9290+138.6010
+https://www.google.com/maps/place/33.5333+-7.5833
+https://www.google.com/maps/place/39.9167+116.3833
+https://www.google.com/maps/place/-22.9068+-43.1729
 ```
 
 ## More resources

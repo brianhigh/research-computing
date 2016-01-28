@@ -507,7 +507,7 @@ Beijing: 39.9167° N, 116.3833° E
 Rio de Janeiro: 22.9068° S, 43.1729° W" %>%
 gsub("([[:digit:].]+°) [WS]", "-\\1", .) %>%
 gsub("([[:digit:].]+°) [NE]", "\\1", .) %>%
-gsub("^[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°$",
+gsub("[[:alpha:][:blank:]]+: ([[:digit:].-]+)°, ([[:digit:].-]+)°",
           "https://www.google.com/maps/place/\\1+\\2", .) %>% cat()
 ```
 

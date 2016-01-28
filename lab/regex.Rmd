@@ -361,10 +361,15 @@ That is, if you want to use one of these special symbols ("metacharacters") as a
 literal (ordinary) character, you may have to "escape" it with a backslash 
 to take away its special meaning. Example: `Wh(o|at|ere|en|y)\?`
 
-Escaping applies more outside of character classes, `[ ]`, than within them. 
-This is because the square bracket notation implies most punctuation symbols are
-being used in their ordinary sense. There a few exceptions to this, such as the
-backslash and forward slash characters: `[\\\/]` matches `\` or `/`.
+Escaping applies _outside_ of the square brackets of character classes, `[ ]`. 
+Inside the square brackets, metacharacters generally lose their special meaning,
+depending on the "flavor" of regex supported by your application, utility or 
+language and on the position of the character within the brackets.
+
+With most regex "flavors", `]`, `\`, `^`, and `-` will still have special 
+meaning. "POSIX" and "GNU" regular expressions do _not_ recognize escaping 
+using `\` within a character class. See the regex(7) "manpage" (`man 7 regex`) 
+or [regular-expressions.info](http://www.regular-expressions.info/charclass.html).
 
 ## Replacement with Capture Groups
 

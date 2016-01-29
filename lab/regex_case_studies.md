@@ -436,7 +436,7 @@ Task:
 
 Extract round-trip-times and IP addresses from the output of the `tracert` command.
 
-R code:
+R code: (Modified from original to simplify and to run independently of other code.)
 
 ```
 library(stringr)
@@ -459,9 +459,12 @@ names(route) <- c("addr", "mean_rtt")
 route <- route[complete.cases(route), ]
 ```
 
+The regex used in the example below was inspired by the code above, but
+was heavily modified and simplified for the purposes of the example.
+
 Try at [https://regex101.com](https://regex101.com):
 
-* Find: `<?([0-9.]+) ms[ *]+<?([0-9.]+) ms[ *]+<?([0-9.]+) ms[ *]+((?:[0-9]{1,3}\.){3}[0-9]{1,3})`
+* Find: `/<?(\d+) ms\s+<?(\d+) ms\s+<?(\d+) ms\s+(\d.{7,})/g`
 * Replace: `\1 \2 \3 \4`
 
 Match the measurements of round-trip-time (rtt) and IP address (addr).
@@ -505,7 +508,7 @@ Task:
 
 Match valid [AIS navigation messages](http://www.navcen.uscg.gov/?pageName=AISMessages).
 
-Python code:
+Python code: (Modified from original to simplify and to run independently of other code.)
 
 ```
 #!/usr/bin/python

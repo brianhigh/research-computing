@@ -355,7 +355,7 @@ http://www.gov.za/latest-speeches</code></pre>
 <p>Example from: <a href="https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R">Visual-Tracerouter</a></p>
 <p>Task:</p>
 <p>Extract round-trip-times and IP addresses from the output of the <code>tracert</code> command.</p>
-<p>R code:</p>
+<p>R code: (Modified from original to simplify and to run independently of other code.)</p>
 <pre><code>library(stringr)
 
 addr &lt;- 'who.int'
@@ -374,9 +374,10 @@ route &lt;- data.frame(unlist(addrs), sapply(rtt, mean),
                     stringsAsFactors=FALSE)
 names(route) &lt;- c(&quot;addr&quot;, &quot;mean_rtt&quot;)
 route &lt;- route[complete.cases(route), ]</code></pre>
+<p>The regex used in the example below was inspired by the code above, but was heavily modified and simplified for the purposes of the example.</p>
 <p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
 <ul>
-<li>Find: <code>&lt;?([0-9.]+) ms[ *]+&lt;?([0-9.]+) ms[ *]+&lt;?([0-9.]+) ms[ *]+((?:[0-9]{1,3}\.){3}[0-9]{1,3})</code></li>
+<li>Find: <code>/&lt;?(\d+) ms\s+&lt;?(\d+) ms\s+&lt;?(\d+) ms\s+(\d.{7,})/g</code></li>
 <li>Replace: <code>\1 \2 \3 \4</code></li>
 </ul>
 <p>Match the measurements of round-trip-time (rtt) and IP address (addr).</p>
@@ -408,7 +409,7 @@ Trace complete.</code></pre>
 <p>The data was recorded using a VHF marine radio to capture the digital broadcasts. Some data may have been garbled. These regular expressions were used to validate the data and throw out any corrupted data. Also, only certain broadcasts types were of interest. So, data of any other type were also excluded.</p>
 <p>Task:</p>
 <p>Match valid <a href="http://www.navcen.uscg.gov/?pageName=AISMessages">AIS navigation messages</a>.</p>
-<p>Python code:</p>
+<p>Python code: (Modified from original to simplify and to run independently of other code.)</p>
 <pre><code>#!/usr/bin/python
 # -*- coding: utf-8 -*-
 

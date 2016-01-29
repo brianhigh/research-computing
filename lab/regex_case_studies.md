@@ -432,9 +432,9 @@ http://www.gov.za/latest-speeches
 
 Example from: [Visual-Tracerouter](https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R)
 
-Teask:
+Task:
 
-Extract round-trip-times and IP addresses from the output of the tracert command.
+Extract round-trip-times and IP addresses from the output of the `tracert` command.
 
 R code:
 

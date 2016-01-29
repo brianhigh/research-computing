@@ -131,31 +131,6 @@ Effective Python: 59 Specific Ways to Write Better Python (Effective Software De
 <p>Example data:</p>
 <pre><code>Burglary,Larceny-theft,Motor vehicle theft,Violent Crime rate</code></pre>
 </div>
-<div id="visual-tracerouter" class="section level2">
-<h2>Visual Tracerouter</h2>
-<p>Example from: <a href="https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R">Visual Tracerouter</a></p>
-<p>Task:</p>
-<p>Clean up address if it is actually a url instead of a domain name.</p>
-<p>R code:</p>
-<pre><code>addr &lt;- gsub(pattern = &quot;^(?:[a-zA-Z]*:\\/\\/)?([^\\/:]+).*&quot;,
-        replacement = &quot;\\1&quot;, addr)</code></pre>
-<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
-<ul>
-<li>Find: <code>/^(?:[a-zA-Z]*:\/\/)?([^\/:\s]+).*/gm</code></li>
-<li>Replace: <code>\1</code></li>
-</ul>
-<p>Replacing with text captured from the search expression is accomplished with the use of parenthesis in the “find” string and a numbered variable in the “replace” string. Here, \1 would normally be entered as  or $1 in most other applications. R requires that the  in  to be “escaped” with another . We will see this a lot when using regular expressions with R.</p>
-<p>Example data:</p>
-<pre><code>www.gov.bm
-http://www.nsa.gov
-opm.gov.jm
-https://www.redcross.org
-http://www.bbc.com/earth/uk
-https://www.cdc.gov/zika/index.html
-www.cubagob.cu
-www.gov.bb
-http://www.gov.za/latest-speeches</code></pre>
-</div>
 <div id="us-cert-bulletins-remove-extra-characters" class="section level2">
 <h2>US CERT Bulletins: Remove extra characters</h2>
 <p>Example from: <a href="https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R">US CERT Bulletins</a></p>
@@ -350,31 +325,82 @@ address:      Geneva 27
 address:      Geneva Geneva CH-1211
 address:      Switzerland</code></pre>
 </div>
-<div id="us-cert-bulletins-vendprod-clean-up" class="section level2">
-<h2>US CERT Bulletins: VendProd clean-up</h2>
-<p>Example from: <a href="https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R">US CERT Bulletins</a></p>
+<div id="visual-tracerouter" class="section level2">
+<h2>Visual Tracerouter</h2>
+<p>Example from: <a href="https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R">Visual Tracerouter</a></p>
 <p>Task:</p>
-<p>Clean up the VendProd variable string for use in plot labels.</p>
+<p>Clean up address if it is actually a url instead of a domain name.</p>
 <p>R code:</p>
-<pre><code>bulletin.df %&gt;%
-    mutate(VendProd = gsub(&quot; -- &quot;, &quot;: &quot;, x=VendProd, fixed = TRUE)) %&gt;%
-    mutate(VendProd = gsub(&quot;_$&quot;, &quot;&quot;, VendProd)) %&gt;%
-    mutate(VendProd = gsub(&quot;(^|[:_ -])([[:alpha:]])&quot;, &quot;\\1\\U\\2&quot;,VendProd,
-        perl=TRUE)) %&gt;%
-    mutate(VendProd = gsub(&quot;_&quot;, &quot; &quot;, VendProd)) -&gt; bulletin.df</code></pre>
-<p>Data source: <a href="https://www.us-cert.gov/ncas/bulletins.xml">US CERT</a></p>
-<p>Sample data:</p>
-<pre><code>adobe -- acrobat
-apache -- subversion
-apple -- mac_os_x
-dell -- pre-boot_authentication_driver
-f5 -- big-ip_access_policy_manager
-microsoft -- windows_10
-microsoft -- jscript
-microsoft -- silverlight
-owncloud -- owncloud
-pygments -- pygments
-sap -- afaria</code></pre>
+<pre><code>addr &lt;- gsub(pattern = &quot;^(?:[a-zA-Z]*:\\/\\/)?([^\\/:]+).*&quot;,
+        replacement = &quot;\\1&quot;, addr)</code></pre>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
+<ul>
+<li>Find: <code>/^(?:[a-zA-Z]*:\/\/)?([^\/:\s]+).*/gm</code></li>
+<li>Replace: <code>\1</code></li>
+</ul>
+<p>Replacing with text captured from the search expression is accomplished with the use of parenthesis in the “find” string and a numbered variable in the “replace” string. Here, \1 would normally be entered as  or $1 in most other applications. R requires that the  in  to be “escaped” with another . We will see this a lot when using regular expressions with R.</p>
+<p>Example data:</p>
+<pre><code>www.gov.bm
+http://www.nsa.gov
+opm.gov.jm
+https://www.redcross.org
+http://www.bbc.com/earth/uk
+https://www.cdc.gov/zika/index.html
+www.cubagob.cu
+www.gov.bb
+http://www.gov.za/latest-speeches</code></pre>
+</div>
+<div id="visual-tracerouter-1" class="section level2">
+<h2>Visual Tracerouter</h2>
+<p>Example from: <a href="https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R">Visual-Tracerouter</a></p>
+<p>Teask:</p>
+<p>Extract round-trip-times and IP addresses from the output of the tracert command.</p>
+<p>R code:</p>
+<pre><code>library(stringr)
+
+addr &lt;- 'who.int'
+pattern &lt;- &quot;(?:&lt;?[0-9.]+ ms[ *]+)*(?:[0-9]{1,3}\\.){3}[0-9]{1,3}&quot;
+
+# Windows uses a `tracert` command to trace internet routes.
+traceroute &lt;- paste(
+    'cmd /c &quot;tracert -d -h 15', addr, '&gt;', &quot;route.txt&quot;, '&quot;')
+route.string &lt;- paste(readLines(&quot;route.txt&quot;), collapse=&quot; &quot;)
+route &lt;- unlist(str_extract_all(route.string, pattern))[-1]
+
+library(gsubfn)
+rtt &lt;- strapply(route, &quot;([0-9.]+) ms&quot;, as.numeric)
+addrs &lt;- strapply(route, &quot;(?:[0-9]{1,3}\\.){3}[0-9]{1,3}&quot;)
+route &lt;- data.frame(unlist(addrs), sapply(rtt, mean), 
+                    stringsAsFactors=FALSE)
+names(route) &lt;- c(&quot;addr&quot;, &quot;mean_rtt&quot;)
+route &lt;- route[complete.cases(route), ]</code></pre>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
+<ul>
+<li>Find: <code>&lt;?([0-9.]+) ms[ *]+&lt;?([0-9.]+) ms[ *]+&lt;?([0-9.]+) ms[ *]+((?:[0-9]{1,3}\.){3}[0-9]{1,3})</code></li>
+<li>Replace: <code>\1 \2 \3 \4</code></li>
+</ul>
+<p>Match the measurements of round-trip-time (rtt) and IP address (addr).</p>
+<p>Example data:</p>
+<pre><code>Tracing route to who.int [158.232.12.119]
+over a maximum of 15 hops:
+
+  1    &lt;1 ms    &lt;1 ms    &lt;1 ms  128.95.230.102
+  2    &lt;1 ms    &lt;1 ms    &lt;1 ms  10.132.1.73
+  3    &lt;1 ms    &lt;1 ms    &lt;1 ms  10.132.1.75
+  4    &lt;1 ms    &lt;1 ms    &lt;1 ms  209.124.181.134
+  5     1 ms    &lt;1 ms    &lt;1 ms  64.57.28.53
+  6    16 ms    16 ms    16 ms  198.71.45.24
+  7    37 ms    36 ms    36 ms  198.71.45.18
+  8    47 ms    48 ms    48 ms  198.71.45.14
+  9    48 ms    48 ms    48 ms  198.71.46.34
+ 10   159 ms   153 ms   153 ms  192.91.246.110
+ 11   156 ms   153 ms   153 ms  192.65.184.58
+ 12   153 ms   153 ms   153 ms  192.65.184.34
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+
+Trace complete.</code></pre>
 </div>
 <div id="ais-navigation-messages" class="section level2">
 <h2>AIS Navigation Messages</h2>

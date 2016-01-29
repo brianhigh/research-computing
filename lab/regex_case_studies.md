@@ -116,46 +116,6 @@ Example data:
 Burglary,Larceny-theft,Motor vehicle theft,Violent Crime rate
 ```
 
-## Visual Tracerouter
-
-Example from: [Visual Tracerouter](https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R)
-
-Task:
-
-Clean up address if it is actually a url instead of a domain name.
-
-R code:
-
-```
-addr <- gsub(pattern = "^(?:[a-zA-Z]*:\\/\\/)?([^\\/:]+).*",
-        replacement = "\\1", addr)
-```
-
-Try at [https://regex101.com](https://regex101.com):
-
-* Find: `/^(?:[a-zA-Z]*:\/\/)?([^\/:\s]+).*/gm`
-* Replace: `\1`
-
-Replacing with text captured from the search expression is accomplished
-with the use of parenthesis in the "find" string and a numbered variable
-in the "replace" string.  Here, \\1 would normally be entered as \1 or $1
-in most other applications. R requires that the \ in \1 to be "escaped" with
-another \. We will see this a lot when using regular expressions with R.
-
-Example data:
-
-```
-www.gov.bm
-http://www.nsa.gov
-opm.gov.jm
-https://www.redcross.org
-http://www.bbc.com/earth/uk
-https://www.cdc.gov/zika/index.html
-www.cubagob.cu
-www.gov.bb
-http://www.gov.za/latest-speeches
-```
-
 ## US CERT Bulletins: Remove extra characters
 
 Example from: [US CERT Bulletins](https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R)
@@ -428,41 +388,107 @@ address:      Geneva Geneva CH-1211
 address:      Switzerland
 ```
 
-## US CERT Bulletins: VendProd clean-up
+## Visual Tracerouter
 
-Example from: [US CERT Bulletins](https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R)
+Example from: [Visual Tracerouter](https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R)
 
 Task:
 
-Clean up the VendProd variable string for use in plot labels.
+Clean up address if it is actually a url instead of a domain name.
 
 R code:
 
 ```
-bulletin.df %>%
-    mutate(VendProd = gsub(" -- ", ": ", x=VendProd, fixed = TRUE)) %>%
-    mutate(VendProd = gsub("_$", "", VendProd)) %>%
-    mutate(VendProd = gsub("(^|[:_ -])([[:alpha:]])", "\\1\\U\\2",VendProd,
-        perl=TRUE)) %>%
-    mutate(VendProd = gsub("_", " ", VendProd)) -> bulletin.df
+addr <- gsub(pattern = "^(?:[a-zA-Z]*:\\/\\/)?([^\\/:]+).*",
+        replacement = "\\1", addr)
 ```
 
-Data source: [US CERT](https://www.us-cert.gov/ncas/bulletins.xml)
+Try at [https://regex101.com](https://regex101.com):
 
-Sample data:
+* Find: `/^(?:[a-zA-Z]*:\/\/)?([^\/:\s]+).*/gm`
+* Replace: `\1`
+
+Replacing with text captured from the search expression is accomplished
+with the use of parenthesis in the "find" string and a numbered variable
+in the "replace" string.  Here, \\1 would normally be entered as \1 or $1
+in most other applications. R requires that the \ in \1 to be "escaped" with
+another \. We will see this a lot when using regular expressions with R.
+
+Example data:
 
 ```
-adobe -- acrobat
-apache -- subversion
-apple -- mac_os_x
-dell -- pre-boot_authentication_driver
-f5 -- big-ip_access_policy_manager
-microsoft -- windows_10
-microsoft -- jscript
-microsoft -- silverlight
-owncloud -- owncloud
-pygments -- pygments
-sap -- afaria
+www.gov.bm
+http://www.nsa.gov
+opm.gov.jm
+https://www.redcross.org
+http://www.bbc.com/earth/uk
+https://www.cdc.gov/zika/index.html
+www.cubagob.cu
+www.gov.bb
+http://www.gov.za/latest-speeches
+```
+
+## Visual Tracerouter
+
+Example from: [Visual-Tracerouter](https://github.com/brianhigh/visual-tracerouter/blob/master/visual-traceroute.R)
+
+Teask:
+
+Extract round-trip-times and IP addresses from the output of the tracert command.
+
+R code:
+
+```
+library(stringr)
+
+addr <- 'who.int'
+pattern <- "(?:<?[0-9.]+ ms[ *]+)*(?:[0-9]{1,3}\\.){3}[0-9]{1,3}"
+
+# Windows uses a `tracert` command to trace internet routes.
+traceroute <- paste(
+    'cmd /c "tracert -d -h 15', addr, '>', "route.txt", '"')
+route.string <- paste(readLines("route.txt"), collapse=" ")
+route <- unlist(str_extract_all(route.string, pattern))[-1]
+
+library(gsubfn)
+rtt <- strapply(route, "([0-9.]+) ms", as.numeric)
+addrs <- strapply(route, "(?:[0-9]{1,3}\\.){3}[0-9]{1,3}")
+route <- data.frame(unlist(addrs), sapply(rtt, mean), 
+                    stringsAsFactors=FALSE)
+names(route) <- c("addr", "mean_rtt")
+route <- route[complete.cases(route), ]
+```
+
+Try at [https://regex101.com](https://regex101.com):
+
+* Find: `<?([0-9.]+) ms[ *]+<?([0-9.]+) ms[ *]+<?([0-9.]+) ms[ *]+((?:[0-9]{1,3}\.){3}[0-9]{1,3})`
+* Replace: `\1 \2 \3 \4`
+
+Match the measurements of round-trip-time (rtt) and IP address (addr).
+
+Example data:
+
+```
+Tracing route to who.int [158.232.12.119]
+over a maximum of 15 hops:
+
+  1    <1 ms    <1 ms    <1 ms  128.95.230.102
+  2    <1 ms    <1 ms    <1 ms  10.132.1.73
+  3    <1 ms    <1 ms    <1 ms  10.132.1.75
+  4    <1 ms    <1 ms    <1 ms  209.124.181.134
+  5     1 ms    <1 ms    <1 ms  64.57.28.53
+  6    16 ms    16 ms    16 ms  198.71.45.24
+  7    37 ms    36 ms    36 ms  198.71.45.18
+  8    47 ms    48 ms    48 ms  198.71.45.14
+  9    48 ms    48 ms    48 ms  198.71.46.34
+ 10   159 ms   153 ms   153 ms  192.91.246.110
+ 11   156 ms   153 ms   153 ms  192.65.184.58
+ 12   153 ms   153 ms   153 ms  192.65.184.34
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+
+Trace complete.
 ```
 
 ## AIS Navigation Messages

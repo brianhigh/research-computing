@@ -4,19 +4,19 @@
 
 ## Agenda for Week 5 Lab
 
-Version Control
+Version Control (_Brian High_): 40 minutes
 
 * Introduce version control and Git
 * Show how Git can be used from RStudio
-* Demonstrate a Git/Github workflow
-* Do a lab exercise
+* Demonstrate a Git/Github workflow and do a lab exercise
 
-Introduction to Programming with R
+Introduction to Programming with R (_Boris Reiss_): 1 hour
 
 * Introduce programming basics
 * Introduce R and RStudio
-* Provide examples
-* Do a lab exercise
+* Provide examples and do a lab exercise
+
+Go over the answers to Quiz 2: 10 minutes
 
 ## Version Control Learning Objectives
 

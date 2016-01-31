@@ -38,28 +38,34 @@ Go over the answers to Quiz 2: 10 minutes
 
 ## Version Control
 
-* A method for tracking changes to your files
-* Works like Word "Track Changes" but for entire project
-* Makes changes to several files as a single version (`commit`)
-* Works with any type of file; works best with plain-text
+The following is true of most modern version control systems:
+
+* A method for tracking changes to one or more files
+* Like Apple Time Machine with "Track Changes" of MS-Word
+* Makes changes to one or more files as a single "commit"
+* Works with any type of file, especially plain-text and "code"
+* Allows multiple users to work with the same files concurrently
+* May also be called "revision control systems"
 
 ## Version Control Features
 
-* Provides commit-log and change status for ease of tracking
-* Allows you to compare versions or revert to past versions
-* Lets you collaborate through a server or website like [Github](https://github.com/)
-* Lets you publish and share project files to get feedback
+Most modern version control systems:
+
+* Provide commit-log and change status for ease of tracking
+* Allow you to compare versions or revert to past versions
+* Let you share files and merge changes from others
+* Let you collaborate through a server or website like [Github](https://github.com/)
 * Sync changes with the server instead of emailing files around
-* Handles merging for you, transparently (in most cases)
+* Handle merging for you, transparently (in most cases)
 
-## A Version Control System: Git
+## Git: Distributed Version Control
 
-* Hugely popular and free, open source, and cross-platform
-* Distributed, decentralized design allowing offline use
-* Integrated with apps like RStudio and Visual Studio Code
+* Hugely popular, free, open source, and cross-platform
+* Distributed, decentralized design allows offline use
+* Integrated with apps like RStudio and MS Visual Studio Code
 * The version control "engine" behind sites like [Github](https://github.com/)
 * Created by Linus Torvalds, the creator of Linux
-* Designed for large projects with world-wide contributors
+* Designed for large projects with many remote contributors
 * Increasingly popular for scientific research projects
 
 ## Installing Git
@@ -112,7 +118,7 @@ We will create a Github repository, clone it, "fork" a repository, make changes,
 and create a "pull request", as time permits.
 
 1. Please turn in the web link (address) to the Github "repo" you create
-(or that of your partner if you chose not to create a gitHub account).
+(or that of your partner if you chose not to create a Github account).
 
 2. If we have time to try a "pull request" in Github, turn in the address
 of your pull request, instead.

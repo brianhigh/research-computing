@@ -79,21 +79,22 @@ Most modern version control systems:
 
 * You need to [configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) 
 your username and email address.
-* Configuring for color output is nice, too.
-* Do this from the command-line prompt (Bash, DOS, etc.).
+* Configuring for default editor and color support is nice, too.
 
-Username: 
 
-`git config --global user.name "John Doe"`
+Run these commands from the "shell" (Bash, DOS, etc.).
 
-Email address: 
+```
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+git config --global color.ui true
+git config --global core.editor nano
+```
 
-`git config --global user.email johndoe@example.com`
+Edit these commands as needed for your name, email, and preferred editor. 
 
-Color:
-
-`git config --global color.ui true`
-
+If you store them in a shell script, you may easily run them on other systems 
+you may be using. For now, copying, pasting, editing, and running will be fine.
 
 ## Git Integration in RStudio
 

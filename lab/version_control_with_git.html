@@ -189,21 +189,19 @@
 
 <ul>
 <li>You need to <a href='https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup' title=''>configure</a> your username and email address.</li>
-<li>Configuring for color output is nice, too.</li>
-<li>Do this from the command-line prompt (Bash, DOS, etc.).</li>
+<li>Configuring for default editor and color support is nice, too.</li>
 </ul>
 
-<p>Username:</p>
+<p>Run these commands from the &quot;shell&quot; (Bash, DOS, etc.).</p>
 
-<p><code>git config --global user.name &quot;John Doe&quot;</code></p>
+<pre >git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+git config --global color.ui true
+git config --global core.editor nano</pre>
 
-<p>Email address:</p>
+<p>Edit these commands as needed for your name, email, and preferred editor.</p>
 
-<p><code>git config --global user.email johndoe@example.com</code></p>
-
-<p>Color:</p>
-
-<p><code>git config --global color.ui true</code></p>
+<p>If you store them in a shell script, you may easily run them on other systems you may be using. For now, copying, pasting, editing, and running will be fine.</p>
 
 </article></slide><slide class=''><hgroup><h2>Git Integration in RStudio</h2></hgroup><article  id="git-integration-in-rstudio">
 

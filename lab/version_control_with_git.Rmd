@@ -78,8 +78,9 @@ Most modern version control systems:
 ## Configuring Git
 
 * You need to [configure](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) 
-your username and email address
-* Do this from the command-line prompt (Bash, DOS, etc.)
+your username and email address.
+* Configuring for color output is nice, too.
+* Do this from the command-line prompt (Bash, DOS, etc.).
 
 Username: 
 
@@ -88,6 +89,11 @@ Username:
 Email address: 
 
 `git config --global user.email johndoe@example.com`
+
+Color:
+
+`git config --global color.ui true`
+
 
 ## Git Integration in RStudio
 

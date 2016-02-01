@@ -111,78 +111,78 @@
 
 <slide class=''><hgroup><h2>Agenda for Week 5 Lab</h2></hgroup><article  id="agenda-for-week-5-lab">
 
-<p>Version Control (<em>Brian High</em>): 40 minutes</p>
+<ul class = 'build'>
+<li>Version Control (<em>Brian High</em>): <strong>40 minutes</strong>
 
-<ul>
+<ul class = 'build'>
 <li>Introduce version control and Git</li>
 <li>Show how Git can be used from RStudio</li>
 <li>Demonstrate a Git/Github workflow and do a lab exercise</li>
-</ul>
+</ul></li>
+<li>Introduction to Programming with R (<em>Boris Reiss</em>): <strong>1 hour</strong>
 
-<p>Introduction to Programming with R (<em>Boris Reiss</em>): 1 hour</p>
-
-<ul>
+<ul class = 'build'>
 <li>Introduce programming basics</li>
 <li>Introduce R and RStudio</li>
 <li>Provide examples and do a lab exercise</li>
+</ul></li>
+<li>Go over the answers to Quiz 2: <strong>10 minutes</strong></li>
 </ul>
-
-<p>Go over the answers to Quiz 2: 10 minutes</p>
 
 </article></slide><slide class=''><hgroup><h2>Version Control Learning Objectives</h2></hgroup><article  id="version-control-learning-objectives">
 
-<ul>
-<li>Understand what version control is and why you should care</li>
-<li>Learn the basic operations of the Git version control system</li>
-<li>Learn how to use Git and Github to manage projects</li>
-<li>Learn how to use Git and Githhub from within RStudio</li>
+<ul class = 'build'>
+<li>Understand what version control is and <em>why you should care</em></li>
+<li>Learn the basic operations of the <em>Git</em> version control system</li>
+<li>Learn how to use Git and Github to <em>manage projects</em></li>
+<li>Learn how to use Git and Githhub <em>from within RStudio</em></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Version Control</h2></hgroup><article  id="version-control">
 
 <p>The following is true of most modern version control systems:</p>
 
-<ul>
-<li>A method for tracking changes to one or more files</li>
+<ul class = 'build'>
+<li>A method for <em>tracking changes</em> to one or more <em>files</em></li>
 <li>Like Apple Time Machine with &quot;Track Changes&quot; of MS-Word</li>
-<li>Makes changes to one or more files as a single &quot;commit&quot;</li>
-<li>Works with any type of file, especially plain-text and &quot;code&quot;</li>
-<li>Allows multiple users to work with the same files concurrently</li>
-<li>May also be called &quot;revision control systems&quot;</li>
+<li>Makes changes to one or more files as a <em>single</em> &quot;commit&quot;</li>
+<li>Works with <em>any type of file</em>, especially plain-text and &quot;code&quot;</li>
+<li>Allows <em>multiple users</em> to work with the same files <em>concurrently</em></li>
+<li>May also be called: <em>revision control systems</em></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Version Control Features</h2></hgroup><article  id="version-control-features">
 
 <p>Most modern version control systems:</p>
 
-<ul>
-<li>Provide commit-log and change status for ease of tracking</li>
-<li>Allow you to compare versions or revert to past versions</li>
-<li>Let you share files and merge changes from others</li>
-<li>Let you collaborate through a server or website like <a href='https://github.com/' title=''>Github</a></li>
-<li>Sync changes with the server instead of emailing files around</li>
-<li>Handle merging for you, transparently (in most cases)</li>
+<ul class = 'build'>
+<li>Provide <em>logging</em> and <em>status reports</em> for ease of tracking</li>
+<li>Allow you to <em>compare</em> versions or <em>revert</em> to past versions</li>
+<li>Let you <em>share</em> files and <em>merge changes</em> from others</li>
+<li>Handle merging for you, <em>transparently</em> (in most cases)</li>
+<li>Let you <em>collaborate</em> through a <em>server</em> or website like <a href='https://github.com/' title=''>Github</a></li>
+<li><em>Sync</em> changes with the server instead of <del>emailing files around</del></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Git: Distributed Version Control</h2></hgroup><article  id="git-distributed-version-control">
 
-<ul>
+<ul class = 'build'>
 <li>Hugely popular, free, open source, and cross-platform</li>
-<li>Distributed, decentralized design allows offline use</li>
-<li>Integrated with apps like RStudio and MS Visual Studio Code</li>
+<li><em>Distributed</em>, decentralized design allows offline use</li>
+<li><em>Integrated</em> with apps like <em>RStudio</em> and MS Visual Studio <em>Code</em></li>
 <li>The version control &quot;engine&quot; behind sites like <a href='https://github.com/' title=''>Github</a></li>
-<li>Created by Linus Torvalds, the creator of Linux</li>
-<li>Designed for large projects with many remote contributors</li>
-<li>Increasingly popular for scientific research projects</li>
+<li>Created by <em>Linus Torvalds</em>, the creator of Linux</li>
+<li>Designed for <em>large</em> projects with many <em>remote</em> contributors</li>
+<li>Increasingly popular for <em>scientific research projects</em></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Installing Git</h2></hgroup><article  id="installing-git">
 
-<ul>
+<ul class = 'build'>
 <li>Installers available from: <a href='https://git-scm.com/' title=''><a href='https://git-scm.com/' title=''>https://git-scm.com/</a></a></li>
-<li>For Windows installer, allow changes to the system PATH</li>
+<li>For Windows installer, <em>allow changes to the system PATH</em></li>
 <li>RStudio searches PATH to find &quot;git&quot;, or manually configure</li>
-<li>Git is already installed on Phage</li>
+<li>Git is <em>already installed</em> on Phage</li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Configuring Git</h2></hgroup><article  id="configuring-git">
@@ -190,9 +190,8 @@
 <ul>
 <li>You need to <a href='https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup' title=''>configure</a> your username and email address.</li>
 <li>Configuring for default editor and color support is nice, too.</li>
+<li>Run these commands from the &quot;shell&quot; (Bash, DOS, etc.).</li>
 </ul>
-
-<p>Run these commands from the &quot;shell&quot; (Bash, DOS, etc.).</p>
 
 <pre >git config --global user.name &quot;John Doe&quot;
 git config --global user.email johndoe@example.com
@@ -205,11 +204,11 @@ git config --global core.editor nano</pre>
 
 </article></slide><slide class=''><hgroup><h2>Git Integration in RStudio</h2></hgroup><article  id="git-integration-in-rstudio">
 
-<ul>
+<ul class = 'build'>
 <li>RStudio can import (<code>clone</code>) a git project from a server</li>
-<li>RStudio can perform all common operations from the GUI
+<li>RStudio can perform all <em>common</em> operations from the GUI
 
-<ul>
+<ul class = 'build'>
 <li>From the menu: <em>Tools</em> -&gt; <em>Version Control</em></li>
 <li>From the <em>Git</em> tab next to the <em>History</em> tab</li>
 </ul></li>
@@ -260,12 +259,11 @@ git config --global core.editor nano</pre>
 
 <p>We will create a Github repository, clone it, &quot;fork&quot; a repository, make changes, and create a &quot;pull request&quot;, as time permits.</p>
 
-<ol>
+<ol class = 'build'>
 <li><p>Please turn in the web link (address) to the Github &quot;repo&quot; you create (or that of your partner if you chose not to create a Github account).</p></li>
-<li><p>If we have time to try a &quot;pull request&quot; in Github, turn in the address of your pull request, instead.</p></li>
-</ol>
-
-<p>Provide this address to Canvas as your homework submission.</p></article></slide>
+<li><p>If we have time to try a &quot;fork&quot; and pull request&quot; in Github, turn in the address of your pull request, instead.</p></li>
+<li><p>Provide this address to Canvas as your <em>homework submission</em>.</p></li>
+</ol></article></slide>
 
 
   <slide class="backdrop"></slide>

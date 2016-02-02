@@ -6,7 +6,7 @@ output:
   ioslides_presentation:
     fig_caption: yes
     fig_retina: 1
-    fig_width: 5
+    fig_width: 6
     fig_height: 4
     keep_md: yes
     smaller: no
@@ -367,7 +367,7 @@ str(tblsdt)
 boxplot(Sepal.Length ~ loc,data = dt)
 ```
 
-```{r, echo=F}
+```{r, echo=F, message=F, results='hide'}
 dev.off()
 ```
 
@@ -376,7 +376,8 @@ dev.off()
 ```{r, eval=T}
 p <- ggplot(dt)
 
-p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, color = loc))
+p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, 
+                        color = loc))
 ```
 
 ## ggplot: The beauty of plotting
@@ -385,7 +386,7 @@ p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, color = loc))
 p
 ```
 
-```{r, echo=F}
+```{r, echo=F, message=F, results='hide'}
 dev.off()
 ```
 
@@ -407,7 +408,7 @@ p <- p + facet_grid(loc ~ date)
 p
 ```
 
-```{r, echo=F}
+```{r, echo=F, message=F, results='hide'}
 dev.off()
 ```
 

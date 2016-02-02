@@ -441,7 +441,7 @@ str(dt)
 ##  $ loc         : chr  "A" "B" "C" "A" ...
 ##  $ date        : chr  "2016-01-12" "2015-11-01" "2016-01-12" "2015-11-01" ...
 ##  $ rain        : chr  "lots" "some" "little" "no" ...
-##  $ rh          : num  73 45.9 50 71 52.1 ...
+##  $ rh          : num  45.8 62.2 40.7 66.6 72.5 ...
 ```
 
 ## Summarize
@@ -473,12 +473,12 @@ head(tbltst)
 
 ```
 ##   loc       date   rain Sepal.Length       rh
-## 1   A 2015-11-01 little          4.9 44.50719
-## 2   B 2015-11-01 little          4.9 62.20600
-## 3   C 2015-11-01 little          4.6 67.42121
-## 4   A 2016-01-12 little          4.6 58.47576
-## 5   B 2016-01-12 little          4.6 67.86777
-## 6   C 2016-01-12 little          4.7 50.03615
+## 1   A 2015-11-01 little          4.9 54.44969
+## 2   B 2015-11-01 little          4.9 45.80965
+## 3   C 2015-11-01 little          4.6 57.39946
+## 4   A 2016-01-12 little          4.6 55.32934
+## 5   B 2016-01-12 little          4.6 62.26314
+## 6   C 2016-01-12 little          4.7 40.71781
 ```
 
 ## Summarize
@@ -528,10 +528,6 @@ boxplot(Sepal.Length ~ loc,data = dt)
 ![](Rintropresentation_files/figure-html/unnamed-chunk-26-1.png)\
 
 
-```
-## null device 
-##           1
-```
 
 ## ggplot: The beauty of plotting
 
@@ -539,7 +535,8 @@ boxplot(Sepal.Length ~ loc,data = dt)
 ```r
 p <- ggplot(dt)
 
-p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, color = loc))
+p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, 
+                        color = loc))
 ```
 
 ## ggplot: The beauty of plotting
@@ -552,10 +549,6 @@ p
 ![](Rintropresentation_files/figure-html/unnamed-chunk-29-1.png)\
 
 
-```
-## null device 
-##           1
-```
 
 ## ggplot: The beauty of plotting
 
@@ -580,10 +573,6 @@ p
 ![](Rintropresentation_files/figure-html/unnamed-chunk-32-1.png)\
 
 
-```
-## null device 
-##           1
-```
 
 ## Analysis
 

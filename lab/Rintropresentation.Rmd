@@ -1,0 +1,435 @@
+---
+title: "Introduction to progamming with R"
+author: "B Reiss"
+date: "2016-02-01"
+output:
+  ioslides_presentation:
+    fig_caption: yes
+    fig_retina: 1
+    fig_width: 5
+    fig_height: 4
+    keep_md: yes
+    smaller: no
+    logo: logo_128.png
+---
+
+## Overview of the lab
+
+- Background on programming 
+- R concepts
+- Exercise: Basic data analysis
+- Help
+
+## Programming (Wikipedia)
+
+- Formulation of a problem that leads to a program
+
+Tasks: 
+
+- analysis, 
+- developing understanding of the problem, 
+- generating algorithm, 
+- verification of algorithm, and 
+- implementation (coding)  
+
+Purpose: 
+
+- find a sequence of instructions (algorithm) that will automate performing a specific task to solve a problem
+
+## Remember
+
+- Programming is something you do and not something you know. 
+
+- It requires active practice. (Reading is not an active practice.)
+
+## Programming structures
+
+```{r, eval=FALSE}
+Variables: 
+-numeric, character, factor...
+
+Control Structures: 
+-if(), ifelse(), while(), for()...
+
+Data Structures: 
+- data.frame, class, matrix...
+
+Syntax: 
+-set of rules that defines the correct combinations of symbols
+in that language
+
+Tools:   
+-library, functions...
+```
+
+
+## R
+
+- R is a statistical programming language and a super advanced calculator
+
+- > 2 million users
+
+- based on functions that can be expanded through packages
+
+- someone has already solved your problem: install.packages()
+
+- it is an interpreter language each command is executed in the console
+
+- "uses vectors to store data" 
+
+## Help
+
+help()
+
+reference cards
+
+books: 
+
+- Beginning Data Science with R by Manas A. Pathak (free at UW)
+
+- The Art of R Programming: A Tour of Statistical Software Design N. Matloff
+
+
+## Function
+
+- some INPUT - computation - some OUTPUT
+
+- e.g. log10(): 10^3 = 1000 
+
+- Thus log10(1000)=3
+
+## Helper functions 
+
+```{r, eval=FALSE}
+help()
+example()
+c()
+data.frame()
+head();tail()
+table()
+summary()
+str()
+unique()
+length()
+subset()
+
+assign:
+  to <- from
+  a <- 5
+```
+
+## Make your own function
+
+```{r, eval=FALSE}
+invmean<-function(data)
+{
+  
+  rslt<-1/mean(data)
+  return(rslt)
+}
+
+```
+
+## Important functions
+
+```{r, eval = FALSE}
+
+apply()
+
+sapply()
+
+lapply()
+
+by()
+
+%in%
+
+reshape()
+
+```
+
+
+## Workflow of a typical program
+
+- get 
+- review 
+- clean 
+- restructure
+- summarize 
+- analyse
+- present results
+
+## Getting data
+
+ - External
+ - Internal
+ + Existing
+ + New
+ - Simulations
+
+## External 
+
+```{r, eval=FALSE}
+read.csv() # won't work with a lot of EU data
+read.tsv() 
+read.table()
+read.xlsx() # requires foreign package
+```
+
+## Internal
+
+```{r, eval=FALSE}
+
+# Existing
+data()
+
+# create
+c()
+seq()
+
+#simulation - distributions
+rnorm();rlnorm();runif()
+```
+
+## Variables
+
+```{r, eval=FALSE}
+#1-D
+as.factor()
+as.numeric()
+as.character()
+
+
+# mulit-D
+c()
+as.data.frame()
+as.list()
+as.matrix()
+
+data.table() # -> through external package
+```
+
+## Special variable: time
+
+```{r, eval=FALSE}
+
+# time
+
+as.POSIXct()
+as.POSIXlt()
+
+# packages: lubridate, chron
+
+```
+
+## Always use ISO time format
+
+- 2015-01-12 23:17:12
+- yyyy-mm-dd hh:mm:ss
+- may include timezone
+
+## Exercise
+
+## Always start with a clean work space
+
+```{r, eval=T}
+rm(list=ls())
+library(ggplot2)
+library(doBy)
+```
+
+## Get data
+
+```{r, eval=T}
+data()
+
+data(iris)
+
+#current <- getwd()
+#setwd(newdir)
+
+dt <- iris
+
+write.csv(dt,file = "irisdata.csv")
+```
+
+## Read the data back
+
+```{r, eval=T}
+read.csv(file = "irisdata.csv",sep = ",",nrows=5)
+
+```
+
+## Review
+
+```{r, eval=T}
+head(dt);tail(dt)
+```
+
+## Review
+
+```{r, eval=T}
+str(dt)
+```
+
+## Review
+
+```{r, eval=T}
+summary(dt)
+```
+
+## Review
+
+```{r, eval=T}
+unique(dt$Species)
+```
+
+## Review
+
+```{r, eval=T}
+table(dt$Species)
+```
+
+## Review
+
+```{r, eval=T}
+nrow(dt) 
+```
+
+
+## Create some data
+
+```{r, eval=T}
+dt$LLOD <- ifelse(dt$Sepal.Length < 5,"y","n")
+
+str(dt)
+
+table(dt$LLOD)
+```
+
+## Create contextual data: location, date, rain
+
+```{r, eval=T}
+location <- c("A","B","C")
+
+date <- c("2015-11-01","2016-01-12")
+
+rain <- c("lots","some","little","no","NA")
+
+```
+
+
+## Modify
+
+```{r, eval=T}
+dt$loc <- rep(location,150 / 3)
+
+dt$date <- rep(sample(date),150 / 2)
+
+dt$rain <- rep(rain,nrow(dt) / length(rain))
+
+dt$rh <- runif(150,min = 37,max = 75)
+```
+
+## Modify
+
+```{r, eval=T}
+str(dt)
+```
+
+## Summarize
+
+```{r, eval=T}
+aggregate(Sepal.Length ~ loc + date, data = dt,FUN = "mean")
+```
+
+## Summarize
+
+```{r, eval=T}
+tbltst <-
+  aggregate(cbind(Sepal.Length,rh) ~ loc + date + rain, 
+            data = subset(dt,LLOD!="n") ,FUN = "mean")
+head(tbltst)
+```
+
+## Summarize
+
+```{r, eval=T}
+tblsdt <-
+  summaryBy(Sepal.Length ~ loc + date + rain,
+            data = dt,FUN = c(mean,sd))
+head(tblsdt)
+```
+
+## Summarize
+
+```{r, eval=T}
+colnames(tblsdt) <- c("lc","dt","rn","msl","sdsl")
+str(tblsdt)
+```
+
+## Basic plots
+
+```{r, eval=T}
+boxplot(Sepal.Length ~ loc,data = dt)
+dev.off()
+```
+
+## ggplot: The beauty of plotting
+
+```{r, eval=T}
+p <- ggplot(dt)
+
+p <- p + geom_point(aes(x = Petal.Width ,y = Sepal.Length,color = loc))
+```
+
+## ggplot: The beauty of plotting
+
+```{r, eval=TRUE}
+p
+dev.off()
+```
+
+## ggplot: The beauty of plotting
+
+```{r, eval = TRUE}
+p <- ggplot(dt,aes(x = Petal.Width , y = Sepal.Length))
+
+p <- p + geom_point()
+
+p <- p + geom_smooth(method = "lm", se = T)
+
+p <- p + facet_grid(loc ~ date)
+```
+
+## ggplot: The beauty of plotting
+
+```{r, eval = TRUE}
+p
+dev.off()
+```
+
+## Analysis
+
+```{r, eval=T}
+lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+```
+
+## Analysis
+
+```{r, eval=TRUE}
+lf <- lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+```
+
+## Analysis
+
+```{r, eval=TRUE}
+summary(lf)
+```
+
+## Presentation
+
+RMarkDown
+
+
+

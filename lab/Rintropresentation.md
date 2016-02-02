@@ -1,6 +1,6 @@
-# Introduction to progamming with R
-B Reiss  
-2016-02-01  
+# Introduction to programming with R
+Boris Reiss  
+![CC BY-SA 4.0](cc_by-sa_4.png)  
 
 ## Overview of the lab
 
@@ -23,7 +23,7 @@ Tasks:
 
 Purpose: 
 
-- find a sequence of instructions (algorithm) that will automate performing a specific task to solve a problem
+- Find a sequence of instructions (algorithm) that will automate performing a specific task to solve a problem
 
 ## Remember
 
@@ -36,20 +36,20 @@ Purpose:
 
 ```r
 Variables: 
--numeric, character, factor...
+- numeric, character, factor...
 
 Control Structures: 
--if(), ifelse(), while(), for()...
+- if(), ifelse(), while(), for()...
 
 Data Structures: 
 - data.frame, class, matrix...
 
 Syntax: 
--set of rules that defines the correct combinations of symbols
+- set of rules that defines the correct combinations of symbols
 in that language
 
 Tools:   
--library, functions...
+- library, functions...
 ```
 
 
@@ -71,13 +71,13 @@ Tools:
 
 help()
 
-reference cards
+[reference cards](https://www.google.com/search?q=r+reference+card)
 
 books: 
 
-- Beginning Data Science with R by Manas A. Pathak (free at UW)
+- Beginning Data Science with R by Manas A. Pathak ([free at UW](http://alliance-primo.hosted.exlibrisgroup.com/UW:all:CP71215329450001451))
 
-- The Art of R Programming: A Tour of Statistical Software Design N. Matloff
+- The Art of R Programming: A Tour of Statistical Software Design N. Matloff ([free at UW](http://alliance-primo.hosted.exlibrisgroup.com/UW:CP71185032870001451))
 
 
 ## Function
@@ -113,10 +113,10 @@ assign:
 
 
 ```r
-invmean<-function(data)
+invmean <- function(data)
 {
   
-  rslt<-1/mean(data)
+  rslt <- 1/mean(data)
   return(rslt)
 }
 ```
@@ -151,11 +151,11 @@ reshape()
 
 ## Getting data
 
- - External
- - Internal
- + Existing
- + New
- - Simulations
+* External
+* Internal
+    + Existing
+    + New
+* Simulations
 
 ## External 
 
@@ -179,7 +179,7 @@ c()
 seq()
 
 #simulation - distributions
-rnorm();rlnorm();runif()
+rnorm(); rlnorm(); runif()
 ```
 
 ## Variables
@@ -191,8 +191,7 @@ as.factor()
 as.numeric()
 as.character()
 
-
-# mulit-D
+# multi-D
 c()
 as.data.frame()
 as.list()
@@ -247,14 +246,14 @@ data(iris)
 
 dt <- iris
 
-write.csv(dt,file = "irisdata.csv")
+write.csv(dt, file = "irisdata.csv")
 ```
 
 ## Read the data back
 
 
 ```r
-read.csv(file = "irisdata.csv",sep = ",",nrows=5)
+read.csv(file = "irisdata.csv", sep = ",", nrows=5)
 ```
 
 ```
@@ -270,7 +269,7 @@ read.csv(file = "irisdata.csv",sep = ",",nrows=5)
 
 
 ```r
-head(dt);tail(dt)
+head(dt); tail(dt)
 ```
 
 ```
@@ -374,7 +373,7 @@ nrow(dt)
 
 
 ```r
-dt$LLOD <- ifelse(dt$Sepal.Length < 5,"y","n")
+dt$LLOD <- ifelse(dt$Sepal.Length < 5, "y", "n")
 
 str(dt)
 ```
@@ -403,11 +402,11 @@ table(dt$LLOD)
 
 
 ```r
-location <- c("A","B","C")
+location <- c("A", "B", "C")
 
-date <- c("2015-11-01","2016-01-12")
+date <- c("2015-11-01", "2016-01-12")
 
-rain <- c("lots","some","little","no","NA")
+rain <- c("lots", "some", "little", "no", "NA")
 ```
 
 
@@ -415,13 +414,13 @@ rain <- c("lots","some","little","no","NA")
 
 
 ```r
-dt$loc <- rep(location,150 / 3)
+dt$loc <- rep(location, 150 / 3)
 
-dt$date <- rep(sample(date),150 / 2)
+dt$date <- rep(sample(date), 150 / 2)
 
-dt$rain <- rep(rain,nrow(dt) / length(rain))
+dt$rain <- rep(rain, nrow(dt) / length(rain))
 
-dt$rh <- runif(150,min = 37,max = 75)
+dt$rh <- runif(150, min = 37, max = 75)
 ```
 
 ## Modify
@@ -442,14 +441,14 @@ str(dt)
 ##  $ loc         : chr  "A" "B" "C" "A" ...
 ##  $ date        : chr  "2016-01-12" "2015-11-01" "2016-01-12" "2015-11-01" ...
 ##  $ rain        : chr  "lots" "some" "little" "no" ...
-##  $ rh          : num  53.4 38 48.3 42.7 62.6 ...
+##  $ rh          : num  73 45.9 50 71 52.1 ...
 ```
 
 ## Summarize
 
 
 ```r
-aggregate(Sepal.Length ~ loc + date, data = dt,FUN = "mean")
+aggregate(Sepal.Length ~ loc + date, data = dt, FUN = "mean")
 ```
 
 ```
@@ -468,18 +467,18 @@ aggregate(Sepal.Length ~ loc + date, data = dt,FUN = "mean")
 ```r
 tbltst <-
   aggregate(cbind(Sepal.Length,rh) ~ loc + date + rain, 
-            data = subset(dt,LLOD!="n") ,FUN = "mean")
+            data = subset(dt, LLOD != "n"), FUN = "mean")
 head(tbltst)
 ```
 
 ```
 ##   loc       date   rain Sepal.Length       rh
-## 1   A 2015-11-01 little          4.9 39.49625
-## 2   B 2015-11-01 little          4.9 73.18646
-## 3   C 2015-11-01 little          4.6 56.03575
-## 4   A 2016-01-12 little          4.6 58.12175
-## 5   B 2016-01-12 little          4.6 61.57063
-## 6   C 2016-01-12 little          4.7 48.29616
+## 1   A 2015-11-01 little          4.9 44.50719
+## 2   B 2015-11-01 little          4.9 62.20600
+## 3   C 2015-11-01 little          4.6 67.42121
+## 4   A 2016-01-12 little          4.6 58.47576
+## 5   B 2016-01-12 little          4.6 67.86777
+## 6   C 2016-01-12 little          4.7 50.03615
 ```
 
 ## Summarize
@@ -488,7 +487,7 @@ head(tbltst)
 ```r
 tblsdt <-
   summaryBy(Sepal.Length ~ loc + date + rain,
-            data = dt,FUN = c(mean,sd))
+            data = dt, FUN = c(mean, sd))
 head(tblsdt)
 ```
 
@@ -506,7 +505,7 @@ head(tblsdt)
 
 
 ```r
-colnames(tblsdt) <- c("lc","dt","rn","msl","sdsl")
+colnames(tblsdt) <- c("lc", "dt", "rn", "msl", "sdsl")
 str(tblsdt)
 ```
 
@@ -528,9 +527,6 @@ boxplot(Sepal.Length ~ loc,data = dt)
 
 ![](Rintropresentation_files/figure-html/unnamed-chunk-26-1.png)\
 
-```r
-dev.off()
-```
 
 ```
 ## null device 
@@ -543,7 +539,7 @@ dev.off()
 ```r
 p <- ggplot(dt)
 
-p <- p + geom_point(aes(x = Petal.Width ,y = Sepal.Length,color = loc))
+p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, color = loc))
 ```
 
 ## ggplot: The beauty of plotting
@@ -553,11 +549,8 @@ p <- p + geom_point(aes(x = Petal.Width ,y = Sepal.Length,color = loc))
 p
 ```
 
-![](Rintropresentation_files/figure-html/unnamed-chunk-28-1.png)\
+![](Rintropresentation_files/figure-html/unnamed-chunk-29-1.png)\
 
-```r
-dev.off()
-```
 
 ```
 ## null device 
@@ -568,7 +561,7 @@ dev.off()
 
 
 ```r
-p <- ggplot(dt,aes(x = Petal.Width , y = Sepal.Length))
+p <- ggplot(dt, aes(x = Petal.Width , y = Sepal.Length))
 
 p <- p + geom_point()
 
@@ -584,11 +577,8 @@ p <- p + facet_grid(loc ~ date)
 p
 ```
 
-![](Rintropresentation_files/figure-html/unnamed-chunk-30-1.png)\
+![](Rintropresentation_files/figure-html/unnamed-chunk-32-1.png)\
 
-```r
-dev.off()
-```
 
 ```
 ## null device 
@@ -599,7 +589,7 @@ dev.off()
 
 
 ```r
-lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+lm(Sepal.Length ~ loc + date + rain, data = tbltst)
 ```
 
 ```
@@ -618,7 +608,7 @@ lm(Sepal.Length ~ loc + date + rain,data = tbltst)
 
 
 ```r
-lf <- lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+lf <- lm(Sepal.Length ~ loc + date + rain, data = tbltst)
 ```
 
 ## Analysis
@@ -657,7 +647,5 @@ summary(lf)
 
 ## Presentation
 
-RMarkDown
-
-
-
+* [RMarkdown](http://rmarkdown.rstudio.com/)
+* [knitr](http://yihui.name/knitr/)

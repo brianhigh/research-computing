@@ -1,7 +1,7 @@
 ---
-title: "Introduction to progamming with R"
-author: "B Reiss"
-date: "2016-02-01"
+title: "Introduction to programming with R"
+author: "Boris Reiss"
+date: "![CC BY-SA 4.0](cc_by-sa_4.png)"
 output:
   ioslides_presentation:
     fig_caption: yes
@@ -34,7 +34,7 @@ Tasks:
 
 Purpose: 
 
-- find a sequence of instructions (algorithm) that will automate performing a specific task to solve a problem
+- Find a sequence of instructions (algorithm) that will automate performing a specific task to solve a problem
 
 ## Remember
 
@@ -46,20 +46,20 @@ Purpose:
 
 ```{r, eval=FALSE}
 Variables: 
--numeric, character, factor...
+- numeric, character, factor...
 
 Control Structures: 
--if(), ifelse(), while(), for()...
+- if(), ifelse(), while(), for()...
 
 Data Structures: 
 - data.frame, class, matrix...
 
 Syntax: 
--set of rules that defines the correct combinations of symbols
+- set of rules that defines the correct combinations of symbols
 in that language
 
 Tools:   
--library, functions...
+- library, functions...
 ```
 
 
@@ -81,13 +81,13 @@ Tools:
 
 help()
 
-reference cards
+[reference cards](https://www.google.com/search?q=r+reference+card)
 
 books: 
 
-- Beginning Data Science with R by Manas A. Pathak (free at UW)
+- Beginning Data Science with R by Manas A. Pathak ([free at UW](http://alliance-primo.hosted.exlibrisgroup.com/UW:all:CP71215329450001451))
 
-- The Art of R Programming: A Tour of Statistical Software Design N. Matloff
+- The Art of R Programming: A Tour of Statistical Software Design N. Matloff ([free at UW](http://alliance-primo.hosted.exlibrisgroup.com/UW:CP71185032870001451))
 
 
 ## Function
@@ -121,19 +121,17 @@ assign:
 ## Make your own function
 
 ```{r, eval=FALSE}
-invmean<-function(data)
+invmean <- function(data)
 {
   
-  rslt<-1/mean(data)
+  rslt <- 1/mean(data)
   return(rslt)
 }
-
 ```
 
 ## Important functions
 
 ```{r, eval = FALSE}
-
 apply()
 
 sapply()
@@ -145,7 +143,6 @@ by()
 %in%
 
 reshape()
-
 ```
 
 
@@ -161,11 +158,11 @@ reshape()
 
 ## Getting data
 
- - External
- - Internal
- + Existing
- + New
- - Simulations
+* External
+* Internal
+    + Existing
+    + New
+* Simulations
 
 ## External 
 
@@ -188,7 +185,7 @@ c()
 seq()
 
 #simulation - distributions
-rnorm();rlnorm();runif()
+rnorm(); rlnorm(); runif()
 ```
 
 ## Variables
@@ -199,8 +196,7 @@ as.factor()
 as.numeric()
 as.character()
 
-
-# mulit-D
+# multi-D
 c()
 as.data.frame()
 as.list()
@@ -212,14 +208,12 @@ data.table() # -> through external package
 ## Special variable: time
 
 ```{r, eval=FALSE}
-
 # time
 
 as.POSIXct()
 as.POSIXlt()
 
 # packages: lubridate, chron
-
 ```
 
 ## Always use ISO time format
@@ -250,20 +244,19 @@ data(iris)
 
 dt <- iris
 
-write.csv(dt,file = "irisdata.csv")
+write.csv(dt, file = "irisdata.csv")
 ```
 
 ## Read the data back
 
 ```{r, eval=T}
-read.csv(file = "irisdata.csv",sep = ",",nrows=5)
-
+read.csv(file = "irisdata.csv", sep = ",", nrows=5)
 ```
 
 ## Review
 
 ```{r, eval=T}
-head(dt);tail(dt)
+head(dt); tail(dt)
 ```
 
 ## Review
@@ -300,7 +293,7 @@ nrow(dt)
 ## Create some data
 
 ```{r, eval=T}
-dt$LLOD <- ifelse(dt$Sepal.Length < 5,"y","n")
+dt$LLOD <- ifelse(dt$Sepal.Length < 5, "y", "n")
 
 str(dt)
 
@@ -310,11 +303,11 @@ table(dt$LLOD)
 ## Create contextual data: location, date, rain
 
 ```{r, eval=T}
-location <- c("A","B","C")
+location <- c("A", "B", "C")
 
-date <- c("2015-11-01","2016-01-12")
+date <- c("2015-11-01", "2016-01-12")
 
-rain <- c("lots","some","little","no","NA")
+rain <- c("lots", "some", "little", "no", "NA")
 
 ```
 
@@ -322,13 +315,13 @@ rain <- c("lots","some","little","no","NA")
 ## Modify
 
 ```{r, eval=T}
-dt$loc <- rep(location,150 / 3)
+dt$loc <- rep(location, 150 / 3)
 
-dt$date <- rep(sample(date),150 / 2)
+dt$date <- rep(sample(date), 150 / 2)
 
-dt$rain <- rep(rain,nrow(dt) / length(rain))
+dt$rain <- rep(rain, nrow(dt) / length(rain))
 
-dt$rh <- runif(150,min = 37,max = 75)
+dt$rh <- runif(150, min = 37, max = 75)
 ```
 
 ## Modify
@@ -340,7 +333,7 @@ str(dt)
 ## Summarize
 
 ```{r, eval=T}
-aggregate(Sepal.Length ~ loc + date, data = dt,FUN = "mean")
+aggregate(Sepal.Length ~ loc + date, data = dt, FUN = "mean")
 ```
 
 ## Summarize
@@ -348,7 +341,7 @@ aggregate(Sepal.Length ~ loc + date, data = dt,FUN = "mean")
 ```{r, eval=T}
 tbltst <-
   aggregate(cbind(Sepal.Length,rh) ~ loc + date + rain, 
-            data = subset(dt,LLOD!="n") ,FUN = "mean")
+            data = subset(dt, LLOD != "n"), FUN = "mean")
 head(tbltst)
 ```
 
@@ -357,14 +350,14 @@ head(tbltst)
 ```{r, eval=T}
 tblsdt <-
   summaryBy(Sepal.Length ~ loc + date + rain,
-            data = dt,FUN = c(mean,sd))
+            data = dt, FUN = c(mean, sd))
 head(tblsdt)
 ```
 
 ## Summarize
 
 ```{r, eval=T}
-colnames(tblsdt) <- c("lc","dt","rn","msl","sdsl")
+colnames(tblsdt) <- c("lc", "dt", "rn", "msl", "sdsl")
 str(tblsdt)
 ```
 
@@ -372,6 +365,9 @@ str(tblsdt)
 
 ```{r, eval=T}
 boxplot(Sepal.Length ~ loc,data = dt)
+```
+
+```{r, echo=F}
 dev.off()
 ```
 
@@ -380,20 +376,23 @@ dev.off()
 ```{r, eval=T}
 p <- ggplot(dt)
 
-p <- p + geom_point(aes(x = Petal.Width ,y = Sepal.Length,color = loc))
+p <- p + geom_point(aes(x = Petal.Width, y = Sepal.Length, color = loc))
 ```
 
 ## ggplot: The beauty of plotting
 
 ```{r, eval=TRUE}
 p
+```
+
+```{r, echo=F}
 dev.off()
 ```
 
 ## ggplot: The beauty of plotting
 
 ```{r, eval = TRUE}
-p <- ggplot(dt,aes(x = Petal.Width , y = Sepal.Length))
+p <- ggplot(dt, aes(x = Petal.Width , y = Sepal.Length))
 
 p <- p + geom_point()
 
@@ -406,19 +405,22 @@ p <- p + facet_grid(loc ~ date)
 
 ```{r, eval = TRUE}
 p
+```
+
+```{r, echo=F}
 dev.off()
 ```
 
 ## Analysis
 
 ```{r, eval=T}
-lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+lm(Sepal.Length ~ loc + date + rain, data = tbltst)
 ```
 
 ## Analysis
 
 ```{r, eval=TRUE}
-lf <- lm(Sepal.Length ~ loc + date + rain,data = tbltst)
+lf <- lm(Sepal.Length ~ loc + date + rain, data = tbltst)
 ```
 
 ## Analysis
@@ -429,7 +431,5 @@ summary(lf)
 
 ## Presentation
 
-RMarkDown
-
-
-
+* [RMarkdown](http://rmarkdown.rstudio.com/)
+* [knitr](http://yihui.name/knitr/)

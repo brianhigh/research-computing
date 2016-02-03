@@ -116,6 +116,49 @@ Example data:
 Burglary,Larceny-theft,Motor vehicle theft,Violent Crime rate
 ```
 
+## US CERT Bulletins: Select only valid bulletins from list
+
+Example from: [US CERT Bulletins](https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R)
+
+Task:
+
+Remove the list elements which do not begin with valid bulletin IDs. This way,
+we can process the resulting list, item by item, assuming all list elements are
+valid bulletins.
+
+R code:
+
+```
+bulletins <- bulletins[grepl("^SB\\d{2}-\\d{3,}: ", bulletins)]
+```
+
+Try at [https://regex101.com](https://regex101.com):
+
+* Find: `/^SB\d{2}-\d{3,}: /gm`
+
+Data source: [US CERT](https://www.us-cert.gov/ncas/bulletins.xml)
+
+Sample data:
+
+```
+US-CERT Bulletins
+NA
+https://www.us-cert.gov/ncas/bullet
+Alerts warn about vulnerabilities,
+en
+NA
+SB16-032: Vulnerability Summary for
+SB16-025: Vulnerability Summary for
+SB16-018: Vulnerability Summary for
+SB16-011: Vulnerability Summary for
+SB16-004: Vulnerability Summary for
+SB15-363: Vulnerability Summary for
+SB15-355: Vulnerability Summary for
+SB15-348: Vulnerability Summary for
+SB15-341: Vulnerability Summary for
+SB15-334: Vulnerability Summary for
+```
+
 ## US CERT Bulletins: Remove extra characters
 
 Example from: [US CERT Bulletins](https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R)
@@ -130,6 +173,8 @@ R code:
 ```
 bulletin.df$Info <- gsub("(CVE-\\d{4}-\\d+).*", "\\1", bulletin.df$Info)
 ```
+
+Try at [https://regex101.com](https://regex101.com):
 
 * Find: `/(CVE-\d{4}-\d+).*/gm`
 * Replace: `\1`

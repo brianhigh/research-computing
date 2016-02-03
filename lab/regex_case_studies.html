@@ -131,6 +131,36 @@ Effective Python: 59 Specific Ways to Write Better Python (Effective Software De
 <p>Example data:</p>
 <pre><code>Burglary,Larceny-theft,Motor vehicle theft,Violent Crime rate</code></pre>
 </div>
+<div id="us-cert-bulletins-select-only-valid-bulletins-from-list" class="section level2">
+<h2>US CERT Bulletins: Select only valid bulletins from list</h2>
+<p>Example from: <a href="https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R">US CERT Bulletins</a></p>
+<p>Task:</p>
+<p>Remove the list elements which do not begin with valid bulletin IDs. This way, we can process the resulting list, item by item, assuming all list elements are valid bulletins.</p>
+<p>R code:</p>
+<pre><code>bulletins &lt;- bulletins[grepl(&quot;^SB\\d{2}-\\d{3,}: &quot;, bulletins)]</code></pre>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
+<ul>
+<li>Find: <code>/^SB\d{2}-\d{3,}: /gm</code></li>
+</ul>
+<p>Data source: <a href="https://www.us-cert.gov/ncas/bulletins.xml">US CERT</a></p>
+<p>Sample data:</p>
+<pre><code>US-CERT Bulletins
+NA
+https://www.us-cert.gov/ncas/bullet
+Alerts warn about vulnerabilities,
+en
+NA
+SB16-032: Vulnerability Summary for
+SB16-025: Vulnerability Summary for
+SB16-018: Vulnerability Summary for
+SB16-011: Vulnerability Summary for
+SB16-004: Vulnerability Summary for
+SB15-363: Vulnerability Summary for
+SB15-355: Vulnerability Summary for
+SB15-348: Vulnerability Summary for
+SB15-341: Vulnerability Summary for
+SB15-334: Vulnerability Summary for</code></pre>
+</div>
 <div id="us-cert-bulletins-remove-extra-characters" class="section level2">
 <h2>US CERT Bulletins: Remove extra characters</h2>
 <p>Example from: <a href="https://github.com/brianhigh/us-cert-bulletins/blob/master/us-cert-bulletins.R">US CERT Bulletins</a></p>
@@ -138,6 +168,7 @@ Effective Python: 59 Specific Ways to Write Better Python (Effective Software De
 <p>Remove extra characters after CVE number.</p>
 <p>R code:</p>
 <pre><code>bulletin.df$Info &lt;- gsub(&quot;(CVE-\\d{4}-\\d+).*&quot;, &quot;\\1&quot;, bulletin.df$Info)</code></pre>
+<p>Try at <a href="https://regex101.com"><a href="https://regex101.com" class="uri">https://regex101.com</a></a>:</p>
 <ul>
 <li>Find: <code>/(CVE-\d{4}-\d+).*/gm</code></li>
 <li>Replace: <code>\1</code></li>

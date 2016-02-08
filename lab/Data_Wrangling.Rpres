@@ -1,35 +1,14 @@
 Data Wrangling
 ========================================================
 author: Noah Simon and Ali Shojaie
+
 date: `r format(Sys.Date(), format="%B %d, %Y")`
 
-Research Computing and Data Management
--------------------------------------------------------
-[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
-
-<small style="font-size:.5em">
-This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-</small>
-
-
-View the names of the columns
-=======================================================
-
-```{r dataframe0, echo=TRUE}
+```{r dataframe1, echo=TRUE}
 data(iris)
 colnames(iris)
-```
-
-Look at the first few rows
-=======================================================
-
-```{r dataframe1, echo=TRUE}
 head(iris)
 ```
-
-Access the columns and rows
-=======================================================
 
 The `i`th entry in column `j` can be accessed using `[i,j]`
 ```{r dataframe2, echo=TRUE}
@@ -45,9 +24,6 @@ and indexed by entry as before
 iris$Sepal.Width[3]
 ```
 
-Access rows by a vector of indicies
-=======================================================
-
 In addition, rather than just putting a single integer in `[]` (as in `iris$Sepal.Width[3]`), one can put a vector of indices in! Something like `iris$Sepal.Width[my_index_vector]`. Let's try this:
 
 ```{r dataframe5, echo=TRUE}
@@ -56,9 +32,6 @@ iris$Sepal.Width[my_inds]
 iris$Sepal.Width[c(1,2,5)]
 iris$Sepal.Width[1:3]
 ```
-
-Access columns by number
-=======================================================
 
 columns/variables can be accessed by number (Rather than by name):
 

@@ -1,0 +1,270 @@
+Data Wrangling
+========================================================
+author: Noah Simon and Ali Shojaie
+date: `r format(Sys.Date(), format="%B %d, %Y")`
+
+Research Computing and Data Management
+-------------------------------------------------------
+[http://github.com/brianhigh/research-computing](http://github.com/brianhigh/research-computing)
+
+<small style="font-size:.5em">
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+</small>
+
+
+View the names of the columns
+=======================================================
+
+```{r dataframe0, echo=TRUE}
+data(iris)
+colnames(iris)
+```
+
+Look at the first few rows
+=======================================================
+
+```{r dataframe1, echo=TRUE}
+head(iris)
+```
+
+Access the columns and rows
+=======================================================
+
+The `i`th entry in column `j` can be accessed using `[i,j]`
+```{r dataframe2, echo=TRUE}
+iris[3,2]    ### third entry in the second column
+```
+
+Columns can also be accessed by name
+```{r dataframe3, echo=TRUE}
+head(iris$Sepal.Width)
+```
+and indexed by entry as before
+```{r dataframe4, echo=TRUE}
+iris$Sepal.Width[3]
+```
+
+Access rows by a vector of indicies
+=======================================================
+
+In addition, rather than just putting a single integer in `[]` (as in `iris$Sepal.Width[3]`), one can put a vector of indices in! Something like `iris$Sepal.Width[my_index_vector]`. Let's try this:
+
+```{r dataframe5, echo=TRUE}
+my_inds <- c(1,3,4)
+iris$Sepal.Width[my_inds]
+iris$Sepal.Width[c(1,2,5)]
+iris$Sepal.Width[1:3]
+```
+
+Access columns by number
+=======================================================
+
+columns/variables can be accessed by number (Rather than by name):
+
+```{r dataframe6, echo=TRUE}
+head(iris$Sepal.Width)
+head(iris[,2])         ## Sepal.Width is second column
+```
+An empty index (as above) means "give all the entries", so `iris[,2]` returns all of the entries in column `2` of the `iris` dataframe.
+
+
+
+Manipulating Data with Base (aka Basic) `R`
+===================
+
+There are two important commands we will go over: `which` and `by` (and others that we will not: eg. `apply`, `match`, `sort`, `order`, `max`, `which.max`).\
+\
+The more important of these is `which`.\
+\
+`which` takes in a vector with `0` and `1` entries (or `true` and `false`) and returns a vector with the indices of the `1` or `true` entries\
+\
+
+```{r base_manip1, echo=TRUE}
+TF <- iris$Species == "versicolor"
+head(TF)
+head(which(TF))
+head(iris[which(TF),])
+```
+
+We can string commands together and use this to summarize subsets of our data
+
+```{r base_manip2, echo=TRUE}
+mean(iris$Sepal.Width[which(iris$Species == "versicolor")])
+
+short_sepal_ind <- which(iris$Sepal.Length < median(iris$Sepal.Length))
+mean(iris$Sepal.Width[short_sepal_ind])
+
+short_sepal_versa_ind <- which((iris$Sepal.Length < median(iris$Sepal.Length)) &
+		      	       (iris$Species == "versicolor"))
+mean(iris$Sepal.Width[short_sepal_versa_ind])
+```
+
+Rather than just summarizing for a single ``Species`` we may want to know mean ``Petal.Length`` for each species. ``by`` comes in handy here: It applies a summarizing function to subsets of our data defined by an index (or key):
+
+```{r base_manip3, echo=TRUE}
+
+by(iris$Sepal.Width, INDEX = iris$Species, FUN=mean)
+
+```
+
+With enough typing, one can generally use these to do whatever one wishes.
+
+
+A Better Way!
+===================
+
+What I showed before generally ends up requiring a lot of code that is usually overly clever, and hard to read/manage.\
+\
+A cleaner, easier way to do this: Use two packages written by Hadley Wickham, `tidyr` and `dplyr`.\
+\
+We will cover `dplyr` here. The 7 `dplyr` commands are:
+
+- `select()`
+- `filter()`
+- `summarise()`
+- `group_by()`
+- `arrange()`
+- `join()`
+- `mutate()`
+
+In addition there is a new operator `%>%` (piping operator) which is an easier-to-read way to combine functions:
+
+## `select()`
+`select` takes a dataframe, and grabs only some of the columns/features
+```{r echo=TRUE}
+library(dplyr)
+head(select(iris, Sepal.Width, Species))
+head( iris %>% select(Sepal.Width, Species) )
+
+```
+
+Notice our use of the piping operator `%>%` (indicating that we "pipe" the `iris` data into the `select` function)
+
+## `filter()`
+`filter` subsets rows of a dataframe by true/false vectors
+```{r echo=TRUE, tidy=FALSE}
+
+head( filter( select(iris, Sepal.Width, Species), Species == "versicolor" ))
+head( iris %>%
+           select(Sepal.Width, Species) %>%
+           filter(Species == "versicolor") )
+
+```
+
+This is basically what we did using `which` in base-R
+
+## `summarise()`
+`summarise` calculates a summary statistic on our manipulated data
+```{r echo=TRUE, tidy = FALSE}
+
+iris %>%
+     select(Sepal.Width, Species) %>%
+     filter(Species == "versicolor") %>%
+     summarise(mean.sepal.width = mean(Sepal.Width))
+```
+
+## `group_by()`
+`group_by` groups our observations by a categorical variable (the first step of a `by`)
+
+```{r echo=TRUE, tidy = FALSE}
+
+iris %>%
+     select(Sepal.Width, Species) %>%
+     group_by(Species) %>%
+     summarise(mean.sepal.width = mean(Sepal.Width))
+```
+
+This is a cleaner version of our `by` example from earlier.
+
+## `arrange()`
+`arrange` orders our data by one of the features
+
+```{r echo=TRUE, tidy = FALSE}
+head(iris %>%
+          select(Sepal.Width, Species) %>%
+          arrange(Sepal.Width))
+```
+
+This can be combined with previous commands:
+
+```{r echo=TRUE, tidy = FALSE}
+head(iris %>%
+          select(Sepal.Width, Species) %>%
+          group_by(Species) %>%
+          arrange(Sepal.Width))
+```
+
+and even used on summaries
+
+```{r echo=TRUE, tidy = FALSE}
+iris %>%
+     group_by(Species) %>%
+     summarize(mean.sep.wid = mean(Sepal.Width),
+               mean.sep.len = mean(Sepal.Length)) %>%
+     arrange(mean.sep.wid)
+```
+
+## `join()`
+
+Imagine we are analyzing patient information and have two datasets. Both datasets are on the same patients; one has clinical information on the patients, and another has lab information. `join()` allows us to combine these two datasets into one (even if patients are in different orders, so long as they have a unique identifier).\
+\
+`join()` is particularly neat because it has options that allow it to flexibly work even if some patients don't have clinical information and others don't have lab information.
+
+## `mutate()`
+
+`mutate` adds new features to our data. For example, we might want to work with the ratio of width-to-length:
+
+```{r echo=TRUE, tidy = FALSE}
+head( iris %>% mutate(ratio.sep = Sepal.Width/Sepal.Length) )
+
+iris %>%
+     mutate(ratio.sep = Sepal.Width/Sepal.Length,
+            ratio.pet = Petal.Width/Petal.Length,
+            ratio.diff = ratio.sep - ratio.pet) %>%
+     group_by(Species) %>%
+     summarize(mean.sep.ratio = mean(ratio.sep),
+               mean.pet.ratio = mean(ratio.pet),
+               mean.ratio.diff = mean(ratio.diff))
+```
+
+## Some questions for you to work on!
+
+- How many flowers are there of each `Species`?
+- How many flowers are there with `Sepal.Width` greater than the overall mean?
+- Of the flowers with `Sepal.Width` greater than the overall mean, how many belong to each `Species`?
+- For each `Species`, what is the mean `Petal.Length` for those flowers with `Sepal.Length` greater than the median `Sepal.Length` within their species?
+- Is the ratio of `Sepal.Length/Sepal.Width` different for flowers with `Petal.Length` greater than the median vs those with `Petal.Length` less than the median? Is this different for different species?
+- If you are particularly precocious, then you can answer the above graphically by piping your output into `ggplot2`
+
+## `%>%` into `ggplot2`
+
+We can take our output and pipe directly into Hadley Wickham's plotting environment `ggplot2`.
+
+```{r echo=TRUE, tidy = FALSE}
+library(ggplot2)
+
+iris %>%
+     mutate(ratio.sep = Sepal.Width/Sepal.Length) %>%
+     ggplot(., aes(x=Petal.Width, y=ratio.sep, color=Species)) + geom_point()
+```
+
+## Another Dataset to play with
+
+```{r echo=TRUE, tidy = FALSE}
+salary_dat <- read.table("http://faculty.washington.edu/nrsimon/datasets/salary.txt")
+names(salary_dat)
+```
+oops!
+
+```{r echo=TRUE, tidy = FALSE}
+salary_dat <- read.table("http://faculty.washington.edu/nrsimon/datasets/salary.txt", header = TRUE)
+names(salary_dat)
+```
+
+This data contains salary, rank, and gender information on faculty members in various fields at various times. Many faculty members have multiple entries in this data (`id` refers to the faculty member)
+
+- Create a dataframe that has a single entry for each `id` which contains the `gender` the maximum `salary` for that `id`, and the `rank` at the time of that `salary` entry.
+- Compare the average `maximum salary` between `male` and `female` professors
+- Break this comparison down by `rank`
+- Find the `id` of the female professor with the 10th smallest `maximum salary` among all female professors

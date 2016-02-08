@@ -6,17 +6,21 @@ output:
   ioslides_presentation:
     fig_caption: yes
     fig_retina: 1
-    fig_width: 6
-    fig_height: 4
+    fig_width: 5
+    fig_height: 3
     keep_md: yes
     smaller: yes
     logo: logo_128.png
 ---
 
+```{r set_knitr_options, echo=FALSE, message=FALSE}
+suppressMessages(library(knitr))
+opts_chunk$set(tidy=FALSE, cache=TRUE, echo=TRUE, message=FALSE)
+```
 
 ## Load the iris dataset
 
-```{r dataframe1, echo=TRUE}
+```{r dataframe1}
 data(iris)
 colnames(iris)
 head(iris)
@@ -26,40 +30,40 @@ head(iris)
 
 The `i`th entry in column `j` can be accessed using `[i,j]`
 
-```{r dataframe2, echo=TRUE}
+```{r dataframe2}
 iris[3,2]    ### third entry in the second column
 ```
 
 Columns can also be accessed by name
 
-```{r dataframe3, echo=TRUE}
+```{r dataframe3}
 head(iris$Sepal.Width)
 ```
 
 and indexed by entry as before
 
-```{r dataframe4, echo=TRUE}
+```{r dataframe4}
 iris$Sepal.Width[3]
 ```
 
-## Access rows by a vector of indicies
+## Access items by a vector of indicies
 
 In addition, rather than just putting a single integer in `[]` 
 (as in `iris$Sepal.Width[3]`), one can put a vector of indices in! 
 Something like `iris$Sepal.Width[my_index_vector]`. Let's try this:
 
-```{r dataframe5, echo=TRUE}
+```{r dataframe5}
 my_inds <- c(1,3,4)
 iris$Sepal.Width[my_inds]
 iris$Sepal.Width[c(1,2,5)]
 iris$Sepal.Width[1:3]
 ```
 
-## Access columns by number
+## Access columns by name or number
 
 Columns/variables can be accessed by number (Rather than by name):
 
-```{r dataframe6, echo=TRUE}
+```{r dataframe6}
 head(iris$Sepal.Width)
 head(iris[,2])         ## Sepal.Width is second column
 ```
@@ -74,13 +78,13 @@ that we will not: eg. `apply`, `match`, `sort`, `order`, `max`, `which.max`).
 
 The more important of these is `which`.
 
-## `which`
+## `which()`
 
 `which` takes in a vector with `0` and `1` entries (or `true` and `false`) and 
 returns a vector with the indices of the `1` or `true` entries\
 
 
-```{r base_manip0, echo=TRUE}
+```{r base_manip0}
 TF <- iris$Species == "versicolor"
 head(TF)
 head(which(TF))
@@ -88,7 +92,7 @@ head(which(TF))
 
 ## `which()`
 
-```{r base_manip1, echo=TRUE}
+```{r base_manip1}
 head(iris[which(TF),])
 ```
 
@@ -96,7 +100,7 @@ head(iris[which(TF),])
 
 We can string commands together and use this to summarize subsets of our data
 
-```{r base_manip2, echo=TRUE}
+```{r base_manip2}
 mean(iris$Sepal.Width[which(iris$Species == "versicolor")])
 
 short_sepal_ind <- which(iris$Sepal.Length < median(iris$Sepal.Length))
@@ -113,12 +117,11 @@ Rather than just summarizing for a single ``Species`` we may want to know mean
 ``Petal.Length`` for each species. ``by`` comes in handy here: It applies a 
 summarizing function to subsets of our data defined by an index (or key):
 
-```{r base_manip3, echo=TRUE}
+```{r base_manip3}
 by(iris$Sepal.Width, INDICES = iris$Species, FUN=mean)
 ```
 
 With enough typing, one can generally use these to do whatever one wishes.
-
 
 ## A Better Way!
 
@@ -143,7 +146,7 @@ We will cover `dplyr` here. The 7 `dplyr` commands are:
 In addition there is a new operator `%>%` (piping operator) which is an 
 easier-to-read way to combine functions.
 
-```{r echo=TRUE, messages=FALSE}
+```{r}
 suppressMessages(library(dplyr))
 ```
 
@@ -151,14 +154,14 @@ suppressMessages(library(dplyr))
 
 `select` takes a dataframe, and grabs only some of the columns/features.
 
-```{r echo=TRUE}
+```{r}
 head(select(iris, Sepal.Width, Species))
 head( iris %>% select(Sepal.Width, Species) )
 ```
 
 ## `select()` with `%>%` "pipe"
 
-```{r echo=TRUE, messages=FALSE}
+```{r}
 iris %>% select(Sepal.Width, Species) %>% head()
 ```
 
@@ -169,13 +172,13 @@ Notice our use of the piping operator `%>%` (indicating that we "pipe" the
 
 `filter` subsets rows of a dataframe by true/false vectors
 
-```{r echo=TRUE, tidy=FALSE}
+```{r}
 head( filter( select(iris, Sepal.Width, Species), Species == "versicolor" ))
 ```
 
 ## `filter()` with `%>%`
 
-```{r echo=TRUE, tidy=FALSE}
+```{r}
 iris %>%
     select(Sepal.Width, Species) %>%
     filter(Species == "versicolor") %>% 
@@ -188,7 +191,7 @@ This is basically what we did using `which` in base-R
 
 `summarise` calculates a summary statistic on our manipulated data
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 
 iris %>%
      select(Sepal.Width, Species) %>%
@@ -201,7 +204,7 @@ iris %>%
 `group_by` groups our observations by a categorical variable (the first step of 
 a `by`)
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 
 iris %>%
      select(Sepal.Width, Species) %>%
@@ -215,7 +218,7 @@ This is a cleaner version of our `by` example from earlier.
 
 `arrange` orders our data by one of the features
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 head(iris %>%
           select(Sepal.Width, Species) %>%
           arrange(Sepal.Width))
@@ -225,7 +228,7 @@ head(iris %>%
 
 This can be combined with previous commands:
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 iris %>%
     select(Sepal.Width, Species) %>%
     group_by(Species) %>%
@@ -237,7 +240,7 @@ iris %>%
 
 ... and can even used on summaries.
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 iris %>%
      group_by(Species) %>%
      summarize(mean.sep.wid = mean(Sepal.Width),
@@ -262,13 +265,13 @@ have lab information.
 `mutate` adds new features to our data. For example, we might want to work with 
 the ratio of width-to-length:
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 iris %>% mutate(ratio.sep = Sepal.Width/Sepal.Length) %>% head()
 ```
 
 ## `mutate()`
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 iris %>%
      mutate(ratio.sep = Sepal.Width/Sepal.Length,
             ratio.pet = Petal.Width/Petal.Length,
@@ -298,22 +301,22 @@ by piping your output into `ggplot2`
 We can take our output and pipe directly into Hadley Wickham's plotting 
 environment `ggplot2`.
 
-```{r echo=TRUE, tidy = FALSE, message=FALSE}
+```{r}
 library(ggplot2)
 ```
 
-```{r echo=TRUE, tidy = FALSE, fig.width=5, fig.height=3}
+```{r}
 iris %>% mutate(ratio.sep = Sepal.Width/Sepal.Length) %>%
          ggplot(., aes(x=Petal.Width, y=ratio.sep, color=Species)) + geom_point()
 ```
 
-```{r echo=FALSE, message=FALSE, results='hide'}
+```{r echo=FALSE, results='hide'}
 dev.off()
 ```
 
 ## Another Dataset to play with
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 url <- "http://faculty.washington.edu/nrsimon/datasets/salary.txt"
 salary_dat <- read.table(url)
 names(salary_dat)
@@ -323,7 +326,7 @@ oops!
 
 ## Another Dataset to play with
 
-```{r echo=TRUE, tidy = FALSE}
+```{r}
 salary_dat <- read.table(url, header = TRUE)
 names(salary_dat)
 ```

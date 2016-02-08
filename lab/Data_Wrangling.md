@@ -3,6 +3,7 @@ Noah Simon and Ali Shojaie
 ![CC BY-SA 4.0](cc_by-sa_4.png)  
 
 
+
 ## Load the iris dataset
 
 
@@ -65,7 +66,7 @@ iris$Sepal.Width[3]
 ## [1] 3.2
 ```
 
-## Access rows by a vector of indicies
+## Access items by a vector of indicies
 
 In addition, rather than just putting a single integer in `[]` 
 (as in `iris$Sepal.Width[3]`), one can put a vector of indices in! 
@@ -97,7 +98,7 @@ iris$Sepal.Width[1:3]
 ## [1] 3.5 3.0 3.2
 ```
 
-## Access columns by number
+## Access columns by name or number
 
 Columns/variables can be accessed by number (Rather than by name):
 
@@ -128,7 +129,7 @@ that we will not: eg. `apply`, `match`, `sort`, `order`, `max`, `which.max`).
 
 The more important of these is `which`.
 
-## `which`
+## `which()`
 
 `which` takes in a vector with `0` and `1` entries (or `true` and `false`) and 
 returns a vector with the indices of the `1` or `true` entries\
@@ -224,7 +225,6 @@ by(iris$Sepal.Width, INDICES = iris$Species, FUN=mean)
 ```
 
 With enough typing, one can generally use these to do whatever one wishes.
-
 
 ## A Better Way!
 

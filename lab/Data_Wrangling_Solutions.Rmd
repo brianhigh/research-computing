@@ -1,0 +1,227 @@
+---
+title: "Data Wrangling Solutions"
+author: "Noah Simon and Ali Shojaie"
+date: "![CC BY-SA 4.0](cc_by-sa_4.png)"
+output:
+  ioslides_presentation:
+    fig_caption: yes
+    fig_retina: 1
+    fig_width: 5
+    fig_height: 3
+    keep_md: yes
+    smaller: yes
+    logo: logo_128.png
+---
+
+```{r set_knitr_options, echo=FALSE, message=FALSE}
+suppressMessages(library(knitr))
+opts_chunk$set(tidy=FALSE, cache=TRUE, echo=TRUE, message=FALSE)
+```
+
+## Load data and libraries
+
+```{r dataframe1,}
+data(iris)
+suppressMessages(library(dplyr))
+library(ggplot2)
+```
+
+## How many flowers?
+
+- How many flowers are there of each `Species`?
+
+```{r}
+iris %>%
+     group_by(Species) %>%
+     summarize(num = length(Sepal.Width))
+```
+
+## How many flowers?
+
+- How many flowers are there of each `Species`?
+
+```{r}
+iris %>%
+     group_by(Species) %>%
+     summarize(num = n())
+```
+
+## How many flowers? - `by()`
+
+- How many flowers are there of each `Species`?
+
+```{r}
+by(iris$Species, iris$Species, length)
+```
+
+## How many flowers?
+
+- How many flowers are there with `Sepal.Width` greater than the overall mean?
+
+```{r}
+iris %>%
+     filter(Sepal.Width > mean(Sepal.Width)) %>%
+     summarize(num = n())
+
+iris %>%
+     summarize(num = sum(Sepal.Width > mean(Sepal.Width)))
+
+sum(iris$Sepal.Width > mean(iris$Sepal.Width))
+```
+
+## How many flowers?
+
+- Of the flowers with `Sepal.Width` greater than the overall mean, how many 
+belong to each `Species`?
+
+```{r}
+iris %>%
+     filter(Sepal.Width > mean(Sepal.Width)) %>%
+     group_by(Species) %>%
+     summarize(num = n())
+```
+
+## How many flowers?
+
+- Of the flowers with `Sepal.Width` greater than the overall mean, how many 
+belong to each `Species`?
+
+```{r}
+ind <- which(iris$Sepal.Width > mean(iris$Sepal.Width))
+by(iris$Species[ind], iris$Species[ind], length)
+```
+
+## Mean petal length
+
+- For each `Species`, what is the mean `Petal.Length` for those flowers with 
+`Sepal.Length` greater than the median `Sepal.Length` within their species?
+
+```{r}
+iris %>%
+     group_by(Species) %>%
+     filter(Sepal.Length > median(Sepal.Length)) %>%
+     summarize(mean.petal.length = mean(Petal.Length))
+```
+
+## Mean petal length
+
+- For each `Species`, what is the mean `Petal.Length` for those flowers with 
+`Sepal.Length` greater than the median `Sepal.Length` within their species?
+
+```{r}
+subset.mean <- function(x){
+  ind <- x$Sepal.Length > median(x$Sepal.Length)
+  return(mean(x$Petal.Length[ind]))
+  }
+
+by(iris[,c("Sepal.Length", "Petal.Length")], iris$Species, subset.mean)
+```
+
+## Ratio of sepal length to sepal width
+
+- Is the ratio of `Sepal.Length/Sepal.Width` different for flowers with 
+`Petal.Length` greater than the median vs those with `Petal.Length` less than 
+the median? Is this different for different species?
+
+```{r}
+
+iris %>%
+     mutate(ratio.sep = Sepal.Width/Sepal.Length,
+            long.Petal = Petal.Length > median(Petal.Length)) %>%
+     group_by(long.Petal) %>%
+     summarize(mean.ratio = mean(ratio.sep))
+```
+
+## Ratio of sepal length to sepal width
+
+- Is the ratio of `Sepal.Length/Sepal.Width` different for flowers with 
+`Petal.Length` greater than the median vs those with `Petal.Length` less than 
+the median? Is this different for different species?
+
+```{r}
+iris %>%
+     group_by(Species) %>%
+     mutate(ratio.sep = Sepal.Width/Sepal.Length,
+            long.Petal = Petal.Length > median(Petal.Length)) %>%
+     group_by(Species, long.Petal) %>%
+     summarize(mean.ratio = mean(ratio.sep))
+```
+
+## Ratio of sepal length to sepal width
+
+- If you are particularly precocious, then you can answer the above graphically 
+by piping your output into `ggplot2`
+
+```{r}
+
+iris %>%
+     group_by(Species) %>%
+     mutate(ratio.sep = Sepal.Width/Sepal.Length,
+            long.Petal = Petal.Length > median(Petal.Length)) %>%
+     ggplot(., aes(x=Petal.Width, y=ratio.sep, color=long.Petal)) + 
+    geom_point() + facet_grid(Species~.)
+```
+
+```{r echo=FALSE, results='hide'}
+dev.off()
+```
+
+## Another Dataset to play with
+
+```{r}
+url <- "http://faculty.washington.edu/nrsimon/datasets/salary.txt"
+salary_dat <- read.table(url, header = TRUE)
+names(salary_dat)
+```
+
+- Create a dataframe that has a single entry for each `id` which contains the 
+`gender` the maximum `salary` for that `id`, and the `rank` at the time of that 
+`salary` entry.
+
+```{r}
+new_dat_frame <- as.data.frame(salary_dat %>%
+			     		  select(id, gender, salary, rank) %>%
+	      	 	     		  group_by(id) %>%
+			     		  filter(salary == max(salary)))
+```
+
+## Compare salaries by gender
+
+- Compare the average `maximum salary` between `male` and `female` professors
+
+```{r}
+salary_dat %>%
+	   select(id, gender, salary, rank) %>%
+	   group_by(id) %>%
+	   filter(salary == max(salary)) %>%
+	   group_by(gender) %>%
+	   summarise(mean.max.salary = mean(salary))
+```
+
+## Compare salaries by gender and rank
+
+- Break this comparison down by `rank`
+
+```{r}
+salary_dat %>%
+	   select(id, gender, salary, rank) %>%
+	   group_by(id) %>%
+	   filter(salary == max(salary)) %>%
+	   group_by(gender, rank) %>%
+	   summarise(mean.max.salary = mean(salary))
+```
+
+## Tenth smallest maximum salary
+
+- Find the `id` of the female professor with the 10th smallest `maximum salary` 
+among all female professors
+
+```{r}
+salary_dat %>%
+	   select(id, gender, salary, rank) %>%
+	   filter(gender == "F") %>%
+	   group_by(id) %>%
+	   summarise(max.salary = max(salary)) %>%
+	   arrange(max.salary) %>%
+	   summarise(id[10])
+```

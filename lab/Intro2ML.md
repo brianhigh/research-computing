@@ -126,7 +126,7 @@ One can also do fancier things---and we'll talk about some of these ideas---but 
 <!-- But generally these (+ simple extensions) are enough -->
 
 
-## Regression-based Learning  {.buld}
+## Regression-based Learning  {.build}
 
 These all _model outcome as a simple function of the features_:
 
@@ -146,7 +146,7 @@ These all _model outcome as a simple function of the features_:
 \]
 
 
-## Regression-based Learning {.buld}
+## Regression-based Learning {.build}
 
 Given Data/observations (outcome-feature pairs) 
 
@@ -171,7 +171,7 @@ $\hat\beta_0, \hat\beta_1,\ldots,\hat\beta_p$.
 
  -->
 
-## What do we do with these models?  {.buld}
+## What do we do with these models?  {.build}
 
 After "fitting" the model to the data, we end up with an "_estimated model_"
 
@@ -187,7 +187,7 @@ Fancier (and non-model-based or algorithmic) methods also give **predictions**..
 </div>
 
 
-## What do we do with these models?  {.buld}
+## What do we do with these models?  {.build}
 
 We can also use the model to calculate a score: 
 \[
@@ -200,7 +200,7 @@ to e.g. **stratify patients** as high/med/low risk (for instance, for survival)
 </div>
 
 
-## What do we do with these models?  {.buld}
+## What do we do with these models?  {.build}
 
 In addition to prediction/stratification, models are also used for **testing conditional/adjusted association**:
 
@@ -210,7 +210,7 @@ Is $feature_j$ associated with outcome $y$ after adjusting for other features?
  - In "classical" settings, software will generally do this for you
 
 
-## Wait, isn't this what we always do?!  {.buld}
+## Wait, isn't this what we always do?!  {.build}
 
 Yes and No!
 
@@ -264,7 +264,7 @@ The principles are the same, but the data we are dealing with is very different.
 </div>
 
 
-## Analysis of High-Dimensional Data {.buld}
+## Analysis of High-Dimensional Data {.build}
 
 For most biomedical big data analyses, we have many more variables than observations... i.e. $p \gg n$
 
@@ -595,7 +595,7 @@ To protect against overfitting...
   - we need to estimate the **test error** 
   - use that to **control the model complexity**
 
-## How to protect against over-fitting? {.buld}
+## How to protect against over-fitting? {.build}
 
 Can't using just the training data...add **validation data**!
 
@@ -607,7 +607,7 @@ Can't using just the training data...add **validation data**!
 </div>
 
 
-## How to protect against over-fitting? {.buld}
+## How to protect against over-fitting? {.build}
 
 Can't we just use the **test data** to check how our model perform?
   

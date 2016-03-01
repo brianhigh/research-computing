@@ -70,7 +70,7 @@ specified **response**
 
 - (eg. regression, 2-sample tests) 
 
-__Unsupervised__: **No response** ??? looking for structure between
+__Unsupervised__: **No response** -- looking for structure between
 features. 
 
 - (eg. clustering, dimension reduction, network analysis)

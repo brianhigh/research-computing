@@ -41,7 +41,7 @@ eBooks.
 Thanks to the following people who have contributed to this resource (in
 no particular order):
 
-_Brian High, Jim Hogan, John Yocum, Elliot Norwood, and Lianne Sheppard_
+_Brian High, Jim Hogan, John Yocum, Elliot Norwood, Lianne Sheppard, Boris Reiss, Noah Simon, and Ali Shojaie_
 
 === Copyright, License and Disclaimer ===
 

@@ -33,7 +33,7 @@ At the end of this course students should be able to:
 
 The files hosted in the repository consist of the presentation slides in 
 Markdown format as well as transcripts to go with those slides. The transcripts 
-are posted as "wiki":wiki pages in ASCIIDoc format and are also offered as PDF and EPUB 
+are posted as wiki[wiki] pages in ASCIIDoc format and are also offered as PDF and EPUB 
 eBooks.
 
 === The Research Computing Team ===
